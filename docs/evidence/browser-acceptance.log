@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /workspace/scratch/588791c8f36f/dsh-sidebar-history
+
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  02:15:27
+   Duration  26.39s (transform 572ms, setup 0ms, import 1.87s, tests 24.24s, environment 1ms)
+

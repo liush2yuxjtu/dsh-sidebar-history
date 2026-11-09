@@ -1,0 +1,46 @@
+# Verification
+
+**Verdict: PASS.** Verified on 2026-11-10 in ChatGPT Work's Linux computer. The package is `dsh-sidebar-history@0.1.0`. [The canonical Page](https://chatgpt.com/space/page_7a28be26236481918ee65d88725c1d38) holds the real screenshots and original generated concept.
+
+| Surface | Observed result | Evidence |
+|---|---|---|
+| Event projection | 6 Node tests passed. Counts come from task events; turn reset, full-list replacement, committed-message filtering, interrupted-message exclusion, session isolation and replay bounds passed. | `npm test`, [unit output](evidence/verify.log) |
+| Package | Syntax, exported entries, declaration entry, skill aliases and required guide references passed. `npm pack --dry-run` contains 8 distributable files. TypeScript NodeNext resolves `index.d.ts`. | `npm run build`, [package inventory](evidence/package.json) |
+| Real DSH browser | All 18 named interaction checks passed in the unchanged executable candidate. No browser console or page errors. | [Raw result and candidate SHA-256 values](evidence/result.json), [runner output](evidence/browser-acceptance.log) |
+| Real event path | A controlled adapter called the actual `todo_write` tool through the real agent loop. The persisted `todo/write` and committed assistant message drove the cards. | [Persisted event subset](evidence/native-events.json) |
+| Long history | 243 sessions, 7 mounted cards in the measured 763px scroller. Scrolling left the 3 already opened Agents unchanged. Home and End reached the virtual first and last rows. | `result.json`: `longHistoryLayout`, `mountedCards`, `activeAgentsAfterScroll` |
+| Visual acceptance | Inspected desktop 1440×1024, mobile 390×844, Chinese light theme, two full title lines, at most two preview lines and escaped HTML-like content. | Real screenshots on the canonical Page |
+| Upstream | Official DSH 0.2.2-rc.1, commit `fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159`. Upstream working tree remained clean. | Runtime revision assertion and independent `git status --porcelain` |
+
+## Repeat the check
+
+Use the existing built upstream checkout and its frozen dependencies. The executed command was:
+
+```bash
+DSH_SOURCE_ROOT=/workspace/scratch/2e77c18f7a46/dsh-plugins/dsh-src \
+DSH_CHROMIUM_PATH=/tmp/chromium npm run verify:browser
+npm run verify
+npm pack --dry-run --json
+git diff --check
+```
+
+The runtime was Node 24.22.1 with Chromium 153. The system Chromium 156 could not create its process-singleton socket in the command environment. The available headless executable completed acceptance. Each test owns and closes its browser and isolated official DSH profile.
+
+## Acceptance coverage
+
+The checks cover matching native and enhanced screenshots, the three-task display limit, true completion counts, switching, reload, empty history, the native TODO tool, uncommitted stream exclusion, updates to an unopened card, search, keyboard selection, archive and restore, collapse and reopen, the mobile drawer, 243-session viewport rendering, absence of historical Agent activation, virtual Home and End, Chinese light mode, long content and HTML escaping.
+
+The test data and model adapter are explicitly controlled. This verifies the actual DSH profile, persistence, agent loop, TODO tool, HTTP/WebSocket updates and rendered client. It does not establish the behavior of an external model.
+
+## Concept comparison and corrected defects
+
+| Area | Actual implementation and decision |
+|---|---|
+| Task and reply cards | Implemented the concept's per-session TODO block and latest Assistant preview. The Page's written specification limits tasks to three; active and pending tasks appear first while the count covers the full list. |
+| Native DSH shell | Preserved the real brand, navigation, composer and conversation UI. The generated concept's shell is illustrative. The original workspace browser is available through Native navigation. |
+| Cold sessions | Added viewport-only projection reads instead of presenting a missing cache as an empty reply. Loading, read failure and migration-required states are explicit. |
+| Long history | Corrected content-sized flex layout so the list is bounded to the sidebar viewport. The regression checks both mounted row count and Agent count. |
+| Virtual keyboard focus | Moved focus after React commits the target virtual row. The regression jumps from the last row to the first and back. |
+| Long titles and mobile evidence | Prevented title flex shrink and allocated sufficient card height. Mobile acceptance opens the drawer and waits for its full on-screen position before capture. |
+
+Independent comment review found no required removals or suppressions. The main agent inspected the code, raw results and screenshots. No required acceptance item remains open.

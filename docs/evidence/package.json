@@ -1,0 +1,56 @@
+[
+  {
+    "id": "dsh-sidebar-history@0.1.0",
+    "name": "dsh-sidebar-history",
+    "version": "0.1.0",
+    "size": 9581,
+    "unpackedSize": 25778,
+    "shasum": "c137336fc975a0285c106ffcb869e8d2332bd74f",
+    "integrity": "sha512-fCabUsizU+94y7M1FL3Tgoly+SrrYnDUXKNvMsRwQfH9LRJWP4YQBRGchuGxMXpxPXW+kLfvWtxuKCYpoxuCNA==",
+    "filename": "dsh-sidebar-history-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1069,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 3862,
+        "mode": 420
+      },
+      {
+        "path": "client.js",
+        "size": 16721,
+        "mode": 420
+      },
+      {
+        "path": "cordis.patch.yml",
+        "size": 72,
+        "mode": 420
+      },
+      {
+        "path": "index.d.ts",
+        "size": 594,
+        "mode": 420
+      },
+      {
+        "path": "index.mjs",
+        "size": 904,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1373,
+        "mode": 420
+      },
+      {
+        "path": "src/projection.mjs",
+        "size": 1183,
+        "mode": 420
+      }
+    ],
+    "entryCount": 8,
+    "bundled": []
+  }
+]
