@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "negativeChecks": [
+    "no actual API responses rejected",
+    "mismatched tool IDs rejected",
+    "missing API response ID rejected"
+  ]
+}

@@ -6,24 +6,63 @@
   "license": "MIT",
   "main": "./index.mjs",
   "types": "./index.d.ts",
-  "exports": {".": {"types": "./index.d.ts", "default": "./index.mjs"}, "./client": "./client.js", "./package.json": "./package.json"},
-  "files": ["index.mjs", "index.d.ts", "client.js", "src", "cordis.patch.yml", "README.md", "LICENSE"],
-  "engines": {"node": ">=24.9.0", "dsh": ">=0.2.2-rc.1 <0.3.0"},
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.mjs"
+    },
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.mjs",
+    "index.d.ts",
+    "client.js",
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=24.9.0",
+    "dsh": ">=0.2.2-rc.1 <0.3.0"
+  },
   "dsh": {
-    "bundle": {"patch": "./cordis.patch.yml"},
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "platform": "web",
       "immediately": true,
-      "inject": ["@deepseek-ai/dsh-client-ui-sidebar", "@deepseek-ai/dsh-client-ui-workspace", "@deepseek-ai/dsh-api-session-controller", "@deepseek-ai/dsh-api-workspace-controller", "@deepseek-ai/dsh-client-locale"]
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-api-workspace-controller",
+        "@deepseek-ai/dsh-client-locale"
+      ]
     }
   },
   "scripts": {
-    "test": "node --test tests/projection.test.mjs",
+    "test": "node --test tests/projection.test.mjs tests/candidate.test.mjs",
     "build": "node scripts/check.mjs",
     "verify": "npm test && npm run build",
-    "verify:browser": "node scripts/browser-test.mjs"
+    "verify:browser": "node scripts/browser-test.mjs",
+    "verify:live": "node scripts/live-browser.mjs",
+    "verify:commit": "node scripts/pre-commit.mjs",
+    "setup:hooks": "node scripts/install-hooks.mjs",
+    "record:live": "node scripts/live-browser.mjs --record",
+    "verify:media": "node scripts/check-live-media.mjs"
   },
-  "dependencies": {"zod": "4.4.3"},
-  "peerDependencies": {"@deepseek-ai/cordis": "^4.1.0", "@deepseek-ai/dsh-session-projection": "0.2.2-rc.1"},
-  "repository": {"type": "git", "url": "git+https://github.com/liush2yuxjtu/dsh-sidebar-history.git"}
+  "dependencies": {
+    "zod": "4.4.3"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.1.0",
+    "@deepseek-ai/dsh-session-projection": "0.2.2-rc.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liush2yuxjtu/dsh-sidebar-history.git"
+  }
 }

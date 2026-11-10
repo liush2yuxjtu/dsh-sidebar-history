@@ -1,3 +1,5 @@
+Current final evidence uses [real API video and screenshots](media/live/README.md). The earlier controlled-adapter reports below are historical debugging coverage. They do not satisfy the final gate.
+
 # Verification
 
 **Verdict: PASS.** Verified on 2026-11-10 in ChatGPT Work's Linux computer. The package is `dsh-sidebar-history@0.1.0`. [The canonical Page](https://chatgpt.com/space/page_7a28be26236481918ee65d88725c1d38) holds the real screenshots and original generated concept.
@@ -55,3 +57,16 @@ The fresh Mac run passed the six unit tests, package checks and all 18 real DSH 
 The accepted third take uses H.264 with limited color range and yuv420p. The first take failed the pixel-format check. The second take exposed a browser reload flash. The final video ends on the saved result. A separate post-capture check verifies reload recovery. Earlier raw recordings remain unchanged on Mac mini.
 
 [Media QA](media/qa.json), [native event evidence](media/evidence/events.json), [runtime markers](media/evidence/markers.jsonl) and the [reproducible script](../examples/0.1.0/record.test.mjs) retain the evidence. The release helper's fixture-only classification remains in the manifest. It does not claim production release, live-model acceptance or anonymous access to this private repository.
+
+
+## Real API replacement and pre-commit gate
+
+The replacement recording uses official deepseek-flash responses in a fresh DSH profile. It contains no seeded assistant messages or TODO events. The model chose native read and todo_write calls. Actual API response IDs, usage, tool IDs, parameters and text match the durable session log. Two native TODO writes produce 2/3 completed tasks. The real browser preview matches the committed reply. A second real API session remains independent and has no TODO list. Switching and reload preserve both summaries.
+
+The accepted take is 9.3 seconds and retains the exact original MP4 bytes. Actual frame inspection and browser playback pass. The previous live take had an encoder-only duration extension caused by the last concat frame inheriting its long duration. The source capture timeline summed to 9.158 seconds while its MP4 lasted 13.6 seconds. The recorder now bounds encoding to the observed capture interval. The accepted take's 9.3-second MP4 matches its 9.290913-second clock. Both original takes remain unchanged.
+
+The tracked pre-commit hook exports the staged tree and runs unit/build, controlled browser regression, final-media provenance and a fresh real API browser E2E. No old PASS is reused. A changed index, missing credential, bad media hash or failed actual API flow refuses the commit. Candidate unit coverage proves that unstaged code is excluded and an index change is rejected. The project verifier and AGENTS.md require this gate for every final commit.
+
+[Live result](media/live/evidence/result.json) · [API-linked native events](media/live/evidence/native-events.json) · [Media provenance](media/live/provenance.json) · [Verifier recipe](../.agents/skills/verify/references/live-api.md).
+
+The installed Git hook was also exercised with a staged old mock screenshot while the working screenshot remained genuine, and with a missing API credential. Both attempts returned nonzero and refused the commit. The staged tree was restored afterward. [Actual hook rejection results](media/live/evidence/negative-hooks.json).

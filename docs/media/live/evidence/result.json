@@ -1,0 +1,281 @@
+{
+  "status": "PASS",
+  "runId": "ea776bdc-ef71-48ec-8512-04acd1119690",
+  "auditId": "ea776bdc",
+  "candidateTree": null,
+  "candidateSources": {
+    "package.json": "6e3cb0cc4466d068666ffe0889f2a7cda82ecb372bc3e91719a23941f9dc472c",
+    "index.mjs": "4578ca495317c028097474cc13a3acdc78611a65a472766abe50c1a1dac5504a",
+    "client.js": "af05a438866817cb737dab5c0500835057beacebc334ddc4b17707b2e08cffb6",
+    "src/projection.mjs": "40405bac66d421977ddf5ddfa5350a83096015b6c157de4e4c3b1f2128d4ff2d",
+    "tests/live.test.mjs": "a40a45cfa22c6314dc4e3838cb364bc7b3e8640e6c200c229d9aa79d2a2457a0",
+    "tests/live-proof.mjs": "6c40205793bb8082a05b61177f63d58a829805976d15660f639306ce9db1ee6d",
+    "tests/live.config.mjs": "89ac271d9dba7a8dfa060923a20eb97d3a2a3e99207bbfecf1f2118196728ffc",
+    "scripts/live-browser.mjs": "5d0f754330f39886b769e42c66b40ec7d1898522a2ac533ba7779e7cf8cadea7"
+  },
+  "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "provider": "deepseek-official",
+  "model": "deepseek-flash",
+  "liveModel": true,
+  "mockedService": false,
+  "scriptedModel": false,
+  "seededAssistantMessages": false,
+  "seededTodoEvents": false,
+  "inputData": "Fresh generated demo order inputs, inspected by native read",
+  "orders": [
+    {
+      "id": "A",
+      "quantity": 3,
+      "unitPrice": 13,
+      "shipping": 5
+    },
+    {
+      "id": "B",
+      "quantity": 0,
+      "unitPrice": 5,
+      "shipping": 5
+    }
+  ],
+  "expectedTotals": [
+    44,
+    5
+  ],
+  "primarySession": "session-8e0c5bb6-b43c-44b4-aac9-d86558f30e02",
+  "secondSession": "session-f756f39c-46e6-46d9-9b51-74db513fde1f",
+  "provenance": {
+    "apiResponses": 3,
+    "nativeToolCalls": 3,
+    "todoWrites": 2
+  },
+  "calls": [
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-8e0c5bb6-b43c-44b4-aac9-d86558f30e02",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T06:07:34.734Z",
+      "responseId": "2a103903-532a-49c3-80d3-543e10c3a55c",
+      "usage": {
+        "input_tokens": 510,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1408,
+        "output_tokens": 112,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_2xZoWGzt2vDNu1O7HEyp4757",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Read order data",
+                "status": "in_progress"
+              },
+              {
+                "content": "Verify both totals",
+                "status": "pending"
+              },
+              {
+                "content": "Publish release",
+                "status": "pending"
+              }
+            ]
+          }
+        },
+        {
+          "id": "call_01_6yWcX0dqy8KoD9UDRWU28959",
+          "name": "read",
+          "arguments": {
+            "file_path": "orders.json"
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "6bd2bb40232430c305b671437a3018555037a74c0d47ecc792a1d6b7ad10788a",
+      "finishedAt": "2026-11-10T06:07:36.031Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-8e0c5bb6-b43c-44b4-aac9-d86558f30e02",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T06:07:36.073Z",
+      "responseId": "52c80017-5e5b-4c14-ad5a-2f05f0273384",
+      "usage": {
+        "input_tokens": 348,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1920,
+        "output_tokens": 81,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_l7VPm0BJWCALNr4mGgNv1499",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Read order data",
+                "status": "completed"
+              },
+              {
+                "content": "Verify both totals",
+                "status": "completed"
+              },
+              {
+                "content": "Publish release",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "93ae4b4a8a0970c1fba5f19c11a3df86f0b220e5f3c7ade92cd80de0b8d390cf",
+      "finishedAt": "2026-11-10T06:07:37.105Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-8e0c5bb6-b43c-44b4-aac9-d86558f30e02",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T06:07:37.132Z",
+      "responseId": "bba3a23e-52a4-4c70-82bb-1f809f10c0f9",
+      "usage": {
+        "input_tokens": 201,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2176,
+        "output_tokens": 61,
+        "service_tier": "standard"
+      },
+      "text": "Audit ea776bdc complete. No edits made.\n\n- Order A: 3 × 13 + 5 = **44**\n- Order B: 0 × 5 + 5 = **5**\n\nRead order data and verified both totals. Publish release remains pending, awaiting approval.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "3e322a28073ee67890e9aca01da5843293db6dfae966479b716d98b66ab4f38c",
+      "finishedAt": "2026-11-10T06:07:38.046Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-f756f39c-46e6-46d9-9b51-74db513fde1f",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T06:07:45.193Z",
+      "responseId": "9086ad31-862b-4955-bb5f-3b079ab3938c",
+      "usage": {
+        "input_tokens": 577,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1280,
+        "output_tokens": 14,
+        "service_tier": "standard"
+      },
+      "text": "Welcome to this independent review, audit ID ea776bdc-second.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "8de349bfc47073a695a18fe2d3f1076a94dc8bdbcdf3c406f0ddf736f0291e4e",
+      "finishedAt": "2026-11-10T06:07:46.074Z"
+    }
+  ],
+  "usage": [
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T06:07:34.724Z",
+      "usage": {
+        "inputTokens": 510,
+        "outputTokens": 112,
+        "cacheReadTokens": 1408,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2030
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T06:07:36.071Z",
+      "usage": {
+        "inputTokens": 348,
+        "outputTokens": 81,
+        "cacheReadTokens": 1920,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2349
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T06:07:37.131Z",
+      "usage": {
+        "inputTokens": 201,
+        "outputTokens": 61,
+        "cacheReadTokens": 2176,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2438
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T06:07:45.191Z",
+      "usage": {
+        "inputTokens": 577,
+        "outputTokens": 14,
+        "cacheReadTokens": 1280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 1871
+      }
+    }
+  ],
+  "checks": [
+    "official-api-response-identity-and-usage",
+    "api-tool-ids-match-durable-events",
+    "native-read-and-todo-write",
+    "model-computed-order-totals",
+    "committed-text-matches-api",
+    "sidebar-count-and-preview-match-persistence",
+    "independent-session-has-no-tasks",
+    "reload-restores-real-summary"
+  ],
+  "consoleErrors": [],
+  "proof_interval_s": [
+    4.5589130859375,
+    9.2889130859375
+  ],
+  "video": {
+    "duration_s": 9.2909130859375,
+    "frames": 58
+  },
+  "finalAssistantText": "Audit ea776bdc complete. No edits made.\n\n- Order A: 3 × 13 + 5 = **44**\n- Order B: 0 × 5 + 5 = **5**\n\nRead order data and verified both totals. Publish release remains pending, awaiting approval.",
+  "finalPreview": "Audit ea776bdc complete. No edits made. - Order A: 3 × 13 + 5 = **44** - Order B: 0 × 5 + 5 = **5** Read order data and verified both totals. Publish release remains pending, awaiting approval.",
+  "finalTodos": [
+    {
+      "content": "Read order data",
+      "status": "completed"
+    },
+    {
+      "content": "Verify both totals",
+      "status": "completed"
+    },
+    {
+      "content": "Publish release",
+      "status": "pending"
+    }
+  ],
+  "screenshots": {
+    "preflight.png": "8237b6ac4a3cbc4c24f599e2a79995122d9feb5a2037e3eb39c3dc478cd95d09",
+    "progress.png": "3ef50d81d4656900176109aa1e55b3bc722d945bf8c9dbcbc55c7b2938350034",
+    "final.png": "3fcf0cb5293e4a121966974e4dce4d017758c2595b96296b46c08629340e9eb2",
+    "reloaded.png": "460cfa895eb45335edcf18e5f3f5563b4843d3f43fbb005d5dd4337f0bf1907d"
+  },
+  "raw_sha256": "abddf33c4724ee0a405442170aa594de3c87759735f6501cf02fc2c00a17d02e"
+}

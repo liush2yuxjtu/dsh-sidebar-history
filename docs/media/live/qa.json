@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "metadata_pass": true,
+  "api_provenance": "PASS",
+  "liveModel": true,
+  "runId": "ea776bdc-ef71-48ec-8512-04acd1119690",
+  "visual_review": {
+    "reviewer": "Codex",
+    "at": "2026-11-10T06:13:06.656671+00:00",
+    "verdict": "PASS",
+    "images": [
+      "snapshot.png",
+      "contact-sheet.png",
+      "interaction-strip.png"
+    ],
+    "checks": [
+      "Real API text visible",
+      "Native 2/3 TODO state",
+      "Readable final reply",
+      "Visible pointer and sidebar toggle",
+      "English UI",
+      "No blank frame",
+      "At least 3 seconds of result"
+    ],
+    "timing": "Raw source is 9.3 seconds, matching the observed 9.290913-second capture."
+  },
+  "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health.",
+  "playback": {
+    "status": "pass",
+    "playback": {
+      "currentTime": 1.604457,
+      "duration": 9.3,
+      "width": 1280,
+      "height": 800,
+      "error": null,
+      "paused": false
+    },
+    "reachedEnd": true
+  }
+}

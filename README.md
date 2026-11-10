@@ -10,13 +10,13 @@ The host stores a bounded `sidebarHistory` projection in each session's normal s
 
 ## Feature video
 
-[![Eight-second preview of the real DSH sidebar](docs/media/feature-8s.gif)](docs/media/demo.mp4)
+[![Eight-second preview recorded with the official DeepSeek API](docs/media/live/feature-8s.gif)](docs/media/live/demo.mp4)
 
-[Watch the 26-second feature video](docs/media/demo.mp4) · [Original recording](docs/media/raw/gt.mp4) · [Recording and verification notes](examples/0.1.0/example.md)
+[Watch the real API video, 9.3 seconds](docs/media/live/demo.mp4) · [Actual browser snapshot](docs/media/live/snapshot.png) · [API receipts and verification](docs/media/live/evidence/result.json)
 
-Switch from native navigation to **History cards**, open another session, and watch TODO progress and the latest saved reply update. The MP4 has five chapters. The preview keeps the full window so the control and result stay in context.
+A fresh DSH session calls the official DeepSeek API. The model reads generated demo order inputs, updates the native TODO list and submits its own reply. The sidebar shows 2/3 completed tasks and the actual saved answer. HTTP response IDs, usage, tool-use IDs and persisted messages are cross-checked. A second real API session and reload recovery are verified after recording.
 
-Recorded on Mac mini with plugin `0.1.0` and real DSH `0.2.2-rc.1`. Session text and adapter responses are controlled English demonstration data. No external model call was made. This video verifies the demonstrated UI path, not ongoing production health. [Media QA and hashes](docs/media/qa.json) retain that limit.
+The video preserves the exact original capture bytes and real elapsed time. The screenshot comes from that same API run. No scripted model, seeded assistant message, seeded task event or mock endpoint is used. [Media provenance and hashes](docs/media/live/provenance.json) · [Media QA](docs/media/live/qa.json).
 
 ## Install
 
@@ -29,9 +29,15 @@ From a checkout, create a tarball with `npm pack`. In the DSH web profile, use i
 Read [AGENTS.md](AGENTS.md) and the [verification surfaces](.agents/skills/verify/references/surfaces.md).
 
 ```bash
+npm run setup:hooks
 npm run verify
 DSH_SOURCE_ROOT=/absolute/path/to/built/deepseek-harness npm run verify:browser
+npm run verify:live
+npm run verify:media
+npm run verify:commit
 ```
+
+`verify` and `verify:browser` are fast unit/build and controlled-adapter debugging checks. They do not establish final acceptance. `verify:live` requires existing authorized DeepSeek credentials and makes actual API calls. `verify:commit` and the installed Git hook export the staged tree, run every check and require a new real API E2E. Missing access refuses the commit. Configure DSH_SOURCE_ROOT or the local Git setting dsh.sourceRoot. Supply DEEPSEEK_API_KEY in the runtime, or use a private DSH_PROVIDER_ENV_FILE. Credentials remain outside the repository.
 
 The browser check requires the upstream frozen dependencies, built Host packages and Web dist, plus Chromium. Set `DSH_CHROMIUM_PATH` to use a system executable, or install the browser associated with upstream Playwright. The runner links missing local test dependencies from that checkout. It runs a real DSH profile, HTTP/WebSocket transport, session persistence, the real TODO tool and browser UI. Its explicit controlled adapter supplies deterministic text and tool calls for streaming checks; it makes no paid model calls and does not claim live model acceptance. Screenshots and raw results are written to ignored `.runtime/browser/`.
 

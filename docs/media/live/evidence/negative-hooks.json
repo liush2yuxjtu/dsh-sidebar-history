@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "test": "staged old mock snapshot, working snapshot genuine",
+      "status": "PASS",
+      "expected": "commit refused",
+      "exit_code": 1,
+      "tested_tree": "14f84673b2d9e54c38c4763b4fcc1e62690eea4a"
+    },
+    {
+      "test": "missing API credential",
+      "status": "PASS",
+      "expected": "commit refused before inference",
+      "exit_code": 1
+    }
+  ],
+  "restored_staged_tree": "67b140646e54288147f98163297a944bfb97633b"
+}
