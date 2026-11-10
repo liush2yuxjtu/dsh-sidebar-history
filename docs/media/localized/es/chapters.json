@@ -1,7 +1,7 @@
 [
   {
     "label": "Revisar los pedidos",
-    "time_s": 0.005
+    "time_s": 0.008
   },
   {
     "label": "Enviar a DeepSeek",
@@ -9,18 +9,18 @@
   },
   {
     "label": "Abrir el historial",
-    "time_s": 2.498
+    "time_s": 2.48
   },
   {
     "label": "Progreso de las tareas",
-    "time_s": 2.687
+    "time_s": 2.676
   },
   {
     "label": "Respuesta guardada verificada",
-    "time_s": 5.916
+    "time_s": 4.242
   },
   {
     "label": "Fin de la grabaci\u00f3n",
-    "time_s": 11.218
+    "time_s": 9.595
   }
 ]

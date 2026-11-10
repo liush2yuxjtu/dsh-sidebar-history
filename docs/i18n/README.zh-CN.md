@@ -1,5 +1,7 @@
 # DSH Sidebar History：DeepSeek Harness 历史侧栏插件
 
+此 checkout 构建 0.2.1；下方命令从当前源码生成安装包，已发布 Release 可能仍是较早版本。
+
 [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md)
 
 **DSH Sidebar History** 在 DeepSeek Harness 的聊天历史侧栏中显示 TODO 进度和最新一条已保存的 Assistant 回复。你可以先找到未完成的工作，再打开对应会话，无需逐个检查聊天记录。
@@ -7,6 +9,8 @@
 这是一个采用 MIT 许可证的独立插件。它使用 DSH 官方投影和侧栏插槽 API，不修改上游 DSH 源码。
 
 ## 功能视频
+
+**0.2.1 五语媒体验证通过。** 五套素材已通过真实文本、像素、来源与播放检查，参见[验证报告](../verification.md)。
 
 [![DSH 历史卡片显示真实 TODO 进度和最新 Assistant 回复](../media/localized/zh-CN/feature-8s.gif)](../media/localized/zh-CN/demo.mp4)
 
@@ -16,15 +20,15 @@
 
 ## 查找并继续工作
 
-- 每张卡片显示会话标题、更新时间、任务完成数、最多三项任务，以及两行 Assistant 摘要。
-- 优先显示进行中和待处理任务，再显示已完成任务。
-- 搜索会话标题和已缓存的回复。DSH 官方内容搜索还可以查找尚未加载的历史。
-- 使用上、下、Home、End 和 Enter 键操作卡片。列表只渲染可见卡片和少量缓冲区。
-- 保留原生侧栏折叠和手机抽屉。点击**原生导航**可以访问原有工作区、归档和会话操作。点击**历史卡片**返回卡片视图。
+每张紧凑卡片显示会话标题、更新时间、完成数与总数、最多三项任务，以及两行 Assistant 预览。进行中和待处理任务优先。点击底部 **工作区与归档**，可访问 DSH 原有工作区、归档和会话操作；点击 **历史卡片** 返回时，搜索词、滚动位置和聚焦会话保持不变。DSH 继续控制侧栏外壳、折叠和手机抽屉。
 
-TODO 状态只来自 `todo/write` 事件。新的 `turn/start` 会清空上一轮任务。摘要只使用已提交的 `assistant/message` 文本。生成期间，卡片保留上一条已提交回复，并显示**生成中**。中断输出、推理和工具块不会成为摘要。空回复、非文本消息、加载中和加载失败都有明确状态。已归档的会话默认隐藏。
+任务状态只来自 `todo/write`。新的 `turn/start` 会清空上一轮任务，与 DSH 原生 TODO 生命周期一致。**此前回复** 表示保留的是较早轮次的文本；本轮没有任务列表，不等于上一轮工作已完成。生成中、原生停止或失败状态描述当前轮次。纯工具消息或空消息会保留最新的有用文本。中断输出、推理、工具结果和未提交尝试不会成为预览。
 
-侧栏支持英文、简体中文、繁体中文、日语和西班牙语，跟随 DSH 的语言设置。繁体中文覆盖侧栏及示范画面，其他 DSH 页面可能回退为简体中文。
+Markdown 预览使用与 DSH 相同的 GFM 语法，显示粗体、斜体、删除线和代码。列表和表格压缩为可读文本，链接显示标签，图片显示替代文本。只读预览不会跳转、加载远程图片或解释原始 HTML；完整格式在对话中查看。无障碍描述包含任务数量、各项状态、回复文本和轮次上下文。
+
+宿主在各会话的常规摘要中保存有长度限制的 `sidebarHistory` 投影。v2 可从持久化日志回放旧检查点，无需激活历史 Agent。未加载的卡片按需读取投影，并明确显示加载或失败状态。客户端只绘制可见区域及少量缓冲；已归档会话保持隐藏。搜索结合缓存标题、回复和 DSH 官方内容搜索。远程搜索失败时保留本地结果，说明结果不完整，并提供 **重试搜索**；达到内容搜索上限时也会显示提示。仅远程匹配的结果及其滚动位置在导航往返后保留。支持上、下、Home、End 和 Enter 键。
+
+侧栏支持英文、简体中文、繁体中文、日语和西班牙语，跟随 DSH 的语言设置。繁体中文原生宿主语言包覆盖 17 个 namespace、1829 个 key，包含示范画面；其他 namespace 可能回退为简体中文。[语言包来源](../../src/zh-tw-host-provenance.json)记录来源和范围。
 
 ## 安装侧栏插件
 
@@ -36,12 +40,12 @@ TODO 状态只来自 `todo/write` 事件。新的 `turn/start` 会清空上一�
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.1.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.1.tgz"
 ```
 
 打开 DSH Web。历史侧栏会为未归档的会话显示卡片。如果你使用其他 Web profile，请替换 `web`。`--profile` 参数必须放在 `add` 前。也可以通过 DSH 插件管理器安装本地包。参见[上游安装指南](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md)。
 
-安装包已包含 JavaScript 入口，无需 bundler。运行时依赖由 DSH 解析。不要再安装第二份 React。这些命令从本仓库安装，不依赖 npm registry 上已有发布版本。DSH API 尚未稳定，升级前请检查兼容性。
+安装包包含预构建的浏览器模块。维护者修改 `src/client.mjs` 和 `src/markdown-preview.mjs` 后，运行 `npm run build:client`；`npm run build` 会拒绝过期 bundle 或许可证声明。运行时依赖由 DSH 解析。不要再安装第二份 React。这些命令从本仓库安装，不依赖 npm registry 上已有发布版本。DSH API 尚未稳定，升级前请检查兼容性。
 
 ## 遥测与隐私
 

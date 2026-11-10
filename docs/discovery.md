@@ -12,7 +12,7 @@ The repository description names DeepSeek Harness, the sidebar, TODO progress, a
 
 ## Language-specific documents
 
-Each language has its own file with links to the other versions. These are documentation translations. The sidebar UI supports the same five languages through DSH's locale service. Traditional Chinese covers the sidebar and demonstrated native screens; other native namespaces may fall back to Simplified Chinese. Each language has an independent real API screenshot, GIF, and video, mapped in [locales.json](media/locales.json).
+Each language has its own file with links to the other versions. These are documentation translations. The sidebar UI supports the same five languages through DSH's locale service. Traditional Chinese covers the sidebar and demonstrated native screens; other native namespaces may fall back to Simplified Chinese. Each language has an independent real API screenshot, GIF, and video, mapped in [locales.json](media/locales.json). The Traditional Chinese host pack covers 17 namespaces and 1829 keys. Version 0.2.1 includes fresh real API captures verified across all five languages.
 
 | Language | README |
 | --- | --- |
@@ -22,7 +22,7 @@ Each language has its own file with links to the other versions. These are docum
 | 日本語 | [README.ja.md](i18n/README.ja.md) |
 | Español | [README.es.md](i18n/README.es.md) |
 
-The root README puts the product name and use case first, then real API media, supported behavior, installation, compatibility, and verification. Each translation keeps the same factual limits and points to its own language-specific verified assets. Generated concepts and controlled adapters do not become live-model evidence through translation.
+The root README puts the product name and use case first, then real API media, supported behavior, installation, compatibility, and verification. Each translation keeps the same factual limits and points to its own language-specific assets and preserves their verification status. Generated concepts and controlled adapters do not become live-model evidence through translation.
 
 GitHub controls the rendered README's HTML head. The [public website](https://liush2yuxjtu.github.io/dsh-sidebar-history/) and [Chinese website](https://liush2yuxjtu.github.io/dsh-sidebar-history/zh/) provide descriptive HTML titles, descriptions, self-canonical URLs, reciprocal `hreflang`, structured data, and a linked sitemap. They link to [English](https://liush2yuxjtu.github.io/dsh-sidebar-history/demo/) and [Chinese](https://liush2yuxjtu.github.io/dsh-sidebar-history/zh/demo/) watch pages. The watch pages each describe their own language-specific real API media with `VideoObject` metadata and video sitemap entries. The English recording uses English UI and model text; the Chinese recording uses Simplified Chinese UI and model text. The [llms.txt reference](https://liush2yuxjtu.github.io/dsh-sidebar-history/llms.txt) gives agents the public product facts and evidence links. None of these files establishes search indexing or ranking. Run `npm run verify:site` to check the deployed pages. Do not add hidden keyword blocks or unsupported SEO tags to Markdown.
 

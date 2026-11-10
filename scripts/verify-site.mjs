@@ -81,7 +81,7 @@ try {
       await page.locator('details').first().evaluate(node => { node.open = true; });
       assert.ok(await page.locator('#install code').allTextContents().then(texts => texts.some(text => text.includes('dsh plugin --profile web add "$PWD/dsh-sidebar-history-' + manifest.version + '.tgz"'))), 'Installation includes the executable tarball command');
       assert.ok(facts.links.includes(base + (target.lang === 'en' ? 'demo/' : 'zh/demo/')), 'Homepage links to its localized watch page');
-      if (target.lang === 'zh-CN') assert.ok(facts.links.some(href => decodeURI(href) === repositoryUrl + '/blob/main/docs/i18n/README.zh-CN.md#安装'), 'Chinese installation links to the existing translation');
+      if (target.lang === 'zh-CN') assert.ok(facts.links.some(href => decodeURI(href) === repositoryUrl + '/blob/main/docs/i18n/README.zh-CN.md#安装侧栏插件'), 'Chinese installation links to the existing translation');
       else assert.ok(facts.googleVerification, 'Google ownership verification is deployed');
     } else {
       const videoSchema = facts.schemas.find(node => node['@type'] === 'VideoObject');

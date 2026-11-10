@@ -24,12 +24,12 @@ assert video['codec_name'] == 'h264' and video['pix_fmt'] == 'yuv420p'
 assert abs(duration - evidence['video']['duration_s']) < 0.25
 proof = evidence['proof_interval_s']
 start = max(0, proof[0] - 3.5)
-assert proof[1] - proof[0] >= 5 and start + 8 <= duration + 0.1 and start + 8 - proof[0] >= 4.0
+assert proof[1] - proof[0] >= 5 and start + 8 <= duration + 0.1 and start + 8 - proof[0] >= 4
 (output / 'raw').mkdir(parents=True)
 (output / 'evidence').mkdir()
 shutil.copyfile(take / 'raw/gt.mp4', output / 'raw/gt.mp4')
 shutil.copyfile(take / 'raw/gt.mp4', output / 'demo.mp4')
-for name in ['result.json', 'native-events.json', 'markers.jsonl', 'preflight.png', 'progress.png', 'final.png', 'reloaded.png']:
+for name in ['result.json', 'native-events.json', 'markers.jsonl', *evidence['screenshots']]:
     shutil.copyfile(take / 'evidence' / name, output / 'evidence' / name)
 for name in ['snapshot.png', 'poster.png']:
     shutil.copyfile(take / 'evidence/final.png', output / name)
@@ -49,7 +49,7 @@ assert b'NETSCAPE2.0\x03\x01\x00\x00' in (output / 'feature-8s.gif').read_bytes(
 markers = [json.loads(line) for line in (output / 'evidence/markers.jsonl').read_text().splitlines()]
 (output / 'chapters.json').write_text(json.dumps([{'label':m['label'], 'time_s':m['elapsed_ms']/1000} for m in markers if m['elapsed_ms']/1000 <= duration], indent=2)+'\n')
 (output / 'probe.json').write_text(json.dumps({'video':raw_probe, 'gif':gif}, indent=2)+'\n')
-artifacts = ['demo.mp4', 'feature-8s.gif', 'snapshot.png', 'poster.png', 'raw/gt.mp4', 'contact-sheet.png', 'interaction-strip.png', 'evidence/progress.png', 'evidence/result.json', 'evidence/native-events.json']
+artifacts = ['demo.mp4', 'feature-8s.gif', 'snapshot.png', 'poster.png', 'raw/gt.mp4', 'contact-sheet.png', 'interaction-strip.png', 'evidence/result.json', 'evidence/native-events.json', *['evidence/' + name for name in evidence['screenshots']]]
 manifest = {'mediaLocale':evidence['mediaLocale'], 'hostLocale':evidence['hostLocale'], 'htmlLang':evidence['htmlLang'], 'runId':evidence['runId'], 'provider':evidence['provider'], 'model':evidence['model'], 'liveModel':True,
             'mockedService':False, 'scriptedModel':False, 'duration_s':duration, 'gif_source_window_s':[start,start+8],
             'proof_interval_s':proof, 'video_is_exact_original_recording':True,

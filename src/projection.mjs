@@ -1,12 +1,15 @@
 /** Bounded per-session summary; source logs remain owned by DSH. */
 export function emptyHistory() {
-  return { todos: null, assistant: null };
+  return { currentTurn: 0, lastTurnEndKind: null, todos: null, assistant: null };
 }
 
 /** Fold committed DSH events without interpreting prose as task state. */
 export function projectHistory(state, event) {
   if (event.type === 'turn/start') {
-    return state.todos === null ? state : { ...state, todos: null };
+    return { ...state, currentTurn: event.data.turn, lastTurnEndKind: null, todos: null };
+  }
+  if (event.type === 'turn/end') {
+    return { ...state, lastTurnEndKind: event.data.reason.kind };
   }
   if (event.type === 'todo/write') {
     const todos = event.data.todos;
@@ -20,8 +23,9 @@ export function projectHistory(state, event) {
   }
   if (event.type === 'assistant/message' && !event.data.interrupted) {
     const text = event.data.message.content.filter(block => block.type === 'text')
-      .map(block => block.text).join(' ').replace(/\s+/g, ' ').trim();
-    return { ...state, assistant: { text: text.slice(0, 360), messageId: event.data.message.id } };
+      .map(block => block.text).join('\n').trim();
+    if (!text) return state;
+    return { ...state, assistant: { text: text.slice(0, 360), messageId: event.data.message.id, turn: event.data.turn } };
   }
   return state;
 }

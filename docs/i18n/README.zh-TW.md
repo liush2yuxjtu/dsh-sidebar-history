@@ -1,5 +1,7 @@
 # DSH Sidebar History：DeepSeek Harness 歷史側欄外掛
 
+此 checkout 建置 0.2.1；下方指令從目前原始碼建立安裝包，已發佈的 Release 可能仍是較早版本。
+
 [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md)
 
 **DSH Sidebar History** 在 DeepSeek Harness 的聊天歷史側欄中顯示 TODO 進度和最新一則已儲存的 Assistant 回覆。你可以先找到未完成的工作，再開啟對應對話，無需逐一檢查聊天記錄。
@@ -7,6 +9,8 @@
 這是採用 MIT 授權的獨立外掛。它使用 DSH 官方投影和側欄插槽 API，不修改上游 DSH 原始碼。
 
 ## 功能影片
+
+**0.2.1 五語媒體驗證通過。** 五套素材已通過真實文字、像素、來源與播放檢查，請參閱[驗證報告](../verification.md)。
 
 [![DSH 歷史卡片顯示真實 TODO 進度和最新 Assistant 回覆](../media/localized/zh-TW/feature-8s.gif)](../media/localized/zh-TW/demo.mp4)
 
@@ -16,15 +20,15 @@
 
 ## 尋找並繼續工作
 
-- 每張卡片顯示對話標題、更新時間、任務完成數、最多三項任務，以及兩行 Assistant 摘要。
-- 優先顯示進行中和待處理任務，再顯示已完成任務。
-- 搜尋對話標題和已快取的回覆。DSH 官方內容搜尋還可以尋找尚未載入的歷史。
-- 使用上、下、Home、End 和 Enter 鍵操作卡片。清單只繪製可見卡片和少量緩衝區。
-- 保留原生側欄收合和行動版抽屜。按 **原生導覽** 可使用原有工作區、封存和對話操作。按 **歷史卡片** 返回卡片檢視。
+每張精簡卡片顯示對話標題、更新時間、完成數與總數、最多三項任務，以及兩行 Assistant 預覽。進行中和待處理任務優先。按底部 **工作區與歸檔**，可使用 DSH 原有工作區、歸檔和對話操作；按 **歷史卡片** 返回時，搜尋文字、捲動位置及聚焦對話保持不變。DSH 繼續控制側欄外殼、收合及行動版抽屜。
 
-TODO 狀態只來自 `todo/write` 事件。新的 `turn/start` 會清空上一輪任務。摘要只使用已提交的 `assistant/message` 文字。生成期間，卡片保留上一則已提交回覆，並顯示 **產生中**。中斷輸出、推理和工具區塊不會成為摘要。空回覆、非文字訊息、載入中和載入失敗都有明確狀態。已封存的對話預設隱藏。
+任務狀態只來自 `todo/write`。新的 `turn/start` 會清空上一輪任務，與 DSH 原生 TODO 生命週期一致。**先前回覆** 標記表示保留的是先前輪次文字；**本輪尚無任務清單**，不代表上一輪工作已完成。產生中、原生停止或失敗狀態描述目前輪次。純工具訊息或空訊息會保留最新的有用文字。中斷輸出、推理、工具結果及未提交的嘗試不會成為預覽。
 
-側欄支援英文、簡體中文、繁體中文、日語和西班牙語，跟隨 DSH 的語言設定。繁體中文涵蓋側欄及示範畫面，其他 DSH 頁面可能回退為簡體中文。
+Markdown 預覽使用與 DSH 相同的 GFM 語法，顯示粗體、斜體、刪除線及程式碼。清單與表格縮為可讀文字，連結顯示標籤，圖片顯示替代文字。唯讀預覽不會跳轉、載入遠端圖片或解讀原始 HTML；完整格式請在對話中查看。無障礙描述包含任務數量、各項狀態、回覆文字及輪次脈絡。
+
+宿主在各對話的一般摘要中儲存有長度限制的 `sidebarHistory` 投影。v2 可從持久化記錄重播舊檢查點，無需啟動歷史 Agent。尚未載入的卡片按需讀取投影，並明確顯示載入或失敗狀態。用戶端只繪製可見區域及少量緩衝；已歸檔對話保持隱藏。搜尋結合快取標題、回覆及 DSH 官方內容搜尋。遠端搜尋失敗時保留本機結果，說明結果不完整，並提供 **重試搜尋**；達到內容搜尋上限時也會顯示提示。僅遠端符合的結果及其捲動位置，在導覽往返後保留。支援上、下、Home、End 及 Enter 鍵。
+
+側欄支援英文、簡體中文、繁體中文、日語及西班牙語，跟隨 DSH 的語言設定。繁體中文原生宿主語言包涵蓋 17 個 namespace、1829 個 key，包含示範畫面；其他 namespace 可能回退為簡體中文。[語言包來源](../../src/zh-tw-host-provenance.json)記錄來源與範圍。
 
 ## 安裝側欄外掛
 
@@ -36,12 +40,12 @@ TODO 狀態只來自 `todo/write` 事件。新的 `turn/start` 會清空上一�
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.1.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.1.tgz"
 ```
 
-開啟 DSH Web。歷史側欄會為未封存的對話顯示卡片。如果你使用其他 Web profile，請替換 `web`。`--profile` 參數必須放在 `add` 前。也可以透過 DSH 外掛管理員安裝本機包。請參閱[上游安裝指南](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md)。
+開啟 DSH Web。歷史側欄會為未歸檔的對話顯示卡片。如果你使用其他 Web profile，請替換 `web`。`--profile` 參數必須放在 `add` 前。也可以透過 DSH 外掛管理員安裝本機包。請參閱[上游安裝指南](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md)。
 
-安裝包已包含 JavaScript 進入點，無需 bundler。執行階段相依套件由 DSH 解析。不要再安裝第二份 React。這些指令從本儲存庫安裝，不依賴 npm registry 已有發佈版本。DSH API 尚未穩定，升級前請檢查相容性。
+安裝包包含預先建置的瀏覽器模組。維護者修改 `src/client.mjs` 和 `src/markdown-preview.mjs` 後，執行 `npm run build:client`；`npm run build` 會拒絕過期的 bundle 或授權聲明。執行階段相依套件由 DSH 解析。不要再安裝第二份 React。這些指令從本儲存庫安裝，不依賴 npm registry 已有發佈版本。DSH API 尚未穩定，升級前請檢查相容性。
 
 ## 遙測與隱私
 

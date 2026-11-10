@@ -3,20 +3,20 @@
   "metadata_pass": true,
   "api_provenance": "PASS",
   "liveModel": true,
-  "runId": "42f9f6b5-adc7-4252-8297-5edd02951895",
+  "runId": "13f00ea1-ea3b-400f-a960-a0b73c4d0286",
   "visual_review": {
     "status": "PASS",
     "method": "Actual screenshot, contact sheet and interaction strip inspected",
-    "reviewedAt": "2026-11-10T09:56:28.570245+00:00",
+    "reviewedAt": "2026-11-10T10:56:24.043875+00:00",
     "artifacts": {
-      "snapshot.png": "9496807ee5dc9acdc9c90b77d9f2a040982b5b2a3ae4e4e2c415ba36c95526bc",
-      "contact-sheet.png": "8b55c9117680d1ab1ca46f2aac0b2f5830fed32e524c61197c2be5dcdba5a757",
-      "interaction-strip.png": "e5926e933e60a1f46a2508dc3a1cc015aeebf894ce864437bd58d4df652d56af"
+      "snapshot.png": "7c6dea12737fcbb0c150da3ad71daaf33349c0af9653826c76fe7ef768a88181",
+      "contact-sheet.png": "05c1abff721de0791660e014ba2bfc2f6d9801d785e589067376368afd5bf903",
+      "interaction-strip.png": "3dd5d99ea60aca03bccf6e90a0d2c813dd014a8812eee29cd569eb4172ce2ced"
     },
-    "findings": "Simplified Chinese native labels and all intermediate/final replies; 读取订单数据 and 核对订单金额 checked, 发布版本 pending. 核对编号 42f9f6b5 gives 42 and 5. Complete result and sidebar visible; time 17:45. Contact sheet and GIF strip preserve creation/read, verification and final preview changes.",
+    "findings": "Actual three PNGs inspected: Simplified Chinese 历史会话 / 工作区与归档 and singular 1个会话. 读取订单数据 and 核对订单金额 checked, 发布版本 pending (2/3). 核对编号 13f00ea1 gives 56 and 3; intermediate explanations remain Simplified Chinese. Bold audit and inline-code preview fit two readable lines in compact card. Full final reply visible, time 18:46. Contact sheet and GIF strip show task creation/read, count updates and saved reply without blank frames.",
     "finalResultHold_s": {
-      "demo.mp4": 5.366667,
-      "feature-8s.gif": 4.5
+      "demo.mp4": 5.333333,
+      "feature-8s.gif": 4.42
     }
   },
   "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."

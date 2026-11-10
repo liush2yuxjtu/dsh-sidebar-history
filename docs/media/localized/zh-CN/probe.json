@@ -31,11 +31,11 @@
         "time_base": "1/15360",
         "start_pts": 0,
         "start_time": "0.000000",
-        "duration_ts": 171520,
-        "duration": "11.166667",
-        "bit_rate": "185330",
+        "duration_ts": 159744,
+        "duration": "10.400000",
+        "bit_rate": "298520",
         "bits_per_raw_sample": "8",
-        "nb_frames": "335",
+        "nb_frames": "312",
         "extradata_size": 49,
         "disposition": {
           "default": 1,
@@ -66,16 +66,16 @@
       }
     ],
     "format": {
-      "filename": "/Users/liushiyu/projects/dsh-sidebar-localized-20261110/.runtime/localization/recording-3/zh-CN/raw/gt.mp4",
+      "filename": "/Users/liushiyu/projects/dsh-sidebar-localized-20261110/.runtime/localization/recording-merged-1/zh-CN/raw/gt.mp4",
       "nb_streams": 1,
       "nb_programs": 0,
       "nb_stream_groups": 0,
       "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
       "format_long_name": "QuickTime / MOV",
       "start_time": "0.000000",
-      "duration": "11.166667",
-      "size": "263584",
-      "bit_rate": "188836",
+      "duration": "10.400000",
+      "size": "392693",
+      "bit_rate": "302071",
       "probe_score": 100,
       "tags": {
         "major_brand": "isom",
@@ -135,7 +135,7 @@
       }
     ],
     "format": {
-      "filename": "/Users/liushiyu/projects/dsh-sidebar-localized-20261110/.runtime/localization/recording-3/zh-CN-assembled/feature-8s.gif",
+      "filename": "/Users/liushiyu/projects/dsh-sidebar-localized-20261110/.runtime/localization/recording-merged-1/zh-CN-assembled/feature-8s.gif",
       "nb_streams": 1,
       "nb_programs": 0,
       "nb_stream_groups": 0,
@@ -143,8 +143,8 @@
       "format_long_name": "CompuServe Graphics Interchange Format (GIF)",
       "start_time": "0.000000",
       "duration": "8.000000",
-      "size": "438821",
-      "bit_rate": "438821",
+      "size": "748587",
+      "bit_rate": "748587",
       "probe_score": 100
     }
   }

@@ -3,20 +3,20 @@
   "metadata_pass": true,
   "api_provenance": "PASS",
   "liveModel": true,
-  "runId": "4eee1736-c1ee-42db-abdb-e909580c3d11",
+  "runId": "43c9d1f2-b81a-4a6c-84af-689702bf7cc6",
   "visual_review": {
     "status": "PASS",
     "method": "Actual screenshot, contact sheet and interaction strip inspected",
-    "reviewedAt": "2026-11-10T09:56:28.570245+00:00",
+    "reviewedAt": "2026-11-10T10:56:24.043875+00:00",
     "artifacts": {
-      "snapshot.png": "38c11174d91de939ba72e4c94224e48384fe6260fa6a669e71a8a0ec66f0edd6",
-      "contact-sheet.png": "8fdc6574977abad775f0dd7d68d391defa9d8a6967fd02775532abd055310bec",
-      "interaction-strip.png": "229c8ab107007d6e4d165a047a7ac788fea958639d6b6f88f2a2ba5f1033099e"
+      "snapshot.png": "0651573166c1d9a6107b3316a71553fe567947e4fda1950099f88cb0ce80e531",
+      "contact-sheet.png": "d50fa2f75cf9233bbce964b94582bf1c972bbbc2d170f87615b35474a36576b0",
+      "interaction-strip.png": "948ef7e56633be0f87754f2d7cd9149d303814048e98b5f834003b6211a6baf7"
     },
-    "findings": "English native labels and all intermediate/final replies; Read order data and Verify both totals checked, Publish release pending. Audit 4eee1736 gives 29 and 3. Complete result and sidebar visible; time 05:44 PM / 17:44. Contact sheet shows input, creation/read, verification and final reply; GIF strip shows task-state and preview updates without blank frames.",
+    "findings": "Actual three PNGs inspected: English Chat history, Workspaces & archives and singular 1 session; Read order data and Verify both totals checked, Publish release pending (2/3). Audit 43c9d1f2 gives 51 and 5. Compact 183px card has readable two-line bold/inline-code preview; full final answer is visible. Times 06:45 PM / 18:45. Full-video contact sheet shows creation/read/verification/final reply. GIF strip begins with existing 2/3, showing generating to saved Markdown; it does not demonstrate task-count changes.",
     "finalResultHold_s": {
       "demo.mp4": 5.2,
-      "feature-8s.gif": 4.42
+      "feature-8s.gif": 4.33
     }
   },
   "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."

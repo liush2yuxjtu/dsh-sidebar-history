@@ -3,7 +3,7 @@
   "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
   "license": "MIT",
   "conversion": "macOS Foundation ICU Hans-Hant",
-  "scope": "Complete dictionaries for the captured conversation, sidebar and settings namespaces. Other host namespaces retain the declared zh fallback.",
+  "scope": "Complete dictionaries for the captured conversation, sidebar, account menu, general settings and theme controls. Other host namespaces retain the declared zh fallback.",
   "sources": [
     {
       "namespace": "common",
@@ -102,7 +102,36 @@
       "exportName": "zh",
       "sourceSha256": "d7306c7bff8ef7c926537ff64263f201283a6d1429a70774759bc0ac87de878a",
       "keys": 199
+    },
+    {
+      "namespace": "settings.account",
+      "path": "packages/client/ui-settings-account/src/client/locales.ts",
+      "exportName": "zh",
+      "sourceSha256": "ca4f7133a0592f92266cf5642ba8996931653325cf623c4648756a39c27655b5",
+      "keys": 94,
+      "dependencies": [
+        {
+          "path": "packages/client/ui-settings-account/src/client/locales/onboarding.ts",
+          "sourceSha256": "de338118d09583f488fe7dc3cc8d1dcdc31001249b17b447db6dc5e0b8dbfa98"
+        }
+      ]
+    },
+    {
+      "namespace": "settings",
+      "path": "packages/client/ui-settings-general/src/client/locales.ts",
+      "exportName": "zh",
+      "sourceSha256": "8c6e1dfaa94da0c1eca09380880b2af4802b8268e8f1bb7f8ceaf87ac41049d4",
+      "keys": 65
+    },
+    {
+      "namespace": "settings.theme",
+      "path": "packages/client/ui-theme/src/client/locales.ts",
+      "exportName": "zh",
+      "sourceSha256": "879d89d63a7f06982e8bd67a467d7dc3598783d1fca05f3dc1cf544aa049a30a",
+      "keys": 25
     }
   ],
-  "sourceLicenseText": "MIT License\n\nCopyright (c) 2026 DeepSeek\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+  "sourceLicenseText": "MIT License\n\nCopyright (c) 2026 DeepSeek\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+  "namespaceCount": 17,
+  "keyCount": 1829
 }

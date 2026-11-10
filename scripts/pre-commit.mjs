@@ -20,7 +20,7 @@ try {
   candidate = await exportStagedCandidate(repository, temporary);
   const source = process.env.DSH_SOURCE_ROOT || setting('dsh.sourceRoot');
   if (!source) throw new Error('BLOCKED: configure DSH_SOURCE_ROOT before committing.');
-  await symlink(join(source, 'node_modules'), join(temporary, 'node_modules'), 'junction');
+  await symlink(join(repository, 'node_modules'), join(temporary, 'node_modules'), 'junction');
   const env = { ...process.env, DSH_SOURCE_ROOT: source,
     DSH_PROVIDER_ENV_FILE: process.env.DSH_PROVIDER_ENV_FILE || setting('dsh.liveEnvFile'),
     DSH_CANDIDATE_TREE: candidate.tree, DSH_LIVE_OUTPUT: join(output, 'live') };

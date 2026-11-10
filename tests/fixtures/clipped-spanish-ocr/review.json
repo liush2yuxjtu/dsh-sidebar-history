@@ -1,0 +1,20 @@
+{
+  "status": "VISUALLY_CONFIRMED",
+  "asset": "evidence/earlier-reply.png",
+  "sha256": "3166cf63100ab25e4867ad8c95469f8a2f89e457ea61479d6055acbe7c233e0d",
+  "box": [
+    0.5109374972656251,
+    0.89249999975,
+    0.3453125,
+    0.014999999999999902
+  ],
+  "ocrText": "rauncar version penaeme porque requiere aprovacion. no eantes mur",
+  "observedLocale": "es",
+  "reviewedAt": "2026-11-10T11:08:22.415Z",
+  "reason": "The fixed conversation tab bar clips the upper glyphs of this Spanish user-request line at y≈76 in the 1280×800 image. Actual pixels were inspected in earlier-reply.png and independently in final.png. The complete corresponding line is Spanish; corrupted OCR, not Portuguese application text, caused the language conflict.",
+  "reference": {
+    "asset": "evidence/final.png",
+    "sha256": "48b3b2c5aeaff7925fc7a9b312950ac4bd76a50b5eaca73977a69680576b7e47",
+    "text": "Publicar versión pendiente porque requiere aprobación. No edites ni"
+  }
+}

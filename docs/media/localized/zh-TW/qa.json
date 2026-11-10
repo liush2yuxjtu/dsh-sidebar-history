@@ -3,20 +3,20 @@
   "metadata_pass": true,
   "api_provenance": "PASS",
   "liveModel": true,
-  "runId": "cae33b84-0956-4aa7-8ae9-3a897fdff821",
+  "runId": "75ee8a5f-c414-4543-ad09-01d8e68a2735",
   "visual_review": {
     "status": "PASS",
     "method": "Actual screenshot, contact sheet and interaction strip inspected",
-    "reviewedAt": "2026-11-10T09:56:28.570245+00:00",
+    "reviewedAt": "2026-11-10T10:56:24.043875+00:00",
     "artifacts": {
-      "snapshot.png": "b92cbac1978785c04abba0dd0708e8c91e95be8e0b5eb460c4ee244ddca4c858",
-      "contact-sheet.png": "810c502a87e26d565ce2c52848caf43653ec12373f0b15e98125a817e6f590f1",
-      "interaction-strip.png": "f49f1166d5311b5c5965d6eeea32c07cf620fe9e192fc7732efcc0ba8f114180"
+      "snapshot.png": "4d0f667bcd44d8e7d9696c244f8ceb8cd0a208eafeff9ea38f40a37170d35174",
+      "contact-sheet.png": "65438d4f889cba32fe50a7a9e3501e33a1d16baff83f950e99de88e9b74a84f7",
+      "interaction-strip.png": "4dd06978164a8e88b2655da9b0f3634fd4b09afaecc7eb0ba9429482063daab2"
     },
-    "findings": "Traditional Chinese native 軌跡 / 歷史會話 / 原生導覽; all intermediate and final replies use Traditional Chinese, with no old 并. 讀取訂單資料 and 核對訂單金額 checked, 發佈版本 pending. 核對編號 cae33b84 gives 24 and 4. Complete result and sidebar visible; 下午05:45 / 17:45. Contact sheet includes input and native tools; GIF strip now shows task/read and completion updates before final result.",
+    "findings": "Actual three PNGs inspected: Traditional Chinese 軌跡 / 歷史會話 / 工作區與歸檔 and singular 1個會話; all visible intermediate/final responses are Traditional, with no old 并. 讀取訂單資料 and 核對訂單金額 checked, 發佈版本 pending (2/3). Audit 75ee8a5f gives 47 and 6. Bold/inline-code preview is two readable lines; complete answer visible. Card 下午06:49 and final reply 18:50 reflect a minute rollover. Full-video contact sheet shows 0/3, 1/3, 2/3 and native operations. GIF strip shows existing 2/3 generating to saved Markdown, not task creation.",
     "finalResultHold_s": {
       "demo.mp4": 5.2,
-      "feature-8s.gif": 4.33
+      "feature-8s.gif": 4.42
     }
   },
   "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."

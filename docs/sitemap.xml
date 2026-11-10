@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <url>
+<url>
     <loc>https://liush2yuxjtu.github.io/dsh-sidebar-history/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://liush2yuxjtu.github.io/dsh-sidebar-history/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://liush2yuxjtu.github.io/dsh-sidebar-history/zh/"/>
@@ -22,7 +22,7 @@
       <video:title>DSH Sidebar History: real TODO and assistant reply demo</video:title>
       <video:description>Original English UI recording from a real official DeepSeek API session showing 2/3 tasks complete and the saved assistant reply.</video:description>
       <video:content_loc>https://liush2yuxjtu.github.io/dsh-sidebar-history/media/live/demo.mp4</video:content_loc>
-      <video:publication_date>2026-11-10T09:57:19+00:00</video:publication_date>
+      <video:publication_date>2026-11-10T10:45:25.606Z</video:publication_date>
     </video:video>
   </url>
   <url>
@@ -35,7 +35,7 @@
       <video:title>DSH Sidebar History：TODO 与最新回复真实演示</video:title>
       <video:description>简体中文界面原始录屏。真实 DSH 会话调用官方 DeepSeek API，展示 2/3 任务完成进度和已保存的回复。</video:description>
       <video:content_loc>https://liush2yuxjtu.github.io/dsh-sidebar-history/media/localized/zh-CN/demo.mp4</video:content_loc>
-      <video:publication_date>2026-11-10T09:57:19+00:00</video:publication_date>
+      <video:publication_date>2026-11-10T10:46:04.339Z</video:publication_date>
     </video:video>
   </url>
 </urlset>

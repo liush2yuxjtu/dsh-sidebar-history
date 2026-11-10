@@ -1,14 +1,15 @@
 {
   "status": "PASS",
-  "runId": "42f9f6b5-adc7-4252-8297-5edd02951895",
-  "auditId": "42f9f6b5",
+  "runId": "13f00ea1-ea3b-400f-a960-a0b73c4d0286",
+  "auditId": "13f00ea1",
+  "candidateTree": null,
   "mediaLocale": "zh-CN",
   "hostLocale": "zh",
   "htmlLang": "zh-CN",
-  "visibleTextAtProof": "DSH 本地构建\n0.2.2-rc.1-fcc0ad4\n新会话\n⌥\n⌘\nN\n插件\n自动化任务\n更多\n历史会话\n1 个会话\n对 orders.json。全程使用简体中\n2/3 项任务\n17:45\n发布版本\n✓\n读取订单数据\n✓\n核对订单金额\n✦\n\n已完成读取和核对，金额按 quantity * unitPrice + shipping 计算： - **订单 A**：3 × 13 + 3 = **42** - **订单 B**：0 × 8 + 5 = **5** 核对编号：42f9f6b5。文件未做任何修改；“发布版本”仍待处理，需要你批准后再执行。\n\n原生导航\n更多\n对 orders.json。全程使用简体中\n标准模式\n对话\n轨迹\n对 orders.json。全程使用简体中文，包括工具调用之前的说明、中途进度和最终回复；技术标识保留原文。先使用 todo_write 创建恰好三项任务：读取订单数据；核对订单金额；发布版本。用 read 读取文件，计算每笔订单的 quantity * unitPrice + shipping。完成前两项；发布版本仍待处理，因为需要批准。不要修改文件或发布。用简体中文简短回复，称每笔为“订单 A”和“订单 B”，列出金额，并包含核对编号 42f9f6b5。\n17:45\n已完成\n已完成，用时 4秒\n\n我先创建任务清单，再读取订单数据。\n\n读取文件内容。\n\n已读取，开始核对金额。\n\n已完成读取和核对，金额按 quantity * unitPrice + shipping 计算：\n\n订单 A：3 × 13 + 3 = 42\n订单 B：0 × 8 + 5 = 5\n\n核对编号：42f9f6b5。文件未做任何修改；“发布版本”仍待处理，需要你批准后再执行。\n\n用量 9.2K tok\n17:45\n任务\n2 已完成 · 1 待处理\n发消息或创建任务, / 调用指令, @ 文件或对话\n工作区内修改\ndeepseek-flash\nOff\n1 轮 4 步·192 tok/s\n9.2K tok·缓存命中 87%\n0%",
+  "visibleTextAtProof": "DSH 本地构建\n0.2.2-rc.1-fcc0ad4\n新会话\n⌥\n⌘\nN\n插件\n自动化任务\n更多\n历史会话\n1 个会话\n对 orders.json。全程使用简体中\n2/3 项任务\n18:46\n待处理:\n发布版本\n✓\n已完成:\n读取订单数据\n✓\n已完成:\n核对订单金额\n✦\n核对编号 13f00ea1 ：文件 orders.json 中的金额已核对完毕。 订单 A ：4 × 13 + 4 = 56 订单 B ：0 × 8 + 3 = 3 前两项任务（读取订单数据、核对订单金额）已完成；发布版本仍待处理，需你批准后再进行，目前未修改文件，也未执行发布。\n2/3 项任务. 待处理: 发布版本. 已完成: 读取订单数据. 已完成: 核对订单金额. 最新助手回复: 核对编号 13f00ea1 ：文件 orders.json 中的金额已核对完毕。 订单 A ：4 × 13 + 4 = 56 订单 B ：0 × 8 + 3 = 3 前两项任务（读取订单数据、核对订单金额）已完成；发布版本仍待处理，需你批准后再进行，目前未修改文件，也未执行发布。\n工作区与归档\n更多\n对 orders.json。全程使用简体中\n标准模式\n对话\n轨迹\n对 orders.json。全程使用简体中文，包括工具调用之前的说明、中途进度和最终回复；技术标识保留原文。先使用 todo_write 创建恰好三项任务：读取订单数据；核对订单金额；发布版本。用 read 读取文件，计算每笔订单的 quantity * unitPrice + shipping。完成前两项；发布版本仍待处理，因为需要批准。不要修改文件或发布。用简体中文简短回复，称每笔为“订单 A”和“订单 B”，列出金额，并包含核对编号 13f00ea1。 开头先以 Markdown 粗体写出核对编号 13f00ea1，再用行内代码写出 orders.json；订单标签使用粗体。\n18:46\n已完成\n已完成，用时 3秒\n\n我先创建三项任务，然后读取订单数据。\n\n订单数据读取完成：订单 A 为 4 × 13 + 4 = 56，订单 B 为 0 × 8 + 3 = 3。金额核对已完成，因此我更新任务进度。\n\n核对编号 13f00ea1：文件 orders.json 中的金额已核对完毕。\n\n订单 A：4 × 13 + 4 = 56\n订单 B：0 × 8 + 3 = 3\n\n前两项任务（读取订单数据、核对订单金额）已完成；发布版本仍待处理，需你批准后再进行，目前未修改文件，也未执行发布。\n\n用量 7.1K tok\n18:46\n任务\n2 已完成 · 1 待处理\n发消息或创建任务, / 调用指令, @ 文件或对话\n工作区内修改\ndeepseek-flash\nOff\n1 轮 3 步·195 tok/s\n7.1K tok·缓存命中 85%\n0%",
   "expectedUiLabels": [
     "历史会话",
-    "原生导航",
+    "工作区与归档",
     "2/3 项任务"
   ],
   "expectedTaskLabels": [
@@ -23,20 +24,22 @@
   ],
   "languageChecks": {
     "status": "PASS",
-    "modelResponse": "all actual assistant messages including tool preambles checked",
-    "nativeTaskLabels": "all three match requested language",
-    "uiLabels": "actual rendered labels checked"
+    "locale": "zh-CN",
+    "assistantResponseTexts": 7,
+    "includesInterruptedResponse": true
   },
-  "candidateTree": null,
   "candidateSources": {
-    "package.json": "0feef80052dd2732f88c6a6dbb5d4b5194b2742d4e50d1dad8b2cf7b8cbdcd15",
-    "index.mjs": "4578ca495317c028097474cc13a3acdc78611a65a472766abe50c1a1dac5504a",
-    "client.js": "2857adb05f89dcd1f9955710ae01401caab4484e14ca43a36559c4faedd6522e",
-    "src/projection.mjs": "40405bac66d421977ddf5ddfa5350a83096015b6c157de4e4c3b1f2128d4ff2d",
-    "tests/live.test.mjs": "51a2cdba796f66527ebd69be27a9eda35a22e44771220889f1ab82475ef90422",
+    "package.json": "1c6c98365f75a35f02a65035276ab7d603e0ab282b9232b360f39427af4a0373",
+    "index.mjs": "453e8a0844aaa8f7e9e0aba583c335112a0c703782aadf88325fad94dec92767",
+    "client.js": "5dda793336cd753b56972e5b581ccacdd2cda5167e0e44e067906d8984cb9bcf",
+    "src/client.mjs": "fbd86d67e473b6a29680f13e23a0002c2574821e2a8505ae7fcc1de2802330d8",
+    "src/markdown-preview.mjs": "ab11500a64bbe2f7e4d181d357935df1232a5cba963a973410373ac34d918ef6",
+    "src/projection.mjs": "817568cbf494fcd5df9d1af74a37e346ea0729a566716523d448d55ee6904785",
+    "src/locales.mjs": "01ad0c6d46a2fee51673db2c86f3141d059d1c457f76663395f98deecee833b9",
+    "tests/live.test.mjs": "e89d0d0fe2a1e4dfab45e0562b48bffc3978e5a086a111b048abe75f6ec1a5ba",
     "tests/live-proof.mjs": "6c40205793bb8082a05b61177f63d58a829805976d15660f639306ce9db1ee6d",
     "tests/live.config.mjs": "89ac271d9dba7a8dfa060923a20eb97d3a2a3e99207bbfecf1f2118196728ffc",
-    "tests/media-locales.mjs": "91a70c6e97bec0773a821350eaf8b68257253645a90e1a7c0885d6d14c64c98b",
+    "tests/media-locales.mjs": "aa943d6a69acd385a93b7e43edca34101c2f7211dbb6149a6773a206820790a1",
     "scripts/live-browser.mjs": "daa74a8172e3163d459d547dd729b56cc8d0d36bf19975a2de12c8eee65f14df"
   },
   "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
@@ -51,46 +54,51 @@
   "orders": [
     {
       "id": "A",
-      "quantity": 3,
+      "quantity": 4,
       "unitPrice": 13,
-      "shipping": 3
+      "shipping": 4
     },
     {
       "id": "B",
       "quantity": 0,
       "unitPrice": 8,
-      "shipping": 5
+      "shipping": 3
     }
   ],
   "expectedTotals": [
-    42,
-    5
+    56,
+    3
   ],
-  "primarySession": "session-80d937cd-5ce5-4f9e-a0f3-5d62406f9a9e",
-  "secondSession": "session-e5ee21ef-fbe2-4cf0-a5f0-c5f8b9b06377",
+  "primarySession": "session-cd9b04d2-75ea-4916-a49f-e6025481f7a0",
+  "secondSession": "session-d683cba2-a299-49c5-97bd-4b28539aebe3",
   "provenance": {
-    "apiResponses": 4,
+    "apiResponses": 5,
+    "nativeToolCalls": 3,
+    "todoWrites": 2
+  },
+  "recordedTurnProvenance": {
+    "apiResponses": 3,
     "nativeToolCalls": 3,
     "todoWrites": 2
   },
   "calls": [
     {
       "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
-      "sessionId": "session-80d937cd-5ce5-4f9e-a0f3-5d62406f9a9e",
+      "sessionId": "session-cd9b04d2-75ea-4916-a49f-e6025481f7a0",
       "model": "deepseek-flash",
-      "at": "2026-11-10T09:45:16.694Z",
-      "responseId": "cf4be7bf-5187-4f46-866e-6e164fd86a19",
+      "at": "2026-11-10T10:46:04.339Z",
+      "responseId": "1f9e70b5-2d1e-490c-a1ae-22adeb166bd7",
       "usage": {
-        "input_tokens": 539,
+        "input_tokens": 568,
         "cache_creation_input_tokens": 0,
         "cache_read_input_tokens": 1408,
-        "output_tokens": 91,
+        "output_tokens": 120,
         "service_tier": "standard"
       },
-      "text": "我先创建任务清单，再读取订单数据。",
+      "text": "我先创建三项任务，然后读取订单数据。",
       "toolCalls": [
         {
-          "id": "call_00_7vc8GZEp9zNpQ3HFrxRM5700",
+          "id": "call_00_f3WRSdyc8GbNohxpKhHk1375",
           "name": "todo_write",
           "arguments": {
             "todos": [
@@ -108,35 +116,12 @@
               }
             ]
           }
-        }
-      ],
-      "httpStatus": 200,
-      "requestId": null,
-      "stopReason": "tool_use",
-      "complete": true,
-      "responseSha256": "79b511ad7b079d53ce0ad1686fcdeae5ea77ae070a03062751080ceb648769f7",
-      "finishedAt": "2026-11-10T09:45:17.815Z"
-    },
-    {
-      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
-      "sessionId": "session-80d937cd-5ce5-4f9e-a0f3-5d62406f9a9e",
-      "model": "deepseek-flash",
-      "at": "2026-11-10T09:45:17.845Z",
-      "responseId": "13acab3c-b451-4efc-bb25-9d60229eef94",
-      "usage": {
-        "input_tokens": 146,
-        "cache_creation_input_tokens": 0,
-        "cache_read_input_tokens": 1920,
-        "output_tokens": 92,
-        "service_tier": "standard"
-      },
-      "text": "读取文件内容。",
-      "toolCalls": [
+        },
         {
-          "id": "call_00_x9FS6OLTNczNXUa2I2yP1979",
+          "id": "call_01_RQiFFFPSxqr2ETerXu8o3225",
           "name": "read",
           "arguments": {
-            "file_path": "/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-R0icjA/sidebar-live-audit/orders.json"
+            "file_path": "orders.json"
           }
         }
       ],
@@ -144,26 +129,26 @@
       "requestId": null,
       "stopReason": "tool_use",
       "complete": true,
-      "responseSha256": "e2d3d059a0f23ef24824132d93343e5308fa5479f5d477c26493b808d68e8309",
-      "finishedAt": "2026-11-10T09:45:18.909Z"
+      "responseSha256": "54849b6df1e0d6ad17472d8044a34583c7f874b5dbc035c735d68f1e6f9efcc1",
+      "finishedAt": "2026-11-10T10:46:05.775Z"
     },
     {
       "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
-      "sessionId": "session-80d937cd-5ce5-4f9e-a0f3-5d62406f9a9e",
+      "sessionId": "session-cd9b04d2-75ea-4916-a49f-e6025481f7a0",
       "model": "deepseek-flash",
-      "at": "2026-11-10T09:45:18.940Z",
-      "responseId": "87f125f1-13b9-41f0-91cf-0a1325749f85",
+      "at": "2026-11-10T10:46:05.815Z",
+      "responseId": "0954d884-f638-4591-9026-aba298587504",
       "usage": {
-        "input_tokens": 327,
+        "input_tokens": 286,
         "cache_creation_input_tokens": 0,
         "cache_read_input_tokens": 2048,
-        "output_tokens": 86,
+        "output_tokens": 126,
         "service_tier": "standard"
       },
-      "text": "已读取，开始核对金额。",
+      "text": "订单数据读取完成：订单 A 为 4 × 13 + 4 = 56，订单 B 为 0 × 8 + 3 = 3。金额核对已完成，因此我更新任务进度。",
       "toolCalls": [
         {
-          "id": "call_00_20ZSvsPxivGABlEUKR2o3151",
+          "id": "call_00_476WDouDQYUJmsBBYi2r1436",
           "name": "todo_write",
           "arguments": {
             "todos": [
@@ -187,137 +172,330 @@
       "requestId": null,
       "stopReason": "tool_use",
       "complete": true,
-      "responseSha256": "8243df0f260cf22ea5c93c0ee955d3e70328953a4a7a69f251b47195551a318f",
-      "finishedAt": "2026-11-10T09:45:20.244Z"
+      "responseSha256": "6a61e68401139eca9e22d92719b07005b2b93cb7dbb59e64eed8859139a894ac",
+      "finishedAt": "2026-11-10T10:46:06.895Z"
     },
     {
       "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
-      "sessionId": "session-80d937cd-5ce5-4f9e-a0f3-5d62406f9a9e",
+      "sessionId": "session-cd9b04d2-75ea-4916-a49f-e6025481f7a0",
       "model": "deepseek-flash",
-      "at": "2026-11-10T09:45:20.275Z",
-      "responseId": "4361642d-e1c6-4699-b507-acf2fb708f91",
+      "at": "2026-11-10T10:46:06.925Z",
+      "responseId": "ad0ac350-875e-4376-9709-1b214c13c2bd",
       "usage": {
-        "input_tokens": 185,
+        "input_tokens": 184,
         "cache_creation_input_tokens": 0,
         "cache_read_input_tokens": 2304,
-        "output_tokens": 80,
+        "output_tokens": 92,
         "service_tier": "standard"
       },
-      "text": "已完成读取和核对，金额按 quantity * unitPrice + shipping 计算：\n\n- **订单 A**：3 × 13 + 3 = **42**\n- **订单 B**：0 × 8 + 5 = **5**\n\n核对编号：42f9f6b5。文件未做任何修改；“发布版本”仍待处理，需要你批准后再执行。",
+      "text": "**核对编号 13f00ea1**：文件 `orders.json` 中的金额已核对完毕。\n\n- **订单 A**：4 × 13 + 4 = **56**\n- **订单 B**：0 × 8 + 3 = **3**\n\n前两项任务（读取订单数据、核对订单金额）已完成；发布版本仍待处理，需你批准后再进行，目前未修改文件，也未执行发布。",
       "toolCalls": [],
       "httpStatus": 200,
       "requestId": null,
       "stopReason": "end_turn",
       "complete": true,
-      "responseSha256": "670dc3b7083fd1e1135f00ed856a90ef946da5437a1dbc583742dcbb1e5382b6",
-      "finishedAt": "2026-11-10T09:45:21.275Z"
+      "responseSha256": "3b9dd83581413e7ceed24c1fa52fe1f9d48fdf0d15d0ec7dfa0f487dce4103b9",
+      "finishedAt": "2026-11-10T10:46:08.067Z"
     },
     {
       "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
-      "sessionId": "session-e5ee21ef-fbe2-4cf0-a5f0-c5f8b9b06377",
+      "sessionId": "session-d683cba2-a299-49c5-97bd-4b28539aebe3",
       "model": "deepseek-flash",
-      "at": "2026-11-10T09:45:29.538Z",
-      "responseId": "05c0c8cc-9992-4cf8-896b-25607721d7a9",
+      "at": "2026-11-10T10:46:15.889Z",
+      "responseId": "408ea431-1be6-4e0b-8b18-ab38de9153cb",
       "usage": {
-        "input_tokens": 576,
+        "input_tokens": 572,
         "cache_creation_input_tokens": 0,
         "cache_read_input_tokens": 1280,
-        "output_tokens": 23,
+        "output_tokens": 21,
         "service_tier": "standard"
       },
-      "text": "你好，这是独立会话中的简体中文问候，核对编号为 42f9f6b5-second。",
+      "text": "你好！欢迎来到这个独立会话，核对编号 13f00ea1-second 已确认。",
       "toolCalls": [],
       "httpStatus": 200,
       "requestId": null,
       "stopReason": "end_turn",
       "complete": true,
-      "responseSha256": "933f8836fcddbb33bfd6a553530a34b18569803e645eb38a8909189a79ba3b26",
-      "finishedAt": "2026-11-10T09:45:30.275Z"
+      "responseSha256": "75b4e32c4b57d31557948d14fcc7ff3ace2162e190dbcd20859fe6ce31db306d",
+      "finishedAt": "2026-11-10T10:46:16.622Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-cd9b04d2-75ea-4916-a49f-e6025481f7a0",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T10:46:22.100Z",
+      "responseId": "552c83ea-cabc-410d-a776-0f2837fe6aaa",
+      "usage": {
+        "input_tokens": 204,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2432,
+        "output_tokens": 42,
+        "service_tier": "standard"
+      },
+      "text": "**核对编号 13f00ea1-followup**：已确认该后续请求，针对 `orders.json` 的订单金额核对已完成，且未调用工具，也未改动任务列表。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "217f113732cf5a246beaee97c8930b1c25e9468d65dbd78baed36a875f4c16f1",
+      "finishedAt": "2026-11-10T10:46:23.375Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-cd9b04d2-75ea-4916-a49f-e6025481f7a0",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T10:46:25.912Z",
+      "responseId": "261961f1-6586-421f-878b-dd9a872733ec",
+      "usage": {
+        "input_tokens": 150,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2688,
+        "output_tokens": 83,
+        "service_tier": "standard"
+      },
+      "text": "**核对编号 13f00ea1-retry**：本次核对恢复进行，`orders.json` 中的金额已核对如下：**订单 A** 为 4 × 13 + 4 = **56**，**订单 B** 为 0 × 8 + 3 = **3**。此前清单请求已取消，本次未使用工具，也未改动任务列表。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "010e9b85f18e89b335333aa37b6c6fc83a4050ae5db05edf07bc2a3a5397b7a9",
+      "finishedAt": "2026-11-10T10:46:27.169Z"
     }
   ],
+  "cancellation": {
+    "expected": true,
+    "state": "native-user-cancelled-partial-api-stream",
+    "call": {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-cd9b04d2-75ea-4916-a49f-e6025481f7a0",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T10:46:23.915Z",
+      "responseId": "4031f628-4b0a-4f00-8098-895ba3aa2610",
+      "usage": {
+        "input_tokens": 173,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2560,
+        "output_tokens": 0,
+        "service_tier": "standard"
+      },
+      "text": "**核对编号 13f00ea1-cancel**：以下是原创的 100 个订单核对问题清单，每条问题都附有相应的解释。\n\n1. **订单编号是否全局唯一？** 重复编号会导致对账时同一笔交易",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null
+    },
+    "nativeTurn": 3,
+    "nativeEndKind": "aborted",
+    "nativeAbortReason": "user",
+    "streamTermination": {
+      "kind": "reader-aborted",
+      "failure": {
+        "kind": "user",
+        "valueType": "object"
+      }
+    },
+    "deliveredPrefixMessageId": "7f227849-ebe8-4fd3-a92d-22dca5538f8f",
+    "deliveredPrefixLength": 95,
+    "retainedMessageId": "1e71dc92-19b7-4620-8f4e-c72c72d0c639"
+  },
   "usage": [
     {
       "provider": "deepseek-official",
       "model": "deepseek-flash",
-      "at": "2026-11-10T09:45:16.685Z",
+      "at": "2026-11-10T10:46:04.331Z",
+      "expectedCancellation": false,
       "usage": {
-        "inputTokens": 539,
-        "outputTokens": 91,
+        "inputTokens": 568,
+        "outputTokens": 120,
         "cacheReadTokens": 1408,
         "cacheWriteTokens": 0,
-        "totalTokens": 2038
+        "totalTokens": 2096
       }
     },
     {
       "provider": "deepseek-official",
       "model": "deepseek-flash",
-      "at": "2026-11-10T09:45:17.843Z",
+      "at": "2026-11-10T10:46:05.813Z",
+      "expectedCancellation": false,
       "usage": {
-        "inputTokens": 146,
-        "outputTokens": 92,
-        "cacheReadTokens": 1920,
-        "cacheWriteTokens": 0,
-        "totalTokens": 2158
-      }
-    },
-    {
-      "provider": "deepseek-official",
-      "model": "deepseek-flash",
-      "at": "2026-11-10T09:45:18.939Z",
-      "usage": {
-        "inputTokens": 327,
-        "outputTokens": 86,
+        "inputTokens": 286,
+        "outputTokens": 126,
         "cacheReadTokens": 2048,
         "cacheWriteTokens": 0,
-        "totalTokens": 2461
+        "totalTokens": 2460
       }
     },
     {
       "provider": "deepseek-official",
       "model": "deepseek-flash",
-      "at": "2026-11-10T09:45:20.273Z",
+      "at": "2026-11-10T10:46:06.923Z",
+      "expectedCancellation": false,
       "usage": {
-        "inputTokens": 185,
-        "outputTokens": 80,
+        "inputTokens": 184,
+        "outputTokens": 92,
         "cacheReadTokens": 2304,
         "cacheWriteTokens": 0,
-        "totalTokens": 2569
+        "totalTokens": 2580
       }
     },
     {
       "provider": "deepseek-official",
       "model": "deepseek-flash",
-      "at": "2026-11-10T09:45:29.537Z",
+      "at": "2026-11-10T10:46:15.887Z",
+      "expectedCancellation": false,
       "usage": {
-        "inputTokens": 576,
-        "outputTokens": 23,
+        "inputTokens": 572,
+        "outputTokens": 21,
         "cacheReadTokens": 1280,
         "cacheWriteTokens": 0,
-        "totalTokens": 1879
+        "totalTokens": 1873
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T10:46:22.099Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 204,
+        "outputTokens": 42,
+        "cacheReadTokens": 2432,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2678
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T10:46:23.913Z",
+      "expectedCancellation": true
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T10:46:25.911Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 150,
+        "outputTokens": 83,
+        "cacheReadTokens": 2688,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2921
       }
     }
   ],
+  "apiCallCounts": {
+    "completed": 6,
+    "deliberatelyInterrupted": 1,
+    "total": 7
+  },
   "checks": [
     "official-api-response-identity-and-usage",
     "api-tool-ids-match-durable-events",
     "native-read-and-todo-write",
     "model-computed-order-totals",
-    "committed-text-matches-api",
-    "sidebar-count-and-preview-match-persistence",
+    "requested-language-for-all-visible-api-text-and-native-tasks",
+    "committed-markdown-source-and-message-id-match-api",
+    "readonly-bold-and-inline-code-render",
+    "accessible-task-count-and-statuses",
+    "compact-two-line-preview",
+    "singular-session-label",
     "independent-session-has-no-tasks",
-    "reload-restores-real-summary"
+    "reload-restores-real-summary",
+    "native-navigation-retains-query-scroll-and-focus",
+    "real-search-disconnect-retains-local-matches-and-retry-recovers",
+    "real-api-data-in-mobile-drawer",
+    "200-percent-equivalent-effective-viewport-reflow",
+    "native-light-dark-theme-independent-of-os",
+    "earlier-reply-distinguished-during-new-real-turn",
+    "new-turn-does-not-inherit-tasks",
+    "actual-api-cancellation-retains-committed-reply",
+    "real-retry-after-cancel-commits-and-reloads"
   ],
   "consoleErrors": [],
+  "expectedNetworkErrors": [
+    {
+      "kind": "deliberately-disconnected-real-search",
+      "message": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+    }
+  ],
+  "searchFault": {
+    "kind": "request-disconnected-without-substitute-response",
+    "requests": 1
+  },
+  "layout": {
+    "compact": {
+      "height": 183,
+      "fontSize": 12,
+      "previewHeight": 36,
+      "fits": true
+    },
+    "mobile": {
+      "height": 183,
+      "fontSize": 12,
+      "previewHeight": 36,
+      "fits": true
+    },
+    "zoom": {
+      "equivalentPercent": 200,
+      "effectiveCssViewport": {
+        "width": 640,
+        "height": 400
+      },
+      "actualDesktopBrowserZoom": false
+    }
+  },
+  "themeChecks": [
+    {
+      "palette": "light",
+      "os": "dark",
+      "rendered": "color(srgb 0.0960784 0.419608 0.22549)",
+      "foreground": [
+        24,
+        107,
+        57
+      ],
+      "background": [
+        237,
+        243,
+        254
+      ],
+      "contrastRatio": 5.889505617179499
+    },
+    {
+      "palette": "dark",
+      "os": "light",
+      "rendered": "color(srgb 0.554902 0.876471 0.676471)",
+      "foreground": [
+        142,
+        224,
+        173
+      ],
+      "background": [
+        45,
+        51,
+        64
+      ],
+      "contrastRatio": 8.086016557435679
+    }
+  ],
+  "navigation": {
+    "restoredQuery": "13f00ea1",
+    "restoredScrollTop": 51,
+    "restoredFocusedSession": "session-cd9b04d2-75ea-4916-a49f-e6025481f7a0"
+  },
   "proof_interval_s": [
-    5.805218994140625,
-    11.165218994140625
+    5.00260009765625,
+    10.40560009765625
   ],
   "video": {
-    "duration_s": 11.169218994140625,
-    "frames": 65
+    "duration_s": 10.41160009765625,
+    "frames": 76
   },
-  "finalAssistantText": "已完成读取和核对，金额按 quantity * unitPrice + shipping 计算：\n\n- **订单 A**：3 × 13 + 3 = **42**\n- **订单 B**：0 × 8 + 5 = **5**\n\n核对编号：42f9f6b5。文件未做任何修改；“发布版本”仍待处理，需要你批准后再执行。",
-  "finalPreview": "已完成读取和核对，金额按 quantity * unitPrice + shipping 计算： - **订单 A**：3 × 13 + 3 = **42** - **订单 B**：0 × 8 + 5 = **5** 核对编号：42f9f6b5。文件未做任何修改；“发布版本”仍待处理，需要你批准后再执行。",
+  "recordedTurn": 1,
+  "finalAssistantText": "**核对编号 13f00ea1**：文件 `orders.json` 中的金额已核对完毕。\n\n- **订单 A**：4 × 13 + 4 = **56**\n- **订单 B**：0 × 8 + 3 = **3**\n\n前两项任务（读取订单数据、核对订单金额）已完成；发布版本仍待处理，需你批准后再进行，目前未修改文件，也未执行发布。",
+  "finalPreview": "**核对编号 13f00ea1**：文件 `orders.json` 中的金额已核对完毕。\n\n- **订单 A**：4 × 13 + 4 = **56**\n- **订单 B**：0 × 8 + 3 = **3**\n\n前两项任务（读取订单数据、核对订单金额）已完成；发布版本仍待处理，需你批准后再进行，目前未修改文件，也未执行发布。",
   "finalTodos": [
     {
       "content": "读取订单数据",
@@ -332,11 +510,28 @@
       "status": "pending"
     }
   ],
-  "screenshots": {
-    "preflight.png": "9746937cad88c57fb0a1a7b9cb7db363f53ee8fcf3292237364dc501d04321cf",
-    "progress.png": "cfe0e9cabb335875a11e2602887a8d56bc76e09f7bf4576eb04529af4b24112f",
-    "final.png": "9496807ee5dc9acdc9c90b77d9f2a040982b5b2a3ae4e4e2c415ba36c95526bc",
-    "reloaded.png": "75bd8de5093230fc2a4559387b6ce8d2de13049d3ee6bb8f6835d4f29f9ee7ac"
+  "latestAfterLifecycle": {
+    "messageId": "464d9d7e-019d-413e-8d1e-1a3353b1504d",
+    "text": "**核对编号 13f00ea1-retry**：本次核对恢复进行，`orders.json` 中的金额已核对如下：**订单 A** 为 4 × 13 + 4 = **56**，**订单 B** 为 0 × 8 + 3 = **3**。此前清单请求已取消，本次未使用工具，也未改动任务列表。",
+    "tasks": null,
+    "endKind": "completed"
   },
-  "raw_sha256": "8f0c870adf4b329472e0b81240ece843cd2e508ead581ef6fa8cb6335dd43871"
+  "screenshots": {
+    "preflight.png": "a0088b2a056745187dd7469d578835fc3a80ef63551364c5f224296a731a5c5f",
+    "progress.png": "e480b757097cd9371f9d2f129a4dc3fc01f1e4eeffb5a782efd0c1a28cf88732",
+    "final.png": "7c6dea12737fcbb0c150da3ad71daaf33349c0af9653826c76fe7ef768a88181",
+    "reloaded.png": "96ebe1774425a11948ffd25f1c8f2dc3c2969cf31ec71b63f5dea675b659431c",
+    "navigation-restored.png": "4b898209fc418cc61fafa3294bda5fe42427905e7e37ee3e1a808b7a65e1541d",
+    "offline-search.png": "2abd1344aa75007b78770465eedca88a7d0173bfc0de591686890389f7ca6ea3",
+    "mobile.png": "2cc502763594f5e52a230842fd915fd9c6c05f9c9538155f7c078aef5a2e582b",
+    "zoom-equivalent-reflow.png": "20f157944163e635c7bcf20eab92c0a0cffe9e6b235903a1bbdb1acba8b33f65",
+    "light-theme.png": "401ea003f970ce349f8cf67d627e2df17fde742e01107d48772ea3ba76508d08",
+    "dark-theme.png": "c10a9544591133a66699dcf10c9e6f0ae820f388fdc2ca9ff04a9dea3d9230da",
+    "earlier-reply.png": "ac025b266023698ae0e9484c9c6d9000a6565829c21171f6a2c9ea0e03aa9921",
+    "followup.png": "97873a36703ea28e1de37980619bbb62277bb93f616b68cc968918d32c4ee784",
+    "stopped.png": "557090e3e241aad7eaa4bf952e025992bb8830aa7dae8eb032c407e877591099",
+    "restarted.png": "310b4a4a1a41708197925e43f3606cd4fafc116b0aa016a474c1d870aeca18b2",
+    "lifecycle-reloaded.png": "2f87f40d52683e156ad1fcd9290e0e3a42ccca0ab180d8c25efe312930ed2690"
+  },
+  "raw_sha256": "8863a94fe70b81e34258a75847841c56110f0f3287fe0b345a19fbe887ea993c"
 }

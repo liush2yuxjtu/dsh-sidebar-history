@@ -6,11 +6,11 @@ import vm from 'node:vm';
 const client = await readFile(new URL('../client.js', import.meta.url), 'utf8');
 const provenance = JSON.parse(await readFile(new URL('../src/zh-tw-host-provenance.json', import.meta.url), 'utf8'));
 const examples = [
-  { locale: 'en', lang: 'en', history: 'Chat history', search: 'Search sessions', native: 'Native navigation', empty: 'No assistant reply yet' },
-  { locale: 'zh', lang: 'zh-CN', history: '历史会话', search: '搜索会话', native: '原生导航', empty: '暂无助手回复' },
-  { locale: 'zh-TW', lang: 'zh-TW', history: '歷史會話', search: '搜尋會話', native: '原生導覽', empty: '暫無助手回覆' },
-  { locale: 'ja', lang: 'ja', history: 'チャット履歴', search: 'セッションを検索', native: '標準ナビゲーション', empty: 'アシスタントの返信はまだありません' },
-  { locale: 'es', lang: 'es', history: 'Historial de chats', search: 'Buscar sesiones', native: 'Navegación nativa', empty: 'Todavía no hay respuesta del asistente' },
+  { locale: 'en', lang: 'en', history: 'Chat history', search: 'Search sessions', native: 'Workspaces & archives', empty: 'No assistant reply yet' },
+  { locale: 'zh', lang: 'zh-CN', history: '历史会话', search: '搜索会话', native: '工作区与归档', empty: '暂无助手回复' },
+  { locale: 'zh-TW', lang: 'zh-TW', history: '歷史會話', search: '搜尋會話', native: '工作區與歸檔', empty: '暫無助手回覆' },
+  { locale: 'ja', lang: 'ja', history: 'チャット履歴', search: 'セッションを検索', native: 'ワークスペースとアーカイブ', empty: 'アシスタントの返信はまだありません' },
+  { locale: 'es', lang: 'es', history: 'Historial de chats', search: 'Buscar sesiones', native: 'Espacios y sesiones archivadas', empty: 'Todavía no hay respuesta del asistente' },
 ];
 
 function renderPlugin(active, existingTraditional = false) {
@@ -24,6 +24,8 @@ function renderPlugin(active, existingTraditional = false) {
     useState: value => [value, () => {}],
     useRef: value => ({ current: value }),
     useEffect: () => {},
+    useLayoutEffect: () => {},
+    useId: () => 'locale-description',
     useSyncExternalStore: (_subscribe, read) => read(),
   };
   vm.runInNewContext(client, { window: { __ModuleLoader__: { load: module => { declaration = module.factory(() => React); } } }, Date, Set, Map });
@@ -71,7 +73,7 @@ for (const example of examples) {
     assert.equal(view.section.props['aria-label'], example.history);
     assert.equal(nodes.find(node => node.type === 'input').props.placeholder, example.search);
     assert.equal(view.toggle.props['aria-label'], example.native);
-    assert.ok(nodes.some(node => node.type === 'p' && node.children.includes(example.empty)));
+    assert.equal(nodes.find(node => node.props.className === 'dsh-history-preview-content').children[0], example.empty);
     const date = new Date('2000-01-02T15:04:00Z');
     const time = nodes.find(node => node.type === 'time');
     assert.equal(time.children[0], new Intl.DateTimeFormat(example.lang, { month: 'short', day: 'numeric' }).format(date));

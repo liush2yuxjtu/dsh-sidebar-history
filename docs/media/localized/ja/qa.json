@@ -3,20 +3,20 @@
   "metadata_pass": true,
   "api_provenance": "PASS",
   "liveModel": true,
-  "runId": "9306a1df-62ec-4242-8de2-191bfb4b5b57",
+  "runId": "4bd0e2d4-424e-477e-88a2-612f47f5f189",
   "visual_review": {
     "status": "PASS",
     "method": "Actual screenshot, contact sheet and interaction strip inspected",
-    "reviewedAt": "2026-11-10T09:56:28.570245+00:00",
+    "reviewedAt": "2026-11-10T10:56:24.043875+00:00",
     "artifacts": {
-      "snapshot.png": "e831c10a3e0fd5740daa0bca23de737820195f6de665535aee8a925914c7426c",
-      "contact-sheet.png": "07497aa40edfc9fa0c705d5744f85916aac433550261e07e631977ce12908c03",
-      "interaction-strip.png": "b56c9d6e6248df8ff0ae784b47d339f1a0d3a244423ac742b794ce7716af7bf4"
+      "snapshot.png": "c49166fb92b056798d31e364b495f6f0afea3262cd93a06e311dd6d196437e11",
+      "contact-sheet.png": "49a1c51c73f3c5e465c84648c8d55530bc9be337bca88a83b76a50ee762b5562",
+      "interaction-strip.png": "27429aea30a4dca527330c4287444e12f2044e552585ba34e1b2396ab94fbc7c"
     },
-    "findings": "Japanese native labels, all intermediate explanations and final reply. 注文データを読む and 合計を確認する checked, リリースを公開する pending. 確認番号 9306a1df gives 31 and 5. Complete result and sidebar visible; time 17:46. Contact sheet and GIF strip show native tools, task updates and final saved reply with no blank frames.",
+    "findings": "Actual three PNGs inspected: Japanese チャット履歴 / ワークスペースとアーカイブ and singular 1セッション, Japanese intermediate explanations and final reply. 注文データを読む and 合計を確認する checked, リリースを公開する pending (2/3). 確認番号 4bd0e2d4 gives 27 and 4. Two-line bold/inline-code card preview is readable after the layout fix; complete long main reply remains visible, time 18:50. Contact sheet and GIF strip show native tools, task-state updates and saved reply without blank frames.",
     "finalResultHold_s": {
-      "demo.mp4": 5.366666,
-      "feature-8s.gif": 4.5
+      "demo.mp4": 5.2,
+      "feature-8s.gif": 4.33
     }
   },
   "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."

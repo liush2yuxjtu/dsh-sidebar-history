@@ -1,6 +1,6 @@
 {
   "name": "dsh-sidebar-history",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "DeepSeek Harness (DSH) sidebar plugin with TODO progress, latest assistant reply previews, and searchable chat history",
   "type": "module",
   "license": "MIT",
@@ -26,15 +26,11 @@
     "docs/telemetry.md",
     "docs/discovery.md",
     "scripts/collect-telemetry.mjs",
-    "docs/media/live/demo.mp4",
-    "docs/media/live/feature-8s.gif",
-    "docs/media/live/snapshot.png",
-    "docs/media/live/evidence/result.json",
-    "docs/media/live/provenance.json",
-    "docs/media/live/qa.json",
-    "docs/media/live/evidence/native-events.json",
+    "THIRD_PARTY_NOTICES.txt",
     "docs/media/localized",
-    "docs/media/locales.json"
+    "docs/media/locales.json",
+    "docs/media/live",
+    "docs/media/localization-verification.json"
   ],
   "engines": {
     "node": ">=24.9.0",
@@ -57,8 +53,8 @@
     }
   },
   "scripts": {
-    "test": "node --test tests/projection.test.mjs tests/candidate.test.mjs tests/telemetry.test.mjs tests/locale.test.mjs tests/localized-media.test.mjs tests/media-locales.test.mjs",
-    "build": "node scripts/check.mjs && node scripts/check-docs.mjs",
+    "test": "node --test tests/projection.test.mjs tests/candidate.test.mjs tests/telemetry.test.mjs tests/markdown-preview.test.mjs tests/projection-migration.test.mjs tests/locale.test.mjs tests/localized-media.test.mjs tests/media-locales.test.mjs",
+    "build": "node scripts/build-client.mjs --check && node scripts/check.mjs && node scripts/check-docs.mjs",
     "verify": "npm test && npm run build",
     "verify:browser": "node scripts/browser-test.mjs",
     "verify:live": "node scripts/live-browser.mjs",
@@ -69,8 +65,10 @@
     "telemetry:collect": "node scripts/collect-telemetry.mjs",
     "verify:docs": "node scripts/check-docs.mjs",
     "verify:site": "node scripts/verify-site.mjs",
+    "build:client": "node scripts/build-client.mjs",
     "verify:media:locales": "node scripts/check-localized-media.mjs",
-    "record:locales": "python3 scripts/record-localized-media.py"
+    "record:locales": "python3 scripts/record-localized-media.py",
+    "verify:published": "node scripts/check-published-media.mjs"
   },
   "dependencies": {
     "zod": "4.4.3"
@@ -102,5 +100,11 @@
   "homepage": "https://liush2yuxjtu.github.io/dsh-sidebar-history/",
   "bugs": {
     "url": "https://github.com/liush2yuxjtu/dsh-sidebar-history/issues"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.1",
+    "mdast-util-from-markdown": "2.0.3",
+    "mdast-util-gfm": "3.1.0",
+    "micromark-extension-gfm": "3.0.0"
   }
 }
