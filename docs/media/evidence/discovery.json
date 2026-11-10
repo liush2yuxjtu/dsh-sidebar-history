@@ -1,0 +1,47 @@
+{
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "discoveries": [
+    {
+      "label": "Open History cards",
+      "rect": {
+        "x": 8,
+        "y": 725,
+        "width": 85.921875,
+        "height": 29
+      }
+    },
+    {
+      "label": "Open Fix build error",
+      "rect": {
+        "x": 16,
+        "y": 549,
+        "width": 248,
+        "height": 234
+      }
+    },
+    {
+      "label": "Return to Ship sidebar history",
+      "rect": {
+        "x": 16,
+        "y": 250,
+        "width": 248,
+        "height": 234
+      }
+    },
+    {
+      "label": "Complete the remaining checks",
+      "rect": {
+        "x": 420.5,
+        "y": 680,
+        "width": 708,
+        "height": 36
+      }
+    }
+  ],
+  "uiLanguage": "en",
+  "fixtureData": true,
+  "liveModel": false
+}

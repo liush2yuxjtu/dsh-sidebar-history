@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "semantics": true,
+  "selectors": true,
+  "state_transitions": true,
+  "framing": true,
+  "dependencies": true,
+  "fixtureData": true,
+  "liveModel": false,
+  "proof_interval_s": [
+    3.24639599609375,
+    7.79539599609375
+  ],
+  "consoleErrors": [],
+  "mode": "record"
+}

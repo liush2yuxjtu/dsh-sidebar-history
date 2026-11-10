@@ -44,3 +44,14 @@ The test data and model adapter are explicitly controlled. This verifies the act
 | Long titles and mobile evidence | Prevented title flex shrink and allocated sufficient card height. Mobile acceptance opens the drawer and waits for its full on-screen position before capture. |
 
 Independent comment review found no required removals or suppressions. The main agent inspected the code, raw results and screenshots. No required acceptance item remains open.
+
+
+## Feature video verification, 2026-11-10
+
+The [26-second feature video](media/demo.mp4) records the actual installed plugin in DSH Web on Mac mini. It shows native navigation, History cards, separate sessions, native TODO updates and the latest committed reply. All displayed task text and adapter responses are controlled English demo data. It makes no external model calls.
+
+The fresh Mac run passed the six unit tests, package checks and all 18 real DSH browser checks. Two test-harness portability fixes preserve the existing assertions. Initial navigation waits for DOM content and then visible cards, instead of waiting for all background requests to stop. The mobile test selects the external drawer opener by its stable attribute because two native controls share the same accessible name.
+
+The accepted third take uses H.264 with limited color range and yuv420p. The first take failed the pixel-format check. The second take exposed a browser reload flash. The final video ends on the saved result. A separate post-capture check verifies reload recovery. Earlier raw recordings remain unchanged on Mac mini.
+
+[Media QA](media/qa.json), [native event evidence](media/evidence/events.json), [runtime markers](media/evidence/markers.jsonl) and the [reproducible script](../examples/0.1.0/record.test.mjs) retain the evidence. The release helper's fixture-only classification remains in the manifest. It does not claim production release, live-model acceptance or anonymous access to this private repository.

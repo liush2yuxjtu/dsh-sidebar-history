@@ -1,0 +1,267 @@
+{
+  "status": "fixture-only",
+  "metadata_pass": true,
+  "feature_id": "dsh-sidebar-history",
+  "raw_sha256": "6ceff866fe4298cdb08df584979c7eeeb1d6fd359d5953e68717dbc099f9a58c",
+  "raw_duration_s": 26.466667,
+  "gif_source_window_s": [
+    0.0,
+    8.0
+  ],
+  "proof_interval_s": [
+    3.24639599609375,
+    7.79539599609375
+  ],
+  "crop": null,
+  "outputs": {
+    "mp4": {
+      "path": "demo.mp4",
+      "bytes": 457693,
+      "sha256": "50f23cb9f553137273f8605db811ff6efcdd8dd2d3eb89ccb902d36ef96c9bfb",
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "mime_codec_string": "avc1.640020",
+            "width": 1280,
+            "height": 800,
+            "coded_width": 1280,
+            "coded_height": 800,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "8:5",
+            "pix_fmt": "yuv420p",
+            "level": 32,
+            "color_range": "tv",
+            "color_space": "bt470bg",
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "30/1",
+            "avg_frame_rate": "30/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 406528,
+            "duration": "26.466667",
+            "bit_rate": "134912",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "794",
+            "extradata_size": 49,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "encoder": "Lavc63.1.102 libx264"
+            }
+          },
+          {
+            "index": 1,
+            "codec_name": "bin_data",
+            "codec_long_name": "binary data",
+            "codec_type": "data",
+            "codec_tag_string": "text",
+            "codec_tag": "0x74786574",
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 406533,
+            "duration": "26.466992",
+            "bit_rate": "54",
+            "nb_frames": "5",
+            "extradata_size": 63,
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "eng",
+              "handler_name": "SubtitleHandler"
+            }
+          }
+        ],
+        "chapters": [
+          {
+            "id": 0,
+            "time_base": "1/15360",
+            "start": 0,
+            "start_time": "0.000000",
+            "end": 49859,
+            "end_time": "3.246029",
+            "tags": {
+              "title": "Original sidebar"
+            }
+          },
+          {
+            "id": 1,
+            "time_base": "1/15360",
+            "start": 49859,
+            "start_time": "3.246029",
+            "end": 137426,
+            "end_time": "8.947005",
+            "tags": {
+              "title": "TODO and latest reply visible"
+            }
+          },
+          {
+            "id": 2,
+            "time_base": "1/15360",
+            "start": 137426,
+            "start_time": "8.947005",
+            "end": 244884,
+            "end_time": "15.942969",
+            "tags": {
+              "title": "Open Fix build error"
+            }
+          },
+          {
+            "id": 3,
+            "time_base": "1/15360",
+            "start": 244884,
+            "start_time": "15.942969",
+            "end": 334771,
+            "end_time": "21.794987",
+            "tags": {
+              "title": "Submit demo task"
+            }
+          },
+          {
+            "id": 4,
+            "time_base": "1/15360",
+            "start": 334771,
+            "start_time": "21.794987",
+            "end": 406533,
+            "end_time": "26.466992",
+            "tags": {
+              "title": "Latest committed reply updates"
+            }
+          }
+        ],
+        "format": {
+          "filename": "plugin/docs/media/demo.mp4",
+          "nb_streams": 2,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "26.466992",
+          "size": "457693",
+          "bit_rate": "138343",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf63.1.102"
+          }
+        }
+      }
+    },
+    "gif": {
+      "path": "feature-8s.gif",
+      "bytes": 201382,
+      "sha256": "bb31c585690bc17483ac8d305c8bcc58f746205b13f512b60cfdb1daec179f45",
+      "width": 1040,
+      "height": 650,
+      "frames": 96,
+      "animated": true,
+      "duration_s": 8.0,
+      "zero_delay_frames": 0,
+      "loop": 0,
+      "average_fps": 12.0
+    }
+  },
+  "visual_review": {
+    "reviewer": "Codex",
+    "at": "2026-11-10T04:57:43.814652+00:00",
+    "verdict": "pass",
+    "images": [
+      "poster.png",
+      "full-contact-sheet.png",
+      "gif-contact-sheet.png",
+      "interaction-strip.png",
+      "update-strip.png",
+      "final-proof.png"
+    ],
+    "checks": [
+      "Actual DSH UI",
+      "English UI",
+      "Visible pointer and toggle",
+      "No explanatory layers",
+      "TODO and committed reply readable",
+      "No blank video frame in accepted take",
+      "Result hold at least 3 seconds"
+    ],
+    "note": "Empty trailing tiles in the fixed-grid update contact sheet are contact-sheet padding, not video frames."
+  },
+  "publish_ready": false,
+  "media_qa": "pass",
+  "access": "Private repository. No anonymous access or production release claimed.",
+  "playback_final": {
+    "status": "pass",
+    "playback": {
+      "currentTime": 1.602084,
+      "duration": 26.466992,
+      "width": 1280,
+      "height": 800,
+      "error": null,
+      "paused": false
+    },
+    "reachedEnd": true
+  },
+  "verification": {
+    "unit_tests": 6,
+    "browser_checks": 18,
+    "build": "pass",
+    "package": "pass"
+  }
+}

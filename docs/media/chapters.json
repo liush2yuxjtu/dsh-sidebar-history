@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Original sidebar",
+    "time_s": 0.006
+  },
+  {
+    "label": "TODO and latest reply visible",
+    "time_s": 3.246
+  },
+  {
+    "label": "Open Fix build error",
+    "time_s": 8.947
+  },
+  {
+    "label": "Submit demo task",
+    "time_s": 15.943
+  },
+  {
+    "label": "Latest committed reply updates",
+    "time_s": 21.795
+  }
+]

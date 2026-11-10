@@ -1,0 +1,3 @@
+{"id": "take1", "verdict": "discard", "reason": "Full-range JPEG flags produced yuvj420p. MP4 pixel-format gate failed. Visual strip and markers were reviewed before discard.", "strip": "evidence/take1-strip.png"}
+{"id": "take2", "verdict": "discard", "reason": "Pixel format passed, but a browser reload produced a visible white frame. Reviewed the fixed-time strip and reload markers.", "strip": "evidence/take2-strip.png"}
+{"id": "take3", "verdict": "keep", "reason": "Original sidebar, toggle, separate session, native TODO events and committed reply are visible. Result holds 4.5 seconds. Reload checks pass after capture.", "strip": "interaction-strip.png", "timing_crosscheck": "evidence/markers.jsonl"}

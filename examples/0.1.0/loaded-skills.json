@@ -1,0 +1,16 @@
+{
+  "release_skills_repository": "liush2yuxjtu/chatcut-release-skills",
+  "revision": "3f870219260b09c42df88d3d95a067ca605df842",
+  "paths": [
+    "skills/record-production-feature/SKILL.md",
+    "skills/record-production-feature/references/story-research.md",
+    "skills/record-production-feature/references/media-contract.md",
+    "skills/record-production-feature/references/cinematography.md",
+    "skills/chatcut-release/references/unslop-playbook.md",
+    "skills/chatcut-release/references/pstack-writing-the-reply.md",
+    "skills/chatcut-release/references/pstack-technical-writing.md",
+    "skills/unslop/SKILL.md"
+  ],
+  "ui_demo": "Session skill with Work execution mapping and Mac mini policy",
+  "scope": "Manual recording of DSH Sidebar History only. No ChatCut runtime or publishing workflow."
+}

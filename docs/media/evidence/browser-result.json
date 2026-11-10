@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "fixtureData": true,
+  "liveModel": false,
+  "checks": [
+    "native-before-and-enhanced-after",
+    "three-todo-limit-and-real-completion-count",
+    "session-switch-isolation",
+    "reload-restores-summary-and-selection",
+    "empty-assistant-and-no-fabricated-tasks",
+    "native-todo-tool-through-agent-loop",
+    "stream-fragments-hidden-until-commit",
+    "unopened-session-push-after-switch",
+    "search-and-empty-result",
+    "keyboard-navigation-and-enter",
+    "host-archive-and-restore-filter",
+    "sidebar-collapse-and-restore",
+    "mobile-layout",
+    "243-session-history-viewport-rendering",
+    "scroll-does-not-activate-historical-agents",
+    "home-end-across-virtualized-rows",
+    "chinese-light-theme",
+    "long-content-clamping-and-html-escaping"
+  ],
+  "candidateSources": {
+    "package.json": "f7ff85db7acc85e68a3aefb69d0d2a6a88c198acc6153b244bc3a8f8d9155bfd",
+    "index.mjs": "4578ca495317c028097474cc13a3acdc78611a65a472766abe50c1a1dac5504a",
+    "client.js": "af05a438866817cb737dab5c0500835057beacebc334ddc4b17707b2e08cffb6",
+    "src/projection.mjs": "40405bac66d421977ddf5ddfa5350a83096015b6c157de4e4c3b1f2128d4ff2d",
+    "tests/browser.test.mjs": "129c99b79680159cfa7ca9c45021e7bc221540699050838681bdee4abcab9a9a",
+    "tests/vitest.config.mjs": "16c5c91d7dc3750cbfd489405a366759b4255e1ee5fe21b0e5d96ab31ac51d71",
+    "scripts/browser-test.mjs": "51506f29921adac5c8981fadb90a2dbc30b78805c049b19e9568e5a2cc41370d"
+  },
+  "longHistoryLayout": {
+    "height": 760,
+    "scrollHeight": 38080,
+    "width": 248,
+    "mounted": 7
+  },
+  "mountedCards": 7,
+  "historySessions": 243,
+  "activeAgentsAfterScroll": 3,
+  "consoleErrors": []
+}

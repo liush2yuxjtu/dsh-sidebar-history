@@ -1,0 +1,27 @@
+
+> dsh-sidebar-history@0.1.0 verify
+> npm test && npm run build
+
+
+> dsh-sidebar-history@0.1.0 test
+> node --test tests/projection.test.mjs
+
+✔ only task events determine counts and preserve active/pending tasks before completed items (0.699375ms)
+✔ starting a new turn clears old tasks but retains the last committed reply (0.062458ms)
+✔ attempts, streaming fragments, reasoning and tool results never become a committed preview (0.380875ms)
+✔ empty committed messages replace the previous reply without inventing text (0.056833ms)
+✔ independent session folds never exchange task or assistant data (0.061208ms)
+✔ replay produces the same bounded state and later full-list writes replace earlier tasks (2.736209ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 59.848833
+
+> dsh-sidebar-history@0.1.0 build
+> node scripts/check.mjs
+
+PASS: package entries, JavaScript syntax, guide references and safe client rendering

@@ -1,0 +1,16 @@
+[chatcut-rec-lock 12:53:50] ACQUIRED owner=dsh-sidebar-video purpose=DSH Sidebar History clean feature take waited=0.001s
+
+ RUN  v4.1.11 /Users/liushiyu/projects/dsh-sidebar-release-20261110/plugin
+
+stdout | examples/0.1.0/record.test.mjs > records real DSH UI with explicitly controlled demonstration data
+{"status":"pass","output":"/Users/liushiyu/projects/dsh-sidebar-release-20261110/plugin/.runtime/release-demo/take3","recording":true,"proof_interval_s":[3.24639599609375,7.79539599609375]}
+
+ ✓ examples/0.1.0/record.test.mjs (1 test) 36431ms
+   ✓ records real DSH UI with explicitly controlled demonstration data  36430ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  12:53:50
+   Duration  36.87s (transform 53ms, setup 0ms, import 348ms, tests 36.43s, environment 0ms)
+
+[chatcut-rec-lock 12:54:27] RELEASED rc=0

@@ -97,7 +97,7 @@ it('verifies the installed plugin in real DSH Web, with controlled UI data and n
     page = await browser.newPage({ viewport: { width: 1440, height: 1024 }, locale: 'en-US', colorScheme: 'dark' });
     page.on('pageerror', error => errors.push(error.message));
     page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
-    await page.goto(scaffold.authenticatedUrl, { waitUntil: 'networkidle' });
+    await page.goto(scaffold.authenticatedUrl, { waitUntil: 'domcontentloaded' });
     await page.locator('.dsh-history-card').first().waitFor({ timeout: 30000 });
     await page.getByRole('button', { name: 'Native navigation', exact: true }).click();
     await page.locator('.dsh-history').waitFor({ state: 'detached' });
@@ -180,7 +180,7 @@ it('verifies the installed plugin in real DSH Web, with controlled UI data and n
 
     await page.setViewportSize({ width: 390, height: 844 });
     await expect.poll(async () => (await page.locator('.dsh-history').boundingBox())?.x ?? 0).toBeLessThanOrEqual(-260);
-    await page.getByRole('button', { name: 'Open sidebar', exact: true }).click();
+    await page.locator('[data-sidebar-opener="true"]').click();
     await expect.poll(async () => (await page.locator('.dsh-history').boundingBox())?.x ?? -1).toBeGreaterThanOrEqual(0);
     assert.ok(await page.locator('.dsh-history').evaluate(element => element.getBoundingClientRect().right <= innerWidth));
     assert.ok(await page.locator('.dsh-history-scroll').evaluate(element => element.scrollWidth <= element.clientWidth + 1));

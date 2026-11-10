@@ -1,0 +1,437 @@
+[
+  {
+    "type": "turn/start",
+    "data": {
+      "turn": 1
+    },
+    "seq": 0,
+    "time": 1794282831726
+  },
+  {
+    "type": "todo/write",
+    "data": {
+      "todos": [
+        {
+          "content": "Connect TODO events",
+          "status": "completed"
+        },
+        {
+          "content": "Show latest assistant reply",
+          "status": "completed"
+        },
+        {
+          "content": "Check session isolation",
+          "status": "in_progress"
+        },
+        {
+          "content": "Verify reload recovery",
+          "status": "pending"
+        }
+      ]
+    },
+    "seq": 5,
+    "time": 1794282831731
+  },
+  {
+    "type": "assistant/message",
+    "data": {
+      "turn": 1,
+      "step": 1,
+      "stream": [],
+      "message": {
+        "id": "ac62ae4a-bba1-464d-9436-e3b720be2ea5",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "History cards show your task progress and the latest saved reply. Session isolation and reload checks are next."
+          }
+        ],
+        "source": {
+          "kind": "model",
+          "provider": "sidebar-demo",
+          "model": "controlled-demo-data"
+        }
+      }
+    },
+    "seq": 6,
+    "time": 1794282831732,
+    "surfaceOp": "append"
+  },
+  {
+    "type": "turn/end",
+    "data": {
+      "turn": 1,
+      "reason": {
+        "kind": "completed"
+      }
+    },
+    "seq": 8,
+    "time": 1794282831734
+  },
+  {
+    "type": "turn/start",
+    "seq": 14,
+    "time": 1794286454868,
+    "data": {
+      "turn": 2
+    }
+  },
+  {
+    "type": "assistant/message",
+    "seq": 23,
+    "time": 1794286454913,
+    "data": {
+      "turn": 2,
+      "step": 1,
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Session isolation is checked. Verifying reload recovery."
+          },
+          {
+            "type": "tool-call",
+            "id": "sidebar-demo-todo-1",
+            "name": "todo_write",
+            "arguments": "{\"todos\":[{\"content\":\"Connect TODO events\",\"status\":\"completed\"},{\"content\":\"Show latest assistant reply\",\"status\":\"completed\"},{\"content\":\"Check session isolation\",\"status\":\"completed\"},{\"content\":\"Verify reload recovery\",\"status\":\"in_progress\"}]}"
+          }
+        ],
+        "source": {
+          "kind": "model",
+          "provider": "sidebar-demo",
+          "model": "controlled-demo-data"
+        },
+        "id": "10b41fa3-fb77-40d9-8d5d-98a8159e4186"
+      },
+      "stream": [
+        {
+          "type": "chunk",
+          "time": 1794286454912,
+          "chunk": {
+            "type": "block-start",
+            "index": 0,
+            "blockType": "text"
+          }
+        },
+        {
+          "type": "text-chunks",
+          "time0": 1794286454912,
+          "index": 0,
+          "dt": [],
+          "texts": [
+            "Session isolation is checked. Verifying reload recovery."
+          ]
+        },
+        {
+          "type": "chunk",
+          "time": 1794286454912,
+          "chunk": {
+            "type": "block-end",
+            "index": 0,
+            "block": {
+              "type": "text",
+              "text": "Session isolation is checked. Verifying reload recovery."
+            }
+          }
+        },
+        {
+          "type": "chunk",
+          "time": 1794286454912,
+          "chunk": {
+            "type": "block-start",
+            "index": 1,
+            "blockType": "tool-call"
+          }
+        },
+        {
+          "type": "tool-call-chunks",
+          "time0": 1794286454912,
+          "index": 1,
+          "dt": [],
+          "id": "sidebar-demo-todo-1",
+          "name": "todo_write",
+          "args": [
+            "{\"todos\":[{\"content\":\"Connect TODO events\",\"status\":\"completed\"},{\"content\":\"Show latest assistant reply\",\"status\":\"completed\"},{\"content\":\"Check session isolation\",\"status\":\"completed\"},{\"content\":\"Verify reload recovery\",\"status\":\"in_progress\"}]}"
+          ]
+        },
+        {
+          "type": "chunk",
+          "time": 1794286454912,
+          "chunk": {
+            "type": "block-end",
+            "index": 1,
+            "block": {
+              "type": "tool-call",
+              "id": "sidebar-demo-todo-1",
+              "name": "todo_write",
+              "arguments": "{\"todos\":[{\"content\":\"Connect TODO events\",\"status\":\"completed\"},{\"content\":\"Show latest assistant reply\",\"status\":\"completed\"},{\"content\":\"Check session isolation\",\"status\":\"completed\"},{\"content\":\"Verify reload recovery\",\"status\":\"in_progress\"}]}"
+            }
+          }
+        },
+        {
+          "type": "chunk",
+          "time": 1794286454913,
+          "chunk": {
+            "type": "finish",
+            "reason": {
+              "kind": "tool-calls"
+            }
+          }
+        }
+      ]
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "todo/write",
+    "seq": 25,
+    "time": 1794286454920,
+    "data": {
+      "todos": [
+        {
+          "content": "Connect TODO events",
+          "status": "completed"
+        },
+        {
+          "content": "Show latest assistant reply",
+          "status": "completed"
+        },
+        {
+          "content": "Check session isolation",
+          "status": "completed"
+        },
+        {
+          "content": "Verify reload recovery",
+          "status": "in_progress"
+        }
+      ]
+    }
+  },
+  {
+    "type": "assistant/message",
+    "seq": 29,
+    "time": 1794286456742,
+    "data": {
+      "turn": 2,
+      "step": 2,
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Task checks complete. Saving the latest reply."
+          },
+          {
+            "type": "tool-call",
+            "id": "sidebar-demo-todo-2",
+            "name": "todo_write",
+            "arguments": "{\"todos\":[{\"content\":\"Connect TODO events\",\"status\":\"completed\"},{\"content\":\"Show latest assistant reply\",\"status\":\"completed\"},{\"content\":\"Check session isolation\",\"status\":\"completed\"},{\"content\":\"Verify reload recovery\",\"status\":\"completed\"}]}"
+          }
+        ],
+        "source": {
+          "kind": "model",
+          "provider": "sidebar-demo",
+          "model": "controlled-demo-data"
+        },
+        "id": "3aea71e5-19c1-47ad-bea8-cfc49ecea76c"
+      },
+      "stream": [
+        {
+          "type": "chunk",
+          "time": 1794286456741,
+          "chunk": {
+            "type": "block-start",
+            "index": 0,
+            "blockType": "text"
+          }
+        },
+        {
+          "type": "text-chunks",
+          "time0": 1794286456741,
+          "index": 0,
+          "dt": [],
+          "texts": [
+            "Task checks complete. Saving the latest reply."
+          ]
+        },
+        {
+          "type": "chunk",
+          "time": 1794286456741,
+          "chunk": {
+            "type": "block-end",
+            "index": 0,
+            "block": {
+              "type": "text",
+              "text": "Task checks complete. Saving the latest reply."
+            }
+          }
+        },
+        {
+          "type": "chunk",
+          "time": 1794286456741,
+          "chunk": {
+            "type": "block-start",
+            "index": 1,
+            "blockType": "tool-call"
+          }
+        },
+        {
+          "type": "tool-call-chunks",
+          "time0": 1794286456741,
+          "index": 1,
+          "dt": [],
+          "id": "sidebar-demo-todo-2",
+          "name": "todo_write",
+          "args": [
+            "{\"todos\":[{\"content\":\"Connect TODO events\",\"status\":\"completed\"},{\"content\":\"Show latest assistant reply\",\"status\":\"completed\"},{\"content\":\"Check session isolation\",\"status\":\"completed\"},{\"content\":\"Verify reload recovery\",\"status\":\"completed\"}]}"
+          ]
+        },
+        {
+          "type": "chunk",
+          "time": 1794286456742,
+          "chunk": {
+            "type": "block-end",
+            "index": 1,
+            "block": {
+              "type": "tool-call",
+              "id": "sidebar-demo-todo-2",
+              "name": "todo_write",
+              "arguments": "{\"todos\":[{\"content\":\"Connect TODO events\",\"status\":\"completed\"},{\"content\":\"Show latest assistant reply\",\"status\":\"completed\"},{\"content\":\"Check session isolation\",\"status\":\"completed\"},{\"content\":\"Verify reload recovery\",\"status\":\"completed\"}]}"
+            }
+          }
+        },
+        {
+          "type": "chunk",
+          "time": 1794286456742,
+          "chunk": {
+            "type": "finish",
+            "reason": {
+              "kind": "tool-calls"
+            }
+          }
+        }
+      ]
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "todo/write",
+    "seq": 31,
+    "time": 1794286456750,
+    "data": {
+      "todos": [
+        {
+          "content": "Connect TODO events",
+          "status": "completed"
+        },
+        {
+          "content": "Show latest assistant reply",
+          "status": "completed"
+        },
+        {
+          "content": "Check session isolation",
+          "status": "completed"
+        },
+        {
+          "content": "Verify reload recovery",
+          "status": "completed"
+        }
+      ]
+    }
+  },
+  {
+    "type": "assistant/message",
+    "seq": 35,
+    "time": 1794286460556,
+    "data": {
+      "turn": 2,
+      "step": 3,
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Sidebar checks complete. Each session keeps its own TODO progress and latest saved reply after reload."
+          }
+        ],
+        "source": {
+          "kind": "model",
+          "provider": "sidebar-demo",
+          "model": "controlled-demo-data"
+        },
+        "id": "e778d433-883d-40f9-8e0a-8c9e2c012ce4"
+      },
+      "stream": [
+        {
+          "type": "chunk",
+          "time": 1794286456767,
+          "chunk": {
+            "type": "block-start",
+            "index": 0,
+            "blockType": "text"
+          }
+        },
+        {
+          "type": "text-chunks",
+          "time0": 1794286456767,
+          "index": 0,
+          "dt": [
+            2810,
+            165,
+            162,
+            162,
+            164,
+            162,
+            163
+          ],
+          "texts": [
+            "Sidebar checks complete.",
+            " Each sessio",
+            "n keeps its ",
+            "own TODO pro",
+            "gress and la",
+            "test saved r",
+            "eply after r",
+            "eload."
+          ]
+        },
+        {
+          "type": "chunk",
+          "time": 1794286460555,
+          "chunk": {
+            "type": "block-end",
+            "index": 0,
+            "block": {
+              "type": "text",
+              "text": "Sidebar checks complete. Each session keeps its own TODO progress and latest saved reply after reload."
+            }
+          }
+        },
+        {
+          "type": "chunk",
+          "time": 1794286460555,
+          "chunk": {
+            "type": "finish",
+            "reason": {
+              "kind": "stop"
+            }
+          }
+        }
+      ]
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "turn/end",
+    "seq": 37,
+    "time": 1794286460557,
+    "data": {
+      "turn": 2,
+      "reason": {
+        "kind": "completed"
+      }
+    }
+  }
+]

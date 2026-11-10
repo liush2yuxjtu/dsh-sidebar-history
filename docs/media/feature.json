@@ -1,0 +1,103 @@
+{
+  "feature_id": "dsh-sidebar-history",
+  "feature_name": "DSH Sidebar History",
+  "user_outcome": "See TODO progress and the latest saved assistant reply in session history.",
+  "source": {
+    "environment": "fixture",
+    "verified": false,
+    "production_available": "unverified",
+    "runtime_verified": true,
+    "release_url": "https://github.com/liush2yuxjtu/dsh-sidebar-history/commit/e5f399d033e154d1df2d503084302563418e409f",
+    "production_tag": null,
+    "observed_app_version": "0.1.0",
+    "commit": "e5f399d033e154d1df2d503084302563418e409f",
+    "dsh_version": "0.2.2-rc.1",
+    "dsh_commit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+    "fixtureData": true,
+    "liveModel": false,
+    "prs": []
+  },
+  "recording": {
+    "surface": "browser",
+    "raw": "raw/gt.mp4",
+    "proof_interval_s": [
+      3.24639599609375,
+      7.79539599609375
+    ],
+    "capture": "Chromium CDP screencast, original frame timestamps, no speed changes",
+    "post_capture_checks": "evidence/post-record-checks.json",
+    "original_gt_sha256": "6ceff866fe4298cdb08df584979c7eeeb1d6fd359d5953e68717dbc099f9a58c",
+    "encoding": "H.264, limited color range, yuv420p. Original frame timestamps retained."
+  },
+  "evidence": {
+    "production": "evidence/source.json",
+    "discovery": "evidence/discovery.json",
+    "rehearsal": "evidence/rehearsal.json",
+    "markers": "evidence/markers.jsonl"
+  },
+  "gif": {
+    "start_s": 0,
+    "duration_s": 8,
+    "width": 1040,
+    "max_bytes": 3145728
+  },
+  "presentation": {
+    "mode": "pure-screen",
+    "explanatory_captions": false,
+    "release_badge": false,
+    "decorative_callouts": false,
+    "pointer": "standard",
+    "preserve_native_text_and_captions": true,
+    "chapters": "metadata-only",
+    "narration": false,
+    "music": false,
+    "transitions": false,
+    "zoom": "None. Full window remains visible. GIF width is 1040 pixels for readable context.",
+    "speed_ramp": null
+  },
+  "ui_language": {
+    "value": "en",
+    "preflight_evidence": "evidence/preflight.png",
+    "postcheck_cjk_ui": false,
+    "notes": "English DOM checked at every marker. Poster, full contact sheet, GIF contact sheet and update strip were reviewed."
+  },
+  "recording_lock": {
+    "owner": "dsh-sidebar-video",
+    "evidence": "evidence/recording.log",
+    "note": "Full acquire and release receipt retained in recording.log. No private recorder state is exported."
+  },
+  "skill": {
+    "repository": "liush2yuxjtu/chatcut-release-skills",
+    "revision": "3f870219260b09c42df88d3d95a067ca605df842",
+    "path": "skills/record-production-feature/SKILL.md"
+  },
+  "clip_test_cutout": {
+    "verdict": "not-applicable",
+    "reason": "No stock or portrait footage. Real DSH browser UI only."
+  },
+  "take_verification": {
+    "required_before_keep_or_discard": true,
+    "takes_log": "evidence/takes.log",
+    "takes": [
+      {
+        "id": "take1",
+        "verdict": "discard",
+        "reason": "Full-range JPEG flags produced yuvj420p. MP4 pixel-format gate failed. Visual strip and markers were reviewed before discard.",
+        "strip": "evidence/take1-strip.png"
+      },
+      {
+        "id": "take2",
+        "verdict": "discard",
+        "reason": "Pixel format passed, but a browser reload produced a visible white frame. Reviewed the fixed-time strip and reload markers.",
+        "strip": "evidence/take2-strip.png"
+      },
+      {
+        "id": "take3",
+        "verdict": "keep",
+        "reason": "Original sidebar, toggle, separate session, native TODO events and committed reply are visible. Result holds 4.5 seconds. Reload checks pass after capture.",
+        "strip": "interaction-strip.png",
+        "timing_crosscheck": "evidence/markers.jsonl"
+      }
+    ]
+  }
+}

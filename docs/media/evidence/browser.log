@@ -1,0 +1,15 @@
+
+> dsh-sidebar-history@0.1.0 verify:browser
+> node scripts/browser-test.mjs
+
+
+ RUN  v4.1.11 /Users/liushiyu/projects/dsh-sidebar-release-20261110/plugin
+
+ ✓ tests/browser.test.mjs (1 test) 19633ms
+   ✓ verifies the installed plugin in real DSH Web, with controlled UI data and no paid model calls  19632ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  12:58:42
+   Duration  20.08s (transform 53ms, setup 0ms, import 360ms, tests 19.63s, environment 0ms)
+

@@ -1,0 +1,15 @@
+{
+  "environment": "fixture",
+  "verified": false,
+  "production_available": "unverified",
+  "runtime_verified": true,
+  "release_url": "https://github.com/liush2yuxjtu/dsh-sidebar-history/commit/e5f399d033e154d1df2d503084302563418e409f",
+  "production_tag": null,
+  "observed_app_version": "0.1.0",
+  "commit": "e5f399d033e154d1df2d503084302563418e409f",
+  "dsh_version": "0.2.2-rc.1",
+  "dsh_commit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "fixtureData": true,
+  "liveModel": false,
+  "prs": []
+}
