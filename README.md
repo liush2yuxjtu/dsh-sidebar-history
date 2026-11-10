@@ -19,6 +19,11 @@ A fresh DSH session calls the official DeepSeek API. The model reads generated d
 The video preserves the exact original capture bytes and real elapsed time. The screenshot comes from that same API run. No scripted model, seeded assistant message, seeded task event or mock endpoint is used. [Media provenance and hashes](docs/media/live/provenance.json) · [Media QA](docs/media/live/qa.json).
 
 
+
+## Story-first product demo (new edit)
+
+A longer **problem → action → payoff** video is now available. This is a traceable edit of the existing real DeepSeek API recording, not a new API request. The original 8-second feature GIF and its proof are unchanged. Independent cold-viewer story approval is still pending. See [storyboard, video links, exact cuts and QA](docs/media/story-first.md).
+
 ## Find and resume work
 
 This checkout builds version 0.2.2. The latest published Release can lag behind the checkout; the installation below builds this source.
