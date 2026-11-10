@@ -1,6 +1,22 @@
-# DSH Sidebar History
+# DSH Sidebar History for DeepSeek Harness
+
+[English](README.md) · [简体中文](README.zh-CN.md) · [Website](https://liush2yuxjtu.github.io/dsh-sidebar-history/) · [Download](https://github.com/liush2yuxjtu/dsh-sidebar-history/releases/latest)
 
 An external DeepSeek Harness plugin that shows the current TODO state and latest committed assistant reply in each history card. It uses official projection and slot APIs. It does not modify upstream DSH.
+
+Find the conversation you need before opening it. Read task progress and the latest saved reply directly in the DSH chat history sidebar.
+
+| In each session card | Behavior |
+|---|---|
+| TODO progress | Completed/total count and up to three native tasks. |
+| Latest assistant reply | Two-line preview of the last committed text response. |
+| Generating state | Keeps the previous saved reply while a new response streams. |
+| Search and navigation | Session search, arrow keys, Home, End, and Enter. |
+| Native navigation | Restore DSH's original workspace browser from the sidebar footer. |
+
+![DeepSeek Harness sidebar plugin showing native TODO progress and the latest assistant reply from a real API session](docs/media/live/snapshot.png)
+
+## How it works
 
 Each card shows its title, update date, completed/total count, up to three tasks, and a two-line assistant preview. Active and pending tasks take precedence over completed tasks. The original sidebar shell keeps its collapse and mobile drawer behavior. Use **Native navigation** at the foot to restore the original workspace browser, including its workspace, archive and session actions; **History cards** returns to this view.
 
@@ -24,6 +40,24 @@ Supported and verified target: DSH `0.2.2-rc.1`, upstream `fcc0ad462172522aaf5c9
 
 From a checkout, create a tarball with `npm pack`. In the DSH web profile, use its supported plugin manager or `dsh plugin add --help` to install the local package. The bundle patch enables the host projection and its `./client` export supplies the browser module. Dependencies resolve in the DSH installation; do not add a second React runtime. The automated acceptance below installs the package into an isolated real DSH profile through the official profile composition layer.
 
+Use Node.js `>=24.9.0` and a compatible DSH installation.
+
+```bash
+git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
+cd dsh-sidebar-history
+npm pack
+```
+
+The package is `dsh-sidebar-history-0.1.0.tgz`. Install that local package through your DSH profile's plugin manager. Check `dsh plugin add --help` for your installed CLI's supported options. This project is a DSH plugin, not a browser extension. It is distributed through GitHub; an npm registry release is not required.
+
+## Frequently asked questions
+
+**Where does the TODO status come from?** The sidebar reads DSH's native `todo/write` events. It does not infer completion from chat text.
+
+**Does a history card open another agent?** No. Cards read bounded session projections on demand and render a virtual list.
+
+**Which DSH version is verified?** The current release is verified with `0.2.2-rc.1`. DSH's APIs are pre-stable. Other versions require a compatibility check.
+
 ## Verify
 
 Read [AGENTS.md](AGENTS.md) and the [verification surfaces](.agents/skills/verify/references/surfaces.md).
@@ -45,7 +79,7 @@ The `build` script validates the already distributable JavaScript entries and pa
 
 ## Design and acceptance
 
-- [Canonical design and acceptance Page](https://chatgpt.com/space/page_7a28be26236481918ee65d88725c1d38).
+- [Public plugin website](https://liush2yuxjtu.github.io/dsh-sidebar-history/).
 - [Architecture and decisions](docs/decisions.md).
 - [Verification report](docs/verification.md).
 - [DSH upstream](https://github.com/deepseek-ai/deepseek-harness).

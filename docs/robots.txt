@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://liush2yuxjtu.github.io/dsh-sidebar-history/sitemap.xml

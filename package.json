@@ -1,7 +1,7 @@
 {
   "name": "dsh-sidebar-history",
   "version": "0.1.0",
-  "description": "History cards with real TODO state and the latest committed Assistant message for DSH",
+  "description": "DeepSeek Harness (DSH) sidebar plugin with session TODO progress and latest assistant reply previews",
   "type": "module",
   "license": "MIT",
   "main": "./index.mjs",
@@ -21,7 +21,8 @@
     "src",
     "cordis.patch.yml",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "README.zh-CN.md"
   ],
   "engines": {
     "node": ">=24.9.0",
@@ -52,7 +53,8 @@
     "verify:commit": "node scripts/pre-commit.mjs",
     "setup:hooks": "node scripts/install-hooks.mjs",
     "record:live": "node scripts/live-browser.mjs --record",
-    "verify:media": "node scripts/check-live-media.mjs"
+    "verify:media": "node scripts/check-live-media.mjs",
+    "verify:site": "node scripts/verify-site.mjs"
   },
   "dependencies": {
     "zod": "4.4.3"
@@ -64,5 +66,20 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/liush2yuxjtu/dsh-sidebar-history.git"
-  }
+  },
+  "homepage": "https://liush2yuxjtu.github.io/dsh-sidebar-history/",
+  "bugs": {
+    "url": "https://github.com/liush2yuxjtu/dsh-sidebar-history/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "sidebar",
+    "chat-history",
+    "session-history",
+    "todo",
+    "ai-agent",
+    "plugin"
+  ]
 }

@@ -8,5 +8,6 @@
 | history-live-api | Actual official API responses drive native tools, durable summaries, independent sessions and reload recovery. | [Real API E2E](live-api.md). |
 | release-live-media | Final video and screenshots match the genuine API recording, and README references the verified files. | Run `npm run verify:media`. |
 | staged-pre-commit | A fresh full E2E runs from the exact staged tree before each final commit. | [Tracked hook](live-api.md). |
+| public-discovery | Anonymous readers can reach the bilingual public website, install instructions, real API media and search metadata. | [Public website verification](surfaces/public-discovery.md). |
 
 Do not mark the whole feature PASS until every applicable surface passes. Builds and controlled adapters are not evidence of live model behavior.
