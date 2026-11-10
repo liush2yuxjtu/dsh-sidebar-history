@@ -62,17 +62,17 @@
     <section id="demo" class="section wrap" aria-labelledby="demo-title">
       <div class="section-header"><h2 id="demo-title">看一次真实 API 演示。</h2><p>视频与截图来自同一次 DSH 运行。模型调用原生 TODO 工具，并保存自己生成的回答。</p></div>
       <div class="demo-grid">
-        <div><video class="video" controls preload="none" playsinline poster="../media/live/snapshot.png" aria-label="调用官方 DeepSeek API 的 DSH Sidebar History 真实演示"><source src="../media/live/demo.mp4" type="video/mp4"><a href="../media/live/demo.mp4">下载演示视频</a>。</video><p class="caption">真实 API 录屏。侧栏展示 3 项任务中已完成 2 项，以及实际保存的回复。</p></div>
+        <div><video class="video" controls preload="none" playsinline poster="../media/live/snapshot.png" aria-label="调用官方 DeepSeek API 的 DSH Sidebar History 真实演示"><source src="../media/live/demo.mp4" type="video/mp4"><a href="../media/live/demo.mp4">下载演示视频</a>。</video><p class="caption">9.3 秒英文界面原始录屏。侧栏展示 3 项任务中已完成 2 项，以及实际保存的回复。<a href="demo/">查看附中文解说的演示页</a>。</p></div>
         <div class="demo-text"><h3>演示附带可查证据</h3><p>模型读取生成的演示订单数据，更新 TODO，再提交回答。视频保留原始录制字节和实际时间。</p><p>验证脚本交叉核对 API response ID、usage、tool-use ID 与持久化消息。另一次真实 API 会话和刷新恢复也经过验证。</p><div class="links"><a href="../media/live/evidence/result.json">API 回执</a><a href="../media/live/provenance.json">来源与哈希</a><a href="../media/live/qa.json">媒体检查</a></div><p class="note">验证套件还使用受控适配器来调试。这些结果与此处的真实 API 演示分开记录。</p></div>
       </div>
       <details><summary>查看 8 秒 GIF 预览</summary><img src="../media/live/feature-8s.gif" alt="真实 API 运行的 8 秒片段，显示 DSH 侧栏中的 TODO 进度和 Assistant 回复。" loading="lazy" decoding="async"><p><a href="../media/live/feature-8s.gif">打开 GIF</a>，或<a href="../media/live/demo.mp4">下载完整录屏</a>。</p></details>
     </section>
     <section id="install" class="section wrap" aria-labelledby="install-title">
       <div class="install-grid">
-        <div><p class="eyebrow">从源码安装</p><h2 id="install-title">为 DSH Profile<br>添加历史卡片。</h2><p>已验证版本为 DeepSeek Harness <code>0.2.2-rc.1</code>，上游 commit 为 <code>fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159</code>。</p><p class="fine">DSH API 尚未稳定。调整支持版本前，先验证兼容性。插件要求 Node.js 24.9.0 或更高版本。</p><div class="links"><a href="https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/main/README.zh-CN.md#安装">完整安装说明</a><a href="https://github.com/deepseek-ai/deepseek-harness">DeepSeek Harness 上游</a></div></div>
+        <div><p class="eyebrow">从源码安装</p><h2 id="install-title">为 DSH Profile<br>添加历史卡片。</h2><p>已验证版本为 DeepSeek Harness <code>0.2.2-rc.1</code>，上游 commit 为 <code>fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159</code>。</p><p class="fine">DSH API 尚未稳定。调整支持版本前，先验证兼容性。插件要求 Node.js 24.9.0 或更高版本。</p><div class="links"><a href="https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/main/docs/i18n/README.zh-CN.md#安装">完整安装说明</a><a href="https://github.com/deepseek-ai/deepseek-harness">DeepSeek Harness 上游</a></div></div>
         <ol class="steps"><li><strong>克隆仓库并生成安装包。</strong><pre><code>git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
-npm pack</code></pre><p>命令会生成本地 tarball 安装包。</p></li><li><strong>把 tarball 安装到 DSH Web Profile。</strong><p>使用该 Profile 支持的插件管理器。若使用 CLI，先运行 <code>dsh plugin add --help</code>，按当前 DSH 版本提供的说明安装。</p></li><li><strong>打开该 Profile 的历史侧栏。</strong><p>历史卡片会显示各会话的 TODO 和最新一条已保存回复。点击底部 <strong>工作区与归档</strong> 可恢复原生工作区导航。</p></li></ol>
+npm pack</code></pre><p>命令会生成本地 tarball 安装包。</p></li><li><strong>把 tarball 安装到 DSH Web Profile。</strong><pre><code>dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.0.tgz"</code></pre><p>在刚克隆的仓库目录运行此命令。若使用其他 Web Profile，替换 <code>web</code>。Profile 选项放在 <code>add</code> 前。也可使用该 Profile 的插件管理器。</p></li><li><strong>打开该 Profile 的历史侧栏。</strong><p>历史卡片会显示各会话的 TODO 和最新一条已保存回复。点击底部 <strong>工作区与归档</strong> 可恢复原生工作区导航。</p></li></ol>
       </div>
     </section>
     <section id="questions" class="section wrap" aria-labelledby="questions-title">
