@@ -1,7 +1,7 @@
 {
   "name": "dsh-sidebar-history",
   "version": "0.1.0",
-  "description": "History cards with real TODO state and the latest committed Assistant message for DSH",
+  "description": "DeepSeek Harness (DSH) sidebar plugin with TODO progress, latest assistant reply previews, and searchable chat history",
   "type": "module",
   "license": "MIT",
   "main": "./index.mjs",
@@ -21,7 +21,18 @@
     "src",
     "cordis.patch.yml",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "docs/i18n",
+    "docs/telemetry.md",
+    "docs/discovery.md",
+    "scripts/collect-telemetry.mjs",
+    "docs/media/live/demo.mp4",
+    "docs/media/live/feature-8s.gif",
+    "docs/media/live/snapshot.png",
+    "docs/media/live/evidence/result.json",
+    "docs/media/live/provenance.json",
+    "docs/media/live/qa.json",
+    "docs/media/live/evidence/native-events.json"
   ],
   "engines": {
     "node": ">=24.9.0",
@@ -44,15 +55,17 @@
     }
   },
   "scripts": {
-    "test": "node --test tests/projection.test.mjs tests/candidate.test.mjs",
-    "build": "node scripts/check.mjs",
+    "test": "node --test tests/projection.test.mjs tests/candidate.test.mjs tests/telemetry.test.mjs",
+    "build": "node scripts/check.mjs && node scripts/check-docs.mjs",
     "verify": "npm test && npm run build",
     "verify:browser": "node scripts/browser-test.mjs",
     "verify:live": "node scripts/live-browser.mjs",
     "verify:commit": "node scripts/pre-commit.mjs",
     "setup:hooks": "node scripts/install-hooks.mjs",
     "record:live": "node scripts/live-browser.mjs --record",
-    "verify:media": "node scripts/check-live-media.mjs"
+    "verify:media": "node scripts/check-live-media.mjs",
+    "telemetry:collect": "node scripts/collect-telemetry.mjs",
+    "verify:docs": "node scripts/check-docs.mjs"
   },
   "dependencies": {
     "zod": "4.4.3"
@@ -64,5 +77,22 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/liush2yuxjtu/dsh-sidebar-history.git"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "dsh-plugins",
+    "deepseek-harness",
+    "deepseek",
+    "sidebar",
+    "chat-history",
+    "todo",
+    "task-management",
+    "ai-agent",
+    "developer-tools",
+    "web-ui"
+  ],
+  "homepage": "https://github.com/liush2yuxjtu/dsh-sidebar-history#readme",
+  "bugs": {
+    "url": "https://github.com/liush2yuxjtu/dsh-sidebar-history/issues"
   }
 }

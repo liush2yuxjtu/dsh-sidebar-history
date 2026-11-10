@@ -1,32 +1,57 @@
-# DSH Sidebar History
+# DSH Sidebar History for DeepSeek Harness
 
-An external DeepSeek Harness plugin that shows the current TODO state and latest committed assistant reply in each history card. It uses official projection and slot APIs. It does not modify upstream DSH.
+[English](README.md) · [简体中文](docs/i18n/README.zh-CN.md) · [繁體中文](docs/i18n/README.zh-TW.md) · [日本語](docs/i18n/README.ja.md) · [Español](docs/i18n/README.es.md)
 
-Each card shows its title, update date, completed/total count, up to three tasks, and a two-line assistant preview. Active and pending tasks take precedence over completed tasks. The original sidebar shell keeps its collapse and mobile drawer behavior. Use **Native navigation** at the foot to restore the original workspace browser, including its workspace, archive and session actions; **History cards** returns to this view.
+**DSH Sidebar History** is a DeepSeek Harness sidebar plugin that puts TODO progress and the latest saved assistant reply in your chat history. Find unfinished work and reopen the right session without opening every conversation.
 
-Task state comes only from `todo/write`. A new `turn/start` clears the previous turn's tasks, matching DSH's own TODO lifecycle. The preview comes only from committed `assistant/message` text, excluding interrupted messages, reasoning, tool blocks and uncommitted attempts. While streaming, the card shows Generating and keeps the last committed message. A formally committed message without text displays an explicit non-text state.
-
-The host stores a bounded `sidebarHistory` projection in each session's normal summary. Historical sessions replay their durable logs. Cold cards read projections on demand, with explicit loading and failure states. The client subscribes to the existing session list and renders only the viewport plus overscan; it never retains every historical session. Archived sessions stay hidden. Search combines cached titles and replies with DSH's official content search to locate cold history. Keyboard navigation supports Up, Down, Home, End and Enter.
+This independent, MIT-licensed plugin uses DSH's official projection and sidebar slot APIs. It does not modify upstream DSH.
 
 ## Feature video
 
-[![Eight-second preview recorded with the official DeepSeek API](docs/media/live/feature-8s.gif)](docs/media/live/demo.mp4)
+[![DSH history cards show real TODO progress and the latest assistant reply](docs/media/live/feature-8s.gif)](docs/media/live/demo.mp4)
 
-[Watch the real API video, 9.3 seconds](docs/media/live/demo.mp4) · [Actual browser snapshot](docs/media/live/snapshot.png) · [API receipts and verification](docs/media/live/evidence/result.json)
+[Watch the real API video, 9.3 seconds](docs/media/live/demo.mp4) · [Actual browser snapshot](docs/media/live/snapshot.png) · [API receipts](docs/media/live/evidence/result.json)
 
-A fresh DSH session calls the official DeepSeek API. The model reads generated demo order inputs, updates the native TODO list and submits its own reply. The sidebar shows 2/3 completed tasks and the actual saved answer. HTTP response IDs, usage, tool-use IDs and persisted messages are cross-checked. A second real API session and reload recovery are verified after recording.
+A fresh DSH session calls the official DeepSeek API. The model reads demo order inputs, calls the native TODO tool, and saves its own answer. The sidebar shows 2/3 tasks completed and that saved reply. The video preserves the original recording bytes and real elapsed time. No mock endpoint, scripted model reply, or seeded assistant or TODO events appear in this recording. A second API session and reload recovery were also checked. See the [media provenance and hashes](docs/media/live/provenance.json) and [media QA](docs/media/live/qa.json).
 
-The video preserves the exact original capture bytes and real elapsed time. The screenshot comes from that same API run. No scripted model, seeded assistant message, seeded task event or mock endpoint is used. [Media provenance and hashes](docs/media/live/provenance.json) · [Media QA](docs/media/live/qa.json).
+## Find and resume work
 
-## Install
+- See each session's title, update date, completed task count, up to three tasks, and a two-line assistant preview.
+- Find unfinished work first. In-progress and pending tasks appear before completed tasks.
+- Search session titles and cached replies. DSH's official content search also finds history that is not loaded yet.
+- Move between cards with Up, Down, Home, End, and Enter. The list renders only visible cards plus a small buffer.
+- Keep the native sidebar collapse and mobile drawer. Use **Native navigation** to access the original workspace, archive, and session actions. Use **History cards** to return.
 
-Supported and verified target: DSH `0.2.2-rc.1`, upstream `fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159`. DSH APIs are pre-stable; verify compatibility before changing the version range.
+TODO status comes only from `todo/write` events. A new `turn/start` clears the previous turn's tasks. Previews use committed `assistant/message` text. During generation, the card keeps the last committed reply and shows **Generating**. Interrupted output, reasoning, and tool blocks do not become previews. Empty, non-text, loading, and failed summaries have explicit states. Archived sessions stay hidden.
 
-From a checkout, create a tarball with `npm pack`. In the DSH web profile, use its supported plugin manager or `dsh plugin add --help` to install the local package. The bundle patch enables the host projection and its `./client` export supplies the browser module. Dependencies resolve in the DSH installation; do not add a second React runtime. The automated acceptance below installs the package into an isolated real DSH profile through the official profile composition layer.
+The UI currently supports English and Simplified Chinese, following DSH's locale. The README documentation is available in the five languages linked above.
 
-## Verify
+## Install the sidebar plugin
 
-Read [AGENTS.md](AGENTS.md) and the [verification surfaces](.agents/skills/verify/references/surfaces.md).
+Requirements: Node.js `>=24.9.0` and an existing DSH Web installation. The verified target is DSH `0.2.2-rc.1`, upstream commit `fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159`. The declared DSH range is `>=0.2.2-rc.1 <0.3.0`; other versions in that range have not been independently verified.
+
+Build a local tarball and install it into the `web` profile:
+
+```bash
+git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
+cd dsh-sidebar-history
+npm pack
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.0.tgz"
+```
+
+Open DSH Web. The history sidebar displays cards for your unarchived sessions. Replace `web` if you use another Web profile. The profile option must appear before `add`. You can also install the tarball with DSH's plugin manager. See the [upstream installation guide](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md).
+
+The package ships JavaScript entries and needs no bundler. DSH resolves runtime dependencies. Do not install a second React runtime. These instructions install from this repository; they do not assume an npm registry release. DSH's APIs are pre-stable, so check compatibility before upgrading.
+
+## Telemetry and privacy
+
+Maintainers can run `npm run telemetry:collect` with authorized GitHub access to collect repository views, clones, referrers, stars, and release asset downloads. The script writes local JSON and Markdown reports. Unavailable traffic APIs are marked **BLOCKED**, not recorded as zero.
+
+No tracking SDK is installed in the plugin. The collector does not contact plugin users or collect chat content. Feature clicks and user retention are not measured yet. The [telemetry guide](docs/telemetry.md) describes the available metrics and a proposed opt-in event design.
+
+## Verify a change
+
+Read [AGENTS.md](https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/main/AGENTS.md) and the [verification surfaces](https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/main/.agents/skills/verify/references/surfaces.md). Use a built upstream checkout with frozen dependencies, Node.js `>=24.9.0`, and Chromium.
 
 ```bash
 npm run setup:hooks
@@ -37,17 +62,17 @@ npm run verify:media
 npm run verify:commit
 ```
 
-`verify` and `verify:browser` are fast unit/build and controlled-adapter debugging checks. They do not establish final acceptance. `verify:live` requires existing authorized DeepSeek credentials and makes actual API calls. `verify:commit` and the installed Git hook export the staged tree, run every check and require a new real API E2E. Missing access refuses the commit. Configure DSH_SOURCE_ROOT or the local Git setting dsh.sourceRoot. Supply DEEPSEEK_API_KEY in the runtime, or use a private DSH_PROVIDER_ENV_FILE. Credentials remain outside the repository.
+Set `DSH_SOURCE_ROOT`, or the local Git setting `dsh.sourceRoot`, for later commands. Set `DSH_CHROMIUM_PATH` if Chromium is not available through upstream Playwright. Supply existing authorized credentials through `DEEPSEEK_API_KEY` or a private `DSH_PROVIDER_ENV_FILE`. Keep credentials outside Git.
 
-The browser check requires the upstream frozen dependencies, built Host packages and Web dist, plus Chromium. Set `DSH_CHROMIUM_PATH` to use a system executable, or install the browser associated with upstream Playwright. The runner links missing local test dependencies from that checkout. It runs a real DSH profile, HTTP/WebSocket transport, session persistence, the real TODO tool and browser UI. Its explicit controlled adapter supplies deterministic text and tool calls for streaming checks; it makes no paid model calls and does not claim live model acceptance. Screenshots and raw results are written to ignored `.runtime/browser/`.
+`verify` checks units and package structure. `verify:browser` uses an explicit controlled adapter for regression tests. These checks do not establish real-model acceptance. `verify:live` makes actual API calls through DSH. The Git hook and `verify:commit` export the staged tree and require fresh unit, browser, media, and real API checks. Missing access or failed assertions refuse the commit. Run evidence stays in ignored `.runtime/`.
 
-The `build` script validates the already distributable JavaScript entries and package references. No bundler is required for DSH's browser-module format.
+## Project links
 
-## Design and acceptance
+- [Architecture and decisions](https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/main/docs/decisions.md)
+- [Verification report](https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/main/docs/verification.md)
+- [Discovery and repository metadata](docs/discovery.md)
+- [Design and acceptance](https://chatgpt.com/space/page_7a28be26236481918ee65d88725c1d38)
+- [DeepSeek Harness upstream](https://github.com/deepseek-ai/deepseek-harness)
+- [MIT license](LICENSE)
 
-- [Canonical design and acceptance Page](https://chatgpt.com/space/page_7a28be26236481918ee65d88725c1d38).
-- [Architecture and decisions](docs/decisions.md).
-- [Verification report](docs/verification.md).
-- [DSH upstream](https://github.com/deepseek-ai/deepseek-harness).
-
-The generated concept is a visual reference. Before/after evidence must be captured from the actual DSH browser at the same viewport. Existing DSH navigation, composer, brand and conversation content remain owned by DSH.
+Find related plugins through the [`dsh-plugin`](https://github.com/topics/dsh-plugin) and [`dsh-plugins`](https://github.com/topics/dsh-plugins) GitHub topics. This project is not an official DeepSeek product.
