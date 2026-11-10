@@ -11,5 +11,6 @@
 | multilingual-discovery | Five README translations have valid language links, real API media references, compatible installation instructions, and package keywords. | [Discovery documentation](discovery-telemetry.md). |
 | maintainer-github-telemetry | An existing authorized GitHub login retrieves aggregate metrics without collecting plugin conversation content or reporting API errors as zero. | [Real GitHub collection](discovery-telemetry.md). |
 | public-discovery | Anonymous readers can reach the bilingual public website, install instructions, real API media and search metadata. | [Public website verification](surfaces/public-discovery.md). |
+| localized-release-media | Each published language uses its own real API screenshot, GIF and MP4, and actual pixels contain the expected language. | [Localized media verification](localized-media.md). |
 
 Do not mark the whole feature PASS until every applicable surface passes. Builds and controlled adapters are not evidence of live model behavior.

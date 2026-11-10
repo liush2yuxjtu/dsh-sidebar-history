@@ -1,17 +1,43 @@
 {
   "status": "PASS",
-  "runId": "ea776bdc-ef71-48ec-8512-04acd1119690",
-  "auditId": "ea776bdc",
+  "runId": "4eee1736-c1ee-42db-abdb-e909580c3d11",
+  "auditId": "4eee1736",
+  "mediaLocale": "en",
+  "hostLocale": "en",
+  "htmlLang": "en",
+  "visibleTextAtProof": "DSH Local Build\n0.2.2-rc.1-fcc0ad4\nNew Session\n⌥\n⌘\nN\nPlugins\nAutomation tasks\nMore\nChat history\n1 sessions\nAudit orders.json. Use English in\n2/3 tasks\n05:44 PM\nPublish release\n✓\nRead order data\n✓\nVerify both totals\n✦\n\nAudit ID 4eee1736: Order A total = 3 × 8 + 5 = **29**. Order B total = 0 × 7 + 3 = **3**. Read and verification tasks are complete. Publish release stays pending because approval is required. Nothing was edited or published.\n\nNative navigation\nMore\nAudit orders.json. Use English in\nStandard mode\nChat\nTrajectory\nAudit orders.json. Use English in every visible message, including explanations before tool calls and progress updates. First create exactly three tasks with todo_write: Read order data; Verify both totals; Publish release. Use read to inspect the file. Compute quantity * unitPrice + shipping for each order. Complete the first two tasks and leave Publish release pending because approval is required. Do not edit or publish. Reply in English under 60 words. Name each row Order A or Order B, give its computed total, and include audit ID 4eee1736.\n17:44\nCompleted\nCompleted in 4s\n\nI'll start by setting up exactly three tasks.\n\nNow I'll read the order file.\n\nOrder A: 3 × 8 + 5 = 29. Order B: 0 × 7 + 3 = 3. Marking the first two tasks complete.\n\nAudit ID 4eee1736: Order A total = 3 × 8 + 5 = 29. Order B total = 0 × 7 + 3 = 3. Read and verification tasks are complete. Publish release stays pending because approval is required. Nothing was edited or published.\n\nUsage 9.2K tok\n17:44\nTo-dos\n2 completed · 1 pending\nMessage or run a task, / commands, @ files or sessions\nWorkspace Write\ndeepseek-flash\nOff\n1 turns 4 steps·196 tok/s\n9.2K tok·Cache hit 87%\n0%",
+  "expectedUiLabels": [
+    "Chat history",
+    "Native navigation",
+    "2/3 tasks"
+  ],
+  "expectedTaskLabels": [
+    "Read order data",
+    "Verify both totals",
+    "Publish release"
+  ],
+  "requestedTaskLabels": [
+    "Read order data",
+    "Verify both totals",
+    "Publish release"
+  ],
+  "languageChecks": {
+    "status": "PASS",
+    "modelResponse": "all actual assistant messages including tool preambles checked",
+    "nativeTaskLabels": "all three match requested language",
+    "uiLabels": "actual rendered labels checked"
+  },
   "candidateTree": null,
   "candidateSources": {
-    "package.json": "6e3cb0cc4466d068666ffe0889f2a7cda82ecb372bc3e91719a23941f9dc472c",
+    "package.json": "0feef80052dd2732f88c6a6dbb5d4b5194b2742d4e50d1dad8b2cf7b8cbdcd15",
     "index.mjs": "4578ca495317c028097474cc13a3acdc78611a65a472766abe50c1a1dac5504a",
-    "client.js": "af05a438866817cb737dab5c0500835057beacebc334ddc4b17707b2e08cffb6",
+    "client.js": "2857adb05f89dcd1f9955710ae01401caab4484e14ca43a36559c4faedd6522e",
     "src/projection.mjs": "40405bac66d421977ddf5ddfa5350a83096015b6c157de4e4c3b1f2128d4ff2d",
-    "tests/live.test.mjs": "a40a45cfa22c6314dc4e3838cb364bc7b3e8640e6c200c229d9aa79d2a2457a0",
+    "tests/live.test.mjs": "51a2cdba796f66527ebd69be27a9eda35a22e44771220889f1ab82475ef90422",
     "tests/live-proof.mjs": "6c40205793bb8082a05b61177f63d58a829805976d15660f639306ce9db1ee6d",
     "tests/live.config.mjs": "89ac271d9dba7a8dfa060923a20eb97d3a2a3e99207bbfecf1f2118196728ffc",
-    "scripts/live-browser.mjs": "5d0f754330f39886b769e42c66b40ec7d1898522a2ac533ba7779e7cf8cadea7"
+    "tests/media-locales.mjs": "91a70c6e97bec0773a821350eaf8b68257253645a90e1a7c0885d6d14c64c98b",
+    "scripts/live-browser.mjs": "daa74a8172e3163d459d547dd729b56cc8d0d36bf19975a2de12c8eee65f14df"
   },
   "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
   "provider": "deepseek-official",
@@ -26,45 +52,45 @@
     {
       "id": "A",
       "quantity": 3,
-      "unitPrice": 13,
+      "unitPrice": 8,
       "shipping": 5
     },
     {
       "id": "B",
       "quantity": 0,
-      "unitPrice": 5,
-      "shipping": 5
+      "unitPrice": 7,
+      "shipping": 3
     }
   ],
   "expectedTotals": [
-    44,
-    5
+    29,
+    3
   ],
-  "primarySession": "session-8e0c5bb6-b43c-44b4-aac9-d86558f30e02",
-  "secondSession": "session-f756f39c-46e6-46d9-9b51-74db513fde1f",
+  "primarySession": "session-cde38ab3-ff96-44c4-a49a-78926d6baaf3",
+  "secondSession": "session-024b4050-413a-42c5-aec6-3ba6fcebcb48",
   "provenance": {
-    "apiResponses": 3,
+    "apiResponses": 4,
     "nativeToolCalls": 3,
     "todoWrites": 2
   },
   "calls": [
     {
       "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
-      "sessionId": "session-8e0c5bb6-b43c-44b4-aac9-d86558f30e02",
+      "sessionId": "session-cde38ab3-ff96-44c4-a49a-78926d6baaf3",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:34.734Z",
-      "responseId": "2a103903-532a-49c3-80d3-543e10c3a55c",
+      "at": "2026-11-10T09:44:49.630Z",
+      "responseId": "294a7ae5-c527-4a3f-8413-8dcb88e8300d",
       "usage": {
-        "input_tokens": 510,
+        "input_tokens": 531,
         "cache_creation_input_tokens": 0,
         "cache_read_input_tokens": 1408,
-        "output_tokens": 112,
+        "output_tokens": 92,
         "service_tier": "standard"
       },
-      "text": "",
+      "text": "I'll start by setting up exactly three tasks.",
       "toolCalls": [
         {
-          "id": "call_00_2xZoWGzt2vDNu1O7HEyp4757",
+          "id": "call_00_EvGsZgKPEY5i2pwUAaxZ4316",
           "name": "todo_write",
           "arguments": {
             "todos": [
@@ -82,12 +108,35 @@
               }
             ]
           }
-        },
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "48ed53703ff9e6b68880aa383948ce25855418ba04ed59ecccfdc78dcf83bcf4",
+      "finishedAt": "2026-11-10T09:44:50.770Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-cde38ab3-ff96-44c4-a49a-78926d6baaf3",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:44:50.801Z",
+      "responseId": "0357191d-c7c8-4e4e-8db5-371c12742000",
+      "usage": {
+        "input_tokens": 139,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1920,
+        "output_tokens": 95,
+        "service_tier": "standard"
+      },
+      "text": "Now I'll read the order file.",
+      "toolCalls": [
         {
-          "id": "call_01_6yWcX0dqy8KoD9UDRWU28959",
+          "id": "call_00_4rYbTtnVFbxlseWa2Veg5096",
           "name": "read",
           "arguments": {
-            "file_path": "orders.json"
+            "file_path": "/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-fzoEWW/sidebar-live-audit/orders.json"
           }
         }
       ],
@@ -95,26 +144,26 @@
       "requestId": null,
       "stopReason": "tool_use",
       "complete": true,
-      "responseSha256": "6bd2bb40232430c305b671437a3018555037a74c0d47ecc792a1d6b7ad10788a",
-      "finishedAt": "2026-11-10T06:07:36.031Z"
+      "responseSha256": "3ff08124e7ac6eb38fa9b99ec9483c57ac584d55b84e539f18a084d91ab7ae2c",
+      "finishedAt": "2026-11-10T09:44:51.950Z"
     },
     {
       "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
-      "sessionId": "session-8e0c5bb6-b43c-44b4-aac9-d86558f30e02",
+      "sessionId": "session-cde38ab3-ff96-44c4-a49a-78926d6baaf3",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:36.073Z",
-      "responseId": "52c80017-5e5b-4c14-ad5a-2f05f0273384",
+      "at": "2026-11-10T09:44:51.986Z",
+      "responseId": "c9311494-a85a-4c5d-923d-58c96e285076",
       "usage": {
-        "input_tokens": 348,
+        "input_tokens": 319,
         "cache_creation_input_tokens": 0,
-        "cache_read_input_tokens": 1920,
-        "output_tokens": 81,
+        "cache_read_input_tokens": 2048,
+        "output_tokens": 118,
         "service_tier": "standard"
       },
-      "text": "",
+      "text": "Order A: 3 × 8 + 5 = 29. Order B: 0 × 7 + 3 = 3. Marking the first two tasks complete.",
       "toolCalls": [
         {
-          "id": "call_00_l7VPm0BJWCALNr4mGgNv1499",
+          "id": "call_00_IfgYgN0EHIREXUnAJrSq4775",
           "name": "todo_write",
           "arguments": {
             "todos": [
@@ -138,101 +187,113 @@
       "requestId": null,
       "stopReason": "tool_use",
       "complete": true,
-      "responseSha256": "93ae4b4a8a0970c1fba5f19c11a3df86f0b220e5f3c7ade92cd80de0b8d390cf",
-      "finishedAt": "2026-11-10T06:07:37.105Z"
+      "responseSha256": "588b87b71a4fb8d6705a63f5f117558a2027c956f56700c28f583a0dde161d22",
+      "finishedAt": "2026-11-10T09:44:52.997Z"
     },
     {
       "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
-      "sessionId": "session-8e0c5bb6-b43c-44b4-aac9-d86558f30e02",
+      "sessionId": "session-cde38ab3-ff96-44c4-a49a-78926d6baaf3",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:37.132Z",
-      "responseId": "bba3a23e-52a4-4c70-82bb-1f809f10c0f9",
+      "at": "2026-11-10T09:44:53.019Z",
+      "responseId": "395e8d4b-61dc-4a1e-8e0e-dfb985804e83",
       "usage": {
-        "input_tokens": 201,
+        "input_tokens": 209,
         "cache_creation_input_tokens": 0,
-        "cache_read_input_tokens": 2176,
-        "output_tokens": 61,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 64,
         "service_tier": "standard"
       },
-      "text": "Audit ea776bdc complete. No edits made.\n\n- Order A: 3 × 13 + 5 = **44**\n- Order B: 0 × 5 + 5 = **5**\n\nRead order data and verified both totals. Publish release remains pending, awaiting approval.",
+      "text": "Audit ID 4eee1736: Order A total = 3 × 8 + 5 = **29**. Order B total = 0 × 7 + 3 = **3**. Read and verification tasks are complete. Publish release stays pending because approval is required. Nothing was edited or published.",
       "toolCalls": [],
       "httpStatus": 200,
       "requestId": null,
       "stopReason": "end_turn",
       "complete": true,
-      "responseSha256": "3e322a28073ee67890e9aca01da5843293db6dfae966479b716d98b66ab4f38c",
-      "finishedAt": "2026-11-10T06:07:38.046Z"
+      "responseSha256": "c11d985d0b0b3ae6c2e112222ed83034f16f4c1585bdeea76abca4e25a951752",
+      "finishedAt": "2026-11-10T09:44:54.407Z"
     },
     {
       "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
-      "sessionId": "session-f756f39c-46e6-46d9-9b51-74db513fde1f",
+      "sessionId": "session-024b4050-413a-42c5-aec6-3ba6fcebcb48",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:45.193Z",
-      "responseId": "9086ad31-862b-4955-bb5f-3b079ab3938c",
+      "at": "2026-11-10T09:45:02.589Z",
+      "responseId": "1ba38f76-0794-4de7-be59-4e5cbffd0238",
       "usage": {
-        "input_tokens": 577,
+        "input_tokens": 575,
         "cache_creation_input_tokens": 0,
         "cache_read_input_tokens": 1280,
-        "output_tokens": 14,
+        "output_tokens": 15,
         "service_tier": "standard"
       },
-      "text": "Welcome to this independent review, audit ID ea776bdc-second.",
+      "text": "Welcome to this independent review, audit ID 4eee1736-second.",
       "toolCalls": [],
       "httpStatus": 200,
       "requestId": null,
       "stopReason": "end_turn",
       "complete": true,
-      "responseSha256": "8de349bfc47073a695a18fe2d3f1076a94dc8bdbcdf3c406f0ddf736f0291e4e",
-      "finishedAt": "2026-11-10T06:07:46.074Z"
+      "responseSha256": "4d6a38cc51756fd1890c7b9148454405559b2efe043dc3ee1f6fdbbd0744ead3",
+      "finishedAt": "2026-11-10T09:45:03.429Z"
     }
   ],
   "usage": [
     {
       "provider": "deepseek-official",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:34.724Z",
+      "at": "2026-11-10T09:44:49.620Z",
       "usage": {
-        "inputTokens": 510,
-        "outputTokens": 112,
+        "inputTokens": 531,
+        "outputTokens": 92,
         "cacheReadTokens": 1408,
         "cacheWriteTokens": 0,
-        "totalTokens": 2030
+        "totalTokens": 2031
       }
     },
     {
       "provider": "deepseek-official",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:36.071Z",
+      "at": "2026-11-10T09:44:50.799Z",
       "usage": {
-        "inputTokens": 348,
-        "outputTokens": 81,
+        "inputTokens": 139,
+        "outputTokens": 95,
         "cacheReadTokens": 1920,
         "cacheWriteTokens": 0,
-        "totalTokens": 2349
+        "totalTokens": 2154
       }
     },
     {
       "provider": "deepseek-official",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:37.131Z",
+      "at": "2026-11-10T09:44:51.982Z",
       "usage": {
-        "inputTokens": 201,
-        "outputTokens": 61,
-        "cacheReadTokens": 2176,
+        "inputTokens": 319,
+        "outputTokens": 118,
+        "cacheReadTokens": 2048,
         "cacheWriteTokens": 0,
-        "totalTokens": 2438
+        "totalTokens": 2485
       }
     },
     {
       "provider": "deepseek-official",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:45.191Z",
+      "at": "2026-11-10T09:44:53.017Z",
       "usage": {
-        "inputTokens": 577,
-        "outputTokens": 14,
+        "inputTokens": 209,
+        "outputTokens": 64,
+        "cacheReadTokens": 2304,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2577
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:02.588Z",
+      "usage": {
+        "inputTokens": 575,
+        "outputTokens": 15,
         "cacheReadTokens": 1280,
         "cacheWriteTokens": 0,
-        "totalTokens": 1871
+        "totalTokens": 1870
       }
     }
   ],
@@ -248,15 +309,15 @@
   ],
   "consoleErrors": [],
   "proof_interval_s": [
-    4.5589130859375,
-    9.2889130859375
+    6.030566162109375,
+    11.319566162109375
   ],
   "video": {
-    "duration_s": 9.2909130859375,
-    "frames": 58
+    "duration_s": 11.325566162109375,
+    "frames": 62
   },
-  "finalAssistantText": "Audit ea776bdc complete. No edits made.\n\n- Order A: 3 × 13 + 5 = **44**\n- Order B: 0 × 5 + 5 = **5**\n\nRead order data and verified both totals. Publish release remains pending, awaiting approval.",
-  "finalPreview": "Audit ea776bdc complete. No edits made. - Order A: 3 × 13 + 5 = **44** - Order B: 0 × 5 + 5 = **5** Read order data and verified both totals. Publish release remains pending, awaiting approval.",
+  "finalAssistantText": "Audit ID 4eee1736: Order A total = 3 × 8 + 5 = **29**. Order B total = 0 × 7 + 3 = **3**. Read and verification tasks are complete. Publish release stays pending because approval is required. Nothing was edited or published.",
+  "finalPreview": "Audit ID 4eee1736: Order A total = 3 × 8 + 5 = **29**. Order B total = 0 × 7 + 3 = **3**. Read and verification tasks are complete. Publish release stays pending because approval is required. Nothing was edited or published.",
   "finalTodos": [
     {
       "content": "Read order data",
@@ -272,10 +333,10 @@
     }
   ],
   "screenshots": {
-    "preflight.png": "8237b6ac4a3cbc4c24f599e2a79995122d9feb5a2037e3eb39c3dc478cd95d09",
-    "progress.png": "3ef50d81d4656900176109aa1e55b3bc722d945bf8c9dbcbc55c7b2938350034",
-    "final.png": "3fcf0cb5293e4a121966974e4dce4d017758c2595b96296b46c08629340e9eb2",
-    "reloaded.png": "460cfa895eb45335edcf18e5f3f5563b4843d3f43fbb005d5dd4337f0bf1907d"
+    "preflight.png": "75b3f1c7c542220b2730c2ae9bbac53653e850f49938faaf8869331a8e076c71",
+    "progress.png": "8d741daa0ba8bc3fdea1a6578f88558cfa3059090c0e58037f2d3ba5ae02712f",
+    "final.png": "38c11174d91de939ba72e4c94224e48384fe6260fa6a669e71a8a0ec66f0edd6",
+    "reloaded.png": "eeb711b63b3d0e63ed99dec685c7bf2ad192efd619441903c86343aa4b2c05ee"
   },
-  "raw_sha256": "abddf33c4724ee0a405442170aa594de3c87759735f6501cf02fc2c00a17d02e"
+  "raw_sha256": "f1f8fcc452d6fbd9d78b6da7a3c3778d45dff767d3fcc4ce58512cabcdf2ef5c"
 }

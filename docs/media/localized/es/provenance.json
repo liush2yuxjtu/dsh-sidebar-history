@@ -1,0 +1,33 @@
+{
+  "mediaLocale": "es",
+  "hostLocale": "es",
+  "htmlLang": "es",
+  "runId": "819a4f8e-2344-488a-82dd-1d06e302035c",
+  "provider": "deepseek-official",
+  "model": "deepseek-flash",
+  "liveModel": true,
+  "mockedService": false,
+  "scriptedModel": false,
+  "duration_s": 11.233333,
+  "gif_source_window_s": [
+    2.417231201171875,
+    10.417231201171875
+  ],
+  "proof_interval_s": [
+    5.917231201171875,
+    11.215231201171875
+  ],
+  "video_is_exact_original_recording": true,
+  "artifacts": {
+    "demo.mp4": "018cababee090823f15b6c2d5834fdaa30387a36f597f9687f914ef11059ffe6",
+    "feature-8s.gif": "281a42ecd76853c560f577e15cefbaa13b2102532bbe2868a774023cc672044d",
+    "snapshot.png": "fe81f513f3766f46c221805be3973d40dcbcaeae5f370e7ad9514dc73283f07b",
+    "poster.png": "fe81f513f3766f46c221805be3973d40dcbcaeae5f370e7ad9514dc73283f07b",
+    "raw/gt.mp4": "018cababee090823f15b6c2d5834fdaa30387a36f597f9687f914ef11059ffe6",
+    "contact-sheet.png": "8d88b57953fe165b7a911b926b7436e362a59a1c8fb2c4eed7600b60fda1750e",
+    "interaction-strip.png": "837beae38f8b819962913999c40b9bca5b77d34a42dd376f023a8f0c992c1ee0",
+    "evidence/progress.png": "acf8efaea2e8790afce98230ca8b35378d825f2ca01af82ff51e74adcb7d22b9",
+    "evidence/result.json": "809c80ae133d0930e8bc1c74970d5e15f8154a20edc982aa1a8664250f3028cb",
+    "evidence/native-events.json": "37dcca1e2f4e5aafe8797b6f0e4f5fe69f7bad0bce5aa99d621bcfbc12fb2e6b"
+  }
+}

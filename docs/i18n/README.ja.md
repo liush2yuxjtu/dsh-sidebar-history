@@ -8,11 +8,11 @@ MIT ライセンスの独立したプラグインです。DSH の公式 projecti
 
 ## 機能の動画
 
-[![DSH の履歴カードに実際の TODO 進捗と最新の Assistant 返信を表示](../media/live/feature-8s.gif)](../media/live/demo.mp4)
+[![DSH の履歴カードに実際の TODO 進捗と最新の Assistant 返信を表示](../media/localized/ja/feature-8s.gif)](../media/localized/ja/demo.mp4)
 
-[実 API による動画を見る、9.3 秒](../media/live/demo.mp4) · [実際のブラウザー画像](../media/live/snapshot.png) · [API の実行記録](../media/live/evidence/result.json)
+[実 API による動画を見る](../media/localized/ja/demo.mp4) · [実際のブラウザー画像](../media/localized/ja/snapshot.png) · [API の実行記録](../media/localized/ja/evidence/result.json)
 
-新しい DSH セッションから DeepSeek 公式 API を呼び出して録画しました。モデルはデモ用の注文データを読み、標準 TODO ツールを呼び出し、自分の回答を保存します。サイドバーには 3 件中 2 件の完了と保存済みの返信が表示されます。動画は元の録画データと実際の経過時間を保持しています。mock エンドポイント、台本によるモデルの返信、事前に挿入した Assistant メッセージや TODO イベントは使っていません。別の実 API セッションと再読み込み後の復元も確認済みです。[出所とハッシュ](../media/live/provenance.json)、[メディアの検証結果](../media/live/qa.json)を参照してください。
+新しい DSH セッションから DeepSeek 公式 API を呼び出して録画しました。モデルはデモ用の注文データを読み、標準 TODO ツールを呼び出し、自分の回答を保存します。サイドバーには 3 件中 2 件の完了と保存済みの返信が表示されます。動画は元の録画データと実際の経過時間を保持しています。mock エンドポイント、台本によるモデルの返信、事前に挿入した Assistant メッセージや TODO イベントは使っていません。別の実 API セッションと再読み込み後の復元も確認済みです。[出所とハッシュ](../media/localized/ja/provenance.json)、[メディアの検証結果](../media/localized/ja/qa.json)を参照してください。
 
 ## 作業を見つけて再開する
 
@@ -20,11 +20,11 @@ MIT ライセンスの独立したプラグインです。DSH の公式 projecti
 - 進行中と未着手のタスクを、完了したタスクより先に表示します。
 - タイトルとキャッシュ済みの返信を検索できます。DSH 公式の内容検索では、未読み込みの履歴も探せます。
 - 上下矢印、Home、End、Enter キーで操作できます。画面内のカードと少量の予備だけを描画します。
-- 標準の折りたたみとモバイル用ドロワーを保持します。**Native navigation** で元のワークスペース、アーカイブ、セッション操作に戻ります。**History cards** でカード表示に戻ります。
+- 標準の折りたたみとモバイル用ドロワーを保持します。**標準ナビゲーション** で元のワークスペース、アーカイブ、セッション操作に戻ります。**履歴カード** でカード表示に戻ります。
 
-TODO の状態は `todo/write` イベントだけから取得します。新しい `turn/start` で前のターンのタスクを消去します。プレビューは確定済みの `assistant/message` テキストだけを使います。生成中は **Generating** と表示し、最後に確定した返信を保持します。中断された出力、推論、ツールブロックはプレビューになりません。返信なし、非テキスト、読み込み中、読み込み失敗を区別します。アーカイブ済みセッションは表示しません。
+TODO の状態は `todo/write` イベントだけから取得します。新しい `turn/start` で前のターンのタスクを消去します。プレビューは確定済みの `assistant/message` テキストだけを使います。生成中は **生成中** と表示し、最後に確定した返信を保持します。中断された出力、推論、ツールブロックはプレビューになりません。返信なし、非テキスト、読み込み中、読み込み失敗を区別します。アーカイブ済みセッションは表示しません。
 
-プラグイン UI は現在、DSH の言語設定に従い、英語と簡体字中国語に対応しています。README は上記の 5 言語で利用できます。
+サイドバーは英語、簡体字中国語、繁体字中国語、日本語、スペイン語に対応し、DSH の言語設定に従います。繁体字はサイドバーとデモ画面を対象とし、他の DSH 画面は簡体字に戻る場合があります。
 
 ## サイドバープラグインをインストールする
 
@@ -36,7 +36,7 @@ Node.js `>=24.9.0` と、インストール済みの DSH Web が必要です。�
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.0.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.1.tgz"
 ```
 
 DSH Web を開くと、アーカイブされていないセッションの履歴カードが表示されます。別の Web profile を使う場合は `web` を置き換えてください。`--profile` は `add` より前に指定します。DSH のプラグインマネージャーからローカル tarball をインストールすることもできます。[上流のインストールガイド](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md)を参照してください。
@@ -71,7 +71,6 @@ npm run verify:commit
 - [アーキテクチャーと設計判断](https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/main/docs/decisions.md)
 - [検証レポート](https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/main/docs/verification.md)
 - [公開検索とリポジトリ情報](../discovery.md)
-- [設計と受け入れ条件](https://chatgpt.com/space/page_7a28be26236481918ee65d88725c1d38)
 - [DeepSeek Harness 上流](https://github.com/deepseek-ai/deepseek-harness)
 - [MIT ライセンス](../../LICENSE)
 

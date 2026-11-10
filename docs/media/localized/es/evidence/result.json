@@ -1,0 +1,342 @@
+{
+  "status": "PASS",
+  "runId": "819a4f8e-2344-488a-82dd-1d06e302035c",
+  "auditId": "819a4f8e",
+  "mediaLocale": "es",
+  "hostLocale": "es",
+  "htmlLang": "es",
+  "visibleTextAtProof": "Compilación local de DSH\n0.2.2-rc.1-fcc0ad4\nNueva sesión\n⌥\n⌘\nN\nComplementos\nTareas de automatización\nMás\nHistorial de chats\n1 sesiones\nRevisa orders.json. Usa español en\n2/3 tareas\n17:46\nPublicar versión\n✓\nLeer pedidos\n✓\nVerificar totales\n✦\n\nRevisión de orders.json (auditoría 819a4f8e): Pedido A = 2×12+3 = 27. Pedido B = 0×5+3 = 3. Tareas «Leer pedidos» y «Verificar totales» completadas; «Publicar versión» queda pendiente por requerir aprobación. No edité ni publiqué nada.\n\nNavegación nativa\nMás\nRevisa orders.json. Usa español en\nModo estándar\nChat\nTrayectoria\nRevisa orders.json. Usa español en TODOS los mensajes visibles, incluidos los avisos antes de usar herramientas y los mensajes de progreso. No expliques los pasos en inglés. Conserva los identificadores técnicos originales. Primero crea exactamente tres tareas con todo_write: Leer pedidos; Verificar totales; Publicar versión. Usa read para leer el archivo. Calcula quantity * unitPrice + shipping para cada pedido. Completa las dos primeras tareas y deja Publicar versión pendiente porque requiere aprobación. No edites ni publiques. Responde en español en menos de 60 palabras. Usa Pedido A y Pedido B, indica cada total e incluye el identificador 819a4f8e.\n17:46\nCompletado\nCompletado en 4s\n\nVoy a crear las tres tareas primero y luego leer el archivo.\n\nAhora leo orders.json.\n\nCalculo los totales: Pedido A = 2×12+3 = 27; Pedido B = 0×5+3 = 3. Marco las dos primeras tareas como completadas.\n\nRevisión de orders.json (auditoría 819a4f8e): Pedido A = 2×12+3 = 27. Pedido B = 0×5+3 = 3. Tareas «Leer pedidos» y «Verificar totales» completadas; «Publicar versión» queda pendiente por requerir aprobación. No edité ni publiqué nada.\n\nUso Tok 9.4K\n17:46\nTareas pendientes\n2 completado · 1 pendiente\nEnvía mensajes o ejecuta una tarea, / comandos, @ archivos o sesiones\nEscritura en el espacio de trabajo\ndeepseek-flash\nOff\n1 turnos, 4 pasos·213 tok/s\nTok 9.4K·Aciertos de caché: 86%\n0%",
+  "expectedUiLabels": [
+    "Historial de chats",
+    "Navegación nativa",
+    "2/3 tareas"
+  ],
+  "expectedTaskLabels": [
+    "Leer pedidos",
+    "Verificar totales",
+    "Publicar versión"
+  ],
+  "requestedTaskLabels": [
+    "Leer pedidos",
+    "Verificar totales",
+    "Publicar versión"
+  ],
+  "languageChecks": {
+    "status": "PASS",
+    "modelResponse": "all actual assistant messages including tool preambles checked",
+    "nativeTaskLabels": "all three match requested language",
+    "uiLabels": "actual rendered labels checked"
+  },
+  "candidateTree": null,
+  "candidateSources": {
+    "package.json": "0feef80052dd2732f88c6a6dbb5d4b5194b2742d4e50d1dad8b2cf7b8cbdcd15",
+    "index.mjs": "4578ca495317c028097474cc13a3acdc78611a65a472766abe50c1a1dac5504a",
+    "client.js": "2857adb05f89dcd1f9955710ae01401caab4484e14ca43a36559c4faedd6522e",
+    "src/projection.mjs": "40405bac66d421977ddf5ddfa5350a83096015b6c157de4e4c3b1f2128d4ff2d",
+    "tests/live.test.mjs": "51a2cdba796f66527ebd69be27a9eda35a22e44771220889f1ab82475ef90422",
+    "tests/live-proof.mjs": "6c40205793bb8082a05b61177f63d58a829805976d15660f639306ce9db1ee6d",
+    "tests/live.config.mjs": "89ac271d9dba7a8dfa060923a20eb97d3a2a3e99207bbfecf1f2118196728ffc",
+    "tests/media-locales.mjs": "91a70c6e97bec0773a821350eaf8b68257253645a90e1a7c0885d6d14c64c98b",
+    "scripts/live-browser.mjs": "daa74a8172e3163d459d547dd729b56cc8d0d36bf19975a2de12c8eee65f14df"
+  },
+  "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "provider": "deepseek-official",
+  "model": "deepseek-flash",
+  "liveModel": true,
+  "mockedService": false,
+  "scriptedModel": false,
+  "seededAssistantMessages": false,
+  "seededTodoEvents": false,
+  "inputData": "Fresh generated demo order inputs, inspected by native read",
+  "orders": [
+    {
+      "id": "A",
+      "quantity": 2,
+      "unitPrice": 12,
+      "shipping": 3
+    },
+    {
+      "id": "B",
+      "quantity": 0,
+      "unitPrice": 5,
+      "shipping": 3
+    }
+  ],
+  "expectedTotals": [
+    27,
+    3
+  ],
+  "primarySession": "session-e494a3de-ef28-45bf-8eb6-23839ddc629e",
+  "secondSession": "session-09e09668-ae20-42dc-9c27-16a8d316299b",
+  "provenance": {
+    "apiResponses": 4,
+    "nativeToolCalls": 3,
+    "todoWrites": 2
+  },
+  "calls": [
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-e494a3de-ef28-45bf-8eb6-23839ddc629e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:39.327Z",
+      "responseId": "a02fbf4b-7a72-49a7-ab25-c90c5fa7f22b",
+      "usage": {
+        "input_tokens": 464,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1536,
+        "output_tokens": 101,
+        "service_tier": "standard"
+      },
+      "text": "Voy a crear las tres tareas primero y luego leer el archivo.",
+      "toolCalls": [
+        {
+          "id": "call_00_yF9HU4z7s2aSPS6dcqt01066",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Leer pedidos",
+                "status": "in_progress"
+              },
+              {
+                "content": "Verificar totales",
+                "status": "pending"
+              },
+              {
+                "content": "Publicar versión",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "ac4c890ba470ffc31ee2c41408bf5738c8ca38f7b6f6dbfb7f8ec24c2bd7a359",
+      "finishedAt": "2026-11-10T09:46:40.560Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-e494a3de-ef28-45bf-8eb6-23839ddc629e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:40.594Z",
+      "responseId": "15a7a460-6dfa-4996-8427-358495f62700",
+      "usage": {
+        "input_tokens": 209,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1920,
+        "output_tokens": 44,
+        "service_tier": "standard"
+      },
+      "text": "Ahora leo orders.json.",
+      "toolCalls": [
+        {
+          "id": "call_00_ebrC0w2Xuz17YivxAyeW2923",
+          "name": "read",
+          "arguments": {
+            "file_path": "orders.json"
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "09dbc2fe44af561972ad025403be56610280cd3b1ae95a17804b643d14cc29e8",
+      "finishedAt": "2026-11-10T09:46:41.866Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-e494a3de-ef28-45bf-8eb6-23839ddc629e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:41.895Z",
+      "responseId": "baa79fd6-afa1-433d-91ee-1311fd316251",
+      "usage": {
+        "input_tokens": 341,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2048,
+        "output_tokens": 128,
+        "service_tier": "standard"
+      },
+      "text": "Calculo los totales: Pedido A = 2×12+3 = 27; Pedido B = 0×5+3 = 3. Marco las dos primeras tareas como completadas.",
+      "toolCalls": [
+        {
+          "id": "call_00_2yG3OIXLbmo8dy1RRzX67343",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Leer pedidos",
+                "status": "completed"
+              },
+              {
+                "content": "Verificar totales",
+                "status": "completed"
+              },
+              {
+                "content": "Publicar versión",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "bf278316364c08e419e84dbfd387b7b05700e0c0e6442a772ed20da29a84dfa0",
+      "finishedAt": "2026-11-10T09:46:43.101Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-e494a3de-ef28-45bf-8eb6-23839ddc629e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:43.131Z",
+      "responseId": "dc441648-2abc-4612-89a8-63b33efcc201",
+      "usage": {
+        "input_tokens": 241,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 88,
+        "service_tier": "standard"
+      },
+      "text": "Revisión de orders.json (auditoría 819a4f8e): Pedido A = 2×12+3 = 27. Pedido B = 0×5+3 = 3. Tareas «Leer pedidos» y «Verificar totales» completadas; «Publicar versión» queda pendiente por requerir aprobación. No edité ni publiqué nada.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "c8963b2d28bd4f214074d79f661f2275f5dbfa14e39cfcfa4b7159a2325eb8bd",
+      "finishedAt": "2026-11-10T09:46:43.984Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-09e09668-ae20-42dc-9c27-16a8d316299b",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:52.195Z",
+      "responseId": "3fc5a9e9-7343-48b6-8b61-98896c70f095",
+      "usage": {
+        "input_tokens": 584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1280,
+        "output_tokens": 24,
+        "service_tier": "standard"
+      },
+      "text": "Hola, esta revisión independiente queda registrada con el identificador 819a4f8e-second.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "abce442814aa90131151a814637811009ae8415933462622270f7132bbd8ad2c",
+      "finishedAt": "2026-11-10T09:46:52.825Z"
+    }
+  ],
+  "usage": [
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:39.318Z",
+      "usage": {
+        "inputTokens": 464,
+        "outputTokens": 101,
+        "cacheReadTokens": 1536,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2101
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:40.592Z",
+      "usage": {
+        "inputTokens": 209,
+        "outputTokens": 44,
+        "cacheReadTokens": 1920,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2173
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:41.893Z",
+      "usage": {
+        "inputTokens": 341,
+        "outputTokens": 128,
+        "cacheReadTokens": 2048,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2517
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:43.129Z",
+      "usage": {
+        "inputTokens": 241,
+        "outputTokens": 88,
+        "cacheReadTokens": 2304,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2633
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:52.193Z",
+      "usage": {
+        "inputTokens": 584,
+        "outputTokens": 24,
+        "cacheReadTokens": 1280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 1888
+      }
+    }
+  ],
+  "checks": [
+    "official-api-response-identity-and-usage",
+    "api-tool-ids-match-durable-events",
+    "native-read-and-todo-write",
+    "model-computed-order-totals",
+    "committed-text-matches-api",
+    "sidebar-count-and-preview-match-persistence",
+    "independent-session-has-no-tasks",
+    "reload-restores-real-summary"
+  ],
+  "consoleErrors": [],
+  "proof_interval_s": [
+    5.917231201171875,
+    11.215231201171875
+  ],
+  "video": {
+    "duration_s": 11.218231201171875,
+    "frames": 78
+  },
+  "finalAssistantText": "Revisión de orders.json (auditoría 819a4f8e): Pedido A = 2×12+3 = 27. Pedido B = 0×5+3 = 3. Tareas «Leer pedidos» y «Verificar totales» completadas; «Publicar versión» queda pendiente por requerir aprobación. No edité ni publiqué nada.",
+  "finalPreview": "Revisión de orders.json (auditoría 819a4f8e): Pedido A = 2×12+3 = 27. Pedido B = 0×5+3 = 3. Tareas «Leer pedidos» y «Verificar totales» completadas; «Publicar versión» queda pendiente por requerir aprobación. No edité ni publiqué nada.",
+  "finalTodos": [
+    {
+      "content": "Leer pedidos",
+      "status": "completed"
+    },
+    {
+      "content": "Verificar totales",
+      "status": "completed"
+    },
+    {
+      "content": "Publicar versión",
+      "status": "pending"
+    }
+  ],
+  "screenshots": {
+    "preflight.png": "09afe68b99ec60c1058e99a1a12656e02740da38729c33f046512ed4cd3dce42",
+    "progress.png": "acf8efaea2e8790afce98230ca8b35378d825f2ca01af82ff51e74adcb7d22b9",
+    "final.png": "fe81f513f3766f46c221805be3973d40dcbcaeae5f370e7ad9514dc73283f07b",
+    "reloaded.png": "59adc7803bc7888031d679af601d4b8847f2f5f6234c0a02fca2ea1e4306999e"
+  },
+  "raw_sha256": "018cababee090823f15b6c2d5834fdaa30387a36f597f9687f914ef11059ffe6"
+}

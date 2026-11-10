@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "metadata_pass": true,
+  "api_provenance": "PASS",
+  "liveModel": true,
+  "runId": "42f9f6b5-adc7-4252-8297-5edd02951895",
+  "visual_review": {
+    "status": "PASS",
+    "method": "Actual screenshot, contact sheet and interaction strip inspected",
+    "reviewedAt": "2026-11-10T09:56:28.570245+00:00",
+    "artifacts": {
+      "snapshot.png": "9496807ee5dc9acdc9c90b77d9f2a040982b5b2a3ae4e4e2c415ba36c95526bc",
+      "contact-sheet.png": "8b55c9117680d1ab1ca46f2aac0b2f5830fed32e524c61197c2be5dcdba5a757",
+      "interaction-strip.png": "e5926e933e60a1f46a2508dc3a1cc015aeebf894ce864437bd58d4df652d56af"
+    },
+    "findings": "Simplified Chinese native labels and all intermediate/final replies; 读取订单数据 and 核对订单金额 checked, 发布版本 pending. 核对编号 42f9f6b5 gives 42 and 5. Complete result and sidebar visible; time 17:45. Contact sheet and GIF strip preserve creation/read, verification and final preview changes.",
+    "finalResultHold_s": {
+      "demo.mp4": 5.366667,
+      "feature-8s.gif": 4.5
+    }
+  },
+  "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."
+}

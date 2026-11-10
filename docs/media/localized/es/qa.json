@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "metadata_pass": true,
+  "api_provenance": "PASS",
+  "liveModel": true,
+  "runId": "819a4f8e-2344-488a-82dd-1d06e302035c",
+  "visual_review": {
+    "status": "PASS",
+    "method": "Actual screenshot, contact sheet and interaction strip inspected",
+    "reviewedAt": "2026-11-10T09:56:28.570245+00:00",
+    "artifacts": {
+      "snapshot.png": "fe81f513f3766f46c221805be3973d40dcbcaeae5f370e7ad9514dc73283f07b",
+      "contact-sheet.png": "8d88b57953fe165b7a911b926b7436e362a59a1c8fb2c4eed7600b60fda1750e",
+      "interaction-strip.png": "837beae38f8b819962913999c40b9bca5b77d34a42dd376f023a8f0c992c1ee0"
+    },
+    "findings": "Spanish native labels and all intermediate/final replies, including Voy a crear / Ahora leo / Calculo; old English sentences absent. Leer pedidos and Verificar totales checked, Publicar versión pending. Auditoría 819a4f8e gives 27 and 3. Complete result and sidebar visible; time 17:46. Contact sheet and GIF strip show task/read, verification and final preview updates.",
+    "finalResultHold_s": {
+      "demo.mp4": 5.233333,
+      "feature-8s.gif": 4.42
+    }
+  },
+  "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."
+}

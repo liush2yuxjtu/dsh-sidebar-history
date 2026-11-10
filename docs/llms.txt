@@ -4,12 +4,12 @@
 
 ## Product facts
 
-- Package version: 0.1.0. Verified DSH target: 0.2.2-rc.1, upstream commit fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159.
+- Package version: 0.1.1. Verified DSH target: 0.2.2-rc.1, upstream commit fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159.
 - Requires Node.js >=24.9.0 and a DSH Web profile. Other declared compatible versions are not independently verified.
 - TODO status comes from native todo/write events. A new turn clears the previous turn's tasks.
 - Reply previews use committed assistant/message text. Interrupted output, reasoning, and tool blocks are excluded.
-- UI languages: English and Simplified Chinese. README languages: English, Simplified Chinese, Traditional Chinese, Japanese, and Spanish.
-- The published video is an original English UI recording using the official DeepSeek API. It contains no scripted model replies or seeded TODO events.
+- Sidebar UI languages: English, Simplified Chinese, Traditional Chinese, Japanese, and Spanish. Traditional Chinese also provides a bounded native-host language pack, with fallback for namespaces outside that pack. README languages: English, Simplified Chinese, Traditional Chinese, Japanese, and Spanish.
+- Each README uses its own language-specific original recording using the official DeepSeek API. The Chinese website uses Simplified Chinese media; the English website uses English media. It contains no scripted model replies or seeded TODO events.
 - Repository metrics do not measure active installations, Google ranking, or user retention.
 
 ## Documentation
@@ -22,3 +22,5 @@
 - [API verification receipt](https://liush2yuxjtu.github.io/dsh-sidebar-history/media/live/evidence/result.json)
 - [Media provenance and SHA-256](https://liush2yuxjtu.github.io/dsh-sidebar-history/media/live/provenance.json)
 - [Sitemap](https://liush2yuxjtu.github.io/dsh-sidebar-history/sitemap.xml)
+
+- [Five-language media registry](https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/main/docs/media/locales.json)

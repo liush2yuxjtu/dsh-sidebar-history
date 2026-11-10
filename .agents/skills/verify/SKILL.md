@@ -1,6 +1,6 @@
 ---
 name: verify
-description: Verify work through existing project checks and the real affected caller boundary. Use for /verify, confirming a fix, verifying agent work, and before every commit in this repository.
+description: Verify work through existing project checks and the real affected caller boundary. Use for /verify, confirming a fix, verifying agent work, localized release media, and before every commit in this repository.
 ---
 
 # Verify the work
@@ -41,9 +41,17 @@ Keep checks proportional. Do not add CI or scaffolding solely for this workflow.
 
 ## Final media and staged commit
 
-Run `npm run setup:hooks` for this checkout. The tracked hook exports the exact staged tree into an isolated directory, then runs unit/build, controlled browser regression, live-media provenance and a new actual API E2E. The index must remain unchanged. Missing prerequisites or a nonzero check refuse the commit. Do not bypass the hook or present a cached receipt as the current run.
+Run `npm run setup:hooks` for this checkout. The tracked hook exports the exact staged tree into an isolated directory, then runs unit/build, controlled browser regression, live-media provenance, localized pixel checks, and five new actual API E2E runs, one for each published language. The index must remain unchanged. Missing prerequisites or a nonzero check refuse the commit. Do not bypass the hook or present a cached receipt as the current run.
 
-The final MP4 must preserve the exact real API raw recording. Its hash and the final screenshot hash must match the live recording receipt. Validate actual official response IDs, usage, native tool IDs and persisted messages. README release media references must point to the live media directory. Test rejection of an old mock screenshot before the final commit. Read `references/live-api.md` for commands and evidence.
+The final MP4 must preserve the exact real API raw recording. Its hash and the final screenshot hash must match the live recording receipt. Validate actual official response IDs, usage, native tool IDs and persisted messages. English README release media references must point to the canonical live media directory. Every translated document must point to its own locale in docs/media/locales.json. Test rejection of an old mock screenshot before the final commit. Read `references/live-api.md` for commands and evidence.
+
+## Localized release media
+
+Read [Localized media verification](references/localized-media.md) when changing a public language, translation, screenshot, poster, GIF, video, media link, or recording script. Validate every language in docs/media/locales.json. Read the actual screen text and saved model output. A translated caption does not translate English pixels.
+
+Run the localized media checker on the Mac mini. It verifies per-language real API provenance, current plugin source hashes, raw video identity, document links, and distinctive words read from actual screenshot, GIF, and MP4 pixels with Vision OCR. Reuse no English capture as another language. Keep the original recordings, timing, and native application text. Do not fake localization through DOM replacement, painted text, generated images, or subtitles.
+
+Run the actual-pixel negative test. It must reject English pixels renamed and rehashed as Japanese. Inspect each language's contact sheet, interaction strip, and final screenshot independently. Save per-language PASS, FAIL, or BLOCKED plus raw evidence. Missing OCR, an unsupported language, a wrong-language asset, or an unrecorded locale blocks localized publication. The staged-tree real API commit gate remains mandatory.
 
 ## Verdict
 

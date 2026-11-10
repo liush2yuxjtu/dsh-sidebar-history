@@ -1,0 +1,342 @@
+{
+  "status": "PASS",
+  "runId": "cae33b84-0956-4aa7-8ae9-3a897fdff821",
+  "auditId": "cae33b84",
+  "mediaLocale": "zh-TW",
+  "hostLocale": "zh-TW",
+  "htmlLang": "zh-TW",
+  "visibleTextAtProof": "DSH 本地構建\n0.2.2-rc.1-fcc0ad4\n新會話\n⌥\n⌘\nN\n插件\n自動化任務\n更多\n歷史會話\n1 個會話\n對 orders.json。全程使用標準繁\n2/3 項任務\n下午05:45\n發佈版本\n✓\n讀取訂單資料\n✓\n核對訂單金額\n✦\n\n已完成前兩項，第三項仍待處理。 **核對編號：cae33b84** - **訂單 A**：3 × 7 + 3 = **24** - **訂單 B**：0 × 9 + 4 = **4** 「發佈版本」尚未處理，因為需要核准；我沒有修改檔案，也沒有進行發佈。\n\n原生導覽\n更多\n對 orders.json。全程使用標準繁\n標準模式\n對話\n軌跡\n對 orders.json。全程使用標準繁體中文，包括工具呼叫前的說明、中途進度及最後回覆，不可混入簡體字；使用「並」、「軌跡」等正體字，技術識別名稱保留原文。先使用 todo_write 建立恰好三項任務：讀取訂單資料；核對訂單金額；發佈版本。用 read 讀取檔案，計算每筆訂單的 quantity * unitPrice + shipping。完成前兩項；發佈版本仍待處理，因為需要核准。不要修改檔案或發佈。用繁體中文簡短回覆，稱每筆為「訂單 A」和「訂單 B」，列出金額，並包含核對編號 cae33b84。\n17:45\n已完成\n已完成，用時 5秒\n\n我先建立三項任務。\n\n現在讀取 orders.json。\n\n計算完成，更新任務狀態。\n\n已完成前兩項，第三項仍待處理。\n\n核對編號：cae33b84\n\n訂單 A：3 × 7 + 3 = 24\n訂單 B：0 × 9 + 4 = 4\n\n「發佈版本」尚未處理，因為需要核准；我沒有修改檔案，也沒有進行發佈。\n\n用量 9.2K tok\n17:45\n任務\n2 已完成 · 1 待處理\n發消息或創建任務, / 調用指令, @ 文件或對話\n工作區內修改\ndeepseek-flash\nOff\n1 輪 4 步·195 tok/s\n9.2K tok·緩存命中 86%\n0%",
+  "expectedUiLabels": [
+    "歷史會話",
+    "原生導覽",
+    "2/3 項任務"
+  ],
+  "expectedTaskLabels": [
+    "讀取訂單資料",
+    "核對訂單金額",
+    "發佈版本"
+  ],
+  "requestedTaskLabels": [
+    "讀取訂單資料",
+    "核對訂單金額",
+    "發佈版本"
+  ],
+  "languageChecks": {
+    "status": "PASS",
+    "modelResponse": "all actual assistant messages including tool preambles checked",
+    "nativeTaskLabels": "all three match requested language",
+    "uiLabels": "actual rendered labels checked"
+  },
+  "candidateTree": null,
+  "candidateSources": {
+    "package.json": "0feef80052dd2732f88c6a6dbb5d4b5194b2742d4e50d1dad8b2cf7b8cbdcd15",
+    "index.mjs": "4578ca495317c028097474cc13a3acdc78611a65a472766abe50c1a1dac5504a",
+    "client.js": "2857adb05f89dcd1f9955710ae01401caab4484e14ca43a36559c4faedd6522e",
+    "src/projection.mjs": "40405bac66d421977ddf5ddfa5350a83096015b6c157de4e4c3b1f2128d4ff2d",
+    "tests/live.test.mjs": "51a2cdba796f66527ebd69be27a9eda35a22e44771220889f1ab82475ef90422",
+    "tests/live-proof.mjs": "6c40205793bb8082a05b61177f63d58a829805976d15660f639306ce9db1ee6d",
+    "tests/live.config.mjs": "89ac271d9dba7a8dfa060923a20eb97d3a2a3e99207bbfecf1f2118196728ffc",
+    "tests/media-locales.mjs": "91a70c6e97bec0773a821350eaf8b68257253645a90e1a7c0885d6d14c64c98b",
+    "scripts/live-browser.mjs": "daa74a8172e3163d459d547dd729b56cc8d0d36bf19975a2de12c8eee65f14df"
+  },
+  "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "provider": "deepseek-official",
+  "model": "deepseek-flash",
+  "liveModel": true,
+  "mockedService": false,
+  "scriptedModel": false,
+  "seededAssistantMessages": false,
+  "seededTodoEvents": false,
+  "inputData": "Fresh generated demo order inputs, inspected by native read",
+  "orders": [
+    {
+      "id": "A",
+      "quantity": 3,
+      "unitPrice": 7,
+      "shipping": 3
+    },
+    {
+      "id": "B",
+      "quantity": 0,
+      "unitPrice": 9,
+      "shipping": 4
+    }
+  ],
+  "expectedTotals": [
+    24,
+    4
+  ],
+  "primarySession": "session-54ff2886-667e-4fee-92b6-72d4f3654823",
+  "secondSession": "session-7a20ccbf-1e77-49bb-81c7-22f430c42271",
+  "provenance": {
+    "apiResponses": 4,
+    "nativeToolCalls": 3,
+    "todoWrites": 2
+  },
+  "calls": [
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-54ff2886-667e-4fee-92b6-72d4f3654823",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:43.723Z",
+      "responseId": "eb63f843-8160-47bd-a3a8-4324ebe84bde",
+      "usage": {
+        "input_tokens": 575,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1408,
+        "output_tokens": 92,
+        "service_tier": "standard"
+      },
+      "text": "我先建立三項任務。",
+      "toolCalls": [
+        {
+          "id": "call_00_dIxNkQVl0L82vmhqsayW4994",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "讀取訂單資料",
+                "status": "in_progress"
+              },
+              {
+                "content": "核對訂單金額",
+                "status": "pending"
+              },
+              {
+                "content": "發佈版本",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "8a77b0e7ab34f83a6836f2666e760a2a4e3d2910f1f3c28fa9e47a24eeb342e0",
+      "finishedAt": "2026-11-10T09:45:45.000Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-54ff2886-667e-4fee-92b6-72d4f3654823",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:45.032Z",
+      "responseId": "7b4e3b49-66a9-42d1-9a43-5a41df1deb43",
+      "usage": {
+        "input_tokens": 183,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1920,
+        "output_tokens": 43,
+        "service_tier": "standard"
+      },
+      "text": "現在讀取 orders.json。",
+      "toolCalls": [
+        {
+          "id": "call_00_lmHKmg61tdIRKkcp1U7V3831",
+          "name": "read",
+          "arguments": {
+            "file_path": "orders.json"
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "fe4079ab57633007aadad40461bd41caf645d806de3530cc169d7aac5590f633",
+      "finishedAt": "2026-11-10T09:45:46.306Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-54ff2886-667e-4fee-92b6-72d4f3654823",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:46.350Z",
+      "responseId": "8990cfb9-7bf3-45e1-9c4e-0bafa8b3ea25",
+      "usage": {
+        "input_tokens": 312,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2048,
+        "output_tokens": 91,
+        "service_tier": "standard"
+      },
+      "text": "計算完成，更新任務狀態。",
+      "toolCalls": [
+        {
+          "id": "call_00_KR0OjHWddQIockBaOtLn6378",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "讀取訂單資料",
+                "status": "completed"
+              },
+              {
+                "content": "核對訂單金額",
+                "status": "completed"
+              },
+              {
+                "content": "發佈版本",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "7eef66e6c08b7be0c77ada22f5b10de7a4a09b4373f028ef914b79fb0969b5ea",
+      "finishedAt": "2026-11-10T09:45:47.490Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-54ff2886-667e-4fee-92b6-72d4f3654823",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:47.513Z",
+      "responseId": "98f997c1-f8e0-4283-bbf5-b10ef1663a71",
+      "usage": {
+        "input_tokens": 175,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 81,
+        "service_tier": "standard"
+      },
+      "text": "已完成前兩項，第三項仍待處理。\n\n**核對編號：cae33b84**\n\n- **訂單 A**：3 × 7 + 3 = **24**\n- **訂單 B**：0 × 9 + 4 = **4**\n\n「發佈版本」尚未處理，因為需要核准；我沒有修改檔案，也沒有進行發佈。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "f02e6e975124361e96a5fbc436e71c8efc0de0da2c58de1b0a6347606b13db88",
+      "finishedAt": "2026-11-10T09:45:48.932Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-7a20ccbf-1e77-49bb-81c7-22f430c42271",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:56.839Z",
+      "responseId": "d9258296-1492-459c-9410-fc32982d32a4",
+      "usage": {
+        "input_tokens": 575,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1280,
+        "output_tokens": 23,
+        "service_tier": "standard"
+      },
+      "text": "您好，這是獨立會話，核對編號 cae33b84-second，一切都已就緒。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "29d46f1c1a92d34cff35d84fdc45ed4818d23103b60f4fe4e87008f619d0c830",
+      "finishedAt": "2026-11-10T09:45:57.933Z"
+    }
+  ],
+  "usage": [
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:43.715Z",
+      "usage": {
+        "inputTokens": 575,
+        "outputTokens": 92,
+        "cacheReadTokens": 1408,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2075
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:45.030Z",
+      "usage": {
+        "inputTokens": 183,
+        "outputTokens": 43,
+        "cacheReadTokens": 1920,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2146
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:46.348Z",
+      "usage": {
+        "inputTokens": 312,
+        "outputTokens": 91,
+        "cacheReadTokens": 2048,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2451
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:47.512Z",
+      "usage": {
+        "inputTokens": 175,
+        "outputTokens": 81,
+        "cacheReadTokens": 2304,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2560
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:56.838Z",
+      "usage": {
+        "inputTokens": 575,
+        "outputTokens": 23,
+        "cacheReadTokens": 1280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 1878
+      }
+    }
+  ],
+  "checks": [
+    "official-api-response-identity-and-usage",
+    "api-tool-ids-match-durable-events",
+    "native-read-and-todo-write",
+    "model-computed-order-totals",
+    "committed-text-matches-api",
+    "sidebar-count-and-preview-match-persistence",
+    "independent-session-has-no-tasks",
+    "reload-restores-real-summary"
+  ],
+  "consoleErrors": [],
+  "proof_interval_s": [
+    6.44577294921875,
+    11.78677294921875
+  ],
+  "video": {
+    "duration_s": 11.78977294921875,
+    "frames": 84
+  },
+  "finalAssistantText": "已完成前兩項，第三項仍待處理。\n\n**核對編號：cae33b84**\n\n- **訂單 A**：3 × 7 + 3 = **24**\n- **訂單 B**：0 × 9 + 4 = **4**\n\n「發佈版本」尚未處理，因為需要核准；我沒有修改檔案，也沒有進行發佈。",
+  "finalPreview": "已完成前兩項，第三項仍待處理。 **核對編號：cae33b84** - **訂單 A**：3 × 7 + 3 = **24** - **訂單 B**：0 × 9 + 4 = **4** 「發佈版本」尚未處理，因為需要核准；我沒有修改檔案，也沒有進行發佈。",
+  "finalTodos": [
+    {
+      "content": "讀取訂單資料",
+      "status": "completed"
+    },
+    {
+      "content": "核對訂單金額",
+      "status": "completed"
+    },
+    {
+      "content": "發佈版本",
+      "status": "pending"
+    }
+  ],
+  "screenshots": {
+    "preflight.png": "bc09d008e1ed852ddfef43887f68f0a4bb8d1f11061222d2ca4a09858136fcec",
+    "progress.png": "5628dd3d559a2b6f4b5b97063a10eadc42c2e0ff9bf0df92f32b467fcf0e3552",
+    "final.png": "b92cbac1978785c04abba0dd0708e8c91e95be8e0b5eb460c4ee244ddca4c858",
+    "reloaded.png": "cb2250a604cd505dfe4d363358d66484f4f0e2d2d27be1d3a8b59eb3f759ac01"
+  },
+  "raw_sha256": "6add87e55d66db17e6273cc0bc1d4ae5f90e768986110a4c119dc2d85ec5a083"
+}

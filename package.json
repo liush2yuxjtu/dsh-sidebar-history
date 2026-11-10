@@ -1,6 +1,6 @@
 {
   "name": "dsh-sidebar-history",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Harness (DSH) sidebar plugin with TODO progress, latest assistant reply previews, and searchable chat history",
   "type": "module",
   "license": "MIT",
@@ -32,7 +32,9 @@
     "docs/media/live/evidence/result.json",
     "docs/media/live/provenance.json",
     "docs/media/live/qa.json",
-    "docs/media/live/evidence/native-events.json"
+    "docs/media/live/evidence/native-events.json",
+    "docs/media/localized",
+    "docs/media/locales.json"
   ],
   "engines": {
     "node": ">=24.9.0",
@@ -55,7 +57,7 @@
     }
   },
   "scripts": {
-    "test": "node --test tests/projection.test.mjs tests/candidate.test.mjs tests/telemetry.test.mjs",
+    "test": "node --test tests/projection.test.mjs tests/candidate.test.mjs tests/telemetry.test.mjs tests/locale.test.mjs tests/localized-media.test.mjs tests/media-locales.test.mjs",
     "build": "node scripts/check.mjs && node scripts/check-docs.mjs",
     "verify": "npm test && npm run build",
     "verify:browser": "node scripts/browser-test.mjs",
@@ -63,10 +65,12 @@
     "verify:commit": "node scripts/pre-commit.mjs",
     "setup:hooks": "node scripts/install-hooks.mjs",
     "record:live": "node scripts/live-browser.mjs --record",
-    "verify:media": "node scripts/check-live-media.mjs",
+    "verify:media": "node scripts/check-live-media.mjs && node scripts/check-localized-media.mjs",
     "telemetry:collect": "node scripts/collect-telemetry.mjs",
     "verify:docs": "node scripts/check-docs.mjs",
-    "verify:site": "node scripts/verify-site.mjs"
+    "verify:site": "node scripts/verify-site.mjs",
+    "verify:media:locales": "node scripts/check-localized-media.mjs",
+    "record:locales": "python3 scripts/record-localized-media.py"
   },
   "dependencies": {
     "zod": "4.4.3"

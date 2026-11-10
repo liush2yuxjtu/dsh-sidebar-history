@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "locales": {
+    "en": {
+      "directory": "docs/media/live",
+      "readme": "README.md",
+      "hostLocale": "en",
+      "htmlLang": "en",
+      "ocrTerms": [
+        "Chat history"
+      ],
+      "website": "docs/index.html",
+      "websites": [
+        "docs/demo/index.html"
+      ]
+    },
+    "zh-CN": {
+      "directory": "docs/media/localized/zh-CN",
+      "readme": "docs/i18n/README.zh-CN.md",
+      "hostLocale": "zh",
+      "htmlLang": "zh-CN",
+      "ocrTerms": [
+        "历史会话"
+      ],
+      "website": "docs/zh/index.html",
+      "websites": [
+        "docs/zh/demo/index.html"
+      ]
+    },
+    "zh-TW": {
+      "directory": "docs/media/localized/zh-TW",
+      "readme": "docs/i18n/README.zh-TW.md",
+      "hostLocale": "zh-TW",
+      "htmlLang": "zh-TW",
+      "ocrTerms": [
+        "歷史會話"
+      ]
+    },
+    "ja": {
+      "directory": "docs/media/localized/ja",
+      "readme": "docs/i18n/README.ja.md",
+      "hostLocale": "ja",
+      "htmlLang": "ja",
+      "ocrTerms": [
+        "履歴"
+      ]
+    },
+    "es": {
+      "directory": "docs/media/localized/es",
+      "readme": "docs/i18n/README.es.md",
+      "hostLocale": "es",
+      "htmlLang": "es",
+      "ocrTerms": [
+        "Historial"
+      ]
+    }
+  }
+}

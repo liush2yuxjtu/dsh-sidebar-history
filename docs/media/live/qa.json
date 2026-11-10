@@ -3,38 +3,21 @@
   "metadata_pass": true,
   "api_provenance": "PASS",
   "liveModel": true,
-  "runId": "ea776bdc-ef71-48ec-8512-04acd1119690",
+  "runId": "4eee1736-c1ee-42db-abdb-e909580c3d11",
   "visual_review": {
-    "reviewer": "Codex",
-    "at": "2026-11-10T06:13:06.656671+00:00",
-    "verdict": "PASS",
-    "images": [
-      "snapshot.png",
-      "contact-sheet.png",
-      "interaction-strip.png"
-    ],
-    "checks": [
-      "Real API text visible",
-      "Native 2/3 TODO state",
-      "Readable final reply",
-      "Visible pointer and sidebar toggle",
-      "English UI",
-      "No blank frame",
-      "At least 3 seconds of result"
-    ],
-    "timing": "Raw source is 9.3 seconds, matching the observed 9.290913-second capture."
-  },
-  "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health.",
-  "playback": {
-    "status": "pass",
-    "playback": {
-      "currentTime": 1.604457,
-      "duration": 9.3,
-      "width": 1280,
-      "height": 800,
-      "error": null,
-      "paused": false
+    "status": "PASS",
+    "method": "Actual screenshot, contact sheet and interaction strip inspected",
+    "reviewedAt": "2026-11-10T09:56:28.570245+00:00",
+    "artifacts": {
+      "snapshot.png": "38c11174d91de939ba72e4c94224e48384fe6260fa6a669e71a8a0ec66f0edd6",
+      "contact-sheet.png": "8fdc6574977abad775f0dd7d68d391defa9d8a6967fd02775532abd055310bec",
+      "interaction-strip.png": "229c8ab107007d6e4d165a047a7ac788fea958639d6b6f88f2a2ba5f1033099e"
     },
-    "reachedEnd": true
-  }
+    "findings": "English native labels and all intermediate/final replies; Read order data and Verify both totals checked, Publish release pending. Audit 4eee1736 gives 29 and 3. Complete result and sidebar visible; time 05:44 PM / 17:44. Contact sheet shows input, creation/read, verification and final reply; GIF strip shows task-state and preview updates without blank frames.",
+    "finalResultHold_s": {
+      "demo.mp4": 5.2,
+      "feature-8s.gif": 4.42
+    }
+  },
+  "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."
 }

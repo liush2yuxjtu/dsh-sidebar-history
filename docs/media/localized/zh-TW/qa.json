@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "metadata_pass": true,
+  "api_provenance": "PASS",
+  "liveModel": true,
+  "runId": "cae33b84-0956-4aa7-8ae9-3a897fdff821",
+  "visual_review": {
+    "status": "PASS",
+    "method": "Actual screenshot, contact sheet and interaction strip inspected",
+    "reviewedAt": "2026-11-10T09:56:28.570245+00:00",
+    "artifacts": {
+      "snapshot.png": "b92cbac1978785c04abba0dd0708e8c91e95be8e0b5eb460c4ee244ddca4c858",
+      "contact-sheet.png": "810c502a87e26d565ce2c52848caf43653ec12373f0b15e98125a817e6f590f1",
+      "interaction-strip.png": "f49f1166d5311b5c5965d6eeea32c07cf620fe9e192fc7732efcc0ba8f114180"
+    },
+    "findings": "Traditional Chinese native 軌跡 / 歷史會話 / 原生導覽; all intermediate and final replies use Traditional Chinese, with no old 并. 讀取訂單資料 and 核對訂單金額 checked, 發佈版本 pending. 核對編號 cae33b84 gives 24 and 4. Complete result and sidebar visible; 下午05:45 / 17:45. Contact sheet includes input and native tools; GIF strip now shows task/read and completion updates before final result.",
+    "finalResultHold_s": {
+      "demo.mp4": 5.2,
+      "feature-8s.gif": 4.33
+    }
+  },
+  "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."
+}

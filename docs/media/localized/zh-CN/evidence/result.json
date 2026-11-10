@@ -1,0 +1,342 @@
+{
+  "status": "PASS",
+  "runId": "42f9f6b5-adc7-4252-8297-5edd02951895",
+  "auditId": "42f9f6b5",
+  "mediaLocale": "zh-CN",
+  "hostLocale": "zh",
+  "htmlLang": "zh-CN",
+  "visibleTextAtProof": "DSH 本地构建\n0.2.2-rc.1-fcc0ad4\n新会话\n⌥\n⌘\nN\n插件\n自动化任务\n更多\n历史会话\n1 个会话\n对 orders.json。全程使用简体中\n2/3 项任务\n17:45\n发布版本\n✓\n读取订单数据\n✓\n核对订单金额\n✦\n\n已完成读取和核对，金额按 quantity * unitPrice + shipping 计算： - **订单 A**：3 × 13 + 3 = **42** - **订单 B**：0 × 8 + 5 = **5** 核对编号：42f9f6b5。文件未做任何修改；“发布版本”仍待处理，需要你批准后再执行。\n\n原生导航\n更多\n对 orders.json。全程使用简体中\n标准模式\n对话\n轨迹\n对 orders.json。全程使用简体中文，包括工具调用之前的说明、中途进度和最终回复；技术标识保留原文。先使用 todo_write 创建恰好三项任务：读取订单数据；核对订单金额；发布版本。用 read 读取文件，计算每笔订单的 quantity * unitPrice + shipping。完成前两项；发布版本仍待处理，因为需要批准。不要修改文件或发布。用简体中文简短回复，称每笔为“订单 A”和“订单 B”，列出金额，并包含核对编号 42f9f6b5。\n17:45\n已完成\n已完成，用时 4秒\n\n我先创建任务清单，再读取订单数据。\n\n读取文件内容。\n\n已读取，开始核对金额。\n\n已完成读取和核对，金额按 quantity * unitPrice + shipping 计算：\n\n订单 A：3 × 13 + 3 = 42\n订单 B：0 × 8 + 5 = 5\n\n核对编号：42f9f6b5。文件未做任何修改；“发布版本”仍待处理，需要你批准后再执行。\n\n用量 9.2K tok\n17:45\n任务\n2 已完成 · 1 待处理\n发消息或创建任务, / 调用指令, @ 文件或对话\n工作区内修改\ndeepseek-flash\nOff\n1 轮 4 步·192 tok/s\n9.2K tok·缓存命中 87%\n0%",
+  "expectedUiLabels": [
+    "历史会话",
+    "原生导航",
+    "2/3 项任务"
+  ],
+  "expectedTaskLabels": [
+    "读取订单数据",
+    "核对订单金额",
+    "发布版本"
+  ],
+  "requestedTaskLabels": [
+    "读取订单数据",
+    "核对订单金额",
+    "发布版本"
+  ],
+  "languageChecks": {
+    "status": "PASS",
+    "modelResponse": "all actual assistant messages including tool preambles checked",
+    "nativeTaskLabels": "all three match requested language",
+    "uiLabels": "actual rendered labels checked"
+  },
+  "candidateTree": null,
+  "candidateSources": {
+    "package.json": "0feef80052dd2732f88c6a6dbb5d4b5194b2742d4e50d1dad8b2cf7b8cbdcd15",
+    "index.mjs": "4578ca495317c028097474cc13a3acdc78611a65a472766abe50c1a1dac5504a",
+    "client.js": "2857adb05f89dcd1f9955710ae01401caab4484e14ca43a36559c4faedd6522e",
+    "src/projection.mjs": "40405bac66d421977ddf5ddfa5350a83096015b6c157de4e4c3b1f2128d4ff2d",
+    "tests/live.test.mjs": "51a2cdba796f66527ebd69be27a9eda35a22e44771220889f1ab82475ef90422",
+    "tests/live-proof.mjs": "6c40205793bb8082a05b61177f63d58a829805976d15660f639306ce9db1ee6d",
+    "tests/live.config.mjs": "89ac271d9dba7a8dfa060923a20eb97d3a2a3e99207bbfecf1f2118196728ffc",
+    "tests/media-locales.mjs": "91a70c6e97bec0773a821350eaf8b68257253645a90e1a7c0885d6d14c64c98b",
+    "scripts/live-browser.mjs": "daa74a8172e3163d459d547dd729b56cc8d0d36bf19975a2de12c8eee65f14df"
+  },
+  "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "provider": "deepseek-official",
+  "model": "deepseek-flash",
+  "liveModel": true,
+  "mockedService": false,
+  "scriptedModel": false,
+  "seededAssistantMessages": false,
+  "seededTodoEvents": false,
+  "inputData": "Fresh generated demo order inputs, inspected by native read",
+  "orders": [
+    {
+      "id": "A",
+      "quantity": 3,
+      "unitPrice": 13,
+      "shipping": 3
+    },
+    {
+      "id": "B",
+      "quantity": 0,
+      "unitPrice": 8,
+      "shipping": 5
+    }
+  ],
+  "expectedTotals": [
+    42,
+    5
+  ],
+  "primarySession": "session-80d937cd-5ce5-4f9e-a0f3-5d62406f9a9e",
+  "secondSession": "session-e5ee21ef-fbe2-4cf0-a5f0-c5f8b9b06377",
+  "provenance": {
+    "apiResponses": 4,
+    "nativeToolCalls": 3,
+    "todoWrites": 2
+  },
+  "calls": [
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-80d937cd-5ce5-4f9e-a0f3-5d62406f9a9e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:16.694Z",
+      "responseId": "cf4be7bf-5187-4f46-866e-6e164fd86a19",
+      "usage": {
+        "input_tokens": 539,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1408,
+        "output_tokens": 91,
+        "service_tier": "standard"
+      },
+      "text": "我先创建任务清单，再读取订单数据。",
+      "toolCalls": [
+        {
+          "id": "call_00_7vc8GZEp9zNpQ3HFrxRM5700",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "读取订单数据",
+                "status": "in_progress"
+              },
+              {
+                "content": "核对订单金额",
+                "status": "pending"
+              },
+              {
+                "content": "发布版本",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "79b511ad7b079d53ce0ad1686fcdeae5ea77ae070a03062751080ceb648769f7",
+      "finishedAt": "2026-11-10T09:45:17.815Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-80d937cd-5ce5-4f9e-a0f3-5d62406f9a9e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:17.845Z",
+      "responseId": "13acab3c-b451-4efc-bb25-9d60229eef94",
+      "usage": {
+        "input_tokens": 146,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1920,
+        "output_tokens": 92,
+        "service_tier": "standard"
+      },
+      "text": "读取文件内容。",
+      "toolCalls": [
+        {
+          "id": "call_00_x9FS6OLTNczNXUa2I2yP1979",
+          "name": "read",
+          "arguments": {
+            "file_path": "/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-R0icjA/sidebar-live-audit/orders.json"
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "e2d3d059a0f23ef24824132d93343e5308fa5479f5d477c26493b808d68e8309",
+      "finishedAt": "2026-11-10T09:45:18.909Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-80d937cd-5ce5-4f9e-a0f3-5d62406f9a9e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:18.940Z",
+      "responseId": "87f125f1-13b9-41f0-91cf-0a1325749f85",
+      "usage": {
+        "input_tokens": 327,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2048,
+        "output_tokens": 86,
+        "service_tier": "standard"
+      },
+      "text": "已读取，开始核对金额。",
+      "toolCalls": [
+        {
+          "id": "call_00_20ZSvsPxivGABlEUKR2o3151",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "读取订单数据",
+                "status": "completed"
+              },
+              {
+                "content": "核对订单金额",
+                "status": "completed"
+              },
+              {
+                "content": "发布版本",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "8243df0f260cf22ea5c93c0ee955d3e70328953a4a7a69f251b47195551a318f",
+      "finishedAt": "2026-11-10T09:45:20.244Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-80d937cd-5ce5-4f9e-a0f3-5d62406f9a9e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:20.275Z",
+      "responseId": "4361642d-e1c6-4699-b507-acf2fb708f91",
+      "usage": {
+        "input_tokens": 185,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 80,
+        "service_tier": "standard"
+      },
+      "text": "已完成读取和核对，金额按 quantity * unitPrice + shipping 计算：\n\n- **订单 A**：3 × 13 + 3 = **42**\n- **订单 B**：0 × 8 + 5 = **5**\n\n核对编号：42f9f6b5。文件未做任何修改；“发布版本”仍待处理，需要你批准后再执行。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "670dc3b7083fd1e1135f00ed856a90ef946da5437a1dbc583742dcbb1e5382b6",
+      "finishedAt": "2026-11-10T09:45:21.275Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-e5ee21ef-fbe2-4cf0-a5f0-c5f8b9b06377",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:29.538Z",
+      "responseId": "05c0c8cc-9992-4cf8-896b-25607721d7a9",
+      "usage": {
+        "input_tokens": 576,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1280,
+        "output_tokens": 23,
+        "service_tier": "standard"
+      },
+      "text": "你好，这是独立会话中的简体中文问候，核对编号为 42f9f6b5-second。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "933f8836fcddbb33bfd6a553530a34b18569803e645eb38a8909189a79ba3b26",
+      "finishedAt": "2026-11-10T09:45:30.275Z"
+    }
+  ],
+  "usage": [
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:16.685Z",
+      "usage": {
+        "inputTokens": 539,
+        "outputTokens": 91,
+        "cacheReadTokens": 1408,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2038
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:17.843Z",
+      "usage": {
+        "inputTokens": 146,
+        "outputTokens": 92,
+        "cacheReadTokens": 1920,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2158
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:18.939Z",
+      "usage": {
+        "inputTokens": 327,
+        "outputTokens": 86,
+        "cacheReadTokens": 2048,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2461
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:20.273Z",
+      "usage": {
+        "inputTokens": 185,
+        "outputTokens": 80,
+        "cacheReadTokens": 2304,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2569
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:45:29.537Z",
+      "usage": {
+        "inputTokens": 576,
+        "outputTokens": 23,
+        "cacheReadTokens": 1280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 1879
+      }
+    }
+  ],
+  "checks": [
+    "official-api-response-identity-and-usage",
+    "api-tool-ids-match-durable-events",
+    "native-read-and-todo-write",
+    "model-computed-order-totals",
+    "committed-text-matches-api",
+    "sidebar-count-and-preview-match-persistence",
+    "independent-session-has-no-tasks",
+    "reload-restores-real-summary"
+  ],
+  "consoleErrors": [],
+  "proof_interval_s": [
+    5.805218994140625,
+    11.165218994140625
+  ],
+  "video": {
+    "duration_s": 11.169218994140625,
+    "frames": 65
+  },
+  "finalAssistantText": "已完成读取和核对，金额按 quantity * unitPrice + shipping 计算：\n\n- **订单 A**：3 × 13 + 3 = **42**\n- **订单 B**：0 × 8 + 5 = **5**\n\n核对编号：42f9f6b5。文件未做任何修改；“发布版本”仍待处理，需要你批准后再执行。",
+  "finalPreview": "已完成读取和核对，金额按 quantity * unitPrice + shipping 计算： - **订单 A**：3 × 13 + 3 = **42** - **订单 B**：0 × 8 + 5 = **5** 核对编号：42f9f6b5。文件未做任何修改；“发布版本”仍待处理，需要你批准后再执行。",
+  "finalTodos": [
+    {
+      "content": "读取订单数据",
+      "status": "completed"
+    },
+    {
+      "content": "核对订单金额",
+      "status": "completed"
+    },
+    {
+      "content": "发布版本",
+      "status": "pending"
+    }
+  ],
+  "screenshots": {
+    "preflight.png": "9746937cad88c57fb0a1a7b9cb7db363f53ee8fcf3292237364dc501d04321cf",
+    "progress.png": "cfe0e9cabb335875a11e2602887a8d56bc76e09f7bf4576eb04529af4b24112f",
+    "final.png": "9496807ee5dc9acdc9c90b77d9f2a040982b5b2a3ae4e4e2c415ba36c95526bc",
+    "reloaded.png": "75bd8de5093230fc2a4559387b6ce8d2de13049d3ee6bb8f6835d4f29f9ee7ac"
+  },
+  "raw_sha256": "8f0c870adf4b329472e0b81240ece843cd2e508ead581ef6fa8cb6335dd43871"
+}

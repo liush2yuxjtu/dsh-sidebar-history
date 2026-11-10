@@ -10,7 +10,7 @@ This independent, MIT-licensed plugin uses DSH's official projection and sidebar
 
 [![DSH history cards show real TODO progress and the latest assistant reply](docs/media/live/feature-8s.gif)](docs/media/live/demo.mp4)
 
-[Watch the demo with a written walkthrough](https://liush2yuxjtu.github.io/dsh-sidebar-history/demo/) · [Real API video, 9.3 seconds](docs/media/live/demo.mp4) · [Actual browser snapshot](docs/media/live/snapshot.png) · [API receipts](docs/media/live/evidence/result.json)
+[Watch the demo with a written walkthrough](https://liush2yuxjtu.github.io/dsh-sidebar-history/demo/) · [Real API video](docs/media/live/demo.mp4) · [Actual browser snapshot](docs/media/live/snapshot.png) · [API receipts](docs/media/live/evidence/result.json)
 
 A fresh DSH session calls the official DeepSeek API. The model reads demo order inputs, calls the native TODO tool, and saves its own answer. The sidebar shows 2/3 tasks completed and that saved reply. The video preserves the original recording bytes and real elapsed time. No mock endpoint, scripted model reply, or seeded assistant or TODO events appear in this recording. A second API session and reload recovery were also checked. See the [media provenance and hashes](docs/media/live/provenance.json) and [media QA](docs/media/live/qa.json).
 
@@ -24,7 +24,7 @@ A fresh DSH session calls the official DeepSeek API. The model reads demo order 
 
 TODO status comes only from `todo/write` events. A new `turn/start` clears the previous turn's tasks. Previews use committed `assistant/message` text. During generation, the card keeps the last committed reply and shows **Generating**. Interrupted output, reasoning, and tool blocks do not become previews. Empty, non-text, loading, and failed summaries have explicit states. Archived sessions stay hidden.
 
-The UI currently supports English and Simplified Chinese, following DSH's locale. The README documentation is available in the five languages linked above.
+The sidebar supports English, Simplified Chinese, Traditional Chinese, Japanese, and Spanish, following DSH's language setting. Traditional Chinese covers the sidebar and the demonstrated DSH screens. Other DSH screens can fall back to Simplified Chinese.
 
 ## Install
 
@@ -36,7 +36,7 @@ Build a local tarball and install it into the `web` profile:
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.0.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.1.tgz"
 ```
 
 Open DSH Web. The history sidebar displays cards for your unarchived sessions. Replace `web` if you use another Web profile. The profile option must appear before `add`. You can also install the tarball with DSH's plugin manager. See the [upstream installation guide](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md).

@@ -4,6 +4,7 @@ import { resolve, dirname, relative } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
 const languages = ['README.md', ...['zh-CN', 'zh-TW', 'ja', 'es'].map(locale => `docs/i18n/README.${locale}.md`)];
+const mediaMapping = JSON.parse(await readFile(resolve(root, 'docs/media/locales.json'), 'utf8'));
 const documents = [...languages, 'docs/telemetry.md', 'docs/discovery.md'];
 const manifest = JSON.parse(await readFile(resolve(root, 'package.json'), 'utf8'));
 for (const keyword of ['dsh-plugin', 'dsh-plugins', 'deepseek-harness', 'sidebar', 'chat-history', 'todo']) {
@@ -29,10 +30,12 @@ for (const document of documents) {
       if (translation !== document) assert.ok(targets.has(translation), `Missing language link in ${document}: ${translation}`);
     }
     for (const media of ['demo.mp4', 'feature-8s.gif', 'snapshot.png']) {
-      assert.ok(targets.has(`docs/media/live/${media}`), `Missing real API media in ${document}: ${media}`);
+      const entry = Object.values(mediaMapping.locales).find(entry => entry.readme === document);
+      assert.ok(entry, 'Missing document media locale: ' + document);
+      assert.ok(targets.has(`${entry.directory}/${media}`), `Missing real API media in ${document}: ${media}`);
     }
     assert.ok(targets.has('docs/telemetry.md'), `Missing telemetry scope in ${document}`);
-    assert.ok(content.includes('0.2.2-rc.1') && content.includes('0.1.0'), `Missing compatibility or package version in ${document}`);
+    assert.ok(content.includes('0.2.2-rc.1') && content.includes(manifest.version), `Missing compatibility or package version in ${document}`);
   }
 }
 const english = await readFile(resolve(root, 'README.md'), 'utf8');

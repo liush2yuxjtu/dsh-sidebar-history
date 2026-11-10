@@ -31,29 +31,34 @@ try {
     ['unit-build', process.execPath, ['--run', 'verify']],
     ['controlled-browser', process.execPath, ['scripts/browser-test.mjs']],
     ['live-media-provenance', process.execPath, ['scripts/check-live-media.mjs']],
-    ['real-api-browser', process.execPath, ['scripts/live-browser.mjs']],
+    ['localized-media-pixels', process.execPath, ['scripts/check-localized-media.mjs', '--output', join(output, 'localized-media')]],
+    ...['en', 'zh-CN', 'zh-TW', 'ja', 'es'].map(locale => ['real-api-' + locale, process.execPath, ['scripts/live-browser.mjs'], { DSH_LIVE_LOCALE: locale, DSH_LIVE_OUTPUT: join(output, 'live', locale) }]),
   ];
-  for (const [name, command, args] of checks) {
-    const result = spawnSync(command, args, { cwd: temporary, env, encoding: 'utf8', timeout: 300000, maxBuffer: 8 * 1024 * 1024 });
+  for (const [name, command, args, extraEnv = {}] of checks) {
+    const result = spawnSync(command, args, { cwd: temporary, env: { ...env, ...extraEnv }, encoding: 'utf8', timeout: 300000, maxBuffer: 8 * 1024 * 1024 });
     const log = (result.stdout || '') + (result.stderr || '');
     await writeFile(join(output, name + '.log'), log.replace(/https?:\/\/[^\s\"<>]+/g, url => url.startsWith('https://api.deepseek.com') ? url : '[redacted-url]'));
     if (result.error || result.status !== 0) throw new Error(`${name} failed. Commit refused. Inspect ${join(output, name + '.log')}`);
     console.log(`Pre-commit ${name}: PASS.`);
   }
-  const evidence = JSON.parse(await readFile(join(output, 'live/evidence/result.json'), 'utf8'));
-  assert.equal(evidence.status, 'PASS');
-  assert.equal(evidence.candidateTree, candidate.tree);
-  assert.equal(evidence.liveModel, true);
-  assert.equal(evidence.mockedService, false);
-  assert.equal(evidence.scriptedModel, false);
-  assert.equal(evidence.seededAssistantMessages, false);
-  assert.equal(evidence.seededTodoEvents, false);
-  assert.ok(evidence.calls.length > 0 && evidence.calls.every(call => call.httpStatus === 200 && call.responseId && call.usage.output_tokens > 0));
+  const localeRuns = [];
+  for (const locale of ['en', 'zh-CN', 'zh-TW', 'ja', 'es']) {
+    const evidence = JSON.parse(await readFile(join(output, 'live', locale, 'evidence/result.json'), 'utf8'));
+    assert.equal(evidence.status, 'PASS');
+    assert.equal(evidence.candidateTree, candidate.tree);
+    assert.equal(evidence.liveModel, true);
+    for (const key of ['mockedService', 'scriptedModel', 'seededAssistantMessages', 'seededTodoEvents']) assert.equal(evidence[key], false);
+    assert.equal(evidence.mediaLocale, locale);
+    assert.equal(evidence.languageChecks.status, 'PASS');
+    assert.ok(evidence.calls.length > 0 && evidence.calls.every(call => call.httpStatus === 200 && call.responseId && call.usage.output_tokens > 0));
+    localeRuns.push({ locale, runId: evidence.runId, apiCalls: evidence.calls.length });
+  }
+  const apiCalls = localeRuns.reduce((total, run) => total + run.apiCalls, 0);
   assertUnchangedIndex(repository, candidate.tree);
   await writeFile(join(output, 'receipt.json'), JSON.stringify({ status: 'PASS', runId, ...candidate, at: new Date().toISOString(),
-    realApiRunId: evidence.runId, apiCalls: evidence.calls.length, checks: checks.map(([name]) => name),
+    realApiRunId: localeRuns[0].runId, localeRuns, apiCalls, checks: checks.map(([name]) => name),
     note: 'Fresh real E2E executed from exported staged files. Index unchanged. Receipt is ignored to avoid changing the validated tree.' }, null, 2) + '\n');
-  console.log(`Pre-commit real E2E PASS. ${evidence.calls.length} actual API responses. Staged tree ${candidate.tree}.`);
+  console.log(`Pre-commit real E2E PASS. ${apiCalls} actual API responses across five languages. Staged tree ${candidate.tree}.`);
 } catch (error) {
   await writeFile(join(output, 'receipt.json'), JSON.stringify({ status: 'BLOCKED_OR_FAIL', runId, candidate: candidate || null, error: error.message }, null, 2)).catch(() => {});
   console.error(error.message); process.exitCode = 1;

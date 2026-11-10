@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { access, mkdir, writeFile } from 'node:fs/promises';
+import { access, mkdir, writeFile, readFile } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
 import { createRequire } from 'node:module';
 import { execFileSync } from 'node:child_process';
@@ -21,6 +21,8 @@ const targets = [
   { path: 'demo/', lang: 'en', kind: 'watch' },
   { path: 'zh/demo/', lang: 'zh-CN', kind: 'watch' },
 ];
+for (const target of targets) target.media = target.lang === 'en' ? 'media/live' : 'media/localized/zh-CN';
+const manifest = JSON.parse(await readFile(join(root, 'package.json'), 'utf8'));
 const output = resolve(process.env.DSH_SITE_OUTPUT || join(root, '.runtime/publication/site'));
 await mkdir(output, { recursive: true });
 const browser = await chromium.launch({ headless: true, ...(process.env.DSH_CHROMIUM_PATH ? { executablePath: process.env.DSH_CHROMIUM_PATH } : {}) });
@@ -32,6 +34,7 @@ try {
   page.on('pageerror', error => errors.push(error.message));
   for (const target of targets) {
     await page.setViewportSize({ width: 1440, height: 1000 });
+    const expectedMedia = JSON.parse(await readFile(join(root, 'docs', target.media, 'provenance.json'), 'utf8'));
     const response = await page.goto(base + target.path, { waitUntil: 'networkidle' });
     assert.equal(response.status(), 200, 'Public page HTTP status');
     const facts = await page.evaluate(() => ({
@@ -58,7 +61,7 @@ try {
     assert.doesNotMatch(facts.robots, /noindex/);
     assert.equal(facts.canonical, canonicalBase + target.path);
     assert.equal(facts.openGraphUrl, facts.canonical);
-    assert.equal(facts.openGraphImage, canonicalBase + 'media/live/snapshot.png');
+    assert.equal(facts.openGraphImage, canonicalBase + target.media + '/snapshot.png');
     assert.equal(facts.twitterCard, 'summary_large_image');
     const englishPath = target.kind === 'watch' ? 'demo/' : '';
     const chinesePath = target.kind === 'watch' ? 'zh/demo/' : 'zh/';
@@ -76,7 +79,7 @@ try {
     }
     if (target.kind === 'home') {
       await page.locator('details').first().evaluate(node => { node.open = true; });
-      assert.ok(await page.locator('#install code').allTextContents().then(texts => texts.some(text => text.includes('dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.0.tgz"'))), 'Installation includes the executable tarball command');
+      assert.ok(await page.locator('#install code').allTextContents().then(texts => texts.some(text => text.includes('dsh plugin --profile web add "$PWD/dsh-sidebar-history-' + manifest.version + '.tgz"'))), 'Installation includes the executable tarball command');
       assert.ok(facts.links.includes(base + (target.lang === 'en' ? 'demo/' : 'zh/demo/')), 'Homepage links to its localized watch page');
       if (target.lang === 'zh-CN') assert.ok(facts.links.some(href => decodeURI(href) === repositoryUrl + '/blob/main/docs/i18n/README.zh-CN.md#安装'), 'Chinese installation links to the existing translation');
       else assert.ok(facts.googleVerification, 'Google ownership verification is deployed');
@@ -84,12 +87,12 @@ try {
       const videoSchema = facts.schemas.find(node => node['@type'] === 'VideoObject');
       assert.ok(videoSchema, 'Watch page describes its actual video');
       assert.ok(videoSchema.name && videoSchema.description);
-      assert.equal(videoSchema.contentUrl, canonicalBase + 'media/live/demo.mp4');
-      assert.deepEqual(videoSchema.thumbnailUrl, [canonicalBase + 'media/live/snapshot.png']);
-      assert.equal(videoSchema.duration, 'PT9.3S');
-      assert.equal(videoSchema.uploadDate, '2026-11-10T14:23:53+08:00');
-      assert.equal(videoSchema.inLanguage, 'en', 'Original recording uses English UI');
-      if (target.lang === 'zh-CN') assert.match(await page.locator('main').innerText(), /英文界面原始录屏/);
+      assert.equal(videoSchema.contentUrl, canonicalBase + target.media + '/demo.mp4');
+      assert.deepEqual(videoSchema.thumbnailUrl, [canonicalBase + target.media + '/snapshot.png']);
+      assert.ok(Math.abs(Number(videoSchema.duration.slice(2, -1)) - expectedMedia.duration_s) < 0.02);
+      assert.ok(Number.isFinite(Date.parse(videoSchema.uploadDate)), 'Video has its actual dated publication metadata');
+      assert.equal(videoSchema.inLanguage, target.lang, 'Video pixels and metadata match the page language');
+      if (target.lang === 'zh-CN') assert.match(await page.locator('main').innerText(), /简体中文界面原始录屏/);
     }
     await page.evaluate(async () => { await Promise.all([...document.images].map(async image => { image.loading = 'eager'; await image.decode(); })); });
     assert.ok(await page.locator('img').evaluateAll(nodes => nodes.every(node => node.naturalWidth > 0)), 'Every image loads');
@@ -97,10 +100,10 @@ try {
     await video.evaluate(node => { node.preload = 'auto'; node.load(); });
     await page.waitForFunction(() => document.querySelector('video').readyState >= 2);
     const duration = await video.evaluate(node => node.duration);
-    assert.ok(duration > 8 && duration < 12, 'The real API demo video loads');
+    assert.ok(Math.abs(duration - expectedMedia.duration_s) < 0.25, 'Video preserves the actual recording duration');
     if (target.kind === 'watch') {
-      assert.ok(Math.abs(duration - 9.3) < 0.1, 'VideoObject duration matches the playable recording');
-      assert.equal(await video.evaluate(node => node.currentSrc), base + 'media/live/demo.mp4', 'VideoObject points to the actual player content');
+      assert.ok(Math.abs(duration - expectedMedia.duration_s) < 0.25, 'VideoObject duration matches the playable recording');
+      assert.equal(await video.evaluate(node => node.currentSrc), base + target.media + '/demo.mp4', 'VideoObject points to the actual player content');
       assert.ok(await video.evaluate(node => node.getBoundingClientRect().top < innerHeight), 'Main watch video is visible in the first viewport');
     }
     for (const viewport of [{ name: 'desktop', width: 1440, height: 1000 }, { name: 'mobile', width: 390, height: 844 }]) {
@@ -134,11 +137,17 @@ try {
   assert.equal(sitemapFacts.errors, 0, 'Sitemap is valid XML');
   for (const target of targets) assert.ok(sitemap.includes('<loc>' + canonicalBase + target.path + '</loc>'), 'Sitemap includes ' + target.path);
   assert.equal(sitemapFacts.videos.length, 2, 'Both watch pages have video sitemap entries');
-  assert.ok(sitemapFacts.videos.every(video => video.title && video.description && video.thumbnail_loc === canonicalBase + 'media/live/snapshot.png' && video.content_loc === canonicalBase + 'media/live/demo.mp4'), 'Video sitemap describes the playable media');
+  for (const [index, target] of targets.filter(item => item.kind === 'watch').entries()) {
+    const video = sitemapFacts.videos[index];
+    assert.ok(video.title && video.description);
+    assert.equal(video.thumbnail_loc, canonicalBase + target.media + '/snapshot.png');
+    assert.equal(video.content_loc, canonicalBase + target.media + '/demo.mp4');
+  }
   const robotsResponse = await context.request.get(base + 'robots.txt');
   assert.equal(robotsResponse.status(), 200);
   assert.ok((await robotsResponse.text()).includes(canonicalBase + 'sitemap.xml'));
-  for (const asset of ['site.css', 'favicon.svg', 'llms.txt', 'media/live/snapshot.png', 'media/live/feature-8s.gif', 'media/live/demo.mp4', 'media/live/evidence/result.json']) {
+  const mediaAssets = ['media/live', 'media/localized/zh-CN'].flatMap(directory => ['snapshot.png', 'feature-8s.gif', 'demo.mp4', 'evidence/result.json'].map(file => directory + '/' + file));
+  for (const asset of ['site.css', 'favicon.svg', 'llms.txt', ...mediaAssets]) {
     const response = await context.request.get(base + asset);
     assert.equal(response.status(), 200, asset);
     if (asset.endsWith('result.json')) assert.equal((await response.json()).status, 'PASS');

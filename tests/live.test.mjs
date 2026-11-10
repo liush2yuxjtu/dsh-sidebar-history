@@ -6,6 +6,7 @@ import { createRequire } from 'node:module';
 import { execFileSync } from 'node:child_process';
 import { randomUUID, randomInt } from 'node:crypto';
 import { it } from 'vitest';
+import { mediaLocales, assertResponseLanguage, assertAssistantMessageLanguage, assertRequestedTasks } from './media-locales.mjs';
 import { chromium, expect } from 'playwright/test';
 import { observeOfficialApi, assertRealProvenance, hash, startCapture, installPointer } from './live-proof.mjs';
 
@@ -14,11 +15,14 @@ const source = resolve(process.env.DSH_SOURCE_ROOT);
 const output = resolve(process.env.DSH_LIVE_OUTPUT);
 const model = process.env.DSH_LIVE_MODEL || 'deepseek-flash';
 const recording = process.env.DSH_LIVE_RECORD === '1';
+const mediaLocale = process.env.DSH_LIVE_LOCALE || 'en';
+const copy = mediaLocales[mediaLocale];
+assert.ok(copy, 'Unsupported media locale: ' + mediaLocale);
 const require = createRequire(join(source, 'apps/cli/package.json'));
 const { SessionId } = require('@deepseek-ai/dsh-session');
 const { launchWebScaffold, readPersistedEvents } = await import(pathToFileURL(join(source, 'apps/web/tests/scaffold.ts')).href);
-const { connectFreshWorkspace, writeComposerDraft } = await import(pathToFileURL(join(source, 'apps/web/tests/support.ts')).href);
-const sourcePaths = ['package.json', 'index.mjs', 'client.js', 'src/projection.mjs', 'tests/live.test.mjs', 'tests/live-proof.mjs', 'tests/live.config.mjs', 'scripts/live-browser.mjs'];
+const { connectFreshWorkspace, writeComposerDraft, openSettings } = await import(pathToFileURL(join(source, 'apps/web/tests/support.ts')).href);
+const sourcePaths = ['package.json', 'index.mjs', 'client.js', 'src/projection.mjs', 'tests/live.test.mjs', 'tests/live-proof.mjs', 'tests/live.config.mjs', 'tests/media-locales.mjs', 'scripts/live-browser.mjs'];
 const sources = async () => Object.fromEntries(await Promise.all(sourcePaths.map(async path => [path, hash(await readFile(join(root, path)))])));
 const textOf = message => message.content.filter(b => b.type === 'text').map(b => b.text).join(' ');
 const previewOf = message => textOf(message).replace(/\s+/g, ' ').trim().slice(0, 360);
@@ -38,7 +42,7 @@ it('proves live API responses drive native DSH tasks, persisted history and real
   const totals = orders.map(o => o.quantity * o.unitPrice + o.shipping);
   const overlay = join(output, 'live-overlay.json');
   await writeFile(overlay, JSON.stringify([{ id: 'llm-deepseek', config: {
-    baseURL: 'https://api.deepseek.com/anthropic', models: [{ id: model, name: model + ' (real API)' }], thinking: 'disabled', reasoningEffort: 'off', maxTokens: 1600,
+    baseURL: 'https://api.deepseek.com/anthropic', models: [{ id: model, name: model }], thinking: 'disabled', reasoningEffort: 'off', maxTokens: 1600,
   } }]));
   let scaffold, browser, page, capture, pendingTurn;
   let clock = Date.now();
@@ -46,8 +50,7 @@ it('proves live API responses drive native DSH tasks, persisted history and real
   const errors = [];
   const usage = [];
   const mark = async label => {
-    const body = await page.locator('body').innerText();
-    assert.ok(!/[\u3400-\u9fff]/u.test(body), 'Use English UI for the recording');
+    assert.equal(await page.locator('html').getAttribute('lang'), copy.htmlLang, 'Actual UI language changed during capture');
     markers.push({ label, elapsed_ms: Math.round(Date.now() - clock), at: new Date().toISOString() });
   };
   const moveClick = async (locator, label) => {
@@ -83,9 +86,18 @@ it('proves live API responses drive native DSH tasks, persisted history and real
     await connectFreshWorkspace(page, scaffold.workspaceCwd, 'sidebar-live-audit');
     const workspace = join(scaffold.workspaceCwd, 'sidebar-live-audit');
     await writeFile(join(workspace, 'orders.json'), JSON.stringify({ auditId, orders }, null, 2));
-    const prompt = `Audit orders.json. First create exactly three tasks with todo_write: Read order data; Verify both totals; Publish release. Use read to inspect the file. Compute quantity * unitPrice + shipping for each order. Complete the first two tasks, and leave Publish release pending because approval is required. Do not edit or publish. Reply in English under 60 words with each order ID and its computed total, and audit ID ${auditId}.`;
+    if (mediaLocale !== 'en') {
+      await openSettings(page, 'en');
+      const settings = page.getByRole('dialog', { name: 'Settings', exact: true });
+      await settings.getByRole('button', { name: 'English', exact: true }).click();
+      await page.getByRole('menuitem', { name: copy.menu, exact: true }).click();
+      await page.keyboard.press('Escape');
+      await expect(page.getByRole('dialog')).toHaveCount(0);
+    }
+    await expect(page.locator('html')).toHaveAttribute('lang', copy.htmlLang);
+    const prompt = copy.prompt(auditId);
     const composer = page.locator('[data-composer-input][contenteditable="true"]').first();
-    const newSessionButton = page.getByRole('button', { name: 'New session', exact: true }).filter({ hasText: 'New Session' });
+    const newSessionButton = page.locator('button[class*="newSession"]');
     await expect(newSessionButton).toHaveCount(1);
     await writeComposerDraft(page, composer, prompt);
     await installPointer(page);
@@ -94,12 +106,12 @@ it('proves live API responses drive native DSH tasks, persisted history and real
       assert.equal(process.platform, 'darwin', 'Record only on the confirmed Mac mini');
       capture = await startCapture(page, output); clock = capture.started;
     }
-    await mark('New real API audit');
+    await mark(copy.beats[0]);
     if (recording) await page.waitForTimeout(1100);
     pendingTurn = scaffold.whenTurnSettled(150000); pendingTurn.catch(() => {});
-    await mark('Submit to DeepSeek');
+    await mark(copy.beats[1]);
     await composer.press('Enter');
-    await moveClick(page.getByRole('button', { name: 'History cards', exact: true }), 'Open History cards');
+    await moveClick(page.getByRole('button', { name: copy.cards, exact: true }), copy.beats[2]);
     let primaryId;
     await expect.poll(() => {
       const agent = scaffold.ctx.agents.list().find(a => a.session.snapshotEvents().some(e => e.type === 'user/message' && textOf(e.data).includes(auditId)));
@@ -108,9 +120,9 @@ it('proves live API responses drive native DSH tasks, persisted history and real
     }, { timeout: 20000 }).toBe(true);
     const primary = page.locator(`[data-session-id="${primaryId}"]`);
     await expect(primary).toBeVisible({ timeout: 30000 });
-    await expect(primary).toContainText('Generating', { timeout: 15000 });
+    await expect(primary).toContainText(copy.running, { timeout: 15000 });
     await expect(primary.locator('.dsh-history-todos')).toBeVisible({ timeout: 90000 });
-    await mark('Native TODO from actual model call');
+    await mark(copy.beats[3]);
     await page.screenshot({ path: join(output, 'evidence/progress.png') });
     await pendingTurn; pendingTurn = undefined;
     const agent = scaffold.ctx.agents.list().find(a => a.session.id === primaryId);
@@ -119,6 +131,7 @@ it('proves live API responses drive native DSH tasks, persisted history and real
     const events = await readPersistedEvents(scaffold, SessionId(primaryId));
     await observer.settle();
     const provenance = assertRealProvenance(observer.receipts, events, primaryId);
+    for (const receipt of observer.receipts) assertAssistantMessageLanguage(receipt.text, mediaLocale);
     const finalMessage = events.findLast(e => e.type === 'assistant/message' && !e.data.interrupted && textOf(e.data.message).trim())?.data.message;
     assert.ok(finalMessage);
     const finalText = textOf(finalMessage);
@@ -128,22 +141,28 @@ it('proves live API responses drive native DSH tasks, persisted history and real
     }
     const todos = events.findLast(e => e.type === 'todo/write').data.todos;
     assert.equal(todos.length, 3);
+    assertRequestedTasks(todos, copy.tasks, mediaLocale);
+    assertResponseLanguage(finalText, mediaLocale);
     assert.equal(todos.filter(t => t.status === 'completed').length, 2);
     assert.equal(todos.filter(t => t.status === 'pending').length, 1);
     assert.deepEqual(events.filter(e => e.type === 'tool/result' && e.data.message.isError), []);
-    await expect(primary).toContainText('2/3 tasks');
+    await expect(primary).toContainText(copy.summary);
     await expect(primary.locator('.dsh-history-preview p')).toHaveText(previewOf(finalMessage));
-    await expect(primary).not.toContainText('Generating');
-    await mark('Real TODO and committed reply verified');
+    await expect(primary).not.toContainText(copy.running);
+    await mark(copy.beats[4]);
+    const visibleTextAtProof = await page.locator('body').innerText();
+    const expectedUiLabels = [copy.history, copy.native, copy.summary];
+    for (const label of [...expectedUiLabels, ...todos.map(todo => todo.content)]) assert.ok(visibleTextAtProof.includes(label), 'Expected visible localized label: ' + label);
+    const htmlLang = await page.locator('html').getAttribute('lang');
     const proofStart = (Date.now() - clock) / 1000;
     await page.screenshot({ path: join(output, 'evidence/final.png') });
-    if (recording) await page.waitForTimeout(4500);
+    if (recording) await page.waitForTimeout(5200);
     const proofEnd = (Date.now() - clock) / 1000;
-    await mark('End of feature recording');
+    await mark(copy.beats[5]);
     let video;
     if (capture) { video = await capture.stop(); capture = undefined; }
-    await moveClick(newSessionButton, 'New independent session');
-    const secondPrompt = `In one short English sentence greet this independent review, including audit ID ${auditId}-second. Do not create a task list or call a tool.`;
+    await moveClick(newSessionButton, copy.beats[6]);
+    const secondPrompt = copy.second(auditId);
     await writeComposerDraft(page, composer, secondPrompt);
     pendingTurn = scaffold.whenTurnSettled(90000); pendingTurn.catch(() => {});
     await composer.press('Enter'); await pendingTurn; pendingTurn = undefined;
@@ -161,11 +180,11 @@ it('proves live API responses drive native DSH tasks, persisted history and real
     await expect(secondary).toHaveAttribute('aria-selected', 'true');
     await expect(secondary.locator('.dsh-history-preview p')).toHaveText(previewOf(secondMessage));
     await expect(secondary.locator('.dsh-history-todos')).toHaveCount(0);
-    await expect(primary).toContainText('2/3 tasks');
+    await expect(primary).toContainText(copy.summary);
     await primary.click();
     await page.reload({ waitUntil: 'domcontentloaded' });
     await expect(primary).toHaveAttribute('aria-selected', 'true');
-    await expect(primary).toContainText('2/3 tasks');
+    await expect(primary).toContainText(copy.summary);
     await expect(primary.locator('.dsh-history-preview p')).toHaveText(previewOf(finalMessage));
     await expect(secondary).toBeVisible();
     await expect(secondary.locator('.dsh-history-preview p')).toHaveText(previewOf(secondMessage));
@@ -179,7 +198,7 @@ it('proves live API responses drive native DSH tasks, persisted history and real
       if (e.type !== 'assistant/message') return e;
       return { ...e, data: { ...e.data, stream: undefined, message: { ...e.data.message, content: e.data.message.content.filter(b => b.type !== 'reasoning'), replayState: undefined } } };
     });
-    const evidence = { status: 'PASS', runId, auditId, candidateTree: process.env.DSH_CANDIDATE_TREE || null,
+    const evidence = { status: 'PASS', runId, auditId, mediaLocale, hostLocale: copy.hostLocale, htmlLang, visibleTextAtProof, expectedUiLabels, expectedTaskLabels: todos.map(todo => todo.content), requestedTaskLabels: copy.tasks, languageChecks: { status: 'PASS', modelResponse: 'all actual assistant messages including tool preambles checked', nativeTaskLabels: 'all three match requested language', uiLabels: 'actual rendered labels checked' }, candidateTree: process.env.DSH_CANDIDATE_TREE || null,
       candidateSources: before, sourceRevision: 'fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159', provider: 'deepseek-official', model,
       liveModel: true, mockedService: false, scriptedModel: false, seededAssistantMessages: false, seededTodoEvents: false,
       inputData: 'Fresh generated demo order inputs, inspected by native read', orders, expectedTotals: totals,

@@ -23,8 +23,8 @@ video = next(s for s in raw_probe['streams'] if s['codec_type'] == 'video')
 assert video['codec_name'] == 'h264' and video['pix_fmt'] == 'yuv420p'
 assert abs(duration - evidence['video']['duration_s']) < 0.25
 proof = evidence['proof_interval_s']
-start = max(0, proof[0] - 5)
-assert proof[1] - proof[0] >= 3 and start + 8 <= duration + 0.1 and start + 8 - proof[0] >= 2.99
+start = max(0, proof[0] - 3.5)
+assert proof[1] - proof[0] >= 5 and start + 8 <= duration + 0.1 and start + 8 - proof[0] >= 4.0
 (output / 'raw').mkdir(parents=True)
 (output / 'evidence').mkdir()
 shutil.copyfile(take / 'raw/gt.mp4', output / 'raw/gt.mp4')
@@ -50,7 +50,7 @@ markers = [json.loads(line) for line in (output / 'evidence/markers.jsonl').read
 (output / 'chapters.json').write_text(json.dumps([{'label':m['label'], 'time_s':m['elapsed_ms']/1000} for m in markers if m['elapsed_ms']/1000 <= duration], indent=2)+'\n')
 (output / 'probe.json').write_text(json.dumps({'video':raw_probe, 'gif':gif}, indent=2)+'\n')
 artifacts = ['demo.mp4', 'feature-8s.gif', 'snapshot.png', 'poster.png', 'raw/gt.mp4', 'contact-sheet.png', 'interaction-strip.png', 'evidence/progress.png', 'evidence/result.json', 'evidence/native-events.json']
-manifest = {'runId':evidence['runId'], 'provider':evidence['provider'], 'model':evidence['model'], 'liveModel':True,
+manifest = {'mediaLocale':evidence['mediaLocale'], 'hostLocale':evidence['hostLocale'], 'htmlLang':evidence['htmlLang'], 'runId':evidence['runId'], 'provider':evidence['provider'], 'model':evidence['model'], 'liveModel':True,
             'mockedService':False, 'scriptedModel':False, 'duration_s':duration, 'gif_source_window_s':[start,start+8],
             'proof_interval_s':proof, 'video_is_exact_original_recording':True,
             'artifacts':{name:sha(output/name) for name in artifacts}}

@@ -1,7 +1,0 @@
-{
-  "status": "PASS",
-  "test": "Replace final real screenshot with older mock screenshot",
-  "expected": "reject",
-  "actual_exit_code": 1,
-  "observed": "Live media verification failed: Real API media hash mismatch: snapshot.png\n+ actual - expected\n\n+ '3cf2bfc7329e92dc521946cd5b40380e3577c54a35517dc85315f0d45e369465'\n- '3fcf0cb5293e4a121966974e4dce4d017758c2595b96296b46c08629340e9eb2'"
-}

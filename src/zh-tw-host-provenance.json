@@ -1,0 +1,108 @@
+{
+  "sourceRepository": "https://github.com/deepseek-ai/deepseek-harness",
+  "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "license": "MIT",
+  "conversion": "macOS Foundation ICU Hans-Hant",
+  "scope": "Complete dictionaries for the captured conversation, sidebar and settings namespaces. Other host namespaces retain the declared zh fallback.",
+  "sources": [
+    {
+      "namespace": "common",
+      "path": "packages/client/locale/src/locales/zh.ts",
+      "exportName": "zh",
+      "sourceSha256": "4489a9bae106f710ff66ee2ea3408baa52470efb5860b9ce5b29eb0de5f9e9ac",
+      "keys": 43
+    },
+    {
+      "namespace": "settings.locale",
+      "path": "packages/client/locale/src/locales/settings.ts",
+      "exportName": "zh",
+      "sourceSha256": "6c2cc59e177a796f851a286009c5462332c7dc88187cbc999bb2abea29025359",
+      "keys": 1
+    },
+    {
+      "namespace": "sidebar",
+      "path": "packages/client/ui-sidebar/src/client/locales.ts",
+      "exportName": "zh",
+      "sourceSha256": "e8c5d98bd691cf45882e78be4b30624731dac7abf9331bd3a99328103ec92ed3",
+      "keys": 10
+    },
+    {
+      "namespace": "workspace",
+      "path": "packages/client/ui-workspace/src/client/locales.ts",
+      "exportName": "zh",
+      "sourceSha256": "9485a1f9ca84c59a25021212fe2df59110d5dcb8cf9c209e63b74ba750bda6f6",
+      "keys": 119
+    },
+    {
+      "namespace": "conversation",
+      "path": "packages/client/ui-conversation/src/client/locales.ts",
+      "exportName": "zh",
+      "sourceSha256": "197c579d227a71e6103d2dda7fd82a678a7c14ff736648c76d644dc6ab5aeed1",
+      "keys": 389
+    },
+    {
+      "namespace": "chat",
+      "path": "packages/client/ui-chat/src/client/locale.ts",
+      "exportName": "zh",
+      "sourceSha256": "2dd7220ced328d50b5a6ef8a320c09f3b82d7a80aed3b15500331d083cda8c31",
+      "keys": 203
+    },
+    {
+      "namespace": "settings.agentPreset",
+      "path": "packages/client/ui-agent-preset/src/client/locales.ts",
+      "exportName": "zh",
+      "sourceSha256": "45fe6f4fe7b2eeaff550f80a262a8760224651181aa008fea325ee51bae41da3",
+      "keys": 47
+    },
+    {
+      "namespace": "settings.permission",
+      "path": "packages/client/ui-permission-presets/src/client/locales.ts",
+      "exportName": "zh",
+      "sourceSha256": "ec72aa0078bf4bf0ce0f3ac07d87c76d15891fcdd19f3720677a82dfb35338e4",
+      "keys": 12
+    },
+    {
+      "namespace": "permission.access",
+      "path": "packages/client/ui-permission-presets/src/client/locales.ts",
+      "exportName": "accessZh",
+      "sourceSha256": "ec72aa0078bf4bf0ce0f3ac07d87c76d15891fcdd19f3720677a82dfb35338e4",
+      "keys": 17
+    },
+    {
+      "namespace": "model",
+      "path": "packages/client/ui-model-selection/src/client/locales.ts",
+      "exportName": "zh",
+      "sourceSha256": "18d7a56687ff7c6b36d0fb5669af669ef3bb86b5b0c39ab266cacb8f088c5f4a",
+      "keys": 23
+    },
+    {
+      "namespace": "pluginManager",
+      "path": "packages/client/ui-plugin-manager/src/client/locales.ts",
+      "exportName": "zh",
+      "sourceSha256": "dc2b570fc321e7ddc83a4dbe1e3f579cffc780472250d512d190209c0a0c78e3",
+      "keys": 291
+    },
+    {
+      "namespace": "schedule.manager",
+      "path": "packages/client/ui-schedule/src/client/task-manager-locales.ts",
+      "exportName": "zh",
+      "sourceSha256": "cc634e3eb7425b481f51c5238bf2eaaea33051a7e3cc5a7d96b8147a73dcae1d",
+      "keys": 215
+    },
+    {
+      "namespace": "schedule.catalog",
+      "path": "packages/client/ui-schedule/src/client/locales.ts",
+      "exportName": "zh",
+      "sourceSha256": "7d3c34307f52a0928543dd505a2f52bbab26241495c6d5b790309d63e083707b",
+      "keys": 76
+    },
+    {
+      "namespace": "trajectory",
+      "path": "packages/client/ui-trajectory/src/client/locales.ts",
+      "exportName": "zh",
+      "sourceSha256": "d7306c7bff8ef7c926537ff64263f201283a6d1429a70774759bc0ac87de878a",
+      "keys": 199
+    }
+  ],
+  "sourceLicenseText": "MIT License\n\nCopyright (c) 2026 DeepSeek\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+}

@@ -1,0 +1,397 @@
+{
+  "status": "PASS",
+  "runId": "9306a1df-62ec-4242-8de2-191bfb4b5b57",
+  "auditId": "9306a1df",
+  "mediaLocale": "ja",
+  "hostLocale": "ja",
+  "htmlLang": "ja",
+  "visibleTextAtProof": "DSHローカルビルド\n0.2.2-rc.1-fcc0ad4\n新規セッション\n⌥\n⌘\nN\nプラグイン\n自動化タスク\nその他\nチャット履歴\n1 セッション\norders.json を確認してください\n2/3 件のタスク\n17:46\nリリースを公開する\n✓\n注文データを読む\n✓\n合計を確認する\n✦\n\n`orders.json` を確認しました。確認番号は 9306a1df です。 - 注文 A の合計は 31 です（2 × 13 + 5）。 - 注文 B の合計は 5 です（0 × 8 + 5）。 ファイルの変更や公開は行なっていません。リリースの公開は承認待ちとして保留のままです。\n\n標準ナビゲーション\nその他\norders.json を確認してください\n標準モード\nチャット\n軌跡\norders.json を確認してください。ツールを使う前の説明、途中経過、最終回答を含め、すべて日本語で書いてください。技術的な識別子は原文を保ちます。最初に todo_write で「注文データを読む」「合計を確認する」「リリースを公開する」の3件を作成します。read でファイルを読み、各注文の quantity * unitPrice + shipping を計算してください。最初の2件を完了にし、公開は承認待ちのため保留にします。ファイルの変更や公開はしないでください。日本語の短い文で注文 A と注文 B の合計を説明し、確認番号 9306a1df を含めてください。\n17:46\n完了\n完了まで 5秒\n\nまず3件のタスクを作成します。\n\n次に orders.json を読みます。\n\n計算結果を確認できました。途中経過としてタスクの状態を更新します。\n\n公開は承認待ちのため保留にします。\n\norders.json を確認しました。確認番号は 9306a1df です。\n\n注文 A の合計は 31 です（2 × 13 + 5）。\n注文 B の合計は 5 です（0 × 8 + 5）。\n\nファイルの変更や公開は行なっていません。リリースの公開は承認待ちとして保留のままです。\n\n使用量 12.3K tok\n17:46\nToDo\n2件完了 · 1件保留中\nメッセージを送信するかタスクを実行、/ コマンド、@ ファイルやセッション\nワークスペース書き込み\ndeepseek-flash\nOff\n1ターン 5ステップ·219 tok/s\n12.3K tok·キャッシュヒット 88%\n0%",
+  "expectedUiLabels": [
+    "チャット履歴",
+    "標準ナビゲーション",
+    "2/3 件のタスク"
+  ],
+  "expectedTaskLabels": [
+    "注文データを読む",
+    "合計を確認する",
+    "リリースを公開する"
+  ],
+  "requestedTaskLabels": [
+    "注文データを読む",
+    "合計を確認する",
+    "リリースを公開する"
+  ],
+  "languageChecks": {
+    "status": "PASS",
+    "modelResponse": "all actual assistant messages including tool preambles checked",
+    "nativeTaskLabels": "all three match requested language",
+    "uiLabels": "actual rendered labels checked"
+  },
+  "candidateTree": null,
+  "candidateSources": {
+    "package.json": "0feef80052dd2732f88c6a6dbb5d4b5194b2742d4e50d1dad8b2cf7b8cbdcd15",
+    "index.mjs": "4578ca495317c028097474cc13a3acdc78611a65a472766abe50c1a1dac5504a",
+    "client.js": "2857adb05f89dcd1f9955710ae01401caab4484e14ca43a36559c4faedd6522e",
+    "src/projection.mjs": "40405bac66d421977ddf5ddfa5350a83096015b6c157de4e4c3b1f2128d4ff2d",
+    "tests/live.test.mjs": "51a2cdba796f66527ebd69be27a9eda35a22e44771220889f1ab82475ef90422",
+    "tests/live-proof.mjs": "6c40205793bb8082a05b61177f63d58a829805976d15660f639306ce9db1ee6d",
+    "tests/live.config.mjs": "89ac271d9dba7a8dfa060923a20eb97d3a2a3e99207bbfecf1f2118196728ffc",
+    "tests/media-locales.mjs": "91a70c6e97bec0773a821350eaf8b68257253645a90e1a7c0885d6d14c64c98b",
+    "scripts/live-browser.mjs": "daa74a8172e3163d459d547dd729b56cc8d0d36bf19975a2de12c8eee65f14df"
+  },
+  "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "provider": "deepseek-official",
+  "model": "deepseek-flash",
+  "liveModel": true,
+  "mockedService": false,
+  "scriptedModel": false,
+  "seededAssistantMessages": false,
+  "seededTodoEvents": false,
+  "inputData": "Fresh generated demo order inputs, inspected by native read",
+  "orders": [
+    {
+      "id": "A",
+      "quantity": 2,
+      "unitPrice": 13,
+      "shipping": 5
+    },
+    {
+      "id": "B",
+      "quantity": 0,
+      "unitPrice": 8,
+      "shipping": 5
+    }
+  ],
+  "expectedTotals": [
+    31,
+    5
+  ],
+  "primarySession": "session-c761d796-8a54-4da1-af01-275124c842d5",
+  "secondSession": "session-93b36651-3b99-42cb-8858-4dcb77bfa81f",
+  "provenance": {
+    "apiResponses": 5,
+    "nativeToolCalls": 4,
+    "todoWrites": 3
+  },
+  "calls": [
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-c761d796-8a54-4da1-af01-275124c842d5",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:11.023Z",
+      "responseId": "ee9a43f2-6d5f-43ac-a2b3-f1c0a932780f",
+      "usage": {
+        "input_tokens": 584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1408,
+        "output_tokens": 100,
+        "service_tier": "standard"
+      },
+      "text": "まず3件のタスクを作成します。",
+      "toolCalls": [
+        {
+          "id": "call_00_dcZb3bVXTQOKjTdMezbX6780",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "注文データを読む",
+                "status": "in_progress"
+              },
+              {
+                "content": "合計を確認する",
+                "status": "pending"
+              },
+              {
+                "content": "リリースを公開する",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "d2d949900fe447b5aa104551a6b680f2ef982d4056f393a8affba62329f22aa1",
+      "finishedAt": "2026-11-10T09:46:12.441Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-c761d796-8a54-4da1-af01-275124c842d5",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:12.470Z",
+      "responseId": "30ae1cd6-7b74-4f03-87cc-9a1a29f72cc8",
+      "usage": {
+        "input_tokens": 200,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1920,
+        "output_tokens": 97,
+        "service_tier": "standard"
+      },
+      "text": "次に orders.json を読みます。",
+      "toolCalls": [
+        {
+          "id": "call_00_BHAfW1uZ7IHmQbyap3ir8461",
+          "name": "read",
+          "arguments": {
+            "file_path": "/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-D8cRog/sidebar-live-audit/orders.json"
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "285ad5c6e78be0458e378adb0d302088461daa0917b29cd81db725dd85b90971",
+      "finishedAt": "2026-11-10T09:46:13.263Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-c761d796-8a54-4da1-af01-275124c842d5",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:13.295Z",
+      "responseId": "2211456f-6a54-461b-aef4-3d9c3bacb96d",
+      "usage": {
+        "input_tokens": 256,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2176,
+        "output_tokens": 109,
+        "service_tier": "standard"
+      },
+      "text": "計算結果を確認できました。途中経過としてタスクの状態を更新します。",
+      "toolCalls": [
+        {
+          "id": "call_00_X1tTvcLcauN0tYsCdGld4971",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "注文データを読む",
+                "status": "completed"
+              },
+              {
+                "content": "合計を確認する",
+                "status": "completed"
+              },
+              {
+                "content": "リリースを公開する",
+                "status": "in_progress"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "3b1277a3de0021ccb6e325263607b80edda1ce8cb58fce90afc173ff445d8d06",
+      "finishedAt": "2026-11-10T09:46:14.784Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-c761d796-8a54-4da1-af01-275124c842d5",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:14.809Z",
+      "responseId": "ace30ad0-9a34-417e-b426-9e11ff925fe6",
+      "usage": {
+        "input_tokens": 265,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 99,
+        "service_tier": "standard"
+      },
+      "text": "公開は承認待ちのため保留にします。",
+      "toolCalls": [
+        {
+          "id": "call_00_7p44Sl7cJdmuXjDlgiOV3749",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "注文データを読む",
+                "status": "completed"
+              },
+              {
+                "content": "合計を確認する",
+                "status": "completed"
+              },
+              {
+                "content": "リリースを公開する",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "9d884ab483a3203b850f33d3d69e73b84b2e7bb32a0e4d1c54eab54f091066c3",
+      "finishedAt": "2026-11-10T09:46:15.641Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-c761d796-8a54-4da1-af01-275124c842d5",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:15.664Z",
+      "responseId": "28f87efd-9eed-4b37-a167-231a765ed823",
+      "usage": {
+        "input_tokens": 136,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2560,
+        "output_tokens": 94,
+        "service_tier": "standard"
+      },
+      "text": "`orders.json` を確認しました。確認番号は 9306a1df です。\n\n- 注文 A の合計は 31 です（2 × 13 + 5）。\n- 注文 B の合計は 5 です（0 × 8 + 5）。\n\nファイルの変更や公開は行なっていません。リリースの公開は承認待ちとして保留のままです。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "0fd7f4235128ffe52400062599787c4e91f16f7e9d0a5584c9ffa0ac1a229a05",
+      "finishedAt": "2026-11-10T09:46:16.720Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-93b36651-3b99-42cb-8858-4dcb77bfa81f",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:24.521Z",
+      "responseId": "8818f6b3-cebe-4fc6-b665-9eb61f0f3070",
+      "usage": {
+        "input_tokens": 591,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1280,
+        "output_tokens": 29,
+        "service_tier": "standard"
+      },
+      "text": "こんにちは！確認番号 9306a1df-second で、お元気でお過ごしください。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "63a7b69b1956cb28f78f2cd14e4f877c65535c1fd8ea8001a6b04ec9024d11f5",
+      "finishedAt": "2026-11-10T09:46:25.427Z"
+    }
+  ],
+  "usage": [
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:11.007Z",
+      "usage": {
+        "inputTokens": 584,
+        "outputTokens": 100,
+        "cacheReadTokens": 1408,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2092
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:12.468Z",
+      "usage": {
+        "inputTokens": 200,
+        "outputTokens": 97,
+        "cacheReadTokens": 1920,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2217
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:13.292Z",
+      "usage": {
+        "inputTokens": 256,
+        "outputTokens": 109,
+        "cacheReadTokens": 2176,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2541
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:14.808Z",
+      "usage": {
+        "inputTokens": 265,
+        "outputTokens": 99,
+        "cacheReadTokens": 2304,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2668
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:15.662Z",
+      "usage": {
+        "inputTokens": 136,
+        "outputTokens": 94,
+        "cacheReadTokens": 2560,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2790
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:46:24.519Z",
+      "usage": {
+        "inputTokens": 591,
+        "outputTokens": 29,
+        "cacheReadTokens": 1280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 1900
+      }
+    }
+  ],
+  "checks": [
+    "official-api-response-identity-and-usage",
+    "api-tool-ids-match-durable-events",
+    "native-read-and-todo-write",
+    "model-computed-order-totals",
+    "committed-text-matches-api",
+    "sidebar-count-and-preview-match-persistence",
+    "independent-session-has-no-tasks",
+    "reload-restores-real-summary"
+  ],
+  "consoleErrors": [],
+  "proof_interval_s": [
+    6.977605224609375,
+    12.323605224609375
+  ],
+  "video": {
+    "duration_s": 12.325605224609374,
+    "frames": 82
+  },
+  "finalAssistantText": "`orders.json` を確認しました。確認番号は 9306a1df です。\n\n- 注文 A の合計は 31 です（2 × 13 + 5）。\n- 注文 B の合計は 5 です（0 × 8 + 5）。\n\nファイルの変更や公開は行なっていません。リリースの公開は承認待ちとして保留のままです。",
+  "finalPreview": "`orders.json` を確認しました。確認番号は 9306a1df です。 - 注文 A の合計は 31 です（2 × 13 + 5）。 - 注文 B の合計は 5 です（0 × 8 + 5）。 ファイルの変更や公開は行なっていません。リリースの公開は承認待ちとして保留のままです。",
+  "finalTodos": [
+    {
+      "content": "注文データを読む",
+      "status": "completed"
+    },
+    {
+      "content": "合計を確認する",
+      "status": "completed"
+    },
+    {
+      "content": "リリースを公開する",
+      "status": "pending"
+    }
+  ],
+  "screenshots": {
+    "preflight.png": "da7bc57b8799e1e81e2c8b9d3f0d6db1c0334ff96c0dd2112e73410648972c22",
+    "progress.png": "dc852bf47ccb6fe83a92d3cd754425711c9f12854bce0a7e2f4c676ba8031279",
+    "final.png": "e831c10a3e0fd5740daa0bca23de737820195f6de665535aee8a925914c7426c",
+    "reloaded.png": "8f57448af9575f733b32a76042b4402c76936c93dca69c3bd4c295127cb83dcd"
+  },
+  "raw_sha256": "b46595f2c1d677fa5bc54af608cd7adb9e79ce12f61ca17842f39393015b2c9a"
+}

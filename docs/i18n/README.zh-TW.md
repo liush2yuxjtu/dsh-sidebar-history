@@ -8,11 +8,11 @@
 
 ## 功能影片
 
-[![DSH 歷史卡片顯示真實 TODO 進度和最新 Assistant 回覆](../media/live/feature-8s.gif)](../media/live/demo.mp4)
+[![DSH 歷史卡片顯示真實 TODO 進度和最新 Assistant 回覆](../media/localized/zh-TW/feature-8s.gif)](../media/localized/zh-TW/demo.mp4)
 
-[觀看真實 API 影片，9.3 秒](../media/live/demo.mp4) · [實際瀏覽器截圖](../media/live/snapshot.png) · [API 回執](../media/live/evidence/result.json)
+[觀看真實 API 影片](../media/localized/zh-TW/demo.mp4) · [實際瀏覽器截圖](../media/localized/zh-TW/snapshot.png) · [API 回執](../media/localized/zh-TW/evidence/result.json)
 
-全新的 DSH 對話呼叫 DeepSeek 官方 API。模型讀取示範訂單輸入，呼叫原生 TODO 工具，並儲存自己的回答。側欄顯示 2/3 項任務已完成，以及該對話儲存的回覆。影片保留原始錄製位元組和實際時長。錄製中沒有 mock 端點、腳本回覆，也沒有預先寫入 Assistant 訊息或 TODO 事件。另一個真實 API 對話和重新整理後的恢復也已檢查。請參閱[媒體來源與雜湊](../media/live/provenance.json)和[媒體檢查結果](../media/live/qa.json)。
+全新的 DSH 對話呼叫 DeepSeek 官方 API。模型讀取示範訂單輸入，呼叫原生 TODO 工具，並儲存自己的回答。側欄顯示 2/3 項任務已完成，以及該對話儲存的回覆。影片保留原始錄製位元組和實際時長。錄製中沒有 mock 端點、腳本回覆，也沒有預先寫入 Assistant 訊息或 TODO 事件。另一個真實 API 對話和重新整理後的恢復也已檢查。請參閱[媒體來源與雜湊](../media/localized/zh-TW/provenance.json)和[媒體檢查結果](../media/localized/zh-TW/qa.json)。
 
 ## 尋找並繼續工作
 
@@ -20,11 +20,11 @@
 - 優先顯示進行中和待處理任務，再顯示已完成任務。
 - 搜尋對話標題和已快取的回覆。DSH 官方內容搜尋還可以尋找尚未載入的歷史。
 - 使用上、下、Home、End 和 Enter 鍵操作卡片。清單只繪製可見卡片和少量緩衝區。
-- 保留原生側欄收合和行動版抽屜。按 **Native navigation** 可使用原有工作區、封存和對話操作。按 **History cards** 返回卡片檢視。
+- 保留原生側欄收合和行動版抽屜。按 **原生導覽** 可使用原有工作區、封存和對話操作。按 **歷史卡片** 返回卡片檢視。
 
-TODO 狀態只來自 `todo/write` 事件。新的 `turn/start` 會清空上一輪任務。摘要只使用已提交的 `assistant/message` 文字。生成期間，卡片保留上一則已提交回覆，並顯示 **Generating**。中斷輸出、推理和工具區塊不會成為摘要。空回覆、非文字訊息、載入中和載入失敗都有明確狀態。已封存的對話預設隱藏。
+TODO 狀態只來自 `todo/write` 事件。新的 `turn/start` 會清空上一輪任務。摘要只使用已提交的 `assistant/message` 文字。生成期間，卡片保留上一則已提交回覆，並顯示 **產生中**。中斷輸出、推理和工具區塊不會成為摘要。空回覆、非文字訊息、載入中和載入失敗都有明確狀態。已封存的對話預設隱藏。
 
-外掛 UI 目前支援英文和簡體中文，跟隨 DSH 的語言設定。README 文件提供上方連結所列的五種語言。
+側欄支援英文、簡體中文、繁體中文、日語和西班牙語，跟隨 DSH 的語言設定。繁體中文涵蓋側欄及示範畫面，其他 DSH 頁面可能回退為簡體中文。
 
 ## 安裝側欄外掛
 
@@ -36,7 +36,7 @@ TODO 狀態只來自 `todo/write` 事件。新的 `turn/start` 會清空上一�
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.0.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.1.tgz"
 ```
 
 開啟 DSH Web。歷史側欄會為未封存的對話顯示卡片。如果你使用其他 Web profile，請替換 `web`。`--profile` 參數必須放在 `add` 前。也可以透過 DSH 外掛管理員安裝本機包。請參閱[上游安裝指南](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md)。
@@ -71,7 +71,6 @@ npm run verify:commit
 - [架構與決策](https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/main/docs/decisions.md)
 - [驗證報告](https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/main/docs/verification.md)
 - [發現入口與儲存庫中繼資料](../discovery.md)
-- [設計與驗收](https://chatgpt.com/space/page_7a28be26236481918ee65d88725c1d38)
 - [DeepSeek Harness 上游](https://github.com/deepseek-ai/deepseek-harness)
 - [MIT 授權](../../LICENSE)
 
