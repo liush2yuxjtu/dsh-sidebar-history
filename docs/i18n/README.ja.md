@@ -1,6 +1,6 @@
 # DSH Sidebar History：DeepSeek Harness の履歴サイドバープラグイン
 
-この checkout は 0.2.1 をビルドします。以下の手順は現在のソースからパッケージを作成します。公開済みの Release は古い場合があります。
+この checkout は 0.2.2 をビルドします。以下の手順は現在のソースからパッケージを作成します。公開済みの Release は古い場合があります。
 
 [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md)
 
@@ -40,7 +40,7 @@ Node.js `>=24.9.0` と、インストール済みの DSH Web が必要です。�
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.1.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.2.tgz"
 ```
 
 DSH Web を開くと、アーカイブされていないセッションの履歴カードが表示されます。別の Web profile を使う場合は `web` を置き換えてください。`--profile` は `add` より前に指定します。DSH のプラグインマネージャーからローカル tarball をインストールすることもできます。[上流のインストールガイド](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md)を参照してください。

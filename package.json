@@ -1,6 +1,6 @@
 {
   "name": "dsh-sidebar-history",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "DeepSeek Harness (DSH) sidebar plugin with TODO progress, latest assistant reply previews, and searchable chat history",
   "type": "module",
   "license": "MIT",

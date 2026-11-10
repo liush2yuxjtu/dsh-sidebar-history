@@ -1,6 +1,6 @@
 # DSH Sidebar History：DeepSeek Harness 歷史側欄外掛
 
-此 checkout 建置 0.2.1；下方指令從目前原始碼建立安裝包，已發佈的 Release 可能仍是較早版本。
+此 checkout 建置 0.2.2；下方指令從目前原始碼建立安裝包，已發佈的 Release 可能仍是較早版本。
 
 [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md)
 
@@ -40,7 +40,7 @@ Markdown 預覽使用與 DSH 相同的 GFM 語法，顯示粗體、斜體、刪�
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.1.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.2.tgz"
 ```
 
 開啟 DSH Web。歷史側欄會為未歸檔的對話顯示卡片。如果你使用其他 Web profile，請替換 `web`。`--profile` 參數必須放在 `add` 前。也可以透過 DSH 外掛管理員安裝本機包。請參閱[上游安裝指南](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md)。

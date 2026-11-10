@@ -1,6 +1,6 @@
 # DSH Sidebar History para DeepSeek Harness
 
-Este checkout compila la versión 0.2.1. Las instrucciones crean el paquete desde este código; el Release publicado puede corresponder a una versión anterior.
+Este checkout compila la versión 0.2.2. Las instrucciones crean el paquete desde este código; el Release publicado puede corresponder a una versión anterior.
 
 [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md)
 
@@ -40,7 +40,7 @@ Crea un tarball local e instálalo en el profile `web`:
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.1.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.2.tgz"
 ```
 
 Abre DSH Web. La barra lateral muestra tarjetas para las sesiones sin archivar. Sustituye `web` si usas otro profile Web. La opción `--profile` debe ir antes de `add`. También puedes instalar el tarball local con el gestor de plugins de DSH. Consulta la [guía de instalación de DSH](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md).

@@ -3,43 +3,20 @@
   "metadata_pass": true,
   "api_provenance": "PASS",
   "liveModel": true,
-  "runId": "ba076771-4919-491b-955e-ba5ef3fdc426",
+  "runId": "37676480-4330-4a7e-a9b9-d8232ad00792",
   "visual_review": {
     "status": "PASS",
-    "method": "Actual screenshot, contact sheet and interaction strip inspected",
-    "reviewedAt": "2026-11-10T10:56:24.043875+00:00",
+    "method": "Actual five-language screenshot and contact-sheet montage visually inspected; QA checks semantic text separately with OCR",
+    "reviewedAt": "2026-11-10T15:48:59.928560+00:00",
     "artifacts": {
-      "snapshot.png": "48b3b2c5aeaff7925fc7a9b312950ac4bd76a50b5eaca73977a69680576b7e47",
-      "contact-sheet.png": "72249124409f0f9aa7038f3897347735517ea54d53d3cc2aeb57cfff0002bdda",
-      "interaction-strip.png": "ebaec71582c407e2f544492c9d835a4db0b038a2bfd73466382e05cc1763def6"
+      "snapshot.png": "5a385619ca6b4a89856aa85b5906578a5a00cbaaa71c3792f480890092a836a1",
+      "contact-sheet.png": "f6f97fc146552c8a7cc05e6d78307cb81754641fb2a9fbdb80aa73b77835ce85",
+      "interaction-strip.png": "3c82c771a18ca6c871aac8e669707c1fcd998935a30b6f2c51b378363b6bf0df"
     },
-    "findings": "Actual three PNGs inspected: Spanish Historial de chats / Espacios y sesiones archivadas and singular 1 sesión. All intermediate/final prose is Spanish (Voy a crear / Leído. Ahora calculo), with no old English intermediate sentences. Leer pedidos and Verificar totales checked, Publicar versión pending (2/3). Audit ba076771 gives 38 and 4. Bold/inline-code preview fits two readable lines; complete final answer visible, time 18:51. Contact sheet and GIF strip contain input, native task/read, count changes and saved reply.",
+    "findings": "es original DSH host UI, sidebar session card and two completed of three TODO tasks visible; native conversation and assistant summary persist. Dark UI and own locale labels inspected alongside complete timeline contact sheet. Model API session run 37676480-4330-4a7e-a9b9-d8232ad00792; independent pixel OCR still required.",
     "finalResultHold_s": {
-      "demo.mp4": 5.2,
-      "feature-8s.gif": 4.33
+      "demo.mp4": 5.48
     }
   },
-  "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health.",
-  "ocr_reviews": [
-    {
-      "status": "VISUALLY_CONFIRMED",
-      "asset": "evidence/earlier-reply.png",
-      "sha256": "3166cf63100ab25e4867ad8c95469f8a2f89e457ea61479d6055acbe7c233e0d",
-      "box": [
-        0.5109374972656251,
-        0.89249999975,
-        0.3453125,
-        0.014999999999999902
-      ],
-      "ocrText": "rauncar version penaeme porque requiere aprovacion. no eantes mur",
-      "observedLocale": "es",
-      "reviewedAt": "2026-11-10T11:08:22.415Z",
-      "reason": "The fixed conversation tab bar clips the upper glyphs of this Spanish user-request line at y≈76 in the 1280×800 image. Actual pixels were inspected in earlier-reply.png and independently in final.png. The complete corresponding line is Spanish; corrupted OCR, not Portuguese application text, caused the language conflict.",
-      "reference": {
-        "asset": "evidence/final.png",
-        "sha256": "48b3b2c5aeaff7925fc7a9b312950ac4bd76a50b5eaca73977a69680576b7e47",
-        "text": "Publicar versión pendiente porque requiere aprobación. No edites ni"
-      }
-    }
-  ]
+  "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."
 }

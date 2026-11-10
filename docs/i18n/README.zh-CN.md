@@ -1,6 +1,6 @@
 # DSH Sidebar History：DeepSeek Harness 历史侧栏插件
 
-此 checkout 构建 0.2.1；下方命令从当前源码生成安装包，已发布 Release 可能仍是较早版本。
+此 checkout 构建 0.2.2；下方命令从当前源码生成安装包，已发布 Release 可能仍是较早版本。
 
 [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md)
 
@@ -40,7 +40,7 @@ Markdown 预览使用与 DSH 相同的 GFM 语法，显示粗体、斜体、删�
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.1.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.2.tgz"
 ```
 
 打开 DSH Web。历史侧栏会为未归档的会话显示卡片。如果你使用其他 Web profile，请替换 `web`。`--profile` 参数必须放在 `add` 前。也可以通过 DSH 插件管理器安装本地包。参见[上游安装指南](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md)。

@@ -1,8 +1,14 @@
 # Verification
 
-## Integrated 0.2.1 real API media
+## Current 0.2.2 real API release captures (2026-11-10)
 
-**Current media verdict: PASS.** The integrated sidebar preserves the search, navigation, task lifecycle, accessibility and safe Markdown fixes. Each of the five README languages now uses its own original API-driven screenshots, GIF and video.
+**Media validation PASS.** A fresh set of five official API-driven DSH sessions was recorded against `package.json` version `0.2.2`. Each locale (en, zh-CN, zh-TW, ja, es) returned seven actual API responses. Each provides an exact original H.264 MP4, a source-bound eight-second GIF, original screenshots, tool receipts, native session state, and SHA-256 provenance. The validator accepted 100 actual pixel samples and zero manual OCR exceptions. These captures replace the previous published media; the earlier 0.2.1 results below remain historical.
+
+The final commit-time `/verify` gate must separately repeat staged-tree tests, media and API browser E2E before a release is created. Publishing via npm Trusted Publishing remains unverified until the GitHub Actions run completes and anonymous registry installation passes.
+
+## Historical integrated 0.2.1 real API media
+
+**Historical media verdict: PASS for 0.2.1.** The integrated sidebar preserves the search, navigation, task lifecycle, accessibility and safe Markdown fixes. Each of the five README languages now uses its own original API-driven screenshots, GIF and video.
 
 The final captures contain **34 complete official DeepSeek API responses and 5 genuinely stopped streams**. Model replies and native TODO events are not seeded. Each full MP4 is byte-identical to its raw recording; each GIF is a continuous eight-second excerpt.
 

@@ -21,7 +21,7 @@ The video preserves the exact original capture bytes and real elapsed time. The 
 
 ## Find and resume work
 
-This checkout builds version 0.2.1. The latest published Release can lag behind the checkout; the installation below builds this source.
+This checkout builds version 0.2.2. The latest published Release can lag behind the checkout; the installation below builds this source.
 
 Each compact card shows its title, update date, completed/total count, up to three tasks, and a two-line assistant preview. Active and pending tasks take precedence over completed tasks. Use **Workspaces & archives** at the foot to open DSH's workspace browser and session actions. **History cards** returns to the same search, scroll position, and focused session. DSH keeps control of the sidebar shell, collapse, and mobile drawer.
 
@@ -44,7 +44,7 @@ Build a local tarball and install it into the `web` profile:
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.1.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.2.tgz"
 ```
 
 Open DSH Web. The history sidebar displays cards for your unarchived sessions. Replace `web` if you use another Web profile. The profile option must appear before `add`. You can also install the tarball with DSH's plugin manager. See the [upstream installation guide](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md).

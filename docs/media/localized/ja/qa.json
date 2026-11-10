@@ -3,20 +3,19 @@
   "metadata_pass": true,
   "api_provenance": "PASS",
   "liveModel": true,
-  "runId": "4bd0e2d4-424e-477e-88a2-612f47f5f189",
+  "runId": "55fac021-fdbe-4edc-96b1-3eef2e2e1d36",
   "visual_review": {
     "status": "PASS",
-    "method": "Actual screenshot, contact sheet and interaction strip inspected",
-    "reviewedAt": "2026-11-10T10:56:24.043875+00:00",
+    "method": "Actual five-language screenshot and contact-sheet montage visually inspected; QA checks semantic text separately with OCR",
+    "reviewedAt": "2026-11-10T15:48:59.927200+00:00",
     "artifacts": {
-      "snapshot.png": "c49166fb92b056798d31e364b495f6f0afea3262cd93a06e311dd6d196437e11",
-      "contact-sheet.png": "49a1c51c73f3c5e465c84648c8d55530bc9be337bca88a83b76a50ee762b5562",
-      "interaction-strip.png": "27429aea30a4dca527330c4287444e12f2044e552585ba34e1b2396ab94fbc7c"
+      "snapshot.png": "3c6c5ff84a86064bc554e6881cc297f2cd5183d9728c56e01d8f189804d70f1e",
+      "contact-sheet.png": "701592133510b1454aaeeca33267ce904754d706cd193c3471b70b61fec20709",
+      "interaction-strip.png": "1082d17e96382d9949e68d2bde860235fbcfaf7e051285eb6d3335fec04e2420"
     },
-    "findings": "Actual three PNGs inspected: Japanese チャット履歴 / ワークスペースとアーカイブ and singular 1セッション, Japanese intermediate explanations and final reply. 注文データを読む and 合計を確認する checked, リリースを公開する pending (2/3). 確認番号 4bd0e2d4 gives 27 and 4. Two-line bold/inline-code card preview is readable after the layout fix; complete long main reply remains visible, time 18:50. Contact sheet and GIF strip show native tools, task-state updates and saved reply without blank frames.",
+    "findings": "ja original DSH host UI, sidebar session card and two completed of three TODO tasks visible; native conversation and assistant summary persist. Dark UI and own locale labels inspected alongside complete timeline contact sheet. Model API session run 55fac021-fdbe-4edc-96b1-3eef2e2e1d36; independent pixel OCR still required.",
     "finalResultHold_s": {
-      "demo.mp4": 5.2,
-      "feature-8s.gif": 4.33
+      "demo.mp4": 5.44
     }
   },
   "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."

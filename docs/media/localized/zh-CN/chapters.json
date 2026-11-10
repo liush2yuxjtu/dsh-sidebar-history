@@ -1,22 +1,22 @@
 [
   {
     "label": "\u5f00\u59cb\u6838\u5bf9\u8ba2\u5355",
-    "time_s": 0.009
+    "time_s": 0.007
   },
   {
     "label": "\u53d1\u9001\u7ed9 DeepSeek",
-    "time_s": 1.114
+    "time_s": 1.111
   },
   {
     "label": "\u6253\u5f00\u5386\u53f2\u5361\u7247",
-    "time_s": 2.236
+    "time_s": 2.203
   },
   {
     "label": "\u539f\u751f\u4efb\u52a1\u8fdb\u5ea6",
-    "time_s": 3.118
+    "time_s": 2.406
   },
   {
     "label": "\u5df2\u9a8c\u8bc1\u4fdd\u5b58\u7684\u56de\u590d",
-    "time_s": 4.995
+    "time_s": 5.297
   }
 ]

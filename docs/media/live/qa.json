@@ -3,20 +3,19 @@
   "metadata_pass": true,
   "api_provenance": "PASS",
   "liveModel": true,
-  "runId": "43c9d1f2-b81a-4a6c-84af-689702bf7cc6",
+  "runId": "b738a6be-985e-4543-ac9f-cd79fc2d2c02",
   "visual_review": {
     "status": "PASS",
-    "method": "Actual screenshot, contact sheet and interaction strip inspected",
-    "reviewedAt": "2026-11-10T10:56:24.043875+00:00",
+    "method": "Actual five-language screenshot and contact-sheet montage visually inspected; QA checks semantic text separately with OCR",
+    "reviewedAt": "2026-11-10T15:48:59.923106+00:00",
     "artifacts": {
-      "snapshot.png": "0651573166c1d9a6107b3316a71553fe567947e4fda1950099f88cb0ce80e531",
-      "contact-sheet.png": "d50fa2f75cf9233bbce964b94582bf1c972bbbc2d170f87615b35474a36576b0",
-      "interaction-strip.png": "948ef7e56633be0f87754f2d7cd9149d303814048e98b5f834003b6211a6baf7"
+      "snapshot.png": "412bd833002a14181c3d88fae5dfd8c9cedbe0e845f0542f596727548ba0b5c4",
+      "contact-sheet.png": "bff8f8abdb4371da0baab7139d2553b2ed3c45aaa69298f7a70941ed36325a11",
+      "interaction-strip.png": "19facf880668303fd010ea697451b3ca55ec617ef195968cdb0501507de16aa3"
     },
-    "findings": "Actual three PNGs inspected: English Chat history, Workspaces & archives and singular 1 session; Read order data and Verify both totals checked, Publish release pending (2/3). Audit 43c9d1f2 gives 51 and 5. Compact 183px card has readable two-line bold/inline-code preview; full final answer is visible. Times 06:45 PM / 18:45. Full-video contact sheet shows creation/read/verification/final reply. GIF strip begins with existing 2/3, showing generating to saved Markdown; it does not demonstrate task-count changes.",
+    "findings": "en original DSH host UI, sidebar session card and two completed of three TODO tasks visible; native conversation and assistant summary persist. Dark UI and own locale labels inspected alongside complete timeline contact sheet. Model API session run b738a6be-985e-4543-ac9f-cd79fc2d2c02; independent pixel OCR still required.",
     "finalResultHold_s": {
-      "demo.mp4": 5.2,
-      "feature-8s.gif": 4.33
+      "demo.mp4": 5.45
     }
   },
   "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."

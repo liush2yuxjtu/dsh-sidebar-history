@@ -4,7 +4,7 @@
 
 ## Product facts
 
-- Package version: 0.2.1. Verified DSH target: 0.2.2-rc.1, upstream commit fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159.
+- Package version: 0.2.2. Verified DSH target: 0.2.2-rc.1, upstream commit fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159.
 - Requires Node.js >=24.9.0 and a DSH Web profile. Other declared compatible versions are not independently verified.
 - TODO status comes from native todo/write events. A new turn clears the previous turn's tasks.
 - Reply previews use committed assistant/message text. Earlier reply identifies a previous turn; no task list this turn does not mean earlier work is done. Empty/tool-only messages preserve useful text. Interrupted output, reasoning, and tool results are excluded.
@@ -12,7 +12,7 @@
 - Workspaces & archives opens native session actions; History cards restores search, scroll, and focused session. Failed remote search keeps local matches, offers retry, and marks results incomplete. Content-search result limits are explicit. Remote-only matches survive navigation.
 - Bounded sidebarHistory projection v2 replays old durable logs without activating historical Agents. Accessible card descriptions expose task counts/states, useful reply text, and turn context.
 - Sidebar UI languages: English, Simplified Chinese, Traditional Chinese, Japanese, and Spanish. Traditional Chinese also provides a native-host language pack covering 17 namespaces and 1829 keys, with fallback for namespaces outside that pack. README languages: English, Simplified Chinese, Traditional Chinese, Japanese, and Spanish.
-- Each README maps to its own language-specific original recording using the official DeepSeek API. Version 0.2.1 has fresh, verified language-specific API captures, native lifecycle checks and real Chromium video playback. The Chinese website uses Simplified Chinese media; the English website uses English media. It contains no scripted model replies or seeded TODO events.
+- Each README maps to its own language-specific original recording using the official DeepSeek API. Version 0.2.2 has fresh, verified language-specific API captures, native lifecycle checks and real Chromium video playback. The Chinese website uses Simplified Chinese media; the English website uses English media. It contains no scripted model replies or seeded TODO events.
 - Repository metrics do not measure active installations, Google ranking, or user retention.
 
 ## Documentation
