@@ -1,5 +1,7 @@
 # DSH Sidebar History：DeepSeek Harness の履歴サイドバープラグイン
 
+現在の main は 0.2.0 です。以下の手順は現在のソースからパッケージを作成します。公開済み Release は旧版の場合があります。読み取り専用の Markdown プレビュー、検索とスクロール位置の保持、以前の返信と現在の進捗の区別に対応します。ツールだけのメッセージや中断された出力は、有用な返信を上書きしません。
+
 [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md)
 
 **DSH Sidebar History** は、DeepSeek Harness のチャット履歴に TODO の進捗と最後に保存された Assistant の返信を表示するプラグインです。会話を一つずつ開かずに、未完了の作業を見つけて再開できます。
@@ -10,7 +12,7 @@ MIT ライセンスの独立したプラグインです。DSH の公式 projecti
 
 [![DSH の履歴カードに実際の TODO 進捗と最新の Assistant 返信を表示](../media/live/feature-8s.gif)](../media/live/demo.mp4)
 
-[実 API による動画を見る、9.3 秒](../media/live/demo.mp4) · [実際のブラウザー画像](../media/live/snapshot.png) · [API の実行記録](../media/live/evidence/result.json)
+[実 API による動画を見る、9.9 秒](../media/live/demo.mp4) · [実際のブラウザー画像](../media/live/snapshot.png) · [API の実行記録](../media/live/evidence/result.json)
 
 新しい DSH セッションから DeepSeek 公式 API を呼び出して録画しました。モデルはデモ用の注文データを読み、標準 TODO ツールを呼び出し、自分の回答を保存します。サイドバーには 3 件中 2 件の完了と保存済みの返信が表示されます。動画は元の録画データと実際の経過時間を保持しています。mock エンドポイント、台本によるモデルの返信、事前に挿入した Assistant メッセージや TODO イベントは使っていません。別の実 API セッションと再読み込み後の復元も確認済みです。[出所とハッシュ](../media/live/provenance.json)、[メディアの検証結果](../media/live/qa.json)を参照してください。
 
@@ -20,7 +22,7 @@ MIT ライセンスの独立したプラグインです。DSH の公式 projecti
 - 進行中と未着手のタスクを、完了したタスクより先に表示します。
 - タイトルとキャッシュ済みの返信を検索できます。DSH 公式の内容検索では、未読み込みの履歴も探せます。
 - 上下矢印、Home、End、Enter キーで操作できます。画面内のカードと少量の予備だけを描画します。
-- 標準の折りたたみとモバイル用ドロワーを保持します。**Native navigation** で元のワークスペース、アーカイブ、セッション操作に戻ります。**History cards** でカード表示に戻ります。
+- 標準の折りたたみとモバイル用ドロワーを保持します。**Workspaces & archives** で元のワークスペース、アーカイブ、セッション操作に戻ります。**History cards** でカード表示に戻ります。
 
 TODO の状態は `todo/write` イベントだけから取得します。新しい `turn/start` で前のターンのタスクを消去します。プレビューは確定済みの `assistant/message` テキストだけを使います。生成中は **Generating** と表示し、最後に確定した返信を保持します。中断された出力、推論、ツールブロックはプレビューになりません。返信なし、非テキスト、読み込み中、読み込み失敗を区別します。アーカイブ済みセッションは表示しません。
 
@@ -36,7 +38,7 @@ Node.js `>=24.9.0` と、インストール済みの DSH Web が必要です。�
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.0.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.0.tgz"
 ```
 
 DSH Web を開くと、アーカイブされていないセッションの履歴カードが表示されます。別の Web profile を使う場合は `web` を置き換えてください。`--profile` は `add` より前に指定します。DSH のプラグインマネージャーからローカル tarball をインストールすることもできます。[上流のインストールガイド](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md)を参照してください。

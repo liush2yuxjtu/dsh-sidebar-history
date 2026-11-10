@@ -1,30 +1,50 @@
 {
-  "runId": "ea776bdc-ef71-48ec-8512-04acd1119690",
+  "runId": "7547cd08-5da0-4472-9e55-9404cf68af6a",
   "provider": "deepseek-official",
   "model": "deepseek-flash",
   "liveModel": true,
   "mockedService": false,
   "scriptedModel": false,
-  "duration_s": 9.3,
+  "duration_s": 9.866667,
   "gif_source_window_s": [
-    0,
-    8
+    0.28928906249999997,
+    8.2892890625
   ],
   "proof_interval_s": [
-    4.5589130859375,
-    9.2889130859375
+    5.2892890625,
+    9.8812890625
   ],
   "video_is_exact_original_recording": true,
   "artifacts": {
-    "demo.mp4": "abddf33c4724ee0a405442170aa594de3c87759735f6501cf02fc2c00a17d02e",
-    "feature-8s.gif": "0279676fa700a354124478b20b98ff748621603e94bd588786d0c7f29d314df1",
-    "snapshot.png": "3fcf0cb5293e4a121966974e4dce4d017758c2595b96296b46c08629340e9eb2",
-    "poster.png": "3fcf0cb5293e4a121966974e4dce4d017758c2595b96296b46c08629340e9eb2",
-    "raw/gt.mp4": "abddf33c4724ee0a405442170aa594de3c87759735f6501cf02fc2c00a17d02e",
-    "contact-sheet.png": "025824ba20a3870626c714d726617d9b3056a0ea0ef34ae7a40e5523e727075c",
-    "interaction-strip.png": "119fbdd4342a05de6dc1edf2dca3dbda14cdd7e745252d8f8068c10b765e929b",
-    "evidence/progress.png": "3ef50d81d4656900176109aa1e55b3bc722d945bf8c9dbcbc55c7b2938350034",
-    "evidence/result.json": "f212148452b02d5097ac9c7b6f08e26b628176b93049c6c952942cf02314263e",
-    "evidence/native-events.json": "05f3c3489faf255f49b6ae2e503a9dbbe72d381f8a91db1035213f543be27c7a"
+    "demo.mp4": "c393c6076347d1addf09df5f54c8486c534d6c3211ab2de442b628b92b563210",
+    "feature-8s.gif": "483ee02168321efb197413be3363f60314b7c0c91726df121a28128568306704",
+    "snapshot.png": "cc0f31901cbe10fdf4564cc67ea3a4bfbeaeea371ca07999af6c957ea12ec4a7",
+    "poster.png": "cc0f31901cbe10fdf4564cc67ea3a4bfbeaeea371ca07999af6c957ea12ec4a7",
+    "raw/gt.mp4": "c393c6076347d1addf09df5f54c8486c534d6c3211ab2de442b628b92b563210",
+    "contact-sheet.png": "d96d966596d5e85799b4bc5095384abc77aedeba4c7bbb2a023d548a79cb0748",
+    "interaction-strip.png": "a6564dd59408fd2acfbd2a08081cb491cc3f23a3d822a22f15f7e2f639257edc",
+    "evidence/result.json": "98fb82cb4478fa4911aacbd4ae3bdd776841d9150d09829078ef18981c2fb5b0",
+    "evidence/native-events.json": "59b49165f5741518cf490a86c70ad2c57b7c619e7d1257c6d7129158c8c71e5d",
+    "evidence/preflight.png": "1d0d7786fc1c9343ddc9f0378bf0a4d79a66b88a63539e24564b04c03f73c5d8",
+    "evidence/progress.png": "7d960b03af247e9d3fed18038fbbd78cb81c4a6c202674a5cf5411fca40bc585",
+    "evidence/final.png": "cc0f31901cbe10fdf4564cc67ea3a4bfbeaeea371ca07999af6c957ea12ec4a7",
+    "evidence/reloaded.png": "b1431711d96e5e573a842533b50aa9a5fda64308de42787566a6eac0f76fae7b",
+    "evidence/navigation-restored.png": "430b3852d0e47708435e5ded385e853cd6bf5c8cbc61d9273679ba6c664e88dc",
+    "evidence/offline-search.png": "3da4da7b740397bad76a0e7c183f8a7f9ffcc47e6f43d01e83c30475f640356b",
+    "evidence/mobile.png": "c0248f4a88f16d26f5452d1871e4f016caee59740f3b1d0ad0e29ca20fbfa562",
+    "evidence/zoom-equivalent-reflow.png": "31874d9add0c7ab2c5dfc030548cad6e9cb0f74f0f170437ce17eb80b0a70897",
+    "evidence/light-theme.png": "5a96c7b82fc3b61f08626033f364af432e07886e604b16c58ed70191174cccf4",
+    "evidence/dark-theme.png": "ecee7ca049f4e2bf2d1ba003ce311dd15622110064cc8bad4ede88b210b7af5e",
+    "evidence/earlier-reply.png": "5b9075e5373fd571018d8b1ba4d84f1bd76521556f57d76e2774cf3a892a9583",
+    "evidence/followup.png": "65719ebd89d60ec03cc2015233297ade5425bcc2fad730df2e56c1e92d134d9d",
+    "evidence/stopped.png": "427c067165165e311773fbba82d621e3242d0a45eae06b1e6d3c51520600078a",
+    "evidence/restarted.png": "30c92ba12abfa0fb504e7bfeaf9caf49962f78d3407d64876b545a555dde6a87",
+    "evidence/lifecycle-reloaded.png": "8053f3e31492580295857cc1960bf4437b3f042bf97f7fc5d68c8b0b6ab5c54a",
+    "evidence/playback.json": "3d442326857b86f4cb9539d0b767c510c1f52b99ca9a77809fcb0140fc22dc3e",
+    "qa.json": "86524d1d08b5ae7e345da8a6041eb07ea2edb4b82484d3a9be270a0cfdad4b35",
+    "README.md": "e29736560f92484646e80cef2d300be239224c2556d32462aba7e0a97a430d5c",
+    "evidence/recording.log": "fcbd3a42601d38c4d1f7858533efeb93419fbb28f37f546c143370c1fab52f22",
+    "evidence/negative-media.json": "49b55affbb2a4ab75743f62f1ef0e7ced01124a3c5c1beb24f0f7f121a0062e5",
+    "evidence/negative-provenance.json": "1b355370e3519a232a49e53df3f3cd268474ebb64e678307f09d94ab4bade923"
   }
 }

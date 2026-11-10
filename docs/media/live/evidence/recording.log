@@ -1,16 +1,20 @@
-[chatcut-rec-lock 14:07:24] ACQUIRED owner=dsh-sidebar-live purpose=Real API sidebar corrected-timing capture waited=0.0s
+[chatcut-rec-lock 17:29:54] ACQUIRED owner=dsh-sidebar-ux-20261110 purpose=Final contrast-verified API recording waited=0.0s
+
+> dsh-sidebar-history@0.2.0 record:live
+> node scripts/live-browser.mjs --record
+
 
  RUN  v4.1.11 /Users/liushiyu/projects/dsh-sidebar-release-20261110/plugin
 
 stdout | tests/live.test.mjs > proves live API responses drive native DSH tasks, persisted history and real browser media
-{"status":"PASS","runId":"ea776bdc-ef71-48ec-8512-04acd1119690","apiCalls":4,"apiResponses":3,"nativeToolCalls":3,"todoWrites":2,"recording":true}
+{"status":"PASS","runId":"7547cd08-5da0-4472-9e55-9404cf68af6a","completedApiCalls":6,"interruptedApiCalls":1,"apiResponses":5,"nativeToolCalls":3,"todoWrites":2,"recording":true}
 
- ✓ tests/live.test.mjs (1 test) 21905ms
-   ✓ proves live API responses drive native DSH tasks, persisted history and real browser media  21904ms
+ ✓ tests/live.test.mjs (1 test) 36564ms
+   ✓ proves live API responses drive native DSH tasks, persisted history and real browser media  36563ms
 
  Test Files  1 passed (1)
       Tests  1 passed (1)
-   Start at  14:07:24
-   Duration  22.38s (transform 65ms, setup 0ms, import 390ms, tests 21.90s, environment 0ms)
+   Start at  17:29:54
+   Duration  37.04s (transform 62ms, setup 0ms, import 386ms, tests 36.56s, environment 0ms)
 
-[chatcut-rec-lock 14:07:47] RELEASED rc=0
+[chatcut-rec-lock 17:30:31] RELEASED rc=0

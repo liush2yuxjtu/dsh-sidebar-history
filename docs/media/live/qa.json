@@ -3,38 +3,13 @@
   "metadata_pass": true,
   "api_provenance": "PASS",
   "liveModel": true,
-  "runId": "ea776bdc-ef71-48ec-8512-04acd1119690",
+  "runId": "7547cd08-5da0-4472-9e55-9404cf68af6a",
   "visual_review": {
-    "reviewer": "Codex",
-    "at": "2026-11-10T06:13:06.656671+00:00",
-    "verdict": "PASS",
-    "images": [
-      "snapshot.png",
-      "contact-sheet.png",
-      "interaction-strip.png"
-    ],
-    "checks": [
-      "Real API text visible",
-      "Native 2/3 TODO state",
-      "Readable final reply",
-      "Visible pointer and sidebar toggle",
-      "English UI",
-      "No blank frame",
-      "At least 3 seconds of result"
-    ],
-    "timing": "Raw source is 9.3 seconds, matching the observed 9.290913-second capture."
+    "accepted": true,
+    "exact_snapshot": "PASS",
+    "full_recording_contact_sheet": "PASS",
+    "native_playback": "PASS",
+    "notes": "Inspected the exact final API snapshot and full-recording contact sheet. Native TODO progression, readable 12px text, bold and inline-code preview, visible cursor action and final hold are present. Playback reached the end with no decode error."
   },
-  "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health.",
-  "playback": {
-    "status": "pass",
-    "playback": {
-      "currentTime": 1.604457,
-      "duration": 9.3,
-      "width": 1280,
-      "height": 800,
-      "error": null,
-      "paused": false
-    },
-    "reachedEnd": true
-  }
+  "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."
 }

@@ -8,23 +8,29 @@ This independent, MIT-licensed plugin uses DSH's official projection and sidebar
 
 ## Feature video
 
-[![DSH history cards show real TODO progress and the latest assistant reply](docs/media/live/feature-8s.gif)](docs/media/live/demo.mp4)
+[![Eight-second preview recorded with the official DeepSeek API](docs/media/live/feature-8s.gif)](docs/media/live/demo.mp4)
 
-[Watch the real API video, 9.3 seconds](docs/media/live/demo.mp4) · [Actual browser snapshot](docs/media/live/snapshot.png) · [API receipts](docs/media/live/evidence/result.json)
+[Watch the real API walkthrough](docs/media/live/demo.mp4) · [Actual browser snapshot](docs/media/live/snapshot.png) · [API receipts and verification](docs/media/live/evidence/result.json)
 
-A fresh DSH session calls the official DeepSeek API. The model reads demo order inputs, calls the native TODO tool, and saves its own answer. The sidebar shows 2/3 tasks completed and that saved reply. The video preserves the original recording bytes and real elapsed time. No mock endpoint, scripted model reply, or seeded assistant or TODO events appear in this recording. A second API session and reload recovery were also checked. See the [media provenance and hashes](docs/media/live/provenance.json) and [media QA](docs/media/live/qa.json).
+A fresh DSH session calls the official DeepSeek API. The model reads generated demo order inputs, updates the native TODO list and submits its own reply. The sidebar shows 2/3 completed tasks and the actual saved answer. HTTP response IDs, usage, tool-use IDs and persisted messages are cross-checked. A second real API session and reload recovery are verified after recording.
+
+The video preserves the exact original capture bytes and real elapsed time. The screenshot comes from that same API run. No scripted model, seeded assistant message, seeded task event or mock endpoint is used. [Media provenance and hashes](docs/media/live/provenance.json) · [Media QA](docs/media/live/qa.json).
+
 
 ## Find and resume work
 
-- See each session's title, update date, completed task count, up to three tasks, and a two-line assistant preview.
-- Find unfinished work first. In-progress and pending tasks appear before completed tasks.
-- Search session titles and cached replies. DSH's official content search also finds history that is not loaded yet.
-- Move between cards with Up, Down, Home, End, and Enter. The list renders only visible cards plus a small buffer.
-- Keep the native sidebar collapse and mobile drawer. Use **Native navigation** to access the original workspace, archive, and session actions. Use **History cards** to return.
+Main now contains version 0.2.0. The latest published Release can lag behind main; the checkout installation below builds the current version.
 
-TODO status comes only from `todo/write` events. A new `turn/start` clears the previous turn's tasks. Previews use committed `assistant/message` text. During generation, the card keeps the last committed reply and shows **Generating**. Interrupted output, reasoning, and tool blocks do not become previews. Empty, non-text, loading, and failed summaries have explicit states. Archived sessions stay hidden.
+Each compact card shows its title, update date, completed/total count, up to three tasks, and a two-line assistant preview. Active and pending tasks take precedence over completed tasks. Use **Workspaces & archives** at the foot to open DSH's workspace browser and session actions. **History cards** returns to the same search, scroll position, and focused session. DSH keeps control of the sidebar shell, collapse, and mobile drawer.
 
-The UI currently supports English and Simplified Chinese, following DSH's locale. The README documentation is available in the five languages linked above.
+Task state comes only from `todo/write`. A new `turn/start` clears the previous turn's tasks, matching DSH's own TODO lifecycle. **Earlier reply** identifies a retained text reply from an earlier turn. **No task list this turn** does not mean that previous work is complete. Generating and native stop or failure states describe the current turn. A tool-only or empty message keeps the latest useful text reply. Interrupted messages, reasoning, tool results, and uncommitted attempts never become the preview.
+
+Markdown previews render bold, emphasis, strikethrough, and code with the same GFM grammar used by DSH. Lists and tables become compact readable text. Links show their labels and images show their alt text. The read-only preview does not navigate, load remote images, or interpret raw HTML. Open the conversation for the full native rendering. Card descriptions expose task counts, individual task states, reply text, and turn context to accessibility APIs.
+
+The host stores a bounded `sidebarHistory` projection in each session's normal summary. Version 2 replays old checkpoints from durable logs without activating historical agents. Cold cards read projections on demand, with explicit loading and failure states. The client renders the viewport plus overscan. Archived sessions stay hidden. Search combines cached titles and replies with DSH's official content search. A failed remote search keeps local matches, marks the results incomplete, and offers **Retry search**. A result-limit notice identifies truncated content search. Remote-only matches and their scroll position survive a navigation round trip. Keyboard navigation supports Up, Down, Home, End, and Enter.
+
+
+The UI supports English and Simplified Chinese. The README translations are linked above.
 
 ## Install
 
@@ -36,12 +42,12 @@ Build a local tarball and install it into the `web` profile:
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.0.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.0.tgz"
 ```
 
 Open DSH Web. The history sidebar displays cards for your unarchived sessions. Replace `web` if you use another Web profile. The profile option must appear before `add`. You can also install the tarball with DSH's plugin manager. See the [upstream installation guide](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md).
 
-The package ships JavaScript entries and needs no bundler. DSH resolves runtime dependencies. Do not install a second React runtime. These instructions install from this repository; they do not assume an npm registry release. DSH's APIs are pre-stable, so check compatibility before upgrading.
+The package ships a prebuilt browser module. Maintainers edit `src/client.mjs` and `src/markdown-preview.mjs`, then run `npm run build:client`. `npm run build` rejects a stale bundle or bundled license notice. DSH resolves runtime dependencies. Do not install a second React runtime. These instructions install from this repository; they do not assume an npm registry release. DSH's APIs are pre-stable, so check compatibility before upgrading.
 
 ## Telemetry and privacy
 
@@ -54,6 +60,8 @@ No tracking SDK is installed in the plugin. The collector does not contact plugi
 Read [AGENTS.md](https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/main/AGENTS.md) and the [verification surfaces](https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/main/.agents/skills/verify/references/surfaces.md). Use a built upstream checkout with frozen dependencies, Node.js `>=24.9.0`, and Chromium.
 
 ```bash
+export DSH_SOURCE_ROOT=/absolute/path/to/built/deepseek-harness
+npm ci --ignore-scripts --legacy-peer-deps
 npm run setup:hooks
 npm run verify
 DSH_SOURCE_ROOT=/absolute/path/to/built/deepseek-harness npm run verify:browser

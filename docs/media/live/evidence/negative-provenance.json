@@ -1,8 +1,6 @@
 {
   "status": "PASS",
-  "negativeChecks": [
-    "no actual API responses rejected",
-    "mismatched tool IDs rejected",
-    "missing API response ID rejected"
-  ]
+  "test": "reject-non-live-model-evidence",
+  "exitCode": 1,
+  "reason": "Live media verification failed: Expected values to be strictly equal:\n\nfalse !== true"
 }

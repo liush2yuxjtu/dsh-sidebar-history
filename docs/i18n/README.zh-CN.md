@@ -1,5 +1,7 @@
 # DSH Sidebar History：DeepSeek Harness 历史侧栏插件
 
+当前 main 为 0.2.0。下方命令从当前源码生成安装包，已发布的 Release 可能仍为较早版本。侧栏支持只读 Markdown 预览，切换导航会保留搜索和滚动位置；此前回复会与本轮进度区分，纯工具消息和中断文本不会覆盖有用回复。
+
 [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md)
 
 **DSH Sidebar History** 在 DeepSeek Harness 的聊天历史侧栏中显示 TODO 进度和最新一条已保存的 Assistant 回复。你可以先找到未完成的工作，再打开对应会话，无需逐个检查聊天记录。
@@ -10,7 +12,7 @@
 
 [![DSH 历史卡片显示真实 TODO 进度和最新 Assistant 回复](../media/live/feature-8s.gif)](../media/live/demo.mp4)
 
-[观看真实 API 视频，9.3 秒](../media/live/demo.mp4) · [实际浏览器截图](../media/live/snapshot.png) · [API 回执](../media/live/evidence/result.json)
+[观看真实 API 视频，9.9 秒](../media/live/demo.mp4) · [实际浏览器截图](../media/live/snapshot.png) · [API 回执](../media/live/evidence/result.json)
 
 全新的 DSH 会话调用 DeepSeek 官方 API。模型读取演示订单输入，调用原生 TODO 工具，并保存自己的回答。侧栏显示 2/3 项任务已完成，以及该会话保存的回复。视频保留原始录制字节和真实时长。录制中没有 mock 接口、脚本回复，也没有预先写入 Assistant 消息或 TODO 事件。另一个真实 API 会话和刷新恢复也已检查。参见[媒体来源与哈希](../media/live/provenance.json)和[媒体检查结果](../media/live/qa.json)。
 
@@ -20,7 +22,7 @@
 - 优先显示进行中和待处理任务，再显示已完成任务。
 - 搜索会话标题和已缓存的回复。DSH 官方内容搜索还可以查找尚未加载的历史。
 - 使用上、下、Home、End 和 Enter 键操作卡片。列表只渲染可见卡片和少量缓冲区。
-- 保留原生侧栏折叠和手机抽屉。点击**原生导航**可以访问原有工作区、归档和会话操作。点击**历史卡片**返回卡片视图。
+- 保留原生侧栏折叠和手机抽屉。点击**工作区与归档**可以访问原有工作区、归档和会话操作。点击**历史卡片**返回卡片视图。
 
 TODO 状态只来自 `todo/write` 事件。新的 `turn/start` 会清空上一轮任务。摘要只使用已提交的 `assistant/message` 文本。生成期间，卡片保留上一条已提交回复，并显示**生成中**。中断输出、推理和工具块不会成为摘要。空回复、非文本消息、加载中和加载失败都有明确状态。已归档的会话默认隐藏。
 
@@ -36,7 +38,7 @@ TODO 状态只来自 `todo/write` 事件。新的 `turn/start` 会清空上一�
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.0.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.0.tgz"
 ```
 
 打开 DSH Web。历史侧栏会为未归档的会话显示卡片。如果你使用其他 Web profile，请替换 `web`。`--profile` 参数必须放在 `add` 前。也可以通过 DSH 插件管理器安装本地包。参见[上游安装指南](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md)。

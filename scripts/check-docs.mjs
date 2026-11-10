@@ -32,7 +32,7 @@ for (const document of documents) {
       assert.ok(targets.has(`docs/media/live/${media}`), `Missing real API media in ${document}: ${media}`);
     }
     assert.ok(targets.has('docs/telemetry.md'), `Missing telemetry scope in ${document}`);
-    assert.ok(content.includes('0.2.2-rc.1') && content.includes('0.1.0'), `Missing compatibility or package version in ${document}`);
+    assert.ok(content.includes('0.2.2-rc.1') && content.includes(manifest.version), `Missing compatibility or package version in ${document}`);
   }
 }
 const english = await readFile(resolve(root, 'README.md'), 'utf8');

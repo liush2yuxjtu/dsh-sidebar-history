@@ -1,17 +1,19 @@
 {
   "status": "PASS",
-  "runId": "ea776bdc-ef71-48ec-8512-04acd1119690",
-  "auditId": "ea776bdc",
+  "runId": "7547cd08-5da0-4472-9e55-9404cf68af6a",
+  "auditId": "7547cd08",
   "candidateTree": null,
   "candidateSources": {
-    "package.json": "6e3cb0cc4466d068666ffe0889f2a7cda82ecb372bc3e91719a23941f9dc472c",
-    "index.mjs": "4578ca495317c028097474cc13a3acdc78611a65a472766abe50c1a1dac5504a",
-    "client.js": "af05a438866817cb737dab5c0500835057beacebc334ddc4b17707b2e08cffb6",
-    "src/projection.mjs": "40405bac66d421977ddf5ddfa5350a83096015b6c157de4e4c3b1f2128d4ff2d",
-    "tests/live.test.mjs": "a40a45cfa22c6314dc4e3838cb364bc7b3e8640e6c200c229d9aa79d2a2457a0",
+    "package.json": "9f4fed41ecaadfe99ce8054b8f3ebd082b93833d5bc9f2c87280bf5f1040dfbb",
+    "index.mjs": "453e8a0844aaa8f7e9e0aba583c335112a0c703782aadf88325fad94dec92767",
+    "client.js": "9957f6dda3d0ff405bbcbf5242e7cf712d1ad1882d35873e048fc6661d20ea9c",
+    "src/client.mjs": "adced552f3826e011b88e0c4513c94fda4c95a834e50e6f81106e082d8be8866",
+    "src/markdown-preview.mjs": "ab11500a64bbe2f7e4d181d357935df1232a5cba963a973410373ac34d918ef6",
+    "src/projection.mjs": "817568cbf494fcd5df9d1af74a37e346ea0729a566716523d448d55ee6904785",
+    "tests/live.test.mjs": "54fd5f0dfda6ac65f960242215cfa2381db12653cd5d6229eae2523c2d7283ae",
     "tests/live-proof.mjs": "6c40205793bb8082a05b61177f63d58a829805976d15660f639306ce9db1ee6d",
     "tests/live.config.mjs": "89ac271d9dba7a8dfa060923a20eb97d3a2a3e99207bbfecf1f2118196728ffc",
-    "scripts/live-browser.mjs": "5d0f754330f39886b769e42c66b40ec7d1898522a2ac533ba7779e7cf8cadea7"
+    "scripts/live-browser.mjs": "daa74a8172e3163d459d547dd729b56cc8d0d36bf19975a2de12c8eee65f14df"
   },
   "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
   "provider": "deepseek-official",
@@ -25,9 +27,9 @@
   "orders": [
     {
       "id": "A",
-      "quantity": 3,
-      "unitPrice": 13,
-      "shipping": 5
+      "quantity": 4,
+      "unitPrice": 10,
+      "shipping": 3
     },
     {
       "id": "B",
@@ -37,12 +39,17 @@
     }
   ],
   "expectedTotals": [
-    44,
+    43,
     5
   ],
-  "primarySession": "session-8e0c5bb6-b43c-44b4-aac9-d86558f30e02",
-  "secondSession": "session-f756f39c-46e6-46d9-9b51-74db513fde1f",
+  "primarySession": "session-8e5b0a68-99ea-4075-b10b-282b8ac11dff",
+  "secondSession": "session-69550af8-2f73-4725-a001-798b065d65e8",
   "provenance": {
+    "apiResponses": 5,
+    "nativeToolCalls": 3,
+    "todoWrites": 2
+  },
+  "recordedTurnProvenance": {
     "apiResponses": 3,
     "nativeToolCalls": 3,
     "todoWrites": 2
@@ -50,21 +57,21 @@
   "calls": [
     {
       "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
-      "sessionId": "session-8e0c5bb6-b43c-44b4-aac9-d86558f30e02",
+      "sessionId": "session-8e5b0a68-99ea-4075-b10b-282b8ac11dff",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:34.734Z",
-      "responseId": "2a103903-532a-49c3-80d3-543e10c3a55c",
+      "at": "2026-11-10T09:30:06.022Z",
+      "responseId": "0523686d-af7f-4a84-b3e5-0a4a10cecb49",
       "usage": {
-        "input_tokens": 510,
+        "input_tokens": 532,
         "cache_creation_input_tokens": 0,
         "cache_read_input_tokens": 1408,
-        "output_tokens": 112,
+        "output_tokens": 177,
         "service_tier": "standard"
       },
-      "text": "",
+      "text": "I'll start by creating the task list, then read the file.",
       "toolCalls": [
         {
-          "id": "call_00_2xZoWGzt2vDNu1O7HEyp4757",
+          "id": "call_00_BgXuqa93PXQbktFlweMX7732",
           "name": "todo_write",
           "arguments": {
             "todos": [
@@ -84,10 +91,10 @@
           }
         },
         {
-          "id": "call_01_6yWcX0dqy8KoD9UDRWU28959",
+          "id": "call_01_IYM1Oqef57vCQAS8j1Tr4692",
           "name": "read",
           "arguments": {
-            "file_path": "orders.json"
+            "file_path": "/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-ih0kOe/sidebar-live-audit/orders.json"
           }
         }
       ],
@@ -95,26 +102,26 @@
       "requestId": null,
       "stopReason": "tool_use",
       "complete": true,
-      "responseSha256": "6bd2bb40232430c305b671437a3018555037a74c0d47ecc792a1d6b7ad10788a",
-      "finishedAt": "2026-11-10T06:07:36.031Z"
+      "responseSha256": "865af5e955f15b29e5831b399fd7e11f16c9d2297287fc99181c7021e07e66a7",
+      "finishedAt": "2026-11-10T09:30:07.577Z"
     },
     {
       "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
-      "sessionId": "session-8e0c5bb6-b43c-44b4-aac9-d86558f30e02",
+      "sessionId": "session-8e5b0a68-99ea-4075-b10b-282b8ac11dff",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:36.073Z",
-      "responseId": "52c80017-5e5b-4c14-ad5a-2f05f0273384",
+      "at": "2026-11-10T09:30:07.619Z",
+      "responseId": "180a1aff-775e-4fd4-ac3b-75aefd304592",
       "usage": {
-        "input_tokens": 348,
+        "input_tokens": 308,
         "cache_creation_input_tokens": 0,
-        "cache_read_input_tokens": 1920,
-        "output_tokens": 81,
+        "cache_read_input_tokens": 2048,
+        "output_tokens": 114,
         "service_tier": "standard"
       },
-      "text": "",
+      "text": "Totals: A = 4×10+3 = 43; B = 0×5+5 = 5. Marking the first two complete.",
       "toolCalls": [
         {
-          "id": "call_00_l7VPm0BJWCALNr4mGgNv1499",
+          "id": "call_00_iSfdaFBk5TTICH8JUcfZ5270",
           "name": "todo_write",
           "arguments": {
             "todos": [
@@ -138,125 +145,329 @@
       "requestId": null,
       "stopReason": "tool_use",
       "complete": true,
-      "responseSha256": "93ae4b4a8a0970c1fba5f19c11a3df86f0b220e5f3c7ade92cd80de0b8d390cf",
-      "finishedAt": "2026-11-10T06:07:37.105Z"
+      "responseSha256": "af4ebf0463b81bbcd5d5a5cc010d9d08907dac6864e16803f9d1ab6d1d31ec92",
+      "finishedAt": "2026-11-10T09:30:08.903Z"
     },
     {
       "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
-      "sessionId": "session-8e0c5bb6-b43c-44b4-aac9-d86558f30e02",
+      "sessionId": "session-8e5b0a68-99ea-4075-b10b-282b8ac11dff",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:37.132Z",
-      "responseId": "bba3a23e-52a4-4c70-82bb-1f809f10c0f9",
+      "at": "2026-11-10T09:30:08.951Z",
+      "responseId": "cb5c2082-5efe-421b-b383-84ef290afb14",
       "usage": {
-        "input_tokens": 201,
+        "input_tokens": 194,
         "cache_creation_input_tokens": 0,
-        "cache_read_input_tokens": 2176,
-        "output_tokens": 61,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 68,
         "service_tier": "standard"
       },
-      "text": "Audit ea776bdc complete. No edits made.\n\n- Order A: 3 × 13 + 5 = **44**\n- Order B: 0 × 5 + 5 = **5**\n\nRead order data and verified both totals. Publish release remains pending, awaiting approval.",
+      "text": "**7547cd08** — audited `orders.json`: **Order A** total = 4 × 10 + 3 = **43**; **Order B** total = 0 × 5 + 5 = **5**. Both verified. Publish release left pending — approval required. No edits or publishing performed.",
       "toolCalls": [],
       "httpStatus": 200,
       "requestId": null,
       "stopReason": "end_turn",
       "complete": true,
-      "responseSha256": "3e322a28073ee67890e9aca01da5843293db6dfae966479b716d98b66ab4f38c",
-      "finishedAt": "2026-11-10T06:07:38.046Z"
+      "responseSha256": "dfd56ea7572e4ef0d223781cd10c5f263108a5fddc12a76d94516fae07425e06",
+      "finishedAt": "2026-11-10T09:30:09.958Z"
     },
     {
       "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
-      "sessionId": "session-f756f39c-46e6-46d9-9b51-74db513fde1f",
+      "sessionId": "session-69550af8-2f73-4725-a001-798b065d65e8",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:45.193Z",
-      "responseId": "9086ad31-862b-4955-bb5f-3b079ab3938c",
+      "at": "2026-11-10T09:30:17.662Z",
+      "responseId": "2599a711-8415-4fe7-962b-8e1f24434951",
       "usage": {
-        "input_tokens": 577,
+        "input_tokens": 580,
         "cache_creation_input_tokens": 0,
         "cache_read_input_tokens": 1280,
-        "output_tokens": 14,
+        "output_tokens": 22,
         "service_tier": "standard"
       },
-      "text": "Welcome to this independent review, audit ID ea776bdc-second.",
+      "text": "Hello, independent review — welcome, and please note audit ID 7547cd08-second for this session.",
       "toolCalls": [],
       "httpStatus": 200,
       "requestId": null,
       "stopReason": "end_turn",
       "complete": true,
-      "responseSha256": "8de349bfc47073a695a18fe2d3f1076a94dc8bdbcdf3c406f0ddf736f0291e4e",
-      "finishedAt": "2026-11-10T06:07:46.074Z"
+      "responseSha256": "98769873e3b48be9ee3c21cca3ef035a23ececaa77dc76333f40563f417f0e3b",
+      "finishedAt": "2026-11-10T09:30:18.509Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-8e5b0a68-99ea-4075-b10b-282b8ac11dff",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:30:26.005Z",
+      "responseId": "9674753a-cdfb-4af2-b4ff-3a7a664acd38",
+      "usage": {
+        "input_tokens": 182,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2432,
+        "output_tokens": 41,
+        "service_tier": "standard"
+      },
+      "text": "Acknowledged: audit **7547cd08-followup** noted for `orders.json`. No tools called and no task list changes; the audit remains read-only, with publishing still pending approval.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "9cb2f7595c59bf4245cc056d158373e94744a476cb9321143d5f256f93d8d640",
+      "finishedAt": "2026-11-10T09:30:27.156Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-8e5b0a68-99ea-4075-b10b-282b8ac11dff",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:30:30.089Z",
+      "responseId": "cea9e718-0825-4c9a-9f3c-f99bd33492c3",
+      "usage": {
+        "input_tokens": 224,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2560,
+        "output_tokens": 39,
+        "service_tier": "standard"
+      },
+      "text": "Acknowledged: audit **7547cd08-retry** for `orders.json` is resumed in read-only review. No tools used and no task list created; publishing remains pending approval.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "98de6f61f16e5b40d5a8b5cfcda76edabe8e8aaad30d1548e8fa7a104459f18d",
+      "finishedAt": "2026-11-10T09:30:30.887Z"
     }
   ],
+  "cancellation": {
+    "expected": true,
+    "state": "native-user-cancelled-partial-api-stream",
+    "call": {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-8e5b0a68-99ea-4075-b10b-282b8ac11dff",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:30:28.046Z",
+      "responseId": "bb99a54b-742a-41c7-880f-95f98f827502",
+      "usage": {
+        "input_tokens": 144,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2560,
+        "output_tokens": 0,
+        "service_tier": "standard"
+      },
+      "text": "**Audit 7547cd08-cancel — 100-Question Origin Review Checklist**\n\n1. **Is the audit scope documented?** Without a written boundary of systems, date",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null
+    },
+    "nativeTurn": 3,
+    "nativeEndKind": "aborted",
+    "nativeAbortReason": "user",
+    "streamTermination": {
+      "kind": "reader-aborted",
+      "failure": {
+        "kind": "user",
+        "valueType": "object"
+      }
+    },
+    "deliveredPrefixMessageId": "939a6e35-0f44-472b-bda6-c253ed1fec28",
+    "deliveredPrefixLength": 147,
+    "retainedMessageId": "1ebd5e67-15f5-4e65-b310-e0e81a7c1e4e"
+  },
   "usage": [
     {
       "provider": "deepseek-official",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:34.724Z",
+      "at": "2026-11-10T09:30:06.004Z",
+      "expectedCancellation": false,
       "usage": {
-        "inputTokens": 510,
-        "outputTokens": 112,
+        "inputTokens": 532,
+        "outputTokens": 177,
         "cacheReadTokens": 1408,
         "cacheWriteTokens": 0,
-        "totalTokens": 2030
+        "totalTokens": 2117
       }
     },
     {
       "provider": "deepseek-official",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:36.071Z",
+      "at": "2026-11-10T09:30:07.617Z",
+      "expectedCancellation": false,
       "usage": {
-        "inputTokens": 348,
-        "outputTokens": 81,
-        "cacheReadTokens": 1920,
+        "inputTokens": 308,
+        "outputTokens": 114,
+        "cacheReadTokens": 2048,
         "cacheWriteTokens": 0,
-        "totalTokens": 2349
+        "totalTokens": 2470
       }
     },
     {
       "provider": "deepseek-official",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:37.131Z",
+      "at": "2026-11-10T09:30:08.949Z",
+      "expectedCancellation": false,
       "usage": {
-        "inputTokens": 201,
-        "outputTokens": 61,
-        "cacheReadTokens": 2176,
+        "inputTokens": 194,
+        "outputTokens": 68,
+        "cacheReadTokens": 2304,
         "cacheWriteTokens": 0,
-        "totalTokens": 2438
+        "totalTokens": 2566
       }
     },
     {
       "provider": "deepseek-official",
       "model": "deepseek-flash",
-      "at": "2026-11-10T06:07:45.191Z",
+      "at": "2026-11-10T09:30:17.660Z",
+      "expectedCancellation": false,
       "usage": {
-        "inputTokens": 577,
-        "outputTokens": 14,
+        "inputTokens": 580,
+        "outputTokens": 22,
         "cacheReadTokens": 1280,
         "cacheWriteTokens": 0,
-        "totalTokens": 1871
+        "totalTokens": 1882
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:30:26.002Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 182,
+        "outputTokens": 41,
+        "cacheReadTokens": 2432,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2655
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:30:28.044Z",
+      "expectedCancellation": true
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:30:30.087Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 224,
+        "outputTokens": 39,
+        "cacheReadTokens": 2560,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2823
       }
     }
   ],
+  "apiCallCounts": {
+    "completed": 6,
+    "deliberatelyInterrupted": 1,
+    "total": 7
+  },
   "checks": [
     "official-api-response-identity-and-usage",
     "api-tool-ids-match-durable-events",
     "native-read-and-todo-write",
     "model-computed-order-totals",
-    "committed-text-matches-api",
-    "sidebar-count-and-preview-match-persistence",
+    "committed-markdown-source-and-message-id-match-api",
+    "readonly-bold-and-inline-code-render",
+    "accessible-task-count-and-statuses",
+    "compact-two-line-preview",
+    "singular-session-label",
     "independent-session-has-no-tasks",
-    "reload-restores-real-summary"
+    "reload-restores-real-summary",
+    "native-navigation-retains-query-scroll-and-focus",
+    "real-search-disconnect-retains-local-matches-and-retry-recovers",
+    "real-api-data-in-mobile-drawer",
+    "200-percent-equivalent-effective-viewport-reflow",
+    "native-light-dark-theme-independent-of-os",
+    "earlier-reply-distinguished-during-new-real-turn",
+    "new-turn-does-not-inherit-tasks",
+    "actual-api-cancellation-retains-committed-reply",
+    "real-retry-after-cancel-commits-and-reloads"
   ],
   "consoleErrors": [],
+  "expectedNetworkErrors": [
+    {
+      "kind": "deliberately-disconnected-real-search",
+      "message": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+    }
+  ],
+  "searchFault": {
+    "kind": "request-disconnected-without-substitute-response",
+    "requests": 1
+  },
+  "layout": {
+    "compact": {
+      "height": 183,
+      "fontSize": 12,
+      "previewHeight": 36,
+      "fits": true
+    },
+    "mobile": {
+      "height": 183,
+      "fontSize": 12,
+      "previewHeight": 36,
+      "fits": true
+    },
+    "zoom": {
+      "equivalentPercent": 200,
+      "effectiveCssViewport": {
+        "width": 640,
+        "height": 400
+      },
+      "actualDesktopBrowserZoom": false
+    }
+  },
+  "themeChecks": [
+    {
+      "palette": "light",
+      "os": "dark",
+      "rendered": "color(srgb 0.0960784 0.419608 0.22549)",
+      "foreground": [
+        24,
+        107,
+        57
+      ],
+      "background": [
+        237,
+        243,
+        254
+      ],
+      "contrastRatio": 5.889505617179499
+    },
+    {
+      "palette": "dark",
+      "os": "light",
+      "rendered": "color(srgb 0.554902 0.876471 0.676471)",
+      "foreground": [
+        142,
+        224,
+        173
+      ],
+      "background": [
+        45,
+        51,
+        64
+      ],
+      "contrastRatio": 8.086016557435679
+    }
+  ],
+  "navigation": {
+    "restoredQuery": "7547cd08",
+    "restoredScrollTop": 47,
+    "restoredFocusedSession": "session-8e5b0a68-99ea-4075-b10b-282b8ac11dff"
+  },
   "proof_interval_s": [
-    4.5589130859375,
-    9.2889130859375
+    5.2892890625,
+    9.8812890625
   ],
   "video": {
-    "duration_s": 9.2909130859375,
-    "frames": 58
+    "duration_s": 9.8832890625,
+    "frames": 64
   },
-  "finalAssistantText": "Audit ea776bdc complete. No edits made.\n\n- Order A: 3 × 13 + 5 = **44**\n- Order B: 0 × 5 + 5 = **5**\n\nRead order data and verified both totals. Publish release remains pending, awaiting approval.",
-  "finalPreview": "Audit ea776bdc complete. No edits made. - Order A: 3 × 13 + 5 = **44** - Order B: 0 × 5 + 5 = **5** Read order data and verified both totals. Publish release remains pending, awaiting approval.",
+  "recordedTurn": 1,
+  "finalAssistantText": "**7547cd08** — audited `orders.json`: **Order A** total = 4 × 10 + 3 = **43**; **Order B** total = 0 × 5 + 5 = **5**. Both verified. Publish release left pending — approval required. No edits or publishing performed.",
+  "finalPreview": "**7547cd08** — audited `orders.json`: **Order A** total = 4 × 10 + 3 = **43**; **Order B** total = 0 × 5 + 5 = **5**. Both verified. Publish release left pending — approval required. No edits or publishing performed.",
   "finalTodos": [
     {
       "content": "Read order data",
@@ -271,11 +482,28 @@
       "status": "pending"
     }
   ],
-  "screenshots": {
-    "preflight.png": "8237b6ac4a3cbc4c24f599e2a79995122d9feb5a2037e3eb39c3dc478cd95d09",
-    "progress.png": "3ef50d81d4656900176109aa1e55b3bc722d945bf8c9dbcbc55c7b2938350034",
-    "final.png": "3fcf0cb5293e4a121966974e4dce4d017758c2595b96296b46c08629340e9eb2",
-    "reloaded.png": "460cfa895eb45335edcf18e5f3f5563b4843d3f43fbb005d5dd4337f0bf1907d"
+  "latestAfterLifecycle": {
+    "messageId": "e75ee914-e99a-4801-ad84-3c8e9cbec443",
+    "text": "Acknowledged: audit **7547cd08-retry** for `orders.json` is resumed in read-only review. No tools used and no task list created; publishing remains pending approval.",
+    "tasks": null,
+    "endKind": "completed"
   },
-  "raw_sha256": "abddf33c4724ee0a405442170aa594de3c87759735f6501cf02fc2c00a17d02e"
+  "screenshots": {
+    "preflight.png": "1d0d7786fc1c9343ddc9f0378bf0a4d79a66b88a63539e24564b04c03f73c5d8",
+    "progress.png": "7d960b03af247e9d3fed18038fbbd78cb81c4a6c202674a5cf5411fca40bc585",
+    "final.png": "cc0f31901cbe10fdf4564cc67ea3a4bfbeaeea371ca07999af6c957ea12ec4a7",
+    "reloaded.png": "b1431711d96e5e573a842533b50aa9a5fda64308de42787566a6eac0f76fae7b",
+    "navigation-restored.png": "430b3852d0e47708435e5ded385e853cd6bf5c8cbc61d9273679ba6c664e88dc",
+    "offline-search.png": "3da4da7b740397bad76a0e7c183f8a7f9ffcc47e6f43d01e83c30475f640356b",
+    "mobile.png": "c0248f4a88f16d26f5452d1871e4f016caee59740f3b1d0ad0e29ca20fbfa562",
+    "zoom-equivalent-reflow.png": "31874d9add0c7ab2c5dfc030548cad6e9cb0f74f0f170437ce17eb80b0a70897",
+    "light-theme.png": "5a96c7b82fc3b61f08626033f364af432e07886e604b16c58ed70191174cccf4",
+    "dark-theme.png": "ecee7ca049f4e2bf2d1ba003ce311dd15622110064cc8bad4ede88b210b7af5e",
+    "earlier-reply.png": "5b9075e5373fd571018d8b1ba4d84f1bd76521556f57d76e2774cf3a892a9583",
+    "followup.png": "65719ebd89d60ec03cc2015233297ade5425bcc2fad730df2e56c1e92d134d9d",
+    "stopped.png": "427c067165165e311773fbba82d621e3242d0a45eae06b1e6d3c51520600078a",
+    "restarted.png": "30c92ba12abfa0fb504e7bfeaf9caf49962f78d3407d64876b545a555dde6a87",
+    "lifecycle-reloaded.png": "8053f3e31492580295857cc1960bf4437b3f042bf97f7fc5d68c8b0b6ab5c54a"
+  },
+  "raw_sha256": "c393c6076347d1addf09df5f54c8486c534d6c3211ab2de442b628b92b563210"
 }

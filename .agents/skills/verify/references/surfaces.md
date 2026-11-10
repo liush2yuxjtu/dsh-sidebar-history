@@ -2,10 +2,15 @@
 
 | Surface | Claim and caller boundary | Recipe |
 |---|---|---|
-| repository-structure | Package entries, project guides, skill aliases and syntax are consistent. | Run `npm run build` and `git diff --check`. |
-| history-event-projection | Only real task events and complete committed assistant messages determine bounded per-session summaries. | Run `npm test`; inspect `src/projection.mjs` and `tests/projection.test.mjs`. |
-| history-dsh-browser | Installed plugin displays and updates the correct summaries through the real DSH profile, persistence and browser transport. | [Real DSH browser](browser.md). |
-| history-live-api | Actual official API responses drive native tools, durable summaries, independent sessions and reload recovery. | [Real API E2E](live-api.md). |
+| repository-structure | Package entries, generated bundle, project guides, skill aliases, and syntax are consistent. | Run `npm run build` and `git diff --check`. |
+| history-event-projection | Real task events and complete text-bearing Assistant messages determine bounded per-session summaries. | Run `npm test`; inspect `src/projection.mjs` and `tests/projection.test.mjs`. |
+| history-dsh-browser | Installed plugin displays and updates the correct summaries through the real DSH profile, persistence, and browser transport. | [Real DSH browser](browser.md). |
+| history-search-navigation | Failed remote search stays explicit beside local matches, retry recovers, and native navigation preserves search, scroll, and focus. | [Sidebar UX](sidebar-ux.md). |
+| history-accessible-layout | Card descriptions expose tasks and replies; compact cards preserve bounded content across narrow and equivalent zoom layouts. | [Sidebar UX](sidebar-ux.md). |
+| history-safe-markdown | Markdown formatting renders in read-only previews without HTML execution, nested controls, images, or URL loading. | [Sidebar UX](sidebar-ux.md). |
+| history-turn-context | Earlier useful replies remain identifiable across native task resets, tool-only messages, and interruption states. | [Sidebar UX](sidebar-ux.md). |
+| history-cold-upgrade | Native v1 checkpoints refold into v2 summaries without changing logs, retaining Sessions, or creating Agents. | [Sidebar UX](sidebar-ux.md). |
+| history-live-api | Actual official API responses drive native tools, durable summaries, independent sessions, and reload recovery. | [Real API E2E](live-api.md). |
 | release-live-media | Final video and screenshots match the genuine API recording, and README references the verified files. | Run `npm run verify:media`. |
 | staged-pre-commit | A fresh full E2E runs from the exact staged tree before each final commit. | [Tracked hook](live-api.md). |
 | multilingual-discovery | Five README translations have valid language links, real API media references, compatible installation instructions, and package keywords. | [Discovery documentation](discovery-telemetry.md). |

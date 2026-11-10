@@ -1,6 +1,39 @@
-Current final evidence uses [real API video and screenshots](media/live/README.md). The earlier controlled-adapter reports below are historical debugging coverage. They do not satisfy the final gate.
-
 # Verification
+
+## Sidebar 0.2.0
+
+The selected sidebar fixes and read-only Markdown rendering pass the checks below on pinned DSH `0.2.2-rc.1`. The implementation uses official slots and projections without upstream changes.
+
+| Evidence | Result | Scope |
+|---|---|---|
+| Unit, Markdown, staged-candidate, native cache-migration, and preserved telemetry tests | 20 PASS | Includes actual JSONL/cache v1-to-v2 refold with no retained historical Session or Agent. |
+| Controlled DSH browser regression | 33 checks PASS, no console errors | Fast debugging coverage with controlled model data, including 243 histories. |
+| Fresh official API recording | PASS, run `7547cd08-5da0-4472-9e55-9404cf68af6a` | Six complete API responses and one genuinely interrupted API stream. Replies and task events are not seeded. |
+| Snapshot and original video | PASS | Exact captured snapshot and raw MP4, with hashes tied to the recording receipt. |
+| Video playback | PASS | H.264, 1280×800, 9.867 seconds, 296 decoded frames, played to the end without an error. |
+
+[Actual API receipts](media/live/evidence/result.json), [native events](media/live/evidence/native-events.json), [media provenance](media/live/provenance.json), [visual and playback QA](media/live/qa.json), and [executable recipes](../.agents/skills/verify/references/sidebar-ux.md) contain the evidence.
+
+Search failure remains visible beside local matches, retry reaches the real service, content-result limits are explicit, and remote-only results survive a navigation round trip. Deep scrolling also survives collapse and reopen. Card descriptions expose tasks and useful replies. Three-task cards measure 183px with a 12px, two-line preview. Bold and inline code render as elements without nested links, buttons, images, or raw HTML.
+
+New turns clear TODO state under the native lifecycle and identify retained text as Earlier reply. Empty tool-call messages and interrupted prefixes do not replace useful text. The actual API lane verifies user Stop, the durable interrupted message, retained reply identity, a subsequent actual retry, and reload.
+
+The recording's other genuine-data checks cover the 390×844 drawer, equivalent 200% effective-viewport reflow, and app light/dark themes independently of the OS palette. Accessibility API checks do not claim a manual VoiceOver audit. Equivalent reflow does not claim actual desktop browser zoom.
+
+The installed pre-commit hook independently exports and verifies the exact staged tree on every final commit. Its fresh ignored receipt records the candidate tree, check names, and real API run. The recording receipt is not a substitute for that commit-time run.
+
+Task-count contrast also passes against the actual selected card background in the API run: 5.89:1 in the light app theme and 8.09:1 in the dark app theme, with the OS palette set to the opposite. The controlled regression separately measures 6.56:1 and 8.90:1 on unselected cards. These checks do not establish complete accessibility compliance.
+
+## Reproduced debugging failures
+
+Before fixes, eight selected checks failed, including hidden partial-search errors, missing accessible descriptions, lost navigation state, card density, singular copy, and Markdown formatting. Two further failures were reproduced and fixed with the same caller:
+
+- Remote-only search lost scrollTop from 1939 to 0 and rendered no visible row after a navigation round trip. The final repeat preserves scrollTop 1981 and the same first visible session, including the result-limit notice.
+- Deep history lost scrollTop from 31495 to 0 after collapse and reopen. The final repeat preserves scrollTop 31495 and the same first visible session.
+
+These RED/GREEN records use controlled historical/model data solely for debugging. They do not replace the actual API receipt above.
+
+## Historical 0.1 verification
 
 **Verdict: PASS.** Verified on 2026-11-10 in ChatGPT Work's Linux computer. The package is `dsh-sidebar-history@0.1.0`. [The canonical Page](https://chatgpt.com/space/page_7a28be26236481918ee65d88725c1d38) holds the real screenshots and original generated concept.
 
@@ -69,4 +102,4 @@ The tracked pre-commit hook exports the staged tree and runs unit/build, control
 
 [Live result](media/live/evidence/result.json) · [API-linked native events](media/live/evidence/native-events.json) · [Media provenance](media/live/provenance.json) · [Verifier recipe](../.agents/skills/verify/references/live-api.md).
 
-The installed Git hook was also exercised with a staged old mock screenshot while the working screenshot remained genuine, and with a missing API credential. Both attempts returned nonzero and refused the commit. The staged tree was restored afterward. [Actual hook rejection results](media/live/evidence/negative-hooks.json).
+The installed Git hook was also exercised with a staged old mock screenshot while the working screenshot remained genuine, and with a missing API credential. Both attempts returned nonzero and refused the commit. The staged tree was restored afterward. [Actual hook rejection results](https://github.com/liush2yuxjtu/dsh-sidebar-history/blob/4085839794d55a280529954c0ae623a26070437d/docs/media/live/evidence/negative-hooks.json).

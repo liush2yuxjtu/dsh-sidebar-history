@@ -1,5 +1,7 @@
 # DSH Sidebar History para DeepSeek Harness
 
+La rama main contiene la versión 0.2.0. Los comandos siguientes crean el paquete desde el código actual; la versión publicada en Releases puede ser anterior. Las vistas previas muestran Markdown de solo lectura y conservan la búsqueda y el desplazamiento. La respuesta anterior se distingue del turno actual; los mensajes de herramientas y el texto interrumpido no sustituyen una respuesta útil.
+
 [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md)
 
 **DSH Sidebar History** es un plugin de barra lateral para DeepSeek Harness. Muestra el progreso de las tareas TODO y la última respuesta guardada del asistente en el historial de chat. Encuentra el trabajo pendiente y vuelve a la sesión correcta sin abrir cada conversación.
@@ -10,7 +12,7 @@ Es un plugin independiente con licencia MIT. Usa las API oficiales de proyecció
 
 [![Las tarjetas de DSH muestran el progreso real de TODO y la última respuesta del asistente](../media/live/feature-8s.gif)](../media/live/demo.mp4)
 
-[Ver el vídeo con la API real, 9.3 segundos](../media/live/demo.mp4) · [Captura real del navegador](../media/live/snapshot.png) · [Registros de la API](../media/live/evidence/result.json)
+[Ver el vídeo con la API real, 9.9 segundos](../media/live/demo.mp4) · [Captura real del navegador](../media/live/snapshot.png) · [Registros de la API](../media/live/evidence/result.json)
 
 La grabación usa una sesión nueva de DSH y la API oficial de DeepSeek. El modelo lee datos de pedidos de demostración, llama a la herramienta TODO nativa y guarda su propia respuesta. La barra lateral muestra 2 de 3 tareas completadas y esa respuesta guardada. El vídeo conserva los bytes de la grabación original y el tiempo real transcurrido. No usa un endpoint mock, respuestas programadas ni mensajes del asistente o eventos TODO insertados de antemano. También se comprobaron una segunda sesión con la API real y la recuperación tras recargar. Consulta la [procedencia y los hashes](../media/live/provenance.json) y la [verificación del material](../media/live/qa.json).
 
@@ -20,7 +22,7 @@ La grabación usa una sesión nueva de DSH y la API oficial de DeepSeek. El mode
 - Las tareas en curso y pendientes aparecen antes que las completadas.
 - Busca títulos y respuestas en caché. La búsqueda oficial de contenido de DSH también encuentra historial que aún no se ha cargado.
 - Usa las flechas arriba y abajo, Home, End y Enter. La lista solo dibuja las tarjetas visibles y un pequeño margen adicional.
-- Conserva la barra lateral plegable y el panel móvil nativos. **Native navigation** abre las acciones originales de espacios de trabajo, archivo y sesiones. **History cards** vuelve a las tarjetas.
+- Conserva la barra lateral plegable y el panel móvil nativos. **Workspaces & archives** abre las acciones originales de espacios de trabajo, archivo y sesiones. **History cards** vuelve a las tarjetas.
 
 El estado TODO procede solo de eventos `todo/write`. Cada nuevo `turn/start` borra las tareas del turno anterior. La vista previa usa únicamente texto confirmado de `assistant/message`. Durante la generación, la tarjeta conserva la última respuesta confirmada y muestra **Generating**. El texto interrumpido, el razonamiento y los bloques de herramientas no se convierten en vistas previas. Se distinguen los estados sin respuesta, de mensaje no textual, de carga y de error. Las sesiones archivadas permanecen ocultas.
 
@@ -36,7 +38,7 @@ Crea un tarball local e instálalo en el profile `web`:
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.0.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.0.tgz"
 ```
 
 Abre DSH Web. La barra lateral muestra tarjetas para las sesiones sin archivar. Sustituye `web` si usas otro profile Web. La opción `--profile` debe ir antes de `add`. También puedes instalar el tarball local con el gestor de plugins de DSH. Consulta la [guía de instalación de DSH](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md).
