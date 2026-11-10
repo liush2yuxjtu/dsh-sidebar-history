@@ -1,0 +1,24 @@
+# DSH Sidebar History
+
+> An independent, MIT-licensed DeepSeek Harness sidebar plugin. History cards show per-session TODO progress and the latest committed assistant reply.
+
+## Product facts
+
+- Package version: 0.1.0. Verified DSH target: 0.2.2-rc.1, upstream commit fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159.
+- Requires Node.js >=24.9.0 and a DSH Web profile. Other declared compatible versions are not independently verified.
+- TODO status comes from native todo/write events. A new turn clears the previous turn's tasks.
+- Reply previews use committed assistant/message text. Interrupted output, reasoning, and tool blocks are excluded.
+- UI languages: English and Simplified Chinese. README languages: English, Simplified Chinese, Traditional Chinese, Japanese, and Spanish.
+- The published video is an original English UI recording using the official DeepSeek API. It contains no scripted model replies or seeded TODO events.
+- Repository metrics do not measure active installations, Google ranking, or user retention.
+
+## Documentation
+
+- [English overview and installation](https://liush2yuxjtu.github.io/dsh-sidebar-history/)
+- [简体中文功能与安装](https://liush2yuxjtu.github.io/dsh-sidebar-history/zh/)
+- [Real API demo and written walkthrough](https://liush2yuxjtu.github.io/dsh-sidebar-history/demo/)
+- [真实 API 演示与中文解说](https://liush2yuxjtu.github.io/dsh-sidebar-history/zh/demo/)
+- [Source and README translations](https://github.com/liush2yuxjtu/dsh-sidebar-history)
+- [API verification receipt](https://liush2yuxjtu.github.io/dsh-sidebar-history/media/live/evidence/result.json)
+- [Media provenance and SHA-256](https://liush2yuxjtu.github.io/dsh-sidebar-history/media/live/provenance.json)
+- [Sitemap](https://liush2yuxjtu.github.io/dsh-sidebar-history/sitemap.xml)

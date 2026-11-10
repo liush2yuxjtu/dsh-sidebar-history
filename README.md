@@ -10,7 +10,7 @@ This independent, MIT-licensed plugin uses DSH's official projection and sidebar
 
 [![DSH history cards show real TODO progress and the latest assistant reply](docs/media/live/feature-8s.gif)](docs/media/live/demo.mp4)
 
-[Watch the real API video, 9.3 seconds](docs/media/live/demo.mp4) · [Actual browser snapshot](docs/media/live/snapshot.png) · [API receipts](docs/media/live/evidence/result.json)
+[Watch the demo with a written walkthrough](https://liush2yuxjtu.github.io/dsh-sidebar-history/demo/) · [Real API video, 9.3 seconds](docs/media/live/demo.mp4) · [Actual browser snapshot](docs/media/live/snapshot.png) · [API receipts](docs/media/live/evidence/result.json)
 
 A fresh DSH session calls the official DeepSeek API. The model reads demo order inputs, calls the native TODO tool, and saves its own answer. The sidebar shows 2/3 tasks completed and that saved reply. The video preserves the original recording bytes and real elapsed time. No mock endpoint, scripted model reply, or seeded assistant or TODO events appear in this recording. A second API session and reload recovery were also checked. See the [media provenance and hashes](docs/media/live/provenance.json) and [media QA](docs/media/live/qa.json).
 

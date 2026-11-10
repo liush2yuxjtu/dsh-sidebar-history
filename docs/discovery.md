@@ -24,11 +24,21 @@ Each language has its own file with links to the other versions. These are docum
 
 The root README puts the product name and use case first, then real API media, supported behavior, installation, compatibility, and verification. Each translation keeps the same factual limits and points to the same verified assets. Generated concepts and controlled adapters do not become live-model evidence through translation.
 
-GitHub controls the rendered README's HTML head. The [public website](https://liush2yuxjtu.github.io/dsh-sidebar-history/) and [Chinese website](https://liush2yuxjtu.github.io/dsh-sidebar-history/zh/) provide descriptive HTML titles, descriptions, self-canonical URLs, reciprocal `hreflang`, structured data, and a linked sitemap. They load the same verified real API media. Run `npm run verify:site` to check the deployed pages. Do not add hidden keyword blocks or unsupported SEO tags to Markdown.
+GitHub controls the rendered README's HTML head. The [public website](https://liush2yuxjtu.github.io/dsh-sidebar-history/) and [Chinese website](https://liush2yuxjtu.github.io/dsh-sidebar-history/zh/) provide descriptive HTML titles, descriptions, self-canonical URLs, reciprocal `hreflang`, structured data, and a linked sitemap. They link to [English](https://liush2yuxjtu.github.io/dsh-sidebar-history/demo/) and [Chinese](https://liush2yuxjtu.github.io/dsh-sidebar-history/zh/demo/) watch pages. The watch pages describe the same verified real API media with `VideoObject` metadata and video sitemap entries. The recording uses the English UI. The Chinese page provides Chinese explanatory text. The [llms.txt reference](https://liush2yuxjtu.github.io/dsh-sidebar-history/llms.txt) gives agents the public product facts and evidence links. None of these files establishes search indexing or ranking. Run `npm run verify:site` to check the deployed pages. Do not add hidden keyword blocks or unsupported SEO tags to Markdown.
 
 ## Check the changes
 
 Run `npm run verify:docs` to verify the language links, local file references, media references, and package keywords. Run `npm run telemetry:collect` with an authorized GitHub login to record actual repository traffic. Compare equivalent windows and account for maintainer activity.
+
+## Record search results
+
+Use the website's URL-prefix property in Google Search Console. After ownership verification, submit `https://liush2yuxjtu.github.io/dsh-sidebar-history/sitemap.xml`. Read the submitted sitemap status. Inspect each of the four canonical URLs to distinguish a submitted page, a fetched page, and an indexed page. An indexing request is not a confirmation that the URL is indexed.
+
+Record Search Console's report period and data freshness with impressions, clicks, CTR, average position, and indexed-page counts. A new property can have no processed data. Record that state as unavailable rather than zero. Do not attribute the first traffic snapshot to these changes.
+
+Keep dated observations for the exact query `"dsh-sidebar-history"`, the site query `site:liush2yuxjtu.github.io/dsh-sidebar-history`, and GitHub repository search `dsh-sidebar-history in:name`. Record the search service, language or location when known, target URLs returned, and query time. An empty result is a bounded observation, not proof of deindexing. Directory submission and directory listing are separate states.
+
+The project-path `robots.txt` links the sitemap for readers. Crawlers use the origin-root robots file at `https://liush2yuxjtu.github.io/robots.txt`. Do not report the project file as origin-wide crawler control. `llms.txt` is an agent reference, not an indexing submission or a ranking signal.
 
 ## Sources
 
@@ -36,3 +46,5 @@ Run `npm run verify:docs` to verify the language links, local file references, m
 - [GitHub repository topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics).
 - [Google guidance for multilingual content](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites).
 - [npm package metadata](https://docs.npmjs.com/cli/v11/configuring-npm/package-json).
+
+- [Google video structured data](https://developers.google.com/search/docs/appearance/structured-data/video).

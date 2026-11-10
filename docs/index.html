@@ -6,6 +6,7 @@
   <title>DSH Sidebar History | DeepSeek Harness TODO &amp; Reply Previews</title>
   <meta name="description" content="Find your DeepSeek Harness sessions with TODO progress and the latest assistant reply in the sidebar. Open-source DSH plugin, real API demo, and installation guide.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-video-preview:-1">
+  <meta name="google-site-verification" content="stHLhzBCf9xHvLyutYC-cLAKOuJE_g8uG2avdBfyQ-M">
   <meta name="theme-color" content="#101715">
   <link rel="canonical" href="https://liush2yuxjtu.github.io/dsh-sidebar-history/">
   <link rel="alternate" hreflang="en" href="https://liush2yuxjtu.github.io/dsh-sidebar-history/">
@@ -62,7 +63,7 @@
     <section id="demo" class="section wrap" aria-labelledby="demo-title">
       <div class="section-header"><h2 id="demo-title">Watch the real API run.</h2><p>The video and snapshot come from the same DSH run. The model uses the native TODO tool and saves its own answer.</p></div>
       <div class="demo-grid">
-        <div><video class="video" controls preload="none" playsinline poster="media/live/snapshot.png" aria-label="Real DeepSeek API demonstration of DSH Sidebar History"><source src="media/live/demo.mp4" type="video/mp4"><a href="media/live/demo.mp4">Download the demonstration video</a>.</video><p class="caption">9.3-second recording. The sidebar shows 2 of 3 tasks complete and the actual saved reply.</p></div>
+        <div><video class="video" controls preload="none" playsinline poster="media/live/snapshot.png" aria-label="Real DeepSeek API demonstration of DSH Sidebar History"><source src="media/live/demo.mp4" type="video/mp4"><a href="media/live/demo.mp4">Download the demonstration video</a>.</video><p class="caption">9.3-second recording. The sidebar shows 2 of 3 tasks complete and the actual saved reply. <a href="demo/">Watch the demo with a written walkthrough</a>.</p></div>
         <div class="demo-text"><h3>Evidence with the preview</h3><p>The model reads generated demo order inputs, updates the TODO list, and returns an answer. The capture preserves the recorded bytes and elapsed time.</p><p>API response IDs, usage, tool-use IDs, and persisted messages are cross-checked. A second real API session and reload recovery are also verified.</p><div class="links"><a href="media/live/evidence/result.json">API receipts</a><a href="media/live/provenance.json">Provenance and hashes</a><a href="media/live/qa.json">Media QA</a></div><p class="note">The verification suite also has controlled adapters for debugging. Those results are separate from this live API demonstration.</p></div>
       </div>
       <details><summary>View the eight-second GIF preview</summary><img src="media/live/feature-8s.gif" alt="Eight-second extract of the real API run showing TODO progress and the assistant reply in the DSH sidebar." loading="lazy" decoding="async"><p><a href="media/live/feature-8s.gif">Open the GIF</a> or <a href="media/live/demo.mp4">download the full recording</a>.</p></details>
@@ -72,7 +73,7 @@
         <div><p class="eyebrow">Install from source</p><h2 id="install-title">Add history cards to your DSH profile.</h2><p>The verified target is DeepSeek Harness <code>0.2.2-rc.1</code>, upstream commit <code>fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159</code>.</p><p class="fine">DSH APIs are pre-stable. Check compatibility before changing the supported version. Node.js 24.9.0 or later is required by the package.</p><div class="links"><a href="https://github.com/liush2yuxjtu/dsh-sidebar-history#install">Full installation reference</a><a href="https://github.com/deepseek-ai/deepseek-harness">DeepSeek Harness upstream</a></div></div>
         <ol class="steps"><li><strong>Clone the repository and create a package.</strong><pre><code>git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
-npm pack</code></pre><p>This creates a local package tarball.</p></li><li><strong>Install the tarball in a DSH web profile.</strong><p>Use the profile's supported plugin manager. For CLI instructions in your installed DSH version, run <code>dsh plugin add --help</code>.</p></li><li><strong>Open the profile's history sidebar.</strong><p>History cards show each session's TODO state and latest saved answer. Use <strong>Native navigation</strong> to return to the original workspace browser.</p></li></ol>
+npm pack</code></pre><p>This creates a local package tarball.</p></li><li><strong>Install the tarball in a DSH web profile.</strong><pre><code>dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.1.0.tgz"</code></pre><p>Run this command from the cloned repository. Replace <code>web</code> if you use another Web profile. The profile option comes before <code>add</code>. You can also use the profile's plugin manager.</p></li><li><strong>Open the profile's history sidebar.</strong><p>History cards show each session's TODO state and latest saved answer. Use <strong>Native navigation</strong> to return to the original workspace browser.</p></li></ol>
       </div>
     </section>
     <section id="questions" class="section wrap" aria-labelledby="questions-title">
