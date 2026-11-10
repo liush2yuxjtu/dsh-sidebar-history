@@ -8,7 +8,7 @@ assert.equal(manifest.exports['./client'], './client.js');
 assert.equal(manifest.exports['.'].types, './index.d.ts');
 assert.equal(manifest.exports['.'].default, './index.mjs');
 assert.equal(manifest.dsh.client.platform, 'web');
-for (const file of ['index.mjs', 'client.js', 'src/projection.mjs', 'scripts/browser-test.mjs', 'tests/browser.test.mjs', 'tests/live.test.mjs', 'tests/live-proof.mjs', 'tests/live.config.mjs', 'tests/candidate.test.mjs', 'scripts/live-browser.mjs', 'scripts/candidate.mjs', 'scripts/pre-commit.mjs', 'scripts/install-hooks.mjs', 'scripts/check-live-media.mjs', 'scripts/check-video.mjs']) {
+for (const file of ['index.mjs', 'client.js', 'src/projection.mjs', 'scripts/browser-test.mjs', 'tests/browser.test.mjs', 'tests/live.test.mjs', 'tests/live-proof.mjs', 'tests/live.config.mjs', 'tests/candidate.test.mjs', 'tests/telemetry.test.mjs', 'scripts/collect-telemetry.mjs', 'scripts/check-docs.mjs', 'scripts/live-browser.mjs', 'scripts/candidate.mjs', 'scripts/pre-commit.mjs', 'scripts/install-hooks.mjs', 'scripts/check-live-media.mjs', 'scripts/check-video.mjs']) {
   const result = spawnSync(process.execPath, ['--check', file], { stdio: 'inherit' });
   assert.equal(result.status, 0, `Syntax check: ${file}`);
 }
