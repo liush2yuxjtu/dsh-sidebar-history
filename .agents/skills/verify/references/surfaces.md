@@ -12,6 +12,7 @@
 | history-cold-upgrade | Native v1 checkpoints refold into v2 summaries without changing logs, retaining Sessions, or creating Agents. | [Sidebar UX](sidebar-ux.md). |
 | history-live-api | Actual official API responses drive native tools, durable summaries, independent sessions, and reload recovery. | [Real API E2E](live-api.md). |
 | release-live-media | Final video and screenshots match the genuine API recording, and README references the verified files. | Run `npm run verify:media`. |
+| release-story-provenance | Every story points to its own language's original real API video; the withdrawn fixture is rejected and narrative review stays separate. | Run `node scripts/check-story-media.mjs`; inspect `docs/media/story-acceptance.json` and the independent cold-viewer evidence. |
 | staged-pre-commit | A fresh full E2E runs from the exact staged tree before each final commit. | [Tracked hook](live-api.md). |
 | multilingual-discovery | Five README translations have valid language links, real API media references, compatible installation instructions, and package keywords. | [Discovery documentation](discovery-telemetry.md). |
 | maintainer-github-telemetry | An existing authorized GitHub login retrieves aggregate metrics without collecting plugin conversation content or reporting API errors as zero. | [Real GitHub collection](discovery-telemetry.md). |

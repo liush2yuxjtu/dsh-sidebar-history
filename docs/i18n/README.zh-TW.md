@@ -8,15 +8,27 @@
 
 這是採用 MIT 授權的獨立外掛。它使用 DSH 官方投影和側欄插槽 API，不修改上游 DSH 原始碼。
 
-## 功能影片
+## 看清已完成與待處理的任務
+
+訂單核對正在執行，原側欄只顯示會話標題。開啟 **歷史卡片**，卡片進度從 **0/3** 變為 **2/3**，並顯示模型儲存的正式回覆。「發佈版本」仍待處理。8 秒進度預覽是側欄的連續裁切，保留實際速度。完整影片展示歷史入口操作和完整回覆。
+
+**已歸檔的真實 API 進度故事。** 錄製回執中的套件雜湊符合 0.2.2。 下方另附目前 0.2.3 的真實 API 錄影與驗證。
+
+[![DSH 歷史卡片顯示真實 TODO 進度和最新 Assistant 回覆](../media/localized/zh-TW/story-preview.gif)](../media/localized/zh-TW/story-source-04f2e81-snapshot/raw/gt.mp4)
+
+[安裝側欄外掛](#安裝側欄外掛)
+
+[完整畫面來源片段（0.2.2）](../media/localized/zh-TW/story-source-04f2e81-snapshot/feature-8s.gif) · [MP4](../media/localized/zh-TW/story-source-04f2e81-snapshot/raw/gt.mp4)
 
 **0.2.3 五語媒體驗證通過。** 五套素材已通過真實文字、像素、來源與播放檢查，請參閱[驗證報告](../verification.md)。
 
-[![DSH 歷史卡片顯示真實 TODO 進度和最新 Assistant 回覆](../media/localized/zh-TW/feature-8s.gif)](../media/localized/zh-TW/demo.mp4)
+[8 秒完整畫面預覽](../media/localized/zh-TW/feature-8s.gif)
 
 [觀看真實 API 影片](../media/localized/zh-TW/demo.mp4) · [實際瀏覽器截圖](../media/localized/zh-TW/snapshot.png) · [API 回執](../media/localized/zh-TW/evidence/result.json)
 
 全新的 DSH 對話呼叫 DeepSeek 官方 API。模型讀取示範訂單輸入，呼叫原生 TODO 工具，並儲存自己的回答。側欄顯示 2/3 項任務已完成，以及該對話儲存的回覆。影片保留原始錄製位元組和實際時長。錄製中沒有 mock 端點、腳本回覆，也沒有預先寫入 Assistant 訊息或 TODO 事件。另一個真實 API 對話和重新整理後的恢復也已檢查。請參閱[媒體來源與雜湊](../media/localized/zh-TW/provenance.json)和[媒體檢查結果](../media/localized/zh-TW/qa.json)。
+
+[安裝側欄外掛](#安裝側欄外掛) · [故事與來源紀錄](../media/story-first.md)
 
 ## 尋找並繼續工作
 

@@ -1,0 +1,44 @@
+{
+  "scope": "Selected byte-for-byte media from the retaining repository snapshot, not a claimed recording commit. Other assets named by the original provenance and QA remain available at this immutable snapshot.",
+  "artifacts": [
+    {
+      "path": "raw/gt.mp4",
+      "sha256": "3b872f60572786ea95abddc5e119644b59ed5547421a0d6a03f0f9ed636a3951",
+      "original_path": "docs/media/localized/es/raw/gt.mp4",
+      "original_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b"
+    },
+    {
+      "path": "feature-8s.gif",
+      "sha256": "9d7417770fb4fa3062a54dc81c4c123ea33dc7820964693382b5047e2416bddb",
+      "original_path": "docs/media/localized/es/feature-8s.gif",
+      "original_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b"
+    },
+    {
+      "path": "evidence/result.json",
+      "sha256": "82344c1fee2d7024f582dd5bd004fba10dbb207ce2c51389bf724ef027479f5e",
+      "original_path": "docs/media/localized/es/evidence/result.json",
+      "original_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b"
+    },
+    {
+      "path": "evidence/native-events.json",
+      "sha256": "9c60772fb8224f10f53e8a1ad595e95e341b351638ec08bbc2325f92b0d53446",
+      "original_path": "docs/media/localized/es/evidence/native-events.json",
+      "original_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b"
+    },
+    {
+      "path": "provenance.json",
+      "sha256": "b590488df905054966644be45e24796ac2801d2e55bc5d0b91b7b5c649be72e8",
+      "original_path": "docs/media/localized/es/provenance.json",
+      "original_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b"
+    },
+    {
+      "path": "qa.json",
+      "sha256": "fd47d1982c365396cbcd0eb1d13a2d69b8206319e61061f0af88a20b20d701a0",
+      "original_path": "docs/media/localized/es/qa.json",
+      "original_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b"
+    }
+  ],
+  "snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b",
+  "recording_commit": null,
+  "recorded_package_version_by_hash": "0.2.2"
+}

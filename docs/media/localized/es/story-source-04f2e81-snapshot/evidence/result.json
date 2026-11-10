@@ -1,0 +1,573 @@
+{
+  "status": "PASS",
+  "runId": "37676480-4330-4a7e-a9b9-d8232ad00792",
+  "auditId": "37676480",
+  "candidateTree": null,
+  "mediaLocale": "es",
+  "hostLocale": "es",
+  "htmlLang": "es",
+  "visibleTextAtProof": "Compilación local de DSH\n0.2.2-rc.1-fcc0ad4\nNueva sesión\n⌥\n⌘\nN\nComplementos\nTareas de automatización\nMás\nHistorial de chats\n1 sesión\nRevisa orders.json. Usa español en\n2/3 tareas\n23:45\nPendiente:\nPublicar versión\n✓\nCompletada:\nLeer pedidos\n✓\nCompletada:\nVerificar totales\n✦\n37676480 : revisé orders.json . Pedido A : 2 × 13 + 4 = 30. Pedido B : 0 × 5 + 5 = 5. Tareas completadas: leer y verificar. La publicación queda pendiente por aprobación; no edité nada.\n2/3 tareas. Pendiente: Publicar versión. Completada: Leer pedidos. Completada: Verificar totales. Última respuesta del asistente: 37676480 : revisé orders.json . Pedido A : 2 × 13 + 4 = 30. Pedido B : 0 × 5 + 5 = 5. Tareas completadas: leer y verificar. La publicación queda pendiente por aprobación; no edité nada.\nEspacios y sesiones archivadas\nMás\nRevisa orders.json. Usa español en\nModo estándar\nChat\nTrayectoria\nRevisa orders.json. Usa español en TODOS los mensajes visibles, incluidos los avisos antes de usar herramientas y los mensajes de progreso. No expliques los pasos en inglés. Conserva los identificadores técnicos originales. Primero crea exactamente tres tareas con todo_write: Leer pedidos; Verificar totales; Publicar versión. Usa read para leer el archivo. Calcula quantity * unitPrice + shipping para cada pedido. Completa las dos primeras tareas y deja Publicar versión pendiente porque requiere aprobación. No edites ni publiques. Responde en español en menos de 60 palabras. Usa Pedido A y Pedido B, indica cada total e incluye el identificador 37676480. Empieza con el identificador 37676480 en negrita Markdown y orders.json como código en línea. Pon las etiquetas de los pedidos en negrita.\n23:45\nCompletado\nCompletado en 3s\n\nVoy a crear primero las tres tareas requeridas.\n\nAhora leo el archivo orders.json.\n\nCalculé ambos totales; completo las dos primeras tareas.\n\n37676480: revisé orders.json. Pedido A: 2 × 13 + 4 = 30. Pedido B: 0 × 5 + 5 = 5. Tareas completadas: leer y verificar. La publicación queda pendiente por aprobación; no edité nada.\n\nUso Tok 9.5K\n23:45\nTareas pendientes\n2 completado · 1 pendiente\nEnvía mensajes o ejecuta una tarea, / comandos, @ archivos o sesiones\nEscritura en el espacio de trabajo\ndeepseek-flash\nOff\n1 turnos, 4 pasos·241 tok/s\nTok 9.5K·Aciertos de caché: 87%\n0%",
+  "expectedUiLabels": [
+    "Historial de chats",
+    "Espacios y sesiones archivadas",
+    "2/3 tareas"
+  ],
+  "expectedTaskLabels": [
+    "Leer pedidos",
+    "Verificar totales",
+    "Publicar versión"
+  ],
+  "requestedTaskLabels": [
+    "Leer pedidos",
+    "Verificar totales",
+    "Publicar versión"
+  ],
+  "languageChecks": {
+    "status": "PASS",
+    "locale": "es",
+    "assistantResponseTexts": 8,
+    "includesInterruptedResponse": true
+  },
+  "candidateSources": {
+    "package.json": "62440c70e1bff0830d94cfe7efdae26dbdba0debf11575d09ea981709abe57e7",
+    "index.mjs": "453e8a0844aaa8f7e9e0aba583c335112a0c703782aadf88325fad94dec92767",
+    "client.js": "5dda793336cd753b56972e5b581ccacdd2cda5167e0e44e067906d8984cb9bcf",
+    "src/client.mjs": "fbd86d67e473b6a29680f13e23a0002c2574821e2a8505ae7fcc1de2802330d8",
+    "src/markdown-preview.mjs": "ab11500a64bbe2f7e4d181d357935df1232a5cba963a973410373ac34d918ef6",
+    "src/projection.mjs": "817568cbf494fcd5df9d1af74a37e346ea0729a566716523d448d55ee6904785",
+    "src/locales.mjs": "01ad0c6d46a2fee51673db2c86f3141d059d1c457f76663395f98deecee833b9",
+    "tests/live.test.mjs": "e89d0d0fe2a1e4dfab45e0562b48bffc3978e5a086a111b048abe75f6ec1a5ba",
+    "tests/live-proof.mjs": "6c40205793bb8082a05b61177f63d58a829805976d15660f639306ce9db1ee6d",
+    "tests/live.config.mjs": "89ac271d9dba7a8dfa060923a20eb97d3a2a3e99207bbfecf1f2118196728ffc",
+    "tests/media-locales.mjs": "aa943d6a69acd385a93b7e43edca34101c2f7211dbb6149a6773a206820790a1",
+    "scripts/live-browser.mjs": "daa74a8172e3163d459d547dd729b56cc8d0d36bf19975a2de12c8eee65f14df"
+  },
+  "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "provider": "deepseek-official",
+  "model": "deepseek-flash",
+  "liveModel": true,
+  "mockedService": false,
+  "scriptedModel": false,
+  "seededAssistantMessages": false,
+  "seededTodoEvents": false,
+  "inputData": "Fresh generated demo order inputs, inspected by native read",
+  "orders": [
+    {
+      "id": "A",
+      "quantity": 2,
+      "unitPrice": 13,
+      "shipping": 4
+    },
+    {
+      "id": "B",
+      "quantity": 0,
+      "unitPrice": 5,
+      "shipping": 5
+    }
+  ],
+  "expectedTotals": [
+    30,
+    5
+  ],
+  "primarySession": "session-26a755fd-7ddf-434b-92d4-8fc8dc39133d",
+  "secondSession": "session-da12ed16-f799-4b17-a762-090b1f4eae31",
+  "provenance": {
+    "apiResponses": 6,
+    "nativeToolCalls": 3,
+    "todoWrites": 2
+  },
+  "recordedTurnProvenance": {
+    "apiResponses": 4,
+    "nativeToolCalls": 3,
+    "todoWrites": 2
+  },
+  "calls": [
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-26a755fd-7ddf-434b-92d4-8fc8dc39133d",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:45:46.949Z",
+      "responseId": "33a12751-9cc1-42d9-b200-e57fb06dd429",
+      "usage": {
+        "input_tokens": 496,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1536,
+        "output_tokens": 97,
+        "service_tier": "standard"
+      },
+      "text": "Voy a crear primero las tres tareas requeridas.",
+      "toolCalls": [
+        {
+          "id": "call_00_CSnzgKgNH6b4C9XDOiYL6060",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Leer pedidos",
+                "status": "in_progress"
+              },
+              {
+                "content": "Verificar totales",
+                "status": "pending"
+              },
+              {
+                "content": "Publicar versión",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "4a3253d1716d747b426dac0a4633ef660b82362562d49d963356b6397ef8cb84",
+      "finishedAt": "2026-11-10T15:45:47.797Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-26a755fd-7ddf-434b-92d4-8fc8dc39133d",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:45:47.829Z",
+      "responseId": "9f803324-6f56-4c76-bbd9-f636f0953223",
+      "usage": {
+        "input_tokens": 237,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1920,
+        "output_tokens": 47,
+        "service_tier": "standard"
+      },
+      "text": "Ahora leo el archivo orders.json.",
+      "toolCalls": [
+        {
+          "id": "call_00_3mfOD9FGByBUsL4laKLu8872",
+          "name": "read",
+          "arguments": {
+            "file_path": "orders.json"
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "84f75c5006b59100e6c23259cee5facf57cdbc87ccff53e7c6137c7c5525148d",
+      "finishedAt": "2026-11-10T15:45:48.888Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-26a755fd-7ddf-434b-92d4-8fc8dc39133d",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:45:48.913Z",
+      "responseId": "34900d28-137f-4690-bbe9-90c708f9696e",
+      "usage": {
+        "input_tokens": 240,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2176,
+        "output_tokens": 97,
+        "service_tier": "standard"
+      },
+      "text": "Calculé ambos totales; completo las dos primeras tareas.",
+      "toolCalls": [
+        {
+          "id": "call_00_6OzayysdUIoAuTsW8YL80440",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Leer pedidos",
+                "status": "completed"
+              },
+              {
+                "content": "Verificar totales",
+                "status": "completed"
+              },
+              {
+                "content": "Publicar versión",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "a69ea839d5f73a66e83dae331644c6a86d412505d372cf9db3f93ec46254793e",
+      "finishedAt": "2026-11-10T15:45:49.776Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-26a755fd-7ddf-434b-92d4-8fc8dc39133d",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:45:49.802Z",
+      "responseId": "00cfa45d-536c-4f9c-b840-a446f58f4670",
+      "usage": {
+        "input_tokens": 237,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 70,
+        "service_tier": "standard"
+      },
+      "text": "**37676480**: revisé `orders.json`. **Pedido A**: 2 × 13 + 4 = 30. **Pedido B**: 0 × 5 + 5 = 5. Tareas completadas: leer y verificar. La publicación queda pendiente por aprobación; no edité nada.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "53bc16f96006eec1b983938d0086ef6bb3c9d2d0eeb6b1291be0092cc8b6b9cc",
+      "finishedAt": "2026-11-10T15:45:50.389Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-da12ed16-f799-4b17-a762-090b1f4eae31",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:45:59.125Z",
+      "responseId": "743d00f0-77d8-4c8b-a714-e6b3f2f239cb",
+      "usage": {
+        "input_tokens": 579,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1280,
+        "output_tokens": 20,
+        "service_tier": "standard"
+      },
+      "text": "Bienvenida a esta revisión independiente; identificador: 37676480-second.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "1c7a65700046ca9089daeb133164bd2ed3fffb7c07b67ba18cf0617db7dcfe7d",
+      "finishedAt": "2026-11-10T15:45:59.993Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-26a755fd-7ddf-434b-92d4-8fc8dc39133d",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:46:06.640Z",
+      "responseId": "02e293b9-57c0-4de3-aff6-af7691a874f5",
+      "usage": {
+        "input_tokens": 244,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2432,
+        "output_tokens": 53,
+        "service_tier": "standard"
+      },
+      "text": "**37676480-followup**: solicitud adicional recibida y confirmada. Mantengo `orders.json` sin cambios y la tarea de publicación sigue pendiente de aprobación. No usé herramientas ni modifiqué la lista de tareas.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "df48dc13f0738d9bdb335f079dc3eac4a19fe651ef1ccb0d20fc820172d157b2",
+      "finishedAt": "2026-11-10T15:46:07.912Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-26a755fd-7ddf-434b-92d4-8fc8dc39133d",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:46:10.706Z",
+      "responseId": "11e193fd-bc8d-4535-a5e1-486719dee06c",
+      "usage": {
+        "input_tokens": 226,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2688,
+        "output_tokens": 65,
+        "service_tier": "standard"
+      },
+      "text": "**37676480-retry**: revisión reanudada y confirmada. `orders.json` permanece sin cambios: **Pedido A** total 30, **Pedido B** total 5. La publicación sigue pendiente de aprobación. No usé herramientas ni listas de tareas.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "7b2dfdb792703b30e75cffff9bfa08fd7799c4786adc0fc09e648a4eb0bf9090",
+      "finishedAt": "2026-11-10T15:46:11.520Z"
+    }
+  ],
+  "cancellation": {
+    "expected": true,
+    "state": "native-user-cancelled-partial-api-stream",
+    "call": {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-26a755fd-7ddf-434b-92d4-8fc8dc39133d",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:46:08.761Z",
+      "responseId": "1554695e-d769-425a-b3d6-729980571ed4",
+      "usage": {
+        "input_tokens": 243,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2560,
+        "output_tokens": 0,
+        "service_tier": "standard"
+      },
+      "text": "**37676480-cancel**: lista numerada de 100 preguntas con su explicación, sin usar herramientas.\n\n1. ¿Está definido el formato exacto de `orders.json` antes de revisar? Explicación: f",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null
+    },
+    "nativeTurn": 3,
+    "nativeEndKind": "aborted",
+    "nativeAbortReason": "user",
+    "streamTermination": {
+      "kind": "reader-aborted",
+      "failure": {
+        "kind": "user",
+        "valueType": "object"
+      }
+    },
+    "deliveredPrefixMessageId": "66767bea-4b1d-418b-aaa4-32eaccc2ab23",
+    "deliveredPrefixLength": 182,
+    "retainedMessageId": "4a0cac6f-eaf3-43eb-878c-023c77a706e3"
+  },
+  "usage": [
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:45:46.941Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 496,
+        "outputTokens": 97,
+        "cacheReadTokens": 1536,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2129
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:45:47.827Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 237,
+        "outputTokens": 47,
+        "cacheReadTokens": 1920,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2204
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:45:48.911Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 240,
+        "outputTokens": 97,
+        "cacheReadTokens": 2176,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2513
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:45:49.800Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 237,
+        "outputTokens": 70,
+        "cacheReadTokens": 2304,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2611
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:45:59.124Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 579,
+        "outputTokens": 20,
+        "cacheReadTokens": 1280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 1879
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:46:06.639Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 244,
+        "outputTokens": 53,
+        "cacheReadTokens": 2432,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2729
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:46:08.759Z",
+      "expectedCancellation": true
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:46:10.705Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 226,
+        "outputTokens": 65,
+        "cacheReadTokens": 2688,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2979
+      }
+    }
+  ],
+  "apiCallCounts": {
+    "completed": 7,
+    "deliberatelyInterrupted": 1,
+    "total": 8
+  },
+  "checks": [
+    "official-api-response-identity-and-usage",
+    "api-tool-ids-match-durable-events",
+    "native-read-and-todo-write",
+    "model-computed-order-totals",
+    "requested-language-for-all-visible-api-text-and-native-tasks",
+    "committed-markdown-source-and-message-id-match-api",
+    "readonly-bold-and-inline-code-render",
+    "accessible-task-count-and-statuses",
+    "compact-two-line-preview",
+    "singular-session-label",
+    "independent-session-has-no-tasks",
+    "reload-restores-real-summary",
+    "native-navigation-retains-query-scroll-and-focus",
+    "real-search-disconnect-retains-local-matches-and-retry-recovers",
+    "real-api-data-in-mobile-drawer",
+    "200-percent-equivalent-effective-viewport-reflow",
+    "native-light-dark-theme-independent-of-os",
+    "earlier-reply-distinguished-during-new-real-turn",
+    "new-turn-does-not-inherit-tasks",
+    "actual-api-cancellation-retains-committed-reply",
+    "real-retry-after-cancel-commits-and-reloads"
+  ],
+  "consoleErrors": [],
+  "expectedNetworkErrors": [
+    {
+      "kind": "deliberately-disconnected-real-search",
+      "message": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+    }
+  ],
+  "searchFault": {
+    "kind": "request-disconnected-without-substitute-response",
+    "requests": 1
+  },
+  "layout": {
+    "compact": {
+      "height": 183,
+      "fontSize": 12,
+      "previewHeight": 36,
+      "fits": true
+    },
+    "mobile": {
+      "height": 183,
+      "fontSize": 12,
+      "previewHeight": 36,
+      "fits": true
+    },
+    "zoom": {
+      "equivalentPercent": 200,
+      "effectiveCssViewport": {
+        "width": 640,
+        "height": 400
+      },
+      "actualDesktopBrowserZoom": false
+    }
+  },
+  "themeChecks": [
+    {
+      "palette": "light",
+      "os": "dark",
+      "rendered": "color(srgb 0.0960784 0.419608 0.22549)",
+      "foreground": [
+        24,
+        107,
+        57
+      ],
+      "background": [
+        237,
+        243,
+        254
+      ],
+      "contrastRatio": 5.889505617179499
+    },
+    {
+      "palette": "dark",
+      "os": "light",
+      "rendered": "color(srgb 0.554902 0.876471 0.676471)",
+      "foreground": [
+        142,
+        224,
+        173
+      ],
+      "background": [
+        45,
+        51,
+        64
+      ],
+      "contrastRatio": 8.086016557435679
+    }
+  ],
+  "navigation": {
+    "restoredQuery": "37676480",
+    "restoredScrollTop": 47,
+    "restoredFocusedSession": "session-26a755fd-7ddf-434b-92d4-8fc8dc39133d"
+  },
+  "proof_interval_s": [
+    4.701005859375,
+    10.184005859375
+  ],
+  "video": {
+    "duration_s": 10.187005859375,
+    "frames": 58
+  },
+  "recordedTurn": 1,
+  "finalAssistantText": "**37676480**: revisé `orders.json`. **Pedido A**: 2 × 13 + 4 = 30. **Pedido B**: 0 × 5 + 5 = 5. Tareas completadas: leer y verificar. La publicación queda pendiente por aprobación; no edité nada.",
+  "finalPreview": "**37676480**: revisé `orders.json`. **Pedido A**: 2 × 13 + 4 = 30. **Pedido B**: 0 × 5 + 5 = 5. Tareas completadas: leer y verificar. La publicación queda pendiente por aprobación; no edité nada.",
+  "finalTodos": [
+    {
+      "content": "Leer pedidos",
+      "status": "completed"
+    },
+    {
+      "content": "Verificar totales",
+      "status": "completed"
+    },
+    {
+      "content": "Publicar versión",
+      "status": "pending"
+    }
+  ],
+  "latestAfterLifecycle": {
+    "messageId": "bd4a21a2-a209-46d8-8a9a-628640bb01f9",
+    "text": "**37676480-retry**: revisión reanudada y confirmada. `orders.json` permanece sin cambios: **Pedido A** total 30, **Pedido B** total 5. La publicación sigue pendiente de aprobación. No usé herramientas ni listas de tareas.",
+    "tasks": null,
+    "endKind": "completed"
+  },
+  "screenshots": {
+    "preflight.png": "4250a6a7fed32b16063cdd8fc87d38b8fbf5a36f7d6e5bf39e5d4a4327503df8",
+    "progress.png": "7874d783c0b6899dd438d2f198615ba38ca7df1aff4485d7d3fc9d1dd8cb42da",
+    "final.png": "5a385619ca6b4a89856aa85b5906578a5a00cbaaa71c3792f480890092a836a1",
+    "reloaded.png": "c9da434bdce42b430cdd18ca3caf727c1790962b37906169f8fe75498f951dcf",
+    "navigation-restored.png": "900008869910ac95d20392a2ba05d08a1e637c4be6fe9cdc86e9f8e70fda506f",
+    "offline-search.png": "00c6cf0fcead3fe2c21db1057be5e1591bc3822e340fc3c1c12ace844c3877aa",
+    "mobile.png": "42754c8f18d6cc3d2e2763e191fd86be3d69560f61b807e4a3aae1d93fd81055",
+    "zoom-equivalent-reflow.png": "a472c919c07c79a92171c973bdbfcdb6a06c16d6ed0bd0b8dd109499d23b4543",
+    "light-theme.png": "7a3735178de00fe93b7206c21da77e34be17df8214f4ee1ad7e762ad4b3224c6",
+    "dark-theme.png": "df6394287a485344349b1844325e74193e892792108bd58c2da81fa68db4e102",
+    "earlier-reply.png": "923d7c0a20250d1e661fb11f7acec6ccc47fc28a81389c1ef2948e7e3edc772d",
+    "followup.png": "6707cbec2788a78286fe2ce94c95a0baf38d498f9dfb727952c037c60c730f24",
+    "stopped.png": "670b41973586372b1aafa48b622a68f52b8589bced1f04c9a94a8025c012162e",
+    "restarted.png": "cdc979b92c62164a698d5c8ec74854a551230c2cfc032a68e64199c4f04631b1",
+    "lifecycle-reloaded.png": "ce03a577d3c1276837f3a2a21925bc308664b262b621649e57daaceb5f2f4079"
+  },
+  "raw_sha256": "3b872f60572786ea95abddc5e119644b59ed5547421a0d6a03f0f9ed636a3951"
+}

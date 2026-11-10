@@ -1,0 +1,50 @@
+{
+  "review_type": "delivery-size readability; separate from anonymous cold-viewer narrative review",
+  "reviewer": "root agent, independent of preview author; not a human user study",
+  "method": "Root independently inspected each result.png with view_image at its actual 520×612 delivery pixel size. No full-frame readability verdict was inherited.",
+  "status": "PASS",
+  "scope": "Task count, task labels, completed/pending indicators and presence of the saved reply excerpt.",
+  "not_established": [
+    "Complete reply readability: the product intentionally truncates to two lines.",
+    "Entry action: the history toggle is outside the crop.",
+    "Installation conversion: no effect has been measured."
+  ],
+  "reviewer_statement": "Root已独立逐张view_image五张520×612结果帧。可读性PASS范围：EN 2/3 tasks + Publish release未勾/Read order data、Verify both totals勾；简中2/3项任务+发布版本未勾/读取订单数据、核对订单金额勾；繁中2/3項任務+發佈版本未勾/讀取訂單資料、核對訂單金額勾；日文2/3件のタスク+リリースを公開する未勾/注文データを読む、合計を確認する勾；西语2/3 tareas+Publicar versión未勾/Leer pedidos、Verificar totales勾。五语回复摘要存在且本来两行省略，不等于完整回复可读。",
+  "frames": [
+    {
+      "locale": "en",
+      "path": "docs/media/story-review/preview/en/result.png",
+      "sha256": "188e2b4283e74f6663ac945409496c7b84ad062b14a711a999143ba7f1d108db",
+      "requested_preview_time_s": 7.3,
+      "requested_source_time_s": 9.40052294921875
+    },
+    {
+      "locale": "zh-CN",
+      "path": "docs/media/story-review/preview/zh-CN/result.png",
+      "sha256": "af5d2158f963e8974b29e738bd8aa9761fa8c9f84ba8cf3bd03bd98eda05e6cc",
+      "requested_preview_time_s": 7.3,
+      "requested_source_time_s": 9.108042968749999
+    },
+    {
+      "locale": "zh-TW",
+      "path": "docs/media/story-review/preview/zh-TW/result.png",
+      "sha256": "e68bb3655faf3bb6d50ad9126c5096ad489a87b6790a80c89ba47bee210aa3a4",
+      "requested_preview_time_s": 7.3,
+      "requested_source_time_s": 9.12126708984375
+    },
+    {
+      "locale": "ja",
+      "path": "docs/media/story-review/preview/ja/result.png",
+      "sha256": "4d93c38e6941640257d3c1094eb9e5ad2e2d97d3a14fcacdc37f869667b83ac2",
+      "requested_preview_time_s": 7.3,
+      "requested_source_time_s": 9.49472705078125
+    },
+    {
+      "locale": "es",
+      "path": "docs/media/story-review/preview/es/result.png",
+      "sha256": "81c78e7e16aced56c0e852209cc7f1a3c58fcd1f5bcef55aa9c889952b7c0955",
+      "requested_preview_time_s": 7.3,
+      "requested_source_time_s": 8.501005859374999
+    }
+  ]
+}

@@ -1,0 +1,573 @@
+{
+  "status": "PASS",
+  "runId": "123db8c4-2509-42a7-a041-9876867b1e74",
+  "auditId": "123db8c4",
+  "candidateTree": null,
+  "mediaLocale": "zh-TW",
+  "hostLocale": "zh-TW",
+  "htmlLang": "zh-TW",
+  "visibleTextAtProof": "DSH 本地構建\n0.2.2-rc.1-fcc0ad4\n新會話\n⌥\n⌘\nN\n插件\n自動化任務\n更多\n歷史會話\n1 個會話\n對 orders.json。全程使用標準繁\n2/3 項任務\n下午11:44\n待處理:\n發佈版本\n✓\n已完成:\n讀取訂單資料\n✓\n已完成:\n核對訂單金額\n✦\n核對編號 123db8c4 （檔案： orders.json ） 訂單 A ：3 × 10 + 3 = 33 訂單 B ：0 × 9 + 6 = 6 計算方式為 quantity * unitPrice + shipping。我已完成讀取訂單資料與核對訂單金額；發佈版本仍待處理，需要核准。未修改檔案，也未發佈。\n2/3 項任務. 待處理: 發佈版本. 已完成: 讀取訂單資料. 已完成: 核對訂單金額. 最新助手回覆: 核對編號 123db8c4 （檔案： orders.json ） 訂單 A ：3 × 10 + 3 = 33 訂單 B ：0 × 9 + 6 = 6 計算方式為 quantity * unitPrice + shipping。我已完成讀取訂單資料與核對訂單金額；發佈版本仍待處理，需要核准。未修改檔案，也未發佈。\n工作區與歸檔\n更多\n對 orders.json。全程使用標準繁\n標準模式\n對話\n軌跡\n對 orders.json。全程使用標準繁體中文，包括工具呼叫前的說明、中途進度及最後回覆，不可混入簡體字；使用「並」、「軌跡」等正體字，技術識別名稱保留原文。先使用 todo_write 建立恰好三項任務：讀取訂單資料；核對訂單金額；發佈版本。用 read 讀取檔案，計算每筆訂單的 quantity * unitPrice + shipping。完成前兩項；發佈版本仍待處理，因為需要核准。不要修改檔案或發佈。用繁體中文簡短回覆，稱每筆為「訂單 A」和「訂單 B」，列出金額，並包含核對編號 123db8c4。 開頭先以 Markdown 粗體寫出核對編號 123db8c4，再以行內程式碼寫出 orders.json；訂單標籤使用粗體。\n23:44\n已完成\n已完成，用時 4秒\n\n我先建立三項任務，再讀取訂單資料。\n\n核對編號 123db8c4（檔案：orders.json）\n\n訂單 A：3 × 10 + 3 = 33\n訂單 B：0 × 9 + 6 = 6\n\n計算方式為 quantity * unitPrice + shipping。我已完成讀取訂單資料與核對訂單金額；發佈版本仍待處理，需要核准。未修改檔案，也未發佈。\n\n用量 9.6K tok\n23:44\n任務\n2 已完成 · 1 待處理\n發消息或創建任務, / 調用指令, @ 文件或對話\n工作區內修改\ndeepseek-flash\nOff\n1 輪 4 步·288 tok/s\n9.6K tok·緩存命中 86%\n0%",
+  "expectedUiLabels": [
+    "歷史會話",
+    "工作區與歸檔",
+    "2/3 項任務"
+  ],
+  "expectedTaskLabels": [
+    "讀取訂單資料",
+    "核對訂單金額",
+    "發佈版本"
+  ],
+  "requestedTaskLabels": [
+    "讀取訂單資料",
+    "核對訂單金額",
+    "發佈版本"
+  ],
+  "languageChecks": {
+    "status": "PASS",
+    "locale": "zh-TW",
+    "assistantResponseTexts": 6,
+    "includesInterruptedResponse": true
+  },
+  "candidateSources": {
+    "package.json": "62440c70e1bff0830d94cfe7efdae26dbdba0debf11575d09ea981709abe57e7",
+    "index.mjs": "453e8a0844aaa8f7e9e0aba583c335112a0c703782aadf88325fad94dec92767",
+    "client.js": "5dda793336cd753b56972e5b581ccacdd2cda5167e0e44e067906d8984cb9bcf",
+    "src/client.mjs": "fbd86d67e473b6a29680f13e23a0002c2574821e2a8505ae7fcc1de2802330d8",
+    "src/markdown-preview.mjs": "ab11500a64bbe2f7e4d181d357935df1232a5cba963a973410373ac34d918ef6",
+    "src/projection.mjs": "817568cbf494fcd5df9d1af74a37e346ea0729a566716523d448d55ee6904785",
+    "src/locales.mjs": "01ad0c6d46a2fee51673db2c86f3141d059d1c457f76663395f98deecee833b9",
+    "tests/live.test.mjs": "e89d0d0fe2a1e4dfab45e0562b48bffc3978e5a086a111b048abe75f6ec1a5ba",
+    "tests/live-proof.mjs": "6c40205793bb8082a05b61177f63d58a829805976d15660f639306ce9db1ee6d",
+    "tests/live.config.mjs": "89ac271d9dba7a8dfa060923a20eb97d3a2a3e99207bbfecf1f2118196728ffc",
+    "tests/media-locales.mjs": "aa943d6a69acd385a93b7e43edca34101c2f7211dbb6149a6773a206820790a1",
+    "scripts/live-browser.mjs": "daa74a8172e3163d459d547dd729b56cc8d0d36bf19975a2de12c8eee65f14df"
+  },
+  "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "provider": "deepseek-official",
+  "model": "deepseek-flash",
+  "liveModel": true,
+  "mockedService": false,
+  "scriptedModel": false,
+  "seededAssistantMessages": false,
+  "seededTodoEvents": false,
+  "inputData": "Fresh generated demo order inputs, inspected by native read",
+  "orders": [
+    {
+      "id": "A",
+      "quantity": 3,
+      "unitPrice": 10,
+      "shipping": 3
+    },
+    {
+      "id": "B",
+      "quantity": 0,
+      "unitPrice": 9,
+      "shipping": 6
+    }
+  ],
+  "expectedTotals": [
+    33,
+    6
+  ],
+  "primarySession": "session-c38a3469-2c54-4c36-8482-511e4d8d2fee",
+  "secondSession": "session-7a81b9af-d036-4de4-adf8-b277e1378657",
+  "provenance": {
+    "apiResponses": 6,
+    "nativeToolCalls": 3,
+    "todoWrites": 2
+  },
+  "recordedTurnProvenance": {
+    "apiResponses": 4,
+    "nativeToolCalls": 3,
+    "todoWrites": 2
+  },
+  "calls": [
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-c38a3469-2c54-4c36-8482-511e4d8d2fee",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:29.810Z",
+      "responseId": "41198aa0-feb9-405c-883a-6a58723b3f08",
+      "usage": {
+        "input_tokens": 621,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1408,
+        "output_tokens": 99,
+        "service_tier": "standard"
+      },
+      "text": "我先建立三項任務，再讀取訂單資料。",
+      "toolCalls": [
+        {
+          "id": "call_00_lpoRWuldyQjFmRPdeOYl1715",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "讀取訂單資料",
+                "status": "in_progress"
+              },
+              {
+                "content": "核對訂單金額",
+                "status": "pending"
+              },
+              {
+                "content": "發佈版本",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "1a5acc1ff08a90d356540e24507199c17c6443ee0455d840639d9df177f174cb",
+      "finishedAt": "2026-11-10T15:44:31.018Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-c38a3469-2c54-4c36-8482-511e4d8d2fee",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:31.046Z",
+      "responseId": "009f0046-92f6-4437-bd6b-1a85ade24d29",
+      "usage": {
+        "input_tokens": 236,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1920,
+        "output_tokens": 89,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_XMos04GQSetG6QpCYtms8744",
+          "name": "read",
+          "arguments": {
+            "file_path": "/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-keXxPO/sidebar-live-audit/orders.json"
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "54df8c33e688962c67a774d98990a32faa4f70672c8c01b2f12dae6c44b88bb4",
+      "finishedAt": "2026-11-10T15:44:31.775Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-c38a3469-2c54-4c36-8482-511e4d8d2fee",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:31.811Z",
+      "responseId": "9abb2738-c688-460c-b217-26b80e1a894d",
+      "usage": {
+        "input_tokens": 284,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2176,
+        "output_tokens": 85,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_bVivaDZHEQH1aN9LGtz33160",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "讀取訂單資料",
+                "status": "completed"
+              },
+              {
+                "content": "核對訂單金額",
+                "status": "completed"
+              },
+              {
+                "content": "發佈版本",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "c7d515405cbeb26b2f169983a1250dec1ae1c68a2ac7720bd82c9cfc61adf371",
+      "finishedAt": "2026-11-10T15:44:32.523Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-c38a3469-2c54-4c36-8482-511e4d8d2fee",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:32.547Z",
+      "responseId": "c36fb0e1-bdbe-4cf6-8c72-9397a58001dd",
+      "usage": {
+        "input_tokens": 141,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2432,
+        "output_tokens": 98,
+        "service_tier": "standard"
+      },
+      "text": "**核對編號 123db8c4**（檔案：`orders.json`）\n\n- **訂單 A**：3 × 10 + 3 = **33**\n- **訂單 B**：0 × 9 + 6 = **6**\n\n計算方式為 quantity * unitPrice + shipping。我已完成讀取訂單資料與核對訂單金額；發佈版本仍待處理，需要核准。未修改檔案，也未發佈。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "d1418d96eaad88cae48ea098e3b026442ce504d965bb7d94589b62f0653d0eef",
+      "finishedAt": "2026-11-10T15:44:33.854Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-7a81b9af-d036-4de4-adf8-b277e1378657",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:41.381Z",
+      "responseId": "e6726060-cd0a-44cb-9849-be50639a437d",
+      "usage": {
+        "input_tokens": 578,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1280,
+        "output_tokens": 24,
+        "service_tier": "standard"
+      },
+      "text": "你好，這是一個獨立會話的問候，核對編號為 123db8c4-second。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "372a74bef72f4841c76a0de411b1c031ab1f3bbb24e6a05a392bc5253ffffd18",
+      "finishedAt": "2026-11-10T15:44:42.434Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-c38a3469-2c54-4c36-8482-511e4d8d2fee",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:48.342Z",
+      "responseId": "909d72a7-bfa2-4201-9235-74305da5c150",
+      "usage": {
+        "input_tokens": 184,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2560,
+        "output_tokens": 50,
+        "service_tier": "standard"
+      },
+      "text": "**核對編號 123db8c4-followup**：已收到後續請求，我會以標準繁體中文回覆，並參照 `orders.json`。不會呼叫工具，也不會建立或更新任務清單。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "39478ac66b198c5685c001d6dffbf254c99b343436950eba92ab3c837f69e57e",
+      "finishedAt": "2026-11-10T15:44:49.563Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-c38a3469-2c54-4c36-8482-511e4d8d2fee",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:51.707Z",
+      "responseId": "18e07bbe-f0c0-42cf-8c30-00e91ecb0f25",
+      "usage": {
+        "input_tokens": 160,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2816,
+        "output_tokens": 44,
+        "service_tier": "standard"
+      },
+      "text": "**核對編號 123db8c4-retry**：已依此編號繼續本次核對，並參照 `orders.json`。未使用工具，也未更動任務清單。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "bc8f060b427ca27b4886bb7d5812f9d7b7064b4249c216c24e9209d2659ea4ac",
+      "finishedAt": "2026-11-10T15:44:52.892Z"
+    }
+  ],
+  "cancellation": {
+    "expected": true,
+    "state": "native-user-cancelled-partial-api-stream",
+    "call": {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "session-c38a3469-2c54-4c36-8482-511e4d8d2fee",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:50.281Z",
+      "responseId": "a8f20831-d828-4448-bea6-d5bdf8e320f8",
+      "usage": {
+        "input_tokens": 179,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2688,
+        "output_tokens": 0,
+        "service_tier": "standard"
+      },
+      "text": "**核對編號 123db8c4-cancel**：以下為原創之訂單核對問題清單，共一百題，每題附解說。全程",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null
+    },
+    "nativeTurn": 3,
+    "nativeEndKind": "aborted",
+    "nativeAbortReason": "user",
+    "streamTermination": {
+      "kind": "reader-aborted",
+      "failure": {
+        "kind": "user",
+        "valueType": "object"
+      }
+    },
+    "deliveredPrefixMessageId": "3b8a1d54-f517-4b96-891e-d3df10e285f9",
+    "deliveredPrefixLength": 53,
+    "retainedMessageId": "f4b9a47a-f1b0-4dc6-bc6f-e57ed57e3bf9"
+  },
+  "usage": [
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:29.797Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 621,
+        "outputTokens": 99,
+        "cacheReadTokens": 1408,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2128
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:31.044Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 236,
+        "outputTokens": 89,
+        "cacheReadTokens": 1920,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2245
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:31.809Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 284,
+        "outputTokens": 85,
+        "cacheReadTokens": 2176,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2545
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:32.545Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 141,
+        "outputTokens": 98,
+        "cacheReadTokens": 2432,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2671
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:41.380Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 578,
+        "outputTokens": 24,
+        "cacheReadTokens": 1280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 1882
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:48.341Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 184,
+        "outputTokens": 50,
+        "cacheReadTokens": 2560,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2794
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:50.280Z",
+      "expectedCancellation": true
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:44:51.706Z",
+      "expectedCancellation": false,
+      "usage": {
+        "inputTokens": 160,
+        "outputTokens": 44,
+        "cacheReadTokens": 2816,
+        "cacheWriteTokens": 0,
+        "totalTokens": 3020
+      }
+    }
+  ],
+  "apiCallCounts": {
+    "completed": 7,
+    "deliberatelyInterrupted": 1,
+    "total": 8
+  },
+  "checks": [
+    "official-api-response-identity-and-usage",
+    "api-tool-ids-match-durable-events",
+    "native-read-and-todo-write",
+    "model-computed-order-totals",
+    "requested-language-for-all-visible-api-text-and-native-tasks",
+    "committed-markdown-source-and-message-id-match-api",
+    "readonly-bold-and-inline-code-render",
+    "accessible-task-count-and-statuses",
+    "compact-two-line-preview",
+    "singular-session-label",
+    "independent-session-has-no-tasks",
+    "reload-restores-real-summary",
+    "native-navigation-retains-query-scroll-and-focus",
+    "real-search-disconnect-retains-local-matches-and-retry-recovers",
+    "real-api-data-in-mobile-drawer",
+    "200-percent-equivalent-effective-viewport-reflow",
+    "native-light-dark-theme-independent-of-os",
+    "earlier-reply-distinguished-during-new-real-turn",
+    "new-turn-does-not-inherit-tasks",
+    "actual-api-cancellation-retains-committed-reply",
+    "real-retry-after-cancel-commits-and-reloads"
+  ],
+  "consoleErrors": [],
+  "expectedNetworkErrors": [
+    {
+      "kind": "deliberately-disconnected-real-search",
+      "message": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+    }
+  ],
+  "searchFault": {
+    "kind": "request-disconnected-without-substitute-response",
+    "requests": 1
+  },
+  "layout": {
+    "compact": {
+      "height": 183,
+      "fontSize": 12,
+      "previewHeight": 36,
+      "fits": true
+    },
+    "mobile": {
+      "height": 183,
+      "fontSize": 12,
+      "previewHeight": 36,
+      "fits": true
+    },
+    "zoom": {
+      "equivalentPercent": 200,
+      "effectiveCssViewport": {
+        "width": 640,
+        "height": 400
+      },
+      "actualDesktopBrowserZoom": false
+    }
+  },
+  "themeChecks": [
+    {
+      "palette": "light",
+      "os": "dark",
+      "rendered": "color(srgb 0.0960784 0.419608 0.22549)",
+      "foreground": [
+        24,
+        107,
+        57
+      ],
+      "background": [
+        237,
+        243,
+        254
+      ],
+      "contrastRatio": 5.889505617179499
+    },
+    {
+      "palette": "dark",
+      "os": "light",
+      "rendered": "color(srgb 0.554902 0.876471 0.676471)",
+      "foreground": [
+        142,
+        224,
+        173
+      ],
+      "background": [
+        45,
+        51,
+        64
+      ],
+      "contrastRatio": 8.086016557435679
+    }
+  ],
+  "navigation": {
+    "restoredQuery": "123db8c4",
+    "restoredScrollTop": 51,
+    "restoredFocusedSession": "session-c38a3469-2c54-4c36-8482-511e4d8d2fee"
+  },
+  "proof_interval_s": [
+    5.32126708984375,
+    10.63626708984375
+  ],
+  "video": {
+    "duration_s": 10.63926708984375,
+    "frames": 69
+  },
+  "recordedTurn": 1,
+  "finalAssistantText": "**核對編號 123db8c4**（檔案：`orders.json`）\n\n- **訂單 A**：3 × 10 + 3 = **33**\n- **訂單 B**：0 × 9 + 6 = **6**\n\n計算方式為 quantity * unitPrice + shipping。我已完成讀取訂單資料與核對訂單金額；發佈版本仍待處理，需要核准。未修改檔案，也未發佈。",
+  "finalPreview": "**核對編號 123db8c4**（檔案：`orders.json`）\n\n- **訂單 A**：3 × 10 + 3 = **33**\n- **訂單 B**：0 × 9 + 6 = **6**\n\n計算方式為 quantity * unitPrice + shipping。我已完成讀取訂單資料與核對訂單金額；發佈版本仍待處理，需要核准。未修改檔案，也未發佈。",
+  "finalTodos": [
+    {
+      "content": "讀取訂單資料",
+      "status": "completed"
+    },
+    {
+      "content": "核對訂單金額",
+      "status": "completed"
+    },
+    {
+      "content": "發佈版本",
+      "status": "pending"
+    }
+  ],
+  "latestAfterLifecycle": {
+    "messageId": "621f45cc-cee3-491d-941b-8145ecc00afb",
+    "text": "**核對編號 123db8c4-retry**：已依此編號繼續本次核對，並參照 `orders.json`。未使用工具，也未更動任務清單。",
+    "tasks": null,
+    "endKind": "completed"
+  },
+  "screenshots": {
+    "preflight.png": "5c59a98f08dffc5ee442c5e6030d93bb9c326f057579da254063236010fde7b8",
+    "progress.png": "ad98282a4254f31a9f08a9c60c47c92faece0c92e92995b475dec329e19cfe36",
+    "final.png": "78ce6dddef83343971d77f7af624abda9618dd0ad36ba3774184aa206a601fab",
+    "reloaded.png": "8cd7ac9680b84de55ae13ffeb8da5f15077393d2ab9099960cc39ba9f7cd40f0",
+    "navigation-restored.png": "8978c062e1f61f16195a8ce694cb9a8a043383431c890522a164b97bc3ce764d",
+    "offline-search.png": "d6ae59d8ea00c17f633738e30b775a396ac98fce96f6ee36dda8d269ead958a8",
+    "mobile.png": "fa0fde36380f23cce9745be471d49cdc7d838230b49c780953334384c15eabc1",
+    "zoom-equivalent-reflow.png": "69aea362a4d067a0455d3749648e731956d70732db6140700d7f37d3538361e3",
+    "light-theme.png": "ab83c721bb481c36a9748e242e89c215b2fb40d9416c50c0d76d057e73497740",
+    "dark-theme.png": "a22f66a0763421a4a3692e8832a9175a2cff9b135ed6238a6d0f07bfdcd88f7c",
+    "earlier-reply.png": "307fcfdfbaab92e4ddb885d587df30d21f556b304264479f9ce4844e7cb1387d",
+    "followup.png": "c80968914f47c09da48078663adac01707ed4f372d56d6929097338a7bc2c6d9",
+    "stopped.png": "e23e67e9a9a96cf4052e5f5ac0bda79b328d4ef2994583fda98c0368c3bbf570",
+    "restarted.png": "b8e47717a25b0b79fcf1017e97b08db5b935821ecb87f0994cf8967c395fa330",
+    "lifecycle-reloaded.png": "53eb88845695e1f8ceec1615cd31f676b4cbd29cb480c8371c8c3e3a558e2d63"
+  },
+  "raw_sha256": "5fe1fac002be74f4d4af63336a4c389311288f3ddc96d0a13b1776310c1d8d87"
+}

@@ -1,27 +1,41 @@
-# Story-first recording plan — record-production-feature adapted for DSH Sidebar History
+# Watch task progress and the saved reply
 
-Source Skill: [my-release-skills/record-production-feature](https://github.com/liush2yuxjtu/my-release-skills/tree/main/skills/record-production-feature), especially [story-research.md](https://github.com/liush2yuxjtu/my-release-skills/blob/main/skills/record-production-feature/references/story-research.md). Keep real-model provenance, legibility and cold-viewer gates. Do not inherit ChatCut-specific English-only UI, portrait-cutout stock testing or machine locking.
+An order audit is running, but the native sidebar only shows its title. The user opens **History cards**. The card shows native progress from **0/3** to **2/3** and retains the saved reply. Publishing remains pending. Each language uses its own real DSH recording and native text, preserved in repository snapshot `04f2e81cefca978a8ecb442900be90c913db065b`. Each recording receipt contains a package hash that matches 0.2.2; no recording commit was retained.
 
-## Story
+## Watch and install
 
-**A DSH user with several unfinished tasks wants to resume the right conversation without opening every session.**
+| Language | Complete real recording | Duration | Install |
+| --- | --- | --- | --- |
+| English | [Watch](live/story-source-04f2e81-snapshot/raw/gt.mp4) | 11.03 seconds | [Install](../../README.md#install) |
+| 简体中文 | [观看](localized/zh-CN/story-source-04f2e81-snapshot/raw/gt.mp4) | 10.67 秒 | [安装](../i18n/README.zh-CN.md#安装侧栏插件) |
+| 繁體中文 | [觀看](localized/zh-TW/story-source-04f2e81-snapshot/raw/gt.mp4) | 10.63 秒 | [安裝](../i18n/README.zh-TW.md#安裝側欄外掛) |
+| 日本語 | [動画](localized/ja/story-source-04f2e81-snapshot/raw/gt.mp4) | 11.13 秒 | [インストール](../i18n/README.ja.md#サイドバープラグインをインストールする) |
+| Español | [Ver](localized/es/story-source-04f2e81-snapshot/raw/gt.mp4) | 10.20 segundos | [Instalar](../i18n/README.es.md#instala-el-plugin-de-barra-lateral) |
 
-- Before: separate sessions have different TODO lists; the user cannot tell progress from a plain title alone.
-- Action: the enhanced sidebar shows native TODO progress and the latest committed assistant response.
-- After: the user locates the unfinished task, opens that chat, and resumes with its context.
+The complete videos show the request, native task progress and saved reply. They preserve the original bytes and real elapsed time. There are no cuts, speed changes, added captions or generated frames. The eight-second GIFs are continuous excerpts at real speed. The new 520-pixel progress previews crop the sidebar so the task labels remain readable in the README. The bottom history toggle lies outside the crop; the full videos show that action. The original full-frame GIFs remain linked. An eight-second excerpt does not mean the complete task took eight seconds.
 
-## Existing real footage, new story edit
+These clips show one task. Cross-session navigation and reload recovery have separate runtime receipts; they are not visible in these clips. The recordings are reused and do not represent new model calls. README placement links the matching preview to the complete video and then the installation section. An installation-conversion effect has not been measured.
 
-[20-second edited English story demo](story-demo.mp4) · [Edit manifest with hashes and exact source intervals](story-demo.manifest.json) · [Original full walkthrough](demo.mp4) · [Recorded live proof](live/README.md).
+## Recorded version and current version
 
-The new MP4 is cut from the existing real UI recording. It contains no mock or generated frames, but has disclosed editorial cuts. It is **not a new API run**. The original per-locale real API media and 8-second GIFs are unchanged; see [language manifest](locales.json). English story preview must not be used as evidence for other languages.
+The reviewed story sources are retained under each language’s `story-source-04f2e81-snapshot/` directory. These selected files are exact copies from the retaining snapshot; the accompanying archive index records their original paths and hashes. Other artifacts named by the original provenance remain in that immutable repository snapshot.
 
-QA: H.264/yuv420p, 20s, and source/output SHA256 verified; actual contact sheet inspected. Cold-viewer comprehension, fresh end-to-end story take and matching five-language long-form story cuts remain pending.
+Version 0.2.3 adds optional usage controls and action events. Code comparison shows no change to the card’s task/reply rendering or the history-switch labels. Its current canonical videos, provenance and Mac OCR remain separate, and the original staged-tree gate verifies the current package with fresh API sessions and Supabase receipt readback. The 0.2.2 narrative verdict does not apply to the new 0.2.3 pixels. Acceptance-generated telemetry is not installation-conversion evidence.
 
-## Next recording gates
+## Source and review
 
-1. Research open-ended candidate stories and score A/B/C on first-second clarity, one visible user result, before/after contrast, silent comprehension, real-world context, motion purpose and 8-second fit.
-2. Capture a real session with an unfinished TODO list, visibly return to that session from another and continue work. Show actual result rather than starting with 2/3 already completed.
-3. Preserve an immutable raw MP4, source revision, actual DeepSeek API receipts, UI state assertions and per-locale original screenshots.
-4. Produce a 15–30s edited story MP4 and a separate continuous 8s GIF with the visible change; recheck dimensions, output language and hashes.
-5. Have an independent cold viewer, without filename/script/feature description, answer what changed and why it matters. Only then mark narrative PASS.
+[The source registry](story-acceptance.json) records each original, video, GIF, SHA256, actual run ID, proof interval and independent narrative-review state. [The language registry](locales.json) maps each README to its own media directory. [The verification script](../../scripts/check-story-media.mjs) checks the raw/video identity, real API and native event correlation, locale-specific links and fixture rejection.
+
+Independent agent reviewers passed all five languages for this narrow visible story: open history cards and see current-session task progress and the saved reply excerpt. This is an agent visual review, not a human user study. The [first review](story-review/cold-viewer-first.json) passed three languages and failed English and Traditional Chinese because the sparse sampling missed the pointer dwell. A fresh [dense action review](story-review/cold-viewer-motion.json) passed those two using additional frames from the unchanged source videos. Both original FAIL verdicts remain in the history. The registry records every sample timestamp and source hash.
+
+The new cropped previews have a separate [delivery-size readability review](story-review/preview-readability.json). It confirms the counts, task labels, status indicators and presence of the reply excerpt at 520 × 612 pixels. It does not claim the full reply is visible or that the cropped preview proves the off-screen entry action. Mac Vision OCR verifies the new derivative pixels separately from the original five-language media gate.
+
+## Withdrawn historical edit
+
+The earlier [20-second edit](story-demo.mp4) came from `docs/media/demo.mp4`, whose SHA256 is `50f23cb9f553137273f8605db811ff6efcdd8dd2d3eb89ccb902d36ef96c9bfb`. The original [feature manifest](feature.json) identifies a controlled adapter and `liveModel: false`; its [QA](qa.json) says `fixture-only`.
+
+The old story description incorrectly called it a real API recording. That claim is withdrawn. The MP4, [original manifest](history/story-demo.manifest.original.json) and [corrected manifest](story-demo.manifest.json) remain available for audit. The edit is excluded from release previews. Real browser pixels alone do not prove real model execution.
+
+## Workflow
+
+The work follows [record-production-feature](https://github.com/liush2yuxjtu/my-release-skills/tree/main/skills/record-production-feature): reuse verified footage, keep originals immutable, choose one visible user result, preserve language and timing, inspect pixels, and obtain an independent cold-viewer verdict. Product source, media provenance, silent understanding and public README access are separate checks.

@@ -1,0 +1,90 @@
+{
+  "review_type": "独立无声视觉复核",
+  "inputs": [
+    "/workspace/scratch/7f2e17124634/sidebar-motion/MotionA.png",
+    "/workspace/scratch/7f2e17124634/sidebar-motion/MotionB.png",
+    "/workspace/scratch/7f2e17124634/sidebar-blind/Clip01.png",
+    "/workspace/scratch/7f2e17124634/sidebar-blind/Clip03.png"
+  ],
+  "method": "只检查指定四张按时间排序的画面及其局部放大。未读取其他项目材料。两个语言版本分别判读。",
+  "clips": [
+    {
+      "clip": "Clip01",
+      "motion": "MotionA",
+      "verdict": "PASS",
+      "pass_scope": "鼠标到达 History cards 后，左栏从工作区列表切换到会话卡片，并在本片内显示任务进度和最终摘要。",
+      "problem_action_result": {
+        "problem_seen": "开始时左栏是 Workspaces 和会话标题行，没有显示任务卡片及任务进度。",
+        "action_seen": "鼠标从内容区移到左下角 History cards；停留后，左栏变为 Chat history。",
+        "result_seen": "历史卡片先显示 0/3 tasks 和 Generating...，随后显示 2/3 tasks；Read order data 与 Verify both totals 已勾选，Publish release 未勾选。卡片中有最新回复摘要。"
+      },
+      "seen": {
+        "readable_controls": ["History cards", "Chat history", "Search sessions", "Workspaces & archives"],
+        "cursor_arrived_before_change": true,
+        "cursor_timing": "MotionA 第 8 帧（2.267 s）鼠标已到 History cards；第 15 帧（2.733 s）左栏仍是工作区列表；第 16 帧（2.800 s）出现 Chat history 和会话卡片。",
+        "final_state_text": [
+          "2/3 tasks",
+          "Publish release（未勾选）",
+          "Read order data（已勾选）",
+          "Verify both totals（已勾选）",
+          "To-dos 2 completed · 1 pending",
+          "Completed in 4s"
+        ],
+        "final_reply_visible": "Clip01 末帧正文显示审计编号 b738a6be、orders.json、Order A 的总额 37、Order B 的总额 3，并写明 Publish release remains pending until you approve。左栏摘要截断了部分正文。",
+        "submission_boundary": "首帧输入框已有完整文字，随后文字成为会话消息；未见输入或提交的具体操作。",
+        "recorded_end": "Clip01 第 16 帧，10.83 s；会话卡片和 2/3 状态仍在。"
+      },
+      "inferred": [
+        "鼠标停在 History cards 后触发了切换，符合点击入口的过程；截图序列没有显示鼠标按键事件。",
+        "历史卡片可用于查看当前会话的任务进度及最新摘要。"
+      ],
+      "unknown": [
+        "文字如何输入、如何提交。",
+        "后台是否确实读取了 orders.json，以及显示的计算是否对应真实文件内容。",
+        "实际业务是否完成；画面只证明界面显示两项完成、一项待处理。",
+        "未编辑、未发布是否有后台证据。",
+        "刷新、重启或重新进入之后是否保持状态。"
+      ]
+    },
+    {
+      "clip": "Clip03",
+      "motion": "MotionB",
+      "verdict": "PASS",
+      "pass_scope": "鼠标到达歷史卡片后，左栏从工作区列表切换到历史会话卡片，并在本片内显示任务进度和最终摘要。",
+      "problem_action_result": {
+        "problem_seen": "开始时左栏是工作区和会话标题行，没有显示任务卡片及任务进度。",
+        "action_seen": "鼠标从内容区移到左下角歷史卡片；停留后，左栏变为歷史會話。",
+        "result_seen": "历史卡片先显示 0/3 項任務及產生中...，随后显示 2/3 項任務；讀取訂單資料与核對訂單金額已勾选，發佈版本未勾选。卡片中有最终回复摘要。"
+      },
+      "seen": {
+        "readable_controls": ["歷史卡片", "歷史會話", "搜尋會話"],
+        "cursor_arrived_before_change": true,
+        "cursor_timing": "MotionB 第 5 帧（2.173 s）鼠标已到歷史卡片；第 9 帧（2.547 s）左栏仍是工作区列表；第 10 帧（2.640 s）出现歷史會話和会话卡片。",
+        "final_state_text": [
+          "2/3 項任務",
+          "發佈版本（未勾选）",
+          "讀取訂單資料（已勾选）",
+          "核對訂單金額（已勾选）",
+          "任務 2 已完成 · 1 待處理",
+          "已完成，用時 4 秒"
+        ],
+        "final_reply_visible": "Clip03 末帧正文显示编号 123db8c4、orders.json、訂單 A：3 × 10 + 3 = 33、訂單 B：0 × 9 + 6 = 6，并写有發佈版本仍待處理及需要核准。左栏摘要截断了部分正文。",
+        "submission_boundary": "首帧输入框已有完整繁体中文文字，随后文字成为会话消息；未见输入或提交的具体操作。",
+        "recorded_end": "Clip03 第 16 帧，10.43 s；历史卡片和 2/3 状态仍在。"
+      },
+      "inferred": [
+        "鼠标停在歷史卡片后触发了切换，符合点击入口的过程；截图序列没有显示鼠标按键事件。",
+        "历史卡片可用于查看当前会话的任务进度及最新摘要。"
+      ],
+      "unknown": [
+        "切换后左下角控件后半段文字分辨率不足，未借用英文版本补写。",
+        "文字如何输入、如何提交。",
+        "后台是否确实读取了 orders.json，以及显示的计算是否对应真实文件内容。",
+        "实际业务是否完成；画面只证明界面显示两项完成、一项待处理。",
+        "未修改、未发布是否有后台证据。",
+        "刷新、重启或重新进入之后是否保持状态。"
+      ]
+    }
+  ],
+  "summary": "两片均对历史入口切换及片内任务状态展示判为 PASS。鼠标先到达控件，再出现左栏变化。不能据此判定输入过程、真实业务执行或刷新持久性通过。"
+}

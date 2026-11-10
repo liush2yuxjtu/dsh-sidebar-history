@@ -8,15 +8,27 @@ Este checkout compila la versión 0.2.3. Las instrucciones crean el paquete desd
 
 Es un plugin independiente con licencia MIT. Usa las API oficiales de proyección y de slots de la barra lateral de DSH. No modifica el código de DSH.
 
-## Vídeo de la función
+## Comprueba qué terminó y qué falta
+
+La revisión de pedidos está en curso, pero la barra lateral original solo muestra el título. Abre **Tarjetas del historial** y observa cómo la tarjeta pasa de **0/3** a **2/3**, con la respuesta guardada del modelo. La publicación queda pendiente. La vista previa de ocho segundos es un recorte continuo de la barra lateral a velocidad real. El vídeo completo muestra el control del historial y la respuesta completa.
+
+**Historia archivada con la API real.** El hash del paquete registrado coincide con 0.2.2. Los vídeos de la API y la verificación de la versión actual 0.2.3 siguen enlazados abajo.
+
+[![Las tarjetas de DSH muestran el progreso real de TODO y la última respuesta del asistente](../media/localized/es/story-preview.gif)](../media/localized/es/story-source-04f2e81-snapshot/raw/gt.mp4)
+
+[Instala el plugin de barra lateral](#instala-el-plugin-de-barra-lateral)
+
+[Fragmento original completo (0.2.2)](../media/localized/es/story-source-04f2e81-snapshot/feature-8s.gif) · [MP4](../media/localized/es/story-source-04f2e81-snapshot/raw/gt.mp4)
 
 **El material de 0.2.3 supera la verificación en cinco idiomas.** Se comprobaron textos reales, píxeles, procedencia y reproducción. Consulta el [informe de verificación](../verification.md).
 
-[![Las tarjetas de DSH muestran el progreso real de TODO y la última respuesta del asistente](../media/localized/es/feature-8s.gif)](../media/localized/es/demo.mp4)
+[Vista de ocho segundos con el cuadro completo](../media/localized/es/feature-8s.gif)
 
 [Ver el vídeo con la API real](../media/localized/es/demo.mp4) · [Captura real del navegador](../media/localized/es/snapshot.png) · [Registros de la API](../media/localized/es/evidence/result.json)
 
 La grabación usa una sesión nueva de DSH y la API oficial de DeepSeek. El modelo lee datos de pedidos de demostración, llama a la herramienta TODO nativa y guarda su propia respuesta. La barra lateral muestra 2 de 3 tareas completadas y esa respuesta guardada. El vídeo conserva los bytes de la grabación original y el tiempo real transcurrido. No usa un endpoint mock, respuestas programadas ni mensajes del asistente o eventos TODO insertados de antemano. También se comprobaron una segunda sesión con la API real y la recuperación tras recargar. Consulta la [procedencia y los hashes](../media/localized/es/provenance.json) y la [verificación del material](../media/localized/es/qa.json).
+
+[Instala el plugin de barra lateral](#instala-el-plugin-de-barra-lateral) · [Historia y procedencia](../media/story-first.md)
 
 ## Encuentra y retoma el trabajo
 

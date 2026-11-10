@@ -1,0 +1,209 @@
+{
+  "status": "PASS",
+  "at": "2026-11-10T16:37:16.130Z",
+  "engine": "macOS Vision",
+  "engine_source_sha256": "d8aaee878f4a4a8ea5a297d34f06bf2e5dd257e7e8d6d8ee4dcc50451f845414",
+  "scope": "OCR of the exact 520×612 progress and result frames decoded from each delivered cropped GIF. Independent visual review verifies checkbox states and excerpt clipping.",
+  "locales": [
+    {
+      "locale": "en",
+      "preview": "docs/media/live/story-preview.gif",
+      "preview_sha256": "11345c08e3f679b6ebc454980cba3f436cb90ab0c1b3840506c0ebca473d79e3",
+      "status": "PASS",
+      "images": [
+        {
+          "asset": "docs/media/story-review/preview/en/progress.png",
+          "sha256": "a6fc8d0370f5d7018c6291afd4da93ff706cbd6f24721918edfdedce8e9a9472",
+          "language": "en-US",
+          "matchedTerms": [
+            "0/3",
+            "Chat history",
+            "Read order data",
+            "Verify both totals",
+            "Publish release"
+          ],
+          "pixelReviewCount": 0,
+          "pixelReviews": [],
+          "requested_preview_time_s": 1,
+          "ocr_evidence": "en/progress.ocr.json"
+        },
+        {
+          "asset": "docs/media/story-review/preview/en/result.png",
+          "sha256": "188e2b4283e74f6663ac945409496c7b84ad062b14a711a999143ba7f1d108db",
+          "language": "en-US",
+          "matchedTerms": [
+            "2/3",
+            "Chat history",
+            "Read order data",
+            "Verify both totals",
+            "Publish release"
+          ],
+          "pixelReviewCount": 0,
+          "pixelReviews": [],
+          "requested_preview_time_s": 7.3,
+          "ocr_evidence": "en/result.ocr.json"
+        }
+      ]
+    },
+    {
+      "locale": "zh-CN",
+      "preview": "docs/media/localized/zh-CN/story-preview.gif",
+      "preview_sha256": "3ffafe4420c627a3d86a810da449aac51b34fc69447e2a131f36236ad99119c5",
+      "status": "PASS",
+      "images": [
+        {
+          "asset": "docs/media/story-review/preview/zh-CN/progress.png",
+          "sha256": "cf53a276cd1228dff0184f1180628d43365c51d3be3f3a0bf60e910625c6cbf0",
+          "language": "zh-Hans",
+          "matchedTerms": [
+            "0/3",
+            "历史会话",
+            "读取订单数据",
+            "核对订单金额",
+            "发布版本"
+          ],
+          "pixelReviewCount": 0,
+          "pixelReviews": [],
+          "requested_preview_time_s": 1,
+          "ocr_evidence": "zh-CN/progress.ocr.json"
+        },
+        {
+          "asset": "docs/media/story-review/preview/zh-CN/result.png",
+          "sha256": "af5d2158f963e8974b29e738bd8aa9761fa8c9f84ba8cf3bd03bd98eda05e6cc",
+          "language": "zh-Hans",
+          "matchedTerms": [
+            "2/3",
+            "历史会话",
+            "读取订单数据",
+            "核对订单金额",
+            "发布版本"
+          ],
+          "pixelReviewCount": 0,
+          "pixelReviews": [],
+          "requested_preview_time_s": 7.3,
+          "ocr_evidence": "zh-CN/result.ocr.json"
+        }
+      ]
+    },
+    {
+      "locale": "zh-TW",
+      "preview": "docs/media/localized/zh-TW/story-preview.gif",
+      "preview_sha256": "0ebb702a7579e4b409711c03ce4a42b10a11a501555a9882c17c8a915eefa572",
+      "status": "PASS",
+      "images": [
+        {
+          "asset": "docs/media/story-review/preview/zh-TW/progress.png",
+          "sha256": "6d50a38fa9ba61e238096b73849f0940be87c201a71b78641eb36be5a7db9d7a",
+          "language": "zh-Hant",
+          "matchedTerms": [
+            "0/3",
+            "歷史會話",
+            "讀取訂單資料",
+            "核對訂單金額",
+            "發佈版本"
+          ],
+          "pixelReviewCount": 0,
+          "pixelReviews": [],
+          "requested_preview_time_s": 1,
+          "ocr_evidence": "zh-TW/progress.ocr.json"
+        },
+        {
+          "asset": "docs/media/story-review/preview/zh-TW/result.png",
+          "sha256": "e68bb3655faf3bb6d50ad9126c5096ad489a87b6790a80c89ba47bee210aa3a4",
+          "language": "zh-Hant",
+          "matchedTerms": [
+            "2/3",
+            "歷史會話",
+            "讀取訂單資料",
+            "核對訂單金額",
+            "發佈版本"
+          ],
+          "pixelReviewCount": 0,
+          "pixelReviews": [],
+          "requested_preview_time_s": 7.3,
+          "ocr_evidence": "zh-TW/result.ocr.json"
+        }
+      ]
+    },
+    {
+      "locale": "ja",
+      "preview": "docs/media/localized/ja/story-preview.gif",
+      "preview_sha256": "414f3226cd91742601428636a839e8753ca9fb2766bc97d009060a6230fd5072",
+      "status": "PASS",
+      "images": [
+        {
+          "asset": "docs/media/story-review/preview/ja/progress.png",
+          "sha256": "277ce273540ed91636265684cb42f08515c9d4c7d75012e057f46e934e7819b6",
+          "language": "ja-JP",
+          "matchedTerms": [
+            "0/3",
+            "チャット履歴",
+            "注文データを読む",
+            "合計を確認する",
+            "リリースを公開する"
+          ],
+          "pixelReviewCount": 0,
+          "pixelReviews": [],
+          "requested_preview_time_s": 1.5,
+          "ocr_evidence": "ja/progress.ocr.json"
+        },
+        {
+          "asset": "docs/media/story-review/preview/ja/result.png",
+          "sha256": "4d93c38e6941640257d3c1094eb9e5ad2e2d97d3a14fcacdc37f869667b83ac2",
+          "language": "ja-JP",
+          "matchedTerms": [
+            "2/3",
+            "チャット履歴",
+            "注文データを読む",
+            "合計を確認する",
+            "リリースを公開する"
+          ],
+          "pixelReviewCount": 0,
+          "pixelReviews": [],
+          "requested_preview_time_s": 7.3,
+          "ocr_evidence": "ja/result.ocr.json"
+        }
+      ]
+    },
+    {
+      "locale": "es",
+      "preview": "docs/media/localized/es/story-preview.gif",
+      "preview_sha256": "2d8f00dc576906737e4d2860ae71fd1d7e8614e22aabb8f81a9499dc9527e0ab",
+      "status": "PASS",
+      "images": [
+        {
+          "asset": "docs/media/story-review/preview/es/progress.png",
+          "sha256": "37d91a48224d03fb7e694cdff8ba5ff3dbc4efd5fba9de81f5fce34768c086ab",
+          "language": "es-ES",
+          "matchedTerms": [
+            "0/3",
+            "Historial de chats",
+            "Leer pedidos",
+            "Verificar totales",
+            "Publicar versión"
+          ],
+          "pixelReviewCount": 0,
+          "pixelReviews": [],
+          "requested_preview_time_s": 2.5,
+          "ocr_evidence": "es/progress.ocr.json"
+        },
+        {
+          "asset": "docs/media/story-review/preview/es/result.png",
+          "sha256": "81c78e7e16aced56c0e852209cc7f1a3c58fcd1f5bcef55aa9c889952b7c0955",
+          "language": "es-ES",
+          "matchedTerms": [
+            "2/3",
+            "Historial de chats",
+            "Leer pedidos",
+            "Verificar totales",
+            "Publicar versión"
+          ],
+          "pixelReviewCount": 0,
+          "pixelReviews": [],
+          "requested_preview_time_s": 7.3,
+          "ocr_evidence": "es/result.ocr.json"
+        }
+      ]
+    }
+  ]
+}

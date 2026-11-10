@@ -1,0 +1,298 @@
+{
+  "file": "/Users/liushiyu/projects/dsh-sidebar-story-20261111/docs/media/story-review/preview/es/result.png",
+  "sha256": "81c78e7e16aced56c0e852209cc7f1a3c58fcd1f5bcef55aa9c889952b7c0955",
+  "locale": "es",
+  "terms": [
+    "2/3",
+    "Historial de chats",
+    "Leer pedidos",
+    "Verificar totales",
+    "Publicar versión"
+  ],
+  "language": "es-ES",
+  "lines": [
+    {
+      "box": [
+        0.06923077208791208,
+        0.8692810458683473,
+        0.4,
+        0.03594771241830064
+      ],
+      "confidence": 1,
+      "segments": [
+        {
+          "classificationText": "Historial de chats",
+          "hypotheses": {
+            "da": 0.013471589423716068,
+            "es": 0.8214859962463379,
+            "nb": 0.016792599111795425,
+            "pt": 0.10371094942092896,
+            "sv": 0.016349803656339645
+          },
+          "language": "es",
+          "text": "Historial de chats"
+        }
+      ],
+      "text": "Historial de chats"
+    },
+    {
+      "box": [
+        0.0961538485164835,
+        0.7647058824696545,
+        0.33076923076923076,
+        0.03594771241830064
+      ],
+      "confidence": 1,
+      "segments": [
+        {
+          "classificationText": "Buscar sesiones",
+          "hypotheses": {
+            "es": 0.9993384480476379,
+            "is": 0.000015350648027379066,
+            "it": 0.0000058370046644995455,
+            "pt": 0.0006128571112640202,
+            "sv": 0.000005582908215728821
+          },
+          "language": "es",
+          "text": "Buscar sesiones"
+        }
+      ],
+      "text": "Buscar sesiones"
+    },
+    {
+      "box": [
+        0.7652184351471882,
+        0.868720914928019,
+        0.16571697821983933,
+        0.03706797431497011
+      ],
+      "confidence": 1,
+      "segments": [
+        {
+          "classificationText": "1 sesión",
+          "hypotheses": {
+            "cs": 0.0070880078710615635,
+            "es": 0.9529656767845154,
+            "hu": 0.003211443545296788,
+            "is": 0.008596518076956272,
+            "sk": 0.012846453115344048
+          },
+          "language": "es",
+          "text": "1 sesión"
+        }
+      ],
+      "text": "1 sesión"
+    },
+    {
+      "box": [
+        0.09230769131410252,
+        0.6241830061546841,
+        0.7884615384615385,
+        0.04575163398692805
+      ],
+      "confidence": 1,
+      "segments": [
+        {
+          "classificationText": "Revisa  .",
+          "hypotheses": {
+            "es": 0.9852781891822815,
+            "id": 0.002695767441764474,
+            "pt": 0.005894707515835762,
+            "ro": 0.0008856026688590646,
+            "sv": 0.0031145962420850992
+          },
+          "language": "es",
+          "text": "Revisa orders.json."
+        },
+        {
+          "classificationText": "Usa español en",
+          "hypotheses": {
+            "da": 0.0035023223608732224,
+            "es": 0.9320863485336304,
+            "fi": 0.01327101606875658,
+            "nl": 0.015381581149995327,
+            "sv": 0.029450802132487297
+          },
+          "language": "es",
+          "text": "Usa español en"
+        }
+      ],
+      "text": "Revisa orders.json. Usa español en"
+    },
+    {
+      "box": [
+        0.08829848113292743,
+        0.5092229644320874,
+        0.22340303567739633,
+        0.04691354589524621
+      ],
+      "confidence": 1,
+      "segments": [
+        {
+          "classificationText": "2/3 tareas",
+          "hypotheses": {
+            "es": 0.9846652746200562,
+            "it": 0.0007418360328301787,
+            "pt": 0.013223015703260899,
+            "ro": 0.00024066212063189596,
+            "sv": 0.00019555345352273434
+          },
+          "language": "es",
+          "text": "2/3 tareas"
+        }
+      ],
+      "text": "2/3 tareas"
+    },
+    {
+      "box": [
+        0.11538461110576934,
+        0.44444444391339877,
+        0.3730769230769231,
+        0.042483660130718914
+      ],
+      "confidence": 0.5,
+      "segments": [
+        {
+          "classificationText": "J Publicar versión",
+          "hypotheses": {
+            "es": 0.9994372725486755,
+            "fi": 0.00006779009709134698,
+            "hu": 0.00007886588718974963,
+            "nl": 0.00010682061110856012,
+            "pt": 0.0001350059756077826
+          },
+          "language": "es",
+          "text": "J Publicar versión"
+        }
+      ],
+      "text": "J Publicar versión"
+    },
+    {
+      "box": [
+        0.16144649787701199,
+        0.38843449229210836,
+        0.26556854248046874,
+        0.04012448024126436
+      ],
+      "confidence": 1,
+      "segments": [
+        {
+          "classificationText": "Leer pedidos",
+          "hypotheses": {
+            "de": 0.0005345005774870515,
+            "es": 0.8989205360412598,
+            "is": 0.00011050439206883311,
+            "nl": 0.002971421694383025,
+            "pt": 0.09698255360126495
+          },
+          "language": "es",
+          "text": "Leer pedidos"
+        }
+      ],
+      "text": "Leer pedidos"
+    },
+    {
+      "box": [
+        0.16153845980769235,
+        0.33660130763888885,
+        0.32307692307692304,
+        0.03594771241830064
+      ],
+      "confidence": 1,
+      "segments": [
+        {
+          "classificationText": "Verificar totales",
+          "hypotheses": {
+            "en": 0.000025615738195483573,
+            "es": 0.9998016953468323,
+            "fr": 0.000028081236450816505,
+            "nl": 0.00001846475606726017,
+            "pt": 0.00006295556522672996
+          },
+          "language": "es",
+          "text": "Verificar totales"
+        }
+      ],
+      "text": "Verificar totales"
+    },
+    {
+      "box": [
+        0.7843553463407537,
+        0.5124558496961215,
+        0.1274431522075946,
+        0.04044777739281746
+      ],
+      "confidence": 1,
+      "segments": [
+        {
+          "classificationText": "23:45",
+          "hypotheses": {},
+          "language": "und",
+          "text": "23:45"
+        }
+      ],
+      "text": "23:45"
+    },
+    {
+      "box": [
+        0.13846153865384608,
+        0.2450980396405228,
+        0.7423076923076923,
+        0.042483660130719025
+      ],
+      "confidence": 0.5,
+      "segments": [
+        {
+          "classificationText": "37676480 : revisé   .",
+          "hypotheses": {
+            "cs": 0.001461054547689855,
+            "es": 0.5407405495643616,
+            "fr": 0.45028549432754517,
+            "sk": 0.0019433662528172135,
+            "sv": 0.0011983803706243634
+          },
+          "language": "es",
+          "text": "37676480 : revisé orders.json ."
+        }
+      ],
+      "text": "37676480 : revisé orders.json ."
+    },
+    {
+      "box": [
+        0.15384615410256403,
+        0.18954248327886702,
+        0.7538461538461538,
+        0.045751633986928164
+      ],
+      "confidence": 0.5,
+      "segments": [
+        {
+          "classificationText": "Pedido A : 2 x 13 + 4 = 30.",
+          "hypotheses": {
+            "es": 0.2216978520154953,
+            "hu": 0.0014502336271107197,
+            "it": 0.007430428639054298,
+            "pt": 0.7639430165290833,
+            "ro": 0.0013962157536298037
+          },
+          "language": "pt",
+          "text": "Pedido A : 2 x 13 + 4 = 30."
+        },
+        {
+          "classificationText": "Pedido...",
+          "hypotheses": {
+            "es": 0.3583117127418518,
+            "it": 0.0011792973382398486,
+            "nl": 0.0001352846302324906,
+            "pl": 0.00011385782272554934,
+            "pt": 0.6394319534301758
+          },
+          "language": "pt",
+          "text": "Pedido..."
+        }
+      ],
+      "text": "Pedido A : 2 x 13 + 4 = 30. Pedido..."
+    }
+  ],
+  "text": "Historial de chats\nBuscar sesiones\n1 sesión\nRevisa orders.json. Usa español en\n2/3 tareas\nJ Publicar versión\nLeer pedidos\nVerificar totales\n23:45\n37676480 : revisé orders.json .\nPedido A : 2 x 13 + 4 = 30. Pedido..."
+}

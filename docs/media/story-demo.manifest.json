@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "derived-from-existing-real-recording",
+  "status": "fixture-only-withdrawn",
   "source": "docs/media/demo.mp4",
   "source_sha256": "50f23cb9f553137273f8605db811ff6efcdd8dd2d3eb89ccb902d36ef96c9bfb",
   "output": "docs/media/story-demo.mp4",
@@ -22,9 +22,18 @@
   "duration_seconds": 20.0,
   "locale": "en",
   "no_new_api_request": true,
-  "no_mock_frames": true,
+  "no_mock_frames": false,
   "no_generated_ui": true,
   "has_editorial_cuts": true,
   "provenance_note": "This is an edited derivative, not a new live API recording. See the original recording evidence.",
-  "visual_review": "contact-sheet-inspected; independent cold-viewer pending"
+  "visual_review": "historical pixel inspection only; release narrative review ineligible because the source uses a controlled adapter",
+  "source_environment": "fixture",
+  "liveModel": false,
+  "scriptedModel": true,
+  "publish_ready": false,
+  "corrected_at": "2026-11-10T16:13:06.900287+00:00",
+  "correction_reason": "The source SHA256 equals docs/media/demo.mp4. Its original feature.json and qa.json identify a controlled adapter and fixture-only acceptance. Real Chromium pixels do not establish real-model execution.",
+  "original_manifest": "docs/media/history/story-demo.manifest.original.json",
+  "original_manifest_sha256": "aaf066e207425d48aa2d148a875b38d4db62e5f18ea66dbd1a97efb96c332d4a",
+  "replacement_registry": "docs/media/story-acceptance.json"
 }

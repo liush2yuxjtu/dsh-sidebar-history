@@ -1,0 +1,781 @@
+[
+  {
+    "type": "turn/start",
+    "seq": 4,
+    "time": 1794325432946,
+    "data": {
+      "turn": 1
+    }
+  },
+  {
+    "type": "user/message",
+    "seq": 8,
+    "time": 1794325432970,
+    "data": {
+      "content": [
+        {
+          "type": "text",
+          "text": "对 orders.json。全程使用简体中文，包括工具调用之前的说明、中途进度和最终回复；技术标识保留原文。先使用 todo_write 创建恰好三项任务：读取订单数据；核对订单金额；发布版本。用 read 读取文件，计算每笔订单的 quantity * unitPrice + shipping。完成前两项；发布版本仍待处理，因为需要批准。不要修改文件或发布。用简体中文简短回复，称每笔为“订单 A”和“订单 B”，列出金额，并包含核对编号 ea5ed592。 开头先以 Markdown 粗体写出核对编号 ea5ed592，再用行内代码写出 orders.json；订单标签使用粗体。"
+        }
+      ],
+      "source": {
+        "kind": "user",
+        "rpcId": "5147e14a-069f-4296-97d1-3ecebcf963aa",
+        "clientTimeZone": "Asia/Shanghai"
+      },
+      "role": "user",
+      "id": "975a1257-c373-487e-9e65-f69386afbd2d"
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "user/message",
+    "seq": 9,
+    "time": 1794325432971,
+    "data": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Current runtime context. This snapshot supersedes earlier runtime-context snapshots.\n\nCurrent working directory: \"/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-0BrGA6/sidebar-live-audit\".\n\nCurrent DSH file policy: workspace-write. Any available operation enforced by the DSH file sandbox may modify files under the session workspace: \"/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-0BrGA6/sidebar-live-audit\". Some platform temporary areas may also be writable.\n\nApproval prompts are enabled in this session: operations that require approval may ask through the configured answerers; without an available answerer, the request fails closed.\n\nYou are the root agent. Your name is \"lead\".\n\nCurrent DeepSeek Harness implementation checkout: \"/Users/liushiyu/projects/dsh-plugins/dsh-src/\".\n\nCurrent DeepSeek Harness Web GUI URL: \"http://127.0.0.1:51801\"."
+        }
+      ],
+      "source": {
+        "kind": "runtime-context",
+        "form": "snapshot",
+        "sections": [
+          {
+            "name": "working-directory:current",
+            "text": "Current working directory: \"/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-0BrGA6/sidebar-live-audit\"."
+          },
+          {
+            "name": "sandbox:policy",
+            "text": "Current DSH file policy: workspace-write. Any available operation enforced by the DSH file sandbox may modify files under the session workspace: \"/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-0BrGA6/sidebar-live-audit\". Some platform temporary areas may also be writable."
+          },
+          {
+            "name": "approval:policy",
+            "text": "Approval prompts are enabled in this session: operations that require approval may ask through the configured answerers; without an available answerer, the request fails closed."
+          },
+          {
+            "name": "subagent:identity",
+            "text": "You are the root agent. Your name is \"lead\"."
+          },
+          {
+            "name": "harness:source",
+            "text": "Current DeepSeek Harness implementation checkout: \"/Users/liushiyu/projects/dsh-plugins/dsh-src/\"."
+          },
+          {
+            "name": "app:web-surface",
+            "text": "Current DeepSeek Harness Web GUI URL: \"http://127.0.0.1:51801\"."
+          }
+        ]
+      },
+      "role": "user",
+      "id": "7e8bb726-7ca3-44db-8327-24acf48897ee"
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "user/message",
+    "seq": 10,
+    "time": 1794325432971,
+    "data": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Time sampled while preparing turn 1, step 1: 2026-11-10T23:43:52+08:00[Asia/Shanghai]\nBrowser time zone for this request: Asia/Shanghai. Interpret otherwise-unqualified dates and times in this zone.\nElapsed since the preceding model-visible message: unavailable."
+        }
+      ],
+      "source": {
+        "kind": "time-context",
+        "form": "snapshot",
+        "sections": [
+          {
+            "name": "time-context",
+            "text": "Time sampled while preparing turn 1, step 1: 2026-11-10T23:43:52+08:00[Asia/Shanghai]\nBrowser time zone for this request: Asia/Shanghai. Interpret otherwise-unqualified dates and times in this zone.\nElapsed since the preceding model-visible message: unavailable."
+          }
+        ]
+      },
+      "role": "user",
+      "id": "975d7c2a-b1ac-49d2-b0c8-c31cce4b747e"
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "assistant/message",
+    "seq": 14,
+    "time": 1794325433992,
+    "data": {
+      "turn": 1,
+      "step": 1,
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "我先创建恰好三项任务，然后读取订单数据。"
+          },
+          {
+            "type": "tool-call",
+            "id": "call_00_F718NlfbqbMrWyT21LM94063",
+            "name": "todo_write",
+            "arguments": "{\"todos\": [{\"content\": \"读取订单数据\", \"status\": \"in_progress\"}, {\"content\": \"核对订单金额\", \"status\": \"pending\"}, {\"content\": \"发布版本\", \"status\": \"pending\"}]}"
+          }
+        ],
+        "source": {
+          "kind": "model",
+          "provider": "deepseek-official",
+          "model": "deepseek-flash",
+          "replayState": {
+            "response": {
+              "kind": "deepseek-messages",
+              "version": 1,
+              "model": "deepseek-flash"
+            },
+            "blocks": [
+              {
+                "type": "text"
+              },
+              {
+                "type": "tool-call"
+              }
+            ]
+          }
+        },
+        "id": "774c72e9-fde7-445a-b7e5-095adecf1f89"
+      },
+      "usage": {
+        "inputTokens": 566,
+        "outputTokens": 92,
+        "cacheReadTokens": 1408,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2066
+      }
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "tool/call",
+    "seq": 15,
+    "time": 1794325433993,
+    "data": {
+      "turn": 1,
+      "step": 1,
+      "callId": "call_00_F718NlfbqbMrWyT21LM94063",
+      "name": "todo_write",
+      "arguments": "{\"todos\": [{\"content\": \"读取订单数据\", \"status\": \"in_progress\"}, {\"content\": \"核对订单金额\", \"status\": \"pending\"}, {\"content\": \"发布版本\", \"status\": \"pending\"}]}"
+    }
+  },
+  {
+    "type": "todo/write",
+    "seq": 16,
+    "time": 1794325434006,
+    "data": {
+      "todos": [
+        {
+          "content": "读取订单数据",
+          "status": "in_progress"
+        },
+        {
+          "content": "核对订单金额",
+          "status": "pending"
+        },
+        {
+          "content": "发布版本",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  {
+    "type": "tool/result",
+    "seq": 17,
+    "time": 1794325434011,
+    "data": {
+      "turn": 1,
+      "step": 1,
+      "message": {
+        "role": "tool",
+        "source": {
+          "kind": "tool",
+          "callId": "call_00_F718NlfbqbMrWyT21LM94063"
+        },
+        "toolCallId": "call_00_F718NlfbqbMrWyT21LM94063",
+        "content": [
+          {
+            "type": "text",
+            "text": "Updated todo list: 2 pending, 1 in progress, 0 completed."
+          }
+        ],
+        "isError": false,
+        "id": "8a99dcac-0dc8-4d36-b0db-d84242578372"
+      }
+    },
+    "sourceEventSeqs": [
+      15
+    ],
+    "surfaceOp": "append"
+  },
+  {
+    "type": "assistant/message",
+    "seq": 20,
+    "time": 1794325434883,
+    "data": {
+      "turn": 1,
+      "step": 2,
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "id": "call_00_n4piGmwaC6ULe9W936PO2559",
+            "name": "read",
+            "arguments": "{\"file_path\": \"/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-0BrGA6/sidebar-live-audit/orders.json\"}"
+          }
+        ],
+        "source": {
+          "kind": "model",
+          "provider": "deepseek-official",
+          "model": "deepseek-flash",
+          "replayState": {
+            "response": {
+              "kind": "deepseek-messages",
+              "version": 1,
+              "model": "deepseek-flash"
+            },
+            "blocks": [
+              {
+                "type": "tool-call"
+              }
+            ]
+          }
+        },
+        "id": "6cea6cec-2dfd-45cb-ad21-fe4bce292478"
+      },
+      "usage": {
+        "inputTokens": 174,
+        "outputTokens": 89,
+        "cacheReadTokens": 1920,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2183
+      }
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "tool/call",
+    "seq": 21,
+    "time": 1794325434884,
+    "data": {
+      "turn": 1,
+      "step": 2,
+      "callId": "call_00_n4piGmwaC6ULe9W936PO2559",
+      "name": "read",
+      "arguments": "{\"file_path\": \"/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-0BrGA6/sidebar-live-audit/orders.json\"}"
+    }
+  },
+  {
+    "type": "tool/result",
+    "seq": 22,
+    "time": 1794325434891,
+    "data": {
+      "turn": 1,
+      "step": 2,
+      "message": {
+        "role": "tool",
+        "source": {
+          "kind": "tool",
+          "callId": "call_00_n4piGmwaC6ULe9W936PO2559"
+        },
+        "toolCallId": "call_00_n4piGmwaC6ULe9W936PO2559",
+        "content": [
+          {
+            "type": "text",
+            "text": "<path>/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-0BrGA6/sidebar-live-audit/orders.json</path>\n<type>file</type>\n<content>\n1: {\n2:   \"auditId\": \"ea5ed592\",\n3:   \"orders\": [\n4:     {\n5:       \"id\": \"A\",\n6:       \"quantity\": 3,\n7:       \"unitPrice\": 10,\n8:       \"shipping\": 2\n9:     },\n10:     {\n11:       \"id\": \"B\",\n12:       \"quantity\": 0,\n13:       \"unitPrice\": 5,\n14:       \"shipping\": 6\n15:     }\n16:   ]\n17: }\n\n(End of file - total 17 lines)\n</content>"
+          }
+        ],
+        "isError": false,
+        "id": "10e9584a-9f63-4473-a302-0690bba4a98f"
+      },
+      "meta": {
+        "path": "/private/var/folders/4s/vv_6wpq17zd39zwjg0904nwm0000gn/T/dsh-web-e2e-ws-0BrGA6/sidebar-live-audit/orders.json",
+        "offset": 1,
+        "lines": [
+          {
+            "number": 1,
+            "text": "{"
+          },
+          {
+            "number": 2,
+            "text": "  \"auditId\": \"ea5ed592\","
+          },
+          {
+            "number": 3,
+            "text": "  \"orders\": ["
+          },
+          {
+            "number": 4,
+            "text": "    {"
+          },
+          {
+            "number": 5,
+            "text": "      \"id\": \"A\","
+          },
+          {
+            "number": 6,
+            "text": "      \"quantity\": 3,"
+          },
+          {
+            "number": 7,
+            "text": "      \"unitPrice\": 10,"
+          },
+          {
+            "number": 8,
+            "text": "      \"shipping\": 2"
+          },
+          {
+            "number": 9,
+            "text": "    },"
+          },
+          {
+            "number": 10,
+            "text": "    {"
+          },
+          {
+            "number": 11,
+            "text": "      \"id\": \"B\","
+          },
+          {
+            "number": 12,
+            "text": "      \"quantity\": 0,"
+          },
+          {
+            "number": 13,
+            "text": "      \"unitPrice\": 5,"
+          },
+          {
+            "number": 14,
+            "text": "      \"shipping\": 6"
+          },
+          {
+            "number": 15,
+            "text": "    }"
+          },
+          {
+            "number": 16,
+            "text": "  ]"
+          },
+          {
+            "number": 17,
+            "text": "}"
+          }
+        ],
+        "totalLines": 17,
+        "lang": "json"
+      }
+    },
+    "sourceEventSeqs": [
+      21
+    ],
+    "surfaceOp": "append"
+  },
+  {
+    "type": "assistant/message",
+    "seq": 25,
+    "time": 1794325435549,
+    "data": {
+      "turn": 1,
+      "step": 3,
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "id": "call_00_KmfVzh2v0K3WMEs1Xhu68230",
+            "name": "todo_write",
+            "arguments": "{\"todos\": [{\"content\": \"读取订单数据\", \"status\": \"completed\"}, {\"content\": \"核对订单金额\", \"status\": \"completed\"}, {\"content\": \"发布版本\", \"status\": \"pending\"}]}"
+          }
+        ],
+        "source": {
+          "kind": "model",
+          "provider": "deepseek-official",
+          "model": "deepseek-flash",
+          "replayState": {
+            "response": {
+              "kind": "deepseek-messages",
+              "version": 1,
+              "model": "deepseek-flash"
+            },
+            "blocks": [
+              {
+                "type": "tool-call"
+              }
+            ]
+          }
+        },
+        "id": "9dbac38e-93f6-49b4-a6a8-3383f9662e16"
+      },
+      "usage": {
+        "inputTokens": 221,
+        "outputTokens": 80,
+        "cacheReadTokens": 2176,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2477
+      }
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "tool/call",
+    "seq": 26,
+    "time": 1794325435549,
+    "data": {
+      "turn": 1,
+      "step": 3,
+      "callId": "call_00_KmfVzh2v0K3WMEs1Xhu68230",
+      "name": "todo_write",
+      "arguments": "{\"todos\": [{\"content\": \"读取订单数据\", \"status\": \"completed\"}, {\"content\": \"核对订单金额\", \"status\": \"completed\"}, {\"content\": \"发布版本\", \"status\": \"pending\"}]}"
+    }
+  },
+  {
+    "type": "todo/write",
+    "seq": 27,
+    "time": 1794325435554,
+    "data": {
+      "todos": [
+        {
+          "content": "读取订单数据",
+          "status": "completed"
+        },
+        {
+          "content": "核对订单金额",
+          "status": "completed"
+        },
+        {
+          "content": "发布版本",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  {
+    "type": "tool/result",
+    "seq": 28,
+    "time": 1794325435554,
+    "data": {
+      "turn": 1,
+      "step": 3,
+      "message": {
+        "role": "tool",
+        "source": {
+          "kind": "tool",
+          "callId": "call_00_KmfVzh2v0K3WMEs1Xhu68230"
+        },
+        "toolCallId": "call_00_KmfVzh2v0K3WMEs1Xhu68230",
+        "content": [
+          {
+            "type": "text",
+            "text": "Updated todo list: 1 pending, 0 in progress, 2 completed."
+          }
+        ],
+        "isError": false,
+        "id": "719b147f-87b1-40f4-8b69-6f5c28ccf503"
+      }
+    },
+    "sourceEventSeqs": [
+      26
+    ],
+    "surfaceOp": "append"
+  },
+  {
+    "type": "assistant/message",
+    "seq": 31,
+    "time": 1794325437035,
+    "data": {
+      "turn": 1,
+      "step": 4,
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "**核对编号 ea5ed592**\n\n已读取 `orders.json`，前两项任务已完成。计算方式为 quantity × unitPrice + shipping：\n\n- **订单 A**：3 × 10 + 2 = **32**\n- **订单 B**：0 × 5 + 6 = **6**\n\n**订单 B** 中 quantity 为 0，因此金额只来自运费，建议留意这单是否为有效订单。\n\n**发布版本**这一任务仍在待处理，因为它需要批准；我没有修改任何文件，也没有执行发布。"
+          }
+        ],
+        "source": {
+          "kind": "model",
+          "provider": "deepseek-official",
+          "model": "deepseek-flash",
+          "replayState": {
+            "response": {
+              "kind": "deepseek-messages",
+              "version": 1,
+              "model": "deepseek-flash"
+            },
+            "blocks": [
+              {
+                "type": "text"
+              }
+            ]
+          }
+        },
+        "id": "28f3c903-b443-41bc-9f7d-5eb90f384027"
+      },
+      "usage": {
+        "inputTokens": 201,
+        "outputTokens": 113,
+        "cacheReadTokens": 2304,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2618
+      }
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "turn/end",
+    "seq": 33,
+    "time": 1794325437036,
+    "data": {
+      "turn": 1,
+      "reason": {
+        "kind": "completed"
+      }
+    }
+  },
+  {
+    "type": "turn/start",
+    "seq": 35,
+    "time": 1794325451725,
+    "data": {
+      "turn": 2
+    }
+  },
+  {
+    "type": "user/message",
+    "seq": 38,
+    "time": 1794325451738,
+    "data": {
+      "content": [
+        {
+          "type": "text",
+          "text": "有可见消息都使用简体中文。简短确认此后续请求，用 Markdown 粗体写出核对编号 ea5ed592-followup，并以行内代码写出 orders.json。不要调用工具，不要创建或更新任务列表。"
+        }
+      ],
+      "source": {
+        "kind": "user",
+        "rpcId": "58b978b9-cabc-4de2-9172-6488d2c1d56a",
+        "clientTimeZone": "Asia/Shanghai"
+      },
+      "role": "user",
+      "id": "fa613668-affc-47c3-ada9-12b66af29318"
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "assistant/message",
+    "seq": 39,
+    "time": 1794325453005,
+    "data": {
+      "turn": 2,
+      "step": 1,
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "已收到后续请求，确认如下：\n\n- 核对编号：**ea5ed592-followup**\n- 相关文件：`orders.json`\n\n我已确认这条消息，本次不会调用工具，也不会改动任务列表；三项任务的状态保持不变，其中“发布版本”仍待批准。"
+          }
+        ],
+        "source": {
+          "kind": "model",
+          "provider": "deepseek-official",
+          "model": "deepseek-flash",
+          "replayState": {
+            "response": {
+              "kind": "deepseek-messages",
+              "version": 1,
+              "model": "deepseek-flash"
+            },
+            "blocks": [
+              {
+                "type": "text"
+              }
+            ]
+          }
+        },
+        "id": "5debbb4d-c424-46b0-b131-d848a95a83a7"
+      },
+      "usage": {
+        "inputTokens": 240,
+        "outputTokens": 60,
+        "cacheReadTokens": 2432,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2732
+      }
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "turn/end",
+    "seq": 41,
+    "time": 1794325453006,
+    "data": {
+      "turn": 2,
+      "reason": {
+        "kind": "completed"
+      }
+    }
+  },
+  {
+    "type": "turn/start",
+    "seq": 43,
+    "time": 1794325453429,
+    "data": {
+      "turn": 3
+    }
+  },
+  {
+    "type": "user/message",
+    "seq": 46,
+    "time": 1794325453443,
+    "data": {
+      "content": [
+        {
+          "type": "text",
+          "text": "核对编号 ea5ed592-cancel 撰写一份原创编号清单，包含100个详细的订单核对问题，每个问题都附上解释。所有可见消息都使用简体中文。不要调用工具，不要创建或更新任务列表。"
+        }
+      ],
+      "source": {
+        "kind": "user",
+        "rpcId": "69f7419f-b721-4fdf-812d-34eccd3852ba",
+        "clientTimeZone": "Asia/Shanghai"
+      },
+      "role": "user",
+      "id": "c7c0d4ff-e8b2-4ca6-8c5b-b4de6c074a1c"
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "assistant/message",
+    "seq": 47,
+    "time": 1794325454247,
+    "data": {
+      "turn": 3,
+      "step": 1,
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "**核对编号 ea5ed592-cancel**\n\n以下是一份原创的订单核对问题清单，共 100 条，按主题分组，每条都附有说明。\n\n**一、订单基础信息**\n\n1. 订单号"
+          }
+        ],
+        "source": {
+          "kind": "model",
+          "provider": "deepseek-official",
+          "model": "deepseek-flash"
+        },
+        "id": "9094914a-6b25-4413-aa1e-58cdfdfb0b10"
+      },
+      "interrupted": true
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "turn/end",
+    "seq": 49,
+    "time": 1794325454247,
+    "data": {
+      "turn": 3,
+      "reason": {
+        "kind": "aborted",
+        "reason": {
+          "kind": "user"
+        }
+      }
+    }
+  },
+  {
+    "type": "turn/start",
+    "seq": 51,
+    "time": 1794325454842,
+    "data": {
+      "turn": 4
+    }
+  },
+  {
+    "type": "user/message",
+    "seq": 54,
+    "time": 1794325454856,
+    "data": {
+      "content": [
+        {
+          "type": "text",
+          "text": "有可见消息都使用简体中文。继续本次核对，简短回复，用 Markdown 粗体写出核对编号 ea5ed592-retry，并以行内代码写出 orders.json。不要使用工具或任务列表。"
+        }
+      ],
+      "source": {
+        "kind": "user",
+        "rpcId": "4c4c8d5d-7c87-4c7b-91b8-0eedadd7b661",
+        "clientTimeZone": "Asia/Shanghai"
+      },
+      "role": "user",
+      "id": "aa7055b5-2228-4fd3-9ac9-6caa5a2ed102"
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "assistant/message",
+    "seq": 55,
+    "time": 1794325455806,
+    "data": {
+      "turn": 4,
+      "step": 1,
+      "message": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "**核对编号 ea5ed592-retry**\n\n继续核对 `orders.json`。此前的结果如下：**订单 A** 为 3 × 10 + 2 = **32**，**订单 B** 为 0 × 5 + 6 = **6**；两项核对均已完成，“发布版本”仍待批准。本次不调用工具，也不改动任务列表。"
+          }
+        ],
+        "source": {
+          "kind": "model",
+          "provider": "deepseek-official",
+          "model": "deepseek-flash",
+          "replayState": {
+            "response": {
+              "kind": "deepseek-messages",
+              "version": 1,
+              "model": "deepseek-flash"
+            },
+            "blocks": [
+              {
+                "type": "text"
+              }
+            ]
+          }
+        },
+        "id": "a02cf490-f596-494f-9c8e-951dcac36fc9"
+      },
+      "usage": {
+        "inputTokens": 195,
+        "outputTokens": 81,
+        "cacheReadTokens": 2688,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2964
+      }
+    },
+    "surfaceOp": "append"
+  },
+  {
+    "type": "turn/end",
+    "seq": 57,
+    "time": 1794325455806,
+    "data": {
+      "turn": 4,
+      "reason": {
+        "kind": "completed"
+      }
+    }
+  }
+]

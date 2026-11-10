@@ -8,15 +8,27 @@
 
 MIT ライセンスの独立したプラグインです。DSH の公式 projection API とサイドバーの slot API を使い、上流の DSH ソースコードは変更しません。
 
-## 機能の動画
+## 完了した作業と残りを確認する
+
+注文の確認中、元のサイドバーには会話のタイトルだけが表示されています。**履歴カード** を開くと、進捗が **0/3** から **2/3** に変わり、保存された返信が表示されます。公開のタスクは未完了のままです。8 秒の進捗プレビューは、サイドバーを実際の速度で切り出した連続映像です。完全な動画では履歴の切り替え操作と返信の全文を確認できます。
+
+**保存済みの実 API 進捗ストーリーです。** 録画記録のパッケージハッシュは 0.2.2 と一致します。 現行 0.2.3 の実 API 動画と検証記録も以下に残しています。
+
+[![DSH の履歴カードに実際の TODO 進捗と最新の Assistant 返信を表示](../media/localized/ja/story-preview.gif)](../media/localized/ja/story-source-04f2e81-snapshot/raw/gt.mp4)
+
+[サイドバープラグインをインストールする](#サイドバープラグインをインストールする)
+
+[全画面の元映像（0.2.2）](../media/localized/ja/story-source-04f2e81-snapshot/feature-8s.gif) · [MP4](../media/localized/ja/story-source-04f2e81-snapshot/raw/gt.mp4)
 
 **0.2.3 の5言語メディア検証に合格しました。** 実際の文字、画面、出典、動画再生を確認しました。[検証レポート](../verification.md)をご覧ください。
 
-[![DSH の履歴カードに実際の TODO 進捗と最新の Assistant 返信を表示](../media/localized/ja/feature-8s.gif)](../media/localized/ja/demo.mp4)
+[全画面の 8 秒プレビュー](../media/localized/ja/feature-8s.gif)
 
 [実 API による動画を見る](../media/localized/ja/demo.mp4) · [実際のブラウザー画像](../media/localized/ja/snapshot.png) · [API の実行記録](../media/localized/ja/evidence/result.json)
 
 新しい DSH セッションから DeepSeek 公式 API を呼び出して録画しました。モデルはデモ用の注文データを読み、標準 TODO ツールを呼び出し、自分の回答を保存します。サイドバーには 3 件中 2 件の完了と保存済みの返信が表示されます。動画は元の録画データと実際の経過時間を保持しています。mock エンドポイント、台本によるモデルの返信、事前に挿入した Assistant メッセージや TODO イベントは使っていません。別の実 API セッションと再読み込み後の復元も確認済みです。[出所とハッシュ](../media/localized/ja/provenance.json)、[メディアの検証結果](../media/localized/ja/qa.json)を参照してください。
+
+[サイドバープラグインをインストールする](#サイドバープラグインをインストールする) · [ストーリーと出典記録](../media/story-first.md)
 
 ## 作業を見つけて再開する
 

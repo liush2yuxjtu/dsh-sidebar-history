@@ -1,0 +1,853 @@
+{
+  "schemaVersion": 1,
+  "feature_id": "sidebar-order-audit-progress",
+  "user_outcome": "Open history cards during an order audit to see completed tasks, the remaining task and the saved reply.",
+  "story": {
+    "problem": "An order audit is running, but the native sidebar only shows the workspace and session title.",
+    "action": "Open History cards to reveal the session progress card.",
+    "result": "The card moves from 0/3 to 2/3, publishing stays pending, and the saved reply replaces the interim preview."
+  },
+  "scope": "The full videos show the history-card entry, current-session native task progress and saved reply. Multi-session navigation and reload recovery are separate runtime evidence. Eight-second GIFs are continuous excerpts and do not imply the complete task took eight seconds. Cropped previews show progress; the entry control is outside their crop.",
+  "media_reused": true,
+  "conversion_measurement": "No installation-conversion effect has been measured. README media links lead to the matching video, followed by the local install section.",
+  "withdrawn_edit": "docs/media/story-demo.manifest.json",
+  "locales": [
+    {
+      "locale": "en",
+      "readme": "README.md",
+      "directory": "docs/media/live",
+      "video": "docs/media/live/story-source-04f2e81-snapshot/raw/gt.mp4",
+      "video_sha256": "8d2fd67e3571ebe88cf9c3b9eeaa5ef1262e58f94e5203818aa41cdd1ea48233",
+      "raw": "docs/media/live/story-source-04f2e81-snapshot/raw/gt.mp4",
+      "raw_sha256": "8d2fd67e3571ebe88cf9c3b9eeaa5ef1262e58f94e5203818aa41cdd1ea48233",
+      "gif": "docs/media/live/story-source-04f2e81-snapshot/feature-8s.gif",
+      "gif_sha256": "31985d8811b02bd01cf4abda63dc9a8db1ace90cc2341cf77337b1127125685f",
+      "evidence": "docs/media/live/story-source-04f2e81-snapshot/evidence/result.json",
+      "evidence_sha256": "3abe722d337d612a05e84c129176d6193e09bc261ac4c861559368bce38a14cc",
+      "provenance": "docs/media/live/story-source-04f2e81-snapshot/provenance.json",
+      "recorded_run_id": "b738a6be-985e-4543-ac9f-cd79fc2d2c02",
+      "duration_s": 11.033333,
+      "proof_interval_s": [
+        5.60052294921875,
+        11.04552294921875
+      ],
+      "gif_source_window_s": [
+        2.1005229492187496,
+        10.10052294921875
+      ],
+      "source_environment": "repository-build",
+      "liveModel": true,
+      "scriptedModel": false,
+      "mockedService": false,
+      "seededAssistantMessages": false,
+      "seededTodoEvents": false,
+      "editorial_cuts": false,
+      "speed_changes": false,
+      "generated_frames": false,
+      "new_api_requests_for_media": 0,
+      "narrative_review": {
+        "status": "PASS",
+        "reviewer_type": "independent agents; not a human user study",
+        "scope": "鼠标到达 History cards 后，左栏从工作区列表切换到会话卡片，并在本片内显示任务进度和最终摘要。",
+        "not_established": [
+          "输入文字或点击发送的具体动作",
+          "多会话之间的切换",
+          "在不打开会话的情况下检查其他会话",
+          "所有细字在交付尺寸下均可读",
+          "后台业务完成由独立 API 回执核验，不由视觉盲评推断"
+        ],
+        "history": [
+          {
+            "status": "FAIL",
+            "method": "Independent reviewer receives only anonymous 16-frame sheets and original frame pixels.",
+            "contact_sheet": "docs/media/story-review/clip01.png",
+            "contact_sheet_sha256": "ec59597861446f88e447c9f05bad4a4e0120ad8f4fb41a4c8e94232eddf219f1",
+            "sample_times_s": [
+              0.0,
+              0.7222222000000001,
+              1.4444444000000003,
+              2.1666666,
+              2.8888888000000006,
+              3.6111110000000006,
+              4.3333332,
+              5.055555400000001,
+              5.777777600000001,
+              6.4999998,
+              7.222222000000001,
+              7.944444200000001,
+              8.6666664,
+              9.388888600000001,
+              10.111110800000002,
+              10.833333000000001
+            ],
+            "review_report": "docs/media/story-review/cold-viewer-first.json",
+            "review_report_sha256": "aa9bf66c18fed58c69819b93e95095b9109aa56aad15f6cb4ac7128f1eb98067",
+            "review_clip_id": "Clip01",
+            "scope": "仅通过“打开历史卡片，查看本次订单核对任务的完成数、待办项及最新答复”这条具体链路。",
+            "not_established": [
+              "输入文字或点击发送的具体动作",
+              "多会话之间的切换",
+              "在不打开会话的情况下检查其他会话",
+              "所有细字在交付尺寸下均可读"
+            ],
+            "reason": "结果明确可见，但关键侧栏操作仅能推断。切换前未见鼠标明确到达 History cards；不能借用其他语言片段补全。",
+            "reviewer_type": "independent agent",
+            "stage": "initial-sparse-16-frame-review"
+          },
+          {
+            "status": "PASS",
+            "stage": "dense-local-motion-review",
+            "reviewer_type": "fresh independent agent",
+            "method": "Fresh agent received only anonymous dense action frames and corresponding full-clip contact sheets; no README, manifest, task prompt or first verdict.",
+            "contact_sheet": "docs/media/story-review/motion-a.png",
+            "contact_sheet_sha256": "d23718484554718b07c2548483b74d263b17f6749097aebba0b43d5715433855",
+            "source": "docs/media/live/story-source-04f2e81-snapshot/raw/gt.mp4",
+            "source_sha256": "8d2fd67e3571ebe88cf9c3b9eeaa5ef1262e58f94e5203818aa41cdd1ea48233",
+            "sample_times_s": [
+              1.8,
+              1.8666666666666667,
+              1.9333333333333333,
+              2.0,
+              2.0666666666666664,
+              2.1333333333333333,
+              2.1999999999999997,
+              2.2666666666666666,
+              2.333333333333333,
+              2.4,
+              2.466666666666667,
+              2.533333333333333,
+              2.5999999999999996,
+              2.6666666666666665,
+              2.7333333333333334,
+              2.8
+            ],
+            "review_report": "docs/media/story-review/cold-viewer-motion.json",
+            "review_report_sha256": "62db7186b8116ce37c3f4f725758672bfefba6f9cf3593c9a65e6ec54956d422",
+            "review_clip_id": "Clip01",
+            "review_motion_id": "MotionA",
+            "scope": "鼠标到达 History cards 后，左栏从工作区列表切换到会话卡片，并在本片内显示任务进度和最终摘要。"
+          }
+        ],
+        "sampling_limitation": "The initial 16 equally spaced frames missed the brief pointer dwell for en and zh-TW. A fresh review of denser frames from the unchanged movies resolved the visible entry operation. Original FAIL reports are retained."
+      },
+      "preview": {
+        "path": "docs/media/live/story-preview.gif",
+        "sha256": "11345c08e3f679b6ebc454980cba3f436cb90ab0c1b3840506c0ebca473d79e3",
+        "source": "docs/media/live/story-source-04f2e81-snapshot/raw/gt.mp4",
+        "source_sha256": "8d2fd67e3571ebe88cf9c3b9eeaa5ef1262e58f94e5203818aa41cdd1ea48233",
+        "source_window_s": [
+          2.1005229492187496,
+          10.10052294921875
+        ],
+        "crop_source_pixels": {
+          "x": 0,
+          "y": 210,
+          "width": 280,
+          "height": 330
+        },
+        "width": 520,
+        "height": 612,
+        "duration_s": 8.0,
+        "fps": 12,
+        "loop": true,
+        "speed_changes": false,
+        "editorial_cuts": false,
+        "generated_frames": false,
+        "overlay_text": false,
+        "scope": "Progress preview: native task state and saved reply excerpt. The bottom history switch is outside this crop; the complete video carries the entry action.",
+        "proof_frames": [
+          {
+            "path": "docs/media/story-review/preview/en/before.png",
+            "sha256": "45000655569cf430bba01f16f0dd66d5df157185d90ab91929383d751bd2e59b",
+            "requested_preview_time_s": 0.0,
+            "requested_source_time_s": 2.1005229492187496
+          },
+          {
+            "path": "docs/media/story-review/preview/en/progress.png",
+            "sha256": "a6fc8d0370f5d7018c6291afd4da93ff706cbd6f24721918edfdedce8e9a9472",
+            "requested_preview_time_s": 1.0,
+            "requested_source_time_s": 3.1005229492187496
+          },
+          {
+            "path": "docs/media/story-review/preview/en/result.png",
+            "sha256": "188e2b4283e74f6663ac945409496c7b84ad062b14a711a999143ba7f1d108db",
+            "requested_preview_time_s": 7.3,
+            "requested_source_time_s": 9.40052294921875
+          }
+        ],
+        "delivery_readability_review": "docs/media/story-review/preview-readability.json",
+        "ocr_status": "PASS",
+        "ocr_report": "docs/media/story-review/preview-ocr/report.json",
+        "ocr_report_sha256": "149a97e5299f0f6ec3fffe26e54cf1b055197c3876de55802fcb470a1d9aab78",
+        "ocr_receipts": [
+          {
+            "path": "docs/media/story-review/preview-ocr/en/progress.ocr.json",
+            "sha256": "1be827ecd770fbab6f7aff436260939ee948ba5825da3007e988c784c704326b"
+          },
+          {
+            "path": "docs/media/story-review/preview-ocr/en/result.ocr.json",
+            "sha256": "ca682f8d982e065a5db44fd912d2fd124c538da35787d4a1f49424bc361fe802"
+          }
+        ],
+        "delivery_readability_review_sha256": "bf1c6ae95438ebcab77a7f83310fac734679bec37ae2c8c827384bb9e203a9e8"
+      },
+      "source_directory": "docs/media/live/story-source-04f2e81-snapshot",
+      "recording_commit": null,
+      "source_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b",
+      "recorded_package_version": "0.2.2"
+    },
+    {
+      "locale": "zh-CN",
+      "readme": "docs/i18n/README.zh-CN.md",
+      "directory": "docs/media/localized/zh-CN",
+      "video": "docs/media/localized/zh-CN/story-source-04f2e81-snapshot/raw/gt.mp4",
+      "video_sha256": "b8d7c856a50324cdb0b41711d5fb03ef81439228c0427635c7639383c1b0ebd5",
+      "raw": "docs/media/localized/zh-CN/story-source-04f2e81-snapshot/raw/gt.mp4",
+      "raw_sha256": "b8d7c856a50324cdb0b41711d5fb03ef81439228c0427635c7639383c1b0ebd5",
+      "gif": "docs/media/localized/zh-CN/story-source-04f2e81-snapshot/feature-8s.gif",
+      "gif_sha256": "54d3527041f73f12a8c899859069a6f47eac711dd3b2dcd899a606b517dd54ae",
+      "evidence": "docs/media/localized/zh-CN/story-source-04f2e81-snapshot/evidence/result.json",
+      "evidence_sha256": "9bf252ea5b30af61195be9376b55a3d33d4e15ae93f4eab908b845c1b0bce3b3",
+      "provenance": "docs/media/localized/zh-CN/story-source-04f2e81-snapshot/provenance.json",
+      "recorded_run_id": "ea5ed592-7062-4038-9ae8-be677bd187d9",
+      "duration_s": 10.666667,
+      "proof_interval_s": [
+        5.30804296875,
+        10.67904296875
+      ],
+      "gif_source_window_s": [
+        1.8080429687499997,
+        9.80804296875
+      ],
+      "source_environment": "repository-build",
+      "liveModel": true,
+      "scriptedModel": false,
+      "mockedService": false,
+      "seededAssistantMessages": false,
+      "seededTodoEvents": false,
+      "editorial_cuts": false,
+      "speed_changes": false,
+      "generated_frames": false,
+      "new_api_requests_for_media": 0,
+      "narrative_review": {
+        "status": "PASS",
+        "reviewer_type": "independent agents; not a human user study",
+        "scope": "仅通过“打开历史卡片，查看本次订单核对任务的完成数、待办项及最新答复”这条具体链路。",
+        "not_established": [
+          "输入文字或点击发送的具体动作",
+          "多会话之间的切换",
+          "在不打开会话的情况下检查其他会话",
+          "所有细字在交付尺寸下均可读",
+          "后台业务完成由独立 API 回执核验，不由视觉盲评推断"
+        ],
+        "history": [
+          {
+            "status": "PASS",
+            "method": "Independent reviewer receives only anonymous 16-frame sheets and original frame pixels.",
+            "contact_sheet": "docs/media/story-review/clip02.png",
+            "contact_sheet_sha256": "b5f8b964930c257e365a24147157d5a5f940a13cd69cf95677d36dc2e71a4d82",
+            "sample_times_s": [
+              0.0,
+              0.6977778000000001,
+              1.3955556000000002,
+              2.0933334,
+              2.7911112000000005,
+              3.4888890000000004,
+              4.1866668,
+              4.8844446,
+              5.582222400000001,
+              6.280000200000001,
+              6.977778000000001,
+              7.675555800000001,
+              8.3733336,
+              9.071111400000001,
+              9.7688892,
+              10.466667000000001
+            ],
+            "review_report": "docs/media/story-review/cold-viewer-first.json",
+            "review_report_sha256": "aa9bf66c18fed58c69819b93e95095b9109aa56aad15f6cb4ac7128f1eb98067",
+            "review_clip_id": "Clip02",
+            "scope": "仅通过“打开历史卡片，查看本次订单核对任务的完成数、待办项及最新答复”这条具体链路。",
+            "not_established": [
+              "输入文字或点击发送的具体动作",
+              "多会话之间的切换",
+              "在不打开会话的情况下检查其他会话",
+              "所有细字在交付尺寸下均可读"
+            ],
+            "reason": "本片自身提供了可读控件处的鼠标位置、紧邻的侧栏切换及后续结果，可以独立复原上述具体链路。PASS 不包括未展示的发送操作。",
+            "reviewer_type": "independent agent",
+            "stage": "initial-sparse-16-frame-review"
+          }
+        ],
+        "sampling_limitation": "Sparse 16-frame review passed this locale on its own pixels."
+      },
+      "preview": {
+        "path": "docs/media/localized/zh-CN/story-preview.gif",
+        "sha256": "3ffafe4420c627a3d86a810da449aac51b34fc69447e2a131f36236ad99119c5",
+        "source": "docs/media/localized/zh-CN/story-source-04f2e81-snapshot/raw/gt.mp4",
+        "source_sha256": "b8d7c856a50324cdb0b41711d5fb03ef81439228c0427635c7639383c1b0ebd5",
+        "source_window_s": [
+          1.8080429687499997,
+          9.80804296875
+        ],
+        "crop_source_pixels": {
+          "x": 0,
+          "y": 210,
+          "width": 280,
+          "height": 330
+        },
+        "width": 520,
+        "height": 612,
+        "duration_s": 8.0,
+        "fps": 12,
+        "loop": true,
+        "speed_changes": false,
+        "editorial_cuts": false,
+        "generated_frames": false,
+        "overlay_text": false,
+        "scope": "Progress preview: native task state and saved reply excerpt. The bottom history switch is outside this crop; the complete video carries the entry action.",
+        "proof_frames": [
+          {
+            "path": "docs/media/story-review/preview/zh-CN/before.png",
+            "sha256": "496ec96f0c7d3d7c5731ce422034df05d092340d33260c1d1a32141767291a1a",
+            "requested_preview_time_s": 0.0,
+            "requested_source_time_s": 1.8080429687499997
+          },
+          {
+            "path": "docs/media/story-review/preview/zh-CN/progress.png",
+            "sha256": "cf53a276cd1228dff0184f1180628d43365c51d3be3f3a0bf60e910625c6cbf0",
+            "requested_preview_time_s": 1.0,
+            "requested_source_time_s": 2.8080429687499997
+          },
+          {
+            "path": "docs/media/story-review/preview/zh-CN/result.png",
+            "sha256": "af5d2158f963e8974b29e738bd8aa9761fa8c9f84ba8cf3bd03bd98eda05e6cc",
+            "requested_preview_time_s": 7.3,
+            "requested_source_time_s": 9.108042968749999
+          }
+        ],
+        "delivery_readability_review": "docs/media/story-review/preview-readability.json",
+        "ocr_status": "PASS",
+        "ocr_report": "docs/media/story-review/preview-ocr/report.json",
+        "ocr_report_sha256": "149a97e5299f0f6ec3fffe26e54cf1b055197c3876de55802fcb470a1d9aab78",
+        "ocr_receipts": [
+          {
+            "path": "docs/media/story-review/preview-ocr/zh-CN/progress.ocr.json",
+            "sha256": "c55a4d329bf09285e467ac97cbfa31766876bf3fdfa7d19a38e95693bf853781"
+          },
+          {
+            "path": "docs/media/story-review/preview-ocr/zh-CN/result.ocr.json",
+            "sha256": "6216f4cd0ba6a164eb15d1c58e9accc4c9d72e176a37dcd3e58e7e310de44958"
+          }
+        ],
+        "delivery_readability_review_sha256": "bf1c6ae95438ebcab77a7f83310fac734679bec37ae2c8c827384bb9e203a9e8"
+      },
+      "source_directory": "docs/media/localized/zh-CN/story-source-04f2e81-snapshot",
+      "recording_commit": null,
+      "source_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b",
+      "recorded_package_version": "0.2.2"
+    },
+    {
+      "locale": "zh-TW",
+      "readme": "docs/i18n/README.zh-TW.md",
+      "directory": "docs/media/localized/zh-TW",
+      "video": "docs/media/localized/zh-TW/story-source-04f2e81-snapshot/raw/gt.mp4",
+      "video_sha256": "5fe1fac002be74f4d4af63336a4c389311288f3ddc96d0a13b1776310c1d8d87",
+      "raw": "docs/media/localized/zh-TW/story-source-04f2e81-snapshot/raw/gt.mp4",
+      "raw_sha256": "5fe1fac002be74f4d4af63336a4c389311288f3ddc96d0a13b1776310c1d8d87",
+      "gif": "docs/media/localized/zh-TW/story-source-04f2e81-snapshot/feature-8s.gif",
+      "gif_sha256": "a39a258da787cb3968240b2d020211744d409d47c25cd4e193b702ccd48353e4",
+      "evidence": "docs/media/localized/zh-TW/story-source-04f2e81-snapshot/evidence/result.json",
+      "evidence_sha256": "3f77533a958f6e6208cab3d2012fdf20550ee52050b7f5c4ba6906773c90cc38",
+      "provenance": "docs/media/localized/zh-TW/story-source-04f2e81-snapshot/provenance.json",
+      "recorded_run_id": "123db8c4-2509-42a7-a041-9876867b1e74",
+      "duration_s": 10.633333,
+      "proof_interval_s": [
+        5.32126708984375,
+        10.63626708984375
+      ],
+      "gif_source_window_s": [
+        1.82126708984375,
+        9.82126708984375
+      ],
+      "source_environment": "repository-build",
+      "liveModel": true,
+      "scriptedModel": false,
+      "mockedService": false,
+      "seededAssistantMessages": false,
+      "seededTodoEvents": false,
+      "editorial_cuts": false,
+      "speed_changes": false,
+      "generated_frames": false,
+      "new_api_requests_for_media": 0,
+      "narrative_review": {
+        "status": "PASS",
+        "reviewer_type": "independent agents; not a human user study",
+        "scope": "鼠标到达歷史卡片后，左栏从工作区列表切换到历史会话卡片，并在本片内显示任务进度和最终摘要。",
+        "not_established": [
+          "输入文字或点击发送的具体动作",
+          "多会话之间的切换",
+          "在不打开会话的情况下检查其他会话",
+          "所有细字在交付尺寸下均可读",
+          "后台业务完成由独立 API 回执核验，不由视觉盲评推断"
+        ],
+        "history": [
+          {
+            "status": "FAIL",
+            "method": "Independent reviewer receives only anonymous 16-frame sheets and original frame pixels.",
+            "contact_sheet": "docs/media/story-review/clip03.png",
+            "contact_sheet_sha256": "caf7e2a643d9bfbecbd5a4398c308381432388abfe529adddadb768bb131ca1d",
+            "sample_times_s": [
+              0.0,
+              0.6955555333333334,
+              1.3911110666666668,
+              2.0866666,
+              2.7822221333333337,
+              3.4777776666666673,
+              4.1733332,
+              4.868888733333334,
+              5.564444266666667,
+              6.259999800000001,
+              6.955555333333335,
+              7.651110866666667,
+              8.3466664,
+              9.042221933333334,
+              9.737777466666667,
+              10.433333000000001
+            ],
+            "review_report": "docs/media/story-review/cold-viewer-first.json",
+            "review_report_sha256": "aa9bf66c18fed58c69819b93e95095b9109aa56aad15f6cb4ac7128f1eb98067",
+            "review_clip_id": "Clip03",
+            "scope": "仅通过“打开历史卡片，查看本次订单核对任务的完成数、待办项及最新答复”这条具体链路。",
+            "not_established": [
+              "输入文字或点击发送的具体动作",
+              "多会话之间的切换",
+              "在不打开会话的情况下检查其他会话",
+              "所有细字在交付尺寸下均可读"
+            ],
+            "reason": "结果明确，但关键用户操作没有在本片抽样帧中明确显示。不能拿简体中文片段的点击画面补全。",
+            "reviewer_type": "independent agent",
+            "stage": "initial-sparse-16-frame-review"
+          },
+          {
+            "status": "PASS",
+            "stage": "dense-local-motion-review",
+            "reviewer_type": "fresh independent agent",
+            "method": "Fresh agent received only anonymous dense action frames and corresponding full-clip contact sheets; no README, manifest, task prompt or first verdict.",
+            "contact_sheet": "docs/media/story-review/motion-b.png",
+            "contact_sheet_sha256": "6c98e03af6eec901386f52aa9d5b3d7ffbdbcb2fccd2f167863c845974dfd659",
+            "source": "docs/media/localized/zh-TW/story-source-04f2e81-snapshot/raw/gt.mp4",
+            "source_sha256": "5fe1fac002be74f4d4af63336a4c389311288f3ddc96d0a13b1776310c1d8d87",
+            "sample_times_s": [
+              1.8,
+              1.8933333333333333,
+              1.9866666666666668,
+              2.08,
+              2.1733333333333333,
+              2.2666666666666666,
+              2.36,
+              2.453333333333333,
+              2.546666666666667,
+              2.64,
+              2.7333333333333334,
+              2.8266666666666667,
+              2.92,
+              3.0133333333333336,
+              3.1066666666666665,
+              3.2
+            ],
+            "review_report": "docs/media/story-review/cold-viewer-motion.json",
+            "review_report_sha256": "62db7186b8116ce37c3f4f725758672bfefba6f9cf3593c9a65e6ec54956d422",
+            "review_clip_id": "Clip03",
+            "review_motion_id": "MotionB",
+            "scope": "鼠标到达歷史卡片后，左栏从工作区列表切换到历史会话卡片，并在本片内显示任务进度和最终摘要。"
+          }
+        ],
+        "sampling_limitation": "The initial 16 equally spaced frames missed the brief pointer dwell for en and zh-TW. A fresh review of denser frames from the unchanged movies resolved the visible entry operation. Original FAIL reports are retained."
+      },
+      "preview": {
+        "path": "docs/media/localized/zh-TW/story-preview.gif",
+        "sha256": "0ebb702a7579e4b409711c03ce4a42b10a11a501555a9882c17c8a915eefa572",
+        "source": "docs/media/localized/zh-TW/story-source-04f2e81-snapshot/raw/gt.mp4",
+        "source_sha256": "5fe1fac002be74f4d4af63336a4c389311288f3ddc96d0a13b1776310c1d8d87",
+        "source_window_s": [
+          1.82126708984375,
+          9.82126708984375
+        ],
+        "crop_source_pixels": {
+          "x": 0,
+          "y": 210,
+          "width": 280,
+          "height": 330
+        },
+        "width": 520,
+        "height": 612,
+        "duration_s": 8.0,
+        "fps": 12,
+        "loop": true,
+        "speed_changes": false,
+        "editorial_cuts": false,
+        "generated_frames": false,
+        "overlay_text": false,
+        "scope": "Progress preview: native task state and saved reply excerpt. The bottom history switch is outside this crop; the complete video carries the entry action.",
+        "proof_frames": [
+          {
+            "path": "docs/media/story-review/preview/zh-TW/before.png",
+            "sha256": "44190362f5558dcb242b28087de273850a1f0a16b7b1f72e9bfe5f7f79999903",
+            "requested_preview_time_s": 0.0,
+            "requested_source_time_s": 1.82126708984375
+          },
+          {
+            "path": "docs/media/story-review/preview/zh-TW/progress.png",
+            "sha256": "6d50a38fa9ba61e238096b73849f0940be87c201a71b78641eb36be5a7db9d7a",
+            "requested_preview_time_s": 1.0,
+            "requested_source_time_s": 2.82126708984375
+          },
+          {
+            "path": "docs/media/story-review/preview/zh-TW/result.png",
+            "sha256": "e68bb3655faf3bb6d50ad9126c5096ad489a87b6790a80c89ba47bee210aa3a4",
+            "requested_preview_time_s": 7.3,
+            "requested_source_time_s": 9.12126708984375
+          }
+        ],
+        "delivery_readability_review": "docs/media/story-review/preview-readability.json",
+        "ocr_status": "PASS",
+        "ocr_report": "docs/media/story-review/preview-ocr/report.json",
+        "ocr_report_sha256": "149a97e5299f0f6ec3fffe26e54cf1b055197c3876de55802fcb470a1d9aab78",
+        "ocr_receipts": [
+          {
+            "path": "docs/media/story-review/preview-ocr/zh-TW/progress.ocr.json",
+            "sha256": "212db0b9ecf32e17d5ec2c8ef178d7146ac3642a96e39bedf48e02970050ab9e"
+          },
+          {
+            "path": "docs/media/story-review/preview-ocr/zh-TW/result.ocr.json",
+            "sha256": "46b81095b4cc47547d0d9bb6aa8af857b1ea5aab95a9927ab80b485774ed7eea"
+          }
+        ],
+        "delivery_readability_review_sha256": "bf1c6ae95438ebcab77a7f83310fac734679bec37ae2c8c827384bb9e203a9e8"
+      },
+      "source_directory": "docs/media/localized/zh-TW/story-source-04f2e81-snapshot",
+      "recording_commit": null,
+      "source_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b",
+      "recorded_package_version": "0.2.2"
+    },
+    {
+      "locale": "ja",
+      "readme": "docs/i18n/README.ja.md",
+      "directory": "docs/media/localized/ja",
+      "video": "docs/media/localized/ja/story-source-04f2e81-snapshot/raw/gt.mp4",
+      "video_sha256": "ce9136ac1bc7a5782730ab9479349deb321cdfee677561bff94602d4b923ac93",
+      "raw": "docs/media/localized/ja/story-source-04f2e81-snapshot/raw/gt.mp4",
+      "raw_sha256": "ce9136ac1bc7a5782730ab9479349deb321cdfee677561bff94602d4b923ac93",
+      "gif": "docs/media/localized/ja/story-source-04f2e81-snapshot/feature-8s.gif",
+      "gif_sha256": "f4631e5e687de53d5abd2fb33395261014af9ae36e49564772f916dceda60460",
+      "evidence": "docs/media/localized/ja/story-source-04f2e81-snapshot/evidence/result.json",
+      "evidence_sha256": "83a5dd72dc5279ea19220eea54e1d002d9c8a08a06bda9c63f4949a6e19d715b",
+      "provenance": "docs/media/localized/ja/story-source-04f2e81-snapshot/provenance.json",
+      "recorded_run_id": "55fac021-fdbe-4edc-96b1-3eef2e2e1d36",
+      "duration_s": 11.133333,
+      "proof_interval_s": [
+        5.69472705078125,
+        11.13572705078125
+      ],
+      "gif_source_window_s": [
+        2.1947270507812497,
+        10.19472705078125
+      ],
+      "source_environment": "repository-build",
+      "liveModel": true,
+      "scriptedModel": false,
+      "mockedService": false,
+      "seededAssistantMessages": false,
+      "seededTodoEvents": false,
+      "editorial_cuts": false,
+      "speed_changes": false,
+      "generated_frames": false,
+      "new_api_requests_for_media": 0,
+      "narrative_review": {
+        "status": "PASS",
+        "reviewer_type": "independent agents; not a human user study",
+        "scope": "仅通过“打开历史卡片，查看本次订单核对任务的完成数、待办项及最新答复”这条具体链路。",
+        "not_established": [
+          "输入文字或点击发送的具体动作",
+          "多会话之间的切换",
+          "在不打开会话的情况下检查其他会话",
+          "所有细字在交付尺寸下均可读",
+          "后台业务完成由独立 API 回执核验，不由视觉盲评推断"
+        ],
+        "history": [
+          {
+            "status": "PASS",
+            "method": "Independent reviewer receives only anonymous 16-frame sheets and original frame pixels.",
+            "contact_sheet": "docs/media/story-review/clip04.png",
+            "contact_sheet_sha256": "503293583b32bf5f7772372c53ea0c1474b8eb31c478f585069af03179909910",
+            "sample_times_s": [
+              0.0,
+              0.7288888666666667,
+              1.4577777333333335,
+              2.1866666,
+              2.915555466666667,
+              3.644444333333334,
+              4.3733332,
+              5.102222066666667,
+              5.831110933333334,
+              6.559999800000001,
+              7.288888666666668,
+              8.017777533333334,
+              8.7466664,
+              9.475555266666667,
+              10.204444133333334,
+              10.933333000000001
+            ],
+            "review_report": "docs/media/story-review/cold-viewer-first.json",
+            "review_report_sha256": "aa9bf66c18fed58c69819b93e95095b9109aa56aad15f6cb4ac7128f1eb98067",
+            "review_clip_id": "Clip04",
+            "scope": "仅通过“打开历史卡片，查看本次订单核对任务的完成数、待办项及最新答复”这条具体链路。",
+            "not_established": [
+              "输入文字或点击发送的具体动作",
+              "多会话之间的切换",
+              "在不打开会话的情况下检查其他会话",
+              "所有细字在交付尺寸下均可读"
+            ],
+            "reason": "本片有鼠标在可读切换控件上的画面，紧邻下一帧出现相应侧栏切换，随后有明确任务状态结果。范围限于本会话进度卡片。",
+            "reviewer_type": "independent agent",
+            "stage": "initial-sparse-16-frame-review"
+          }
+        ],
+        "sampling_limitation": "Sparse 16-frame review passed this locale on its own pixels."
+      },
+      "preview": {
+        "path": "docs/media/localized/ja/story-preview.gif",
+        "sha256": "414f3226cd91742601428636a839e8753ca9fb2766bc97d009060a6230fd5072",
+        "source": "docs/media/localized/ja/story-source-04f2e81-snapshot/raw/gt.mp4",
+        "source_sha256": "ce9136ac1bc7a5782730ab9479349deb321cdfee677561bff94602d4b923ac93",
+        "source_window_s": [
+          2.1947270507812497,
+          10.19472705078125
+        ],
+        "crop_source_pixels": {
+          "x": 0,
+          "y": 210,
+          "width": 280,
+          "height": 330
+        },
+        "width": 520,
+        "height": 612,
+        "duration_s": 8.0,
+        "fps": 12,
+        "loop": true,
+        "speed_changes": false,
+        "editorial_cuts": false,
+        "generated_frames": false,
+        "overlay_text": false,
+        "scope": "Progress preview: native task state and saved reply excerpt. The bottom history switch is outside this crop; the complete video carries the entry action.",
+        "proof_frames": [
+          {
+            "path": "docs/media/story-review/preview/ja/before.png",
+            "sha256": "10080a069ab117870691f01f53e2ba25c8e81b396da21db414b60373a89447fd",
+            "requested_preview_time_s": 0.0,
+            "requested_source_time_s": 2.1947270507812497
+          },
+          {
+            "path": "docs/media/story-review/preview/ja/progress.png",
+            "sha256": "277ce273540ed91636265684cb42f08515c9d4c7d75012e057f46e934e7819b6",
+            "requested_preview_time_s": 1.5,
+            "requested_source_time_s": 3.6947270507812497
+          },
+          {
+            "path": "docs/media/story-review/preview/ja/result.png",
+            "sha256": "4d93c38e6941640257d3c1094eb9e5ad2e2d97d3a14fcacdc37f869667b83ac2",
+            "requested_preview_time_s": 7.3,
+            "requested_source_time_s": 9.49472705078125
+          }
+        ],
+        "delivery_readability_review": "docs/media/story-review/preview-readability.json",
+        "ocr_status": "PASS",
+        "ocr_report": "docs/media/story-review/preview-ocr/report.json",
+        "ocr_report_sha256": "149a97e5299f0f6ec3fffe26e54cf1b055197c3876de55802fcb470a1d9aab78",
+        "ocr_receipts": [
+          {
+            "path": "docs/media/story-review/preview-ocr/ja/progress.ocr.json",
+            "sha256": "dd813acf9da20f83ddb1a1f8d4714d47b1b7e5486ee4d4acfe6337d223979959"
+          },
+          {
+            "path": "docs/media/story-review/preview-ocr/ja/result.ocr.json",
+            "sha256": "2a365d13d1aa3a27c9dcbb47a51292546226e5254b15eb1673ab345a75dcaf07"
+          }
+        ],
+        "delivery_readability_review_sha256": "bf1c6ae95438ebcab77a7f83310fac734679bec37ae2c8c827384bb9e203a9e8"
+      },
+      "source_directory": "docs/media/localized/ja/story-source-04f2e81-snapshot",
+      "recording_commit": null,
+      "source_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b",
+      "recorded_package_version": "0.2.2"
+    },
+    {
+      "locale": "es",
+      "readme": "docs/i18n/README.es.md",
+      "directory": "docs/media/localized/es",
+      "video": "docs/media/localized/es/story-source-04f2e81-snapshot/raw/gt.mp4",
+      "video_sha256": "3b872f60572786ea95abddc5e119644b59ed5547421a0d6a03f0f9ed636a3951",
+      "raw": "docs/media/localized/es/story-source-04f2e81-snapshot/raw/gt.mp4",
+      "raw_sha256": "3b872f60572786ea95abddc5e119644b59ed5547421a0d6a03f0f9ed636a3951",
+      "gif": "docs/media/localized/es/story-source-04f2e81-snapshot/feature-8s.gif",
+      "gif_sha256": "9d7417770fb4fa3062a54dc81c4c123ea33dc7820964693382b5047e2416bddb",
+      "evidence": "docs/media/localized/es/story-source-04f2e81-snapshot/evidence/result.json",
+      "evidence_sha256": "82344c1fee2d7024f582dd5bd004fba10dbb207ce2c51389bf724ef027479f5e",
+      "provenance": "docs/media/localized/es/story-source-04f2e81-snapshot/provenance.json",
+      "recorded_run_id": "37676480-4330-4a7e-a9b9-d8232ad00792",
+      "duration_s": 10.2,
+      "proof_interval_s": [
+        4.701005859375,
+        10.184005859375
+      ],
+      "gif_source_window_s": [
+        1.201005859375,
+        9.201005859375
+      ],
+      "source_environment": "repository-build",
+      "liveModel": true,
+      "scriptedModel": false,
+      "mockedService": false,
+      "seededAssistantMessages": false,
+      "seededTodoEvents": false,
+      "editorial_cuts": false,
+      "speed_changes": false,
+      "generated_frames": false,
+      "new_api_requests_for_media": 0,
+      "narrative_review": {
+        "status": "PASS",
+        "reviewer_type": "independent agents; not a human user study",
+        "scope": "仅通过“打开历史卡片，查看本次订单核对任务的完成数、待办项及最新答复”这条具体链路。",
+        "not_established": [
+          "输入文字或点击发送的具体动作",
+          "多会话之间的切换",
+          "在不打开会话的情况下检查其他会话",
+          "所有细字在交付尺寸下均可读",
+          "后台业务完成由独立 API 回执核验，不由视觉盲评推断"
+        ],
+        "history": [
+          {
+            "status": "PASS",
+            "method": "Independent reviewer receives only anonymous 16-frame sheets and original frame pixels.",
+            "contact_sheet": "docs/media/story-review/clip05.png",
+            "contact_sheet_sha256": "bdd68f542f61a4c3ebda5e09343f4d4b3ccde1dcb6767a339db694a68bca752b",
+            "sample_times_s": [
+              0.0,
+              0.6666666666666666,
+              1.3333333333333333,
+              2.0,
+              2.6666666666666665,
+              3.3333333333333335,
+              4.0,
+              4.666666666666667,
+              5.333333333333333,
+              6.0,
+              6.666666666666667,
+              7.333333333333333,
+              8.0,
+              8.666666666666666,
+              9.333333333333334,
+              10.0
+            ],
+            "review_report": "docs/media/story-review/cold-viewer-first.json",
+            "review_report_sha256": "aa9bf66c18fed58c69819b93e95095b9109aa56aad15f6cb4ac7128f1eb98067",
+            "review_clip_id": "Clip05",
+            "scope": "仅通过“打开历史卡片，查看本次订单核对任务的完成数、待办项及最新答复”这条具体链路。",
+            "not_established": [
+              "输入文字或点击发送的具体动作",
+              "多会话之间的切换",
+              "在不打开会话的情况下检查其他会话",
+              "所有细字在交付尺寸下均可读"
+            ],
+            "reason": "单片内有鼠标明确位于可读控件、侧栏切换和任务结果三类证据。可以独立复原有限的具体问题→操作→结果。",
+            "reviewer_type": "independent agent",
+            "stage": "initial-sparse-16-frame-review"
+          }
+        ],
+        "sampling_limitation": "Sparse 16-frame review passed this locale on its own pixels."
+      },
+      "preview": {
+        "path": "docs/media/localized/es/story-preview.gif",
+        "sha256": "2d8f00dc576906737e4d2860ae71fd1d7e8614e22aabb8f81a9499dc9527e0ab",
+        "source": "docs/media/localized/es/story-source-04f2e81-snapshot/raw/gt.mp4",
+        "source_sha256": "3b872f60572786ea95abddc5e119644b59ed5547421a0d6a03f0f9ed636a3951",
+        "source_window_s": [
+          1.201005859375,
+          9.201005859375
+        ],
+        "crop_source_pixels": {
+          "x": 0,
+          "y": 210,
+          "width": 280,
+          "height": 330
+        },
+        "width": 520,
+        "height": 612,
+        "duration_s": 8.0,
+        "fps": 12,
+        "loop": true,
+        "speed_changes": false,
+        "editorial_cuts": false,
+        "generated_frames": false,
+        "overlay_text": false,
+        "scope": "Progress preview: native task state and saved reply excerpt. The bottom history switch is outside this crop; the complete video carries the entry action.",
+        "proof_frames": [
+          {
+            "path": "docs/media/story-review/preview/es/before.png",
+            "sha256": "f30019dc54729e0ebf690123d2a90b1046de3e11234dcb3caec980810a9ae077",
+            "requested_preview_time_s": 0.0,
+            "requested_source_time_s": 1.201005859375
+          },
+          {
+            "path": "docs/media/story-review/preview/es/progress.png",
+            "sha256": "37d91a48224d03fb7e694cdff8ba5ff3dbc4efd5fba9de81f5fce34768c086ab",
+            "requested_preview_time_s": 2.5,
+            "requested_source_time_s": 3.701005859375
+          },
+          {
+            "path": "docs/media/story-review/preview/es/result.png",
+            "sha256": "81c78e7e16aced56c0e852209cc7f1a3c58fcd1f5bcef55aa9c889952b7c0955",
+            "requested_preview_time_s": 7.3,
+            "requested_source_time_s": 8.501005859374999
+          }
+        ],
+        "delivery_readability_review": "docs/media/story-review/preview-readability.json",
+        "ocr_status": "PASS",
+        "ocr_report": "docs/media/story-review/preview-ocr/report.json",
+        "ocr_report_sha256": "149a97e5299f0f6ec3fffe26e54cf1b055197c3876de55802fcb470a1d9aab78",
+        "ocr_receipts": [
+          {
+            "path": "docs/media/story-review/preview-ocr/es/progress.ocr.json",
+            "sha256": "19fed409f7c651561725ce52e3b5bd49755d627e20674b927de0d403e248c2bc"
+          },
+          {
+            "path": "docs/media/story-review/preview-ocr/es/result.ocr.json",
+            "sha256": "c9549f48202b44e70b2c5ad5151616ec720388d4ed33bddd1d6775db1a86b5af"
+          }
+        ],
+        "delivery_readability_review_sha256": "bf1c6ae95438ebcab77a7f83310fac734679bec37ae2c8c827384bb9e203a9e8"
+      },
+      "source_directory": "docs/media/localized/es/story-source-04f2e81-snapshot",
+      "recording_commit": null,
+      "source_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b",
+      "recorded_package_version": "0.2.2"
+    }
+  ],
+  "readability_review_separate_from_narrative": true,
+  "motion_frame_map": {
+    "path": "docs/media/story-review/motion-frame-map.json",
+    "sha256": "b2ad46190551897f16496f86c649e81349725f199c5dd0dec072c828dcb68fc2"
+  },
+  "current_version": "0.2.3",
+  "current_base_revision": "adee1c1e2401740696df61b2449e20c14670a9fc",
+  "version_scope": "The independent narrative review proves the archived story whose recorded package hash matches 0.2.2. The 0.2.3 change adds optional usage controls and event calls; task-card rendering, the history switch labels and native task/reply semantics are unchanged. Current 0.2.3 media and fresh staged runtime gates remain separate. No narrative verdict is inherited by the newly recorded 0.2.3 pixels.",
+  "recording_commit": null,
+  "source_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b",
+  "package_version_evidence": {
+    "version": "0.2.2",
+    "path": "docs/media/story-review/recorded-package.json",
+    "sha256": "62440c70e1bff0830d94cfe7efdae26dbdba0debf11575d09ea981709abe57e7",
+    "basis": "The exact package.json bytes from the retaining snapshot match candidateSources.package.json in every recording receipt. This supports the package version, not a recording commit."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "metadata_pass": true,
+  "api_provenance": "PASS",
+  "liveModel": true,
+  "runId": "55fac021-fdbe-4edc-96b1-3eef2e2e1d36",
+  "visual_review": {
+    "status": "PASS",
+    "method": "Actual five-language screenshot and contact-sheet montage visually inspected; QA checks semantic text separately with OCR",
+    "reviewedAt": "2026-11-10T15:48:59.927200+00:00",
+    "artifacts": {
+      "snapshot.png": "3c6c5ff84a86064bc554e6881cc297f2cd5183d9728c56e01d8f189804d70f1e",
+      "contact-sheet.png": "701592133510b1454aaeeca33267ce904754d706cd193c3471b70b61fec20709",
+      "interaction-strip.png": "1082d17e96382d9949e68d2bde860235fbcfaf7e051285eb6d3335fec04e2420"
+    },
+    "findings": "ja original DSH host UI, sidebar session card and two completed of three TODO tasks visible; native conversation and assistant summary persist. Dark UI and own locale labels inspected alongside complete timeline contact sheet. Model API session run 55fac021-fdbe-4edc-96b1-3eef2e2e1d36; independent pixel OCR still required.",
+    "finalResultHold_s": {
+      "demo.mp4": 5.44
+    }
+  },
+  "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."
+}

@@ -8,9 +8,19 @@ This independent, MIT-licensed plugin uses DSH's official projection and sidebar
 
 ## Feature video
 
+An order check is running, but the native sidebar only shows its title. Open **History cards**, then watch the card move from **0/3** to **2/3** and retain the model's saved reply. **Publish release** stays pending. The [complete English recording](docs/media/live/story-source-04f2e81-snapshot/raw/gt.mp4) preserves the real wait and final result; the eight-second progress preview is a continuous sidebar crop. The complete video shows the history switch and the full reply.
+
+**Archived real API progress story.** Its recorded package hash matches 0.2.2. The current 0.2.3 API recordings and verification remain linked below.
+
+[![Eight-second preview recorded with the official DeepSeek API](docs/media/live/story-preview.gif)](docs/media/live/story-source-04f2e81-snapshot/raw/gt.mp4)
+
+[Install the plugin](#install)
+
+[Full-frame source excerpt (0.2.2)](docs/media/live/story-source-04f2e81-snapshot/feature-8s.gif) · [MP4](docs/media/live/story-source-04f2e81-snapshot/raw/gt.mp4)
+
 **Verified real API media for 0.2.3.** The five language captures passed actual-text, pixel, provenance and playback checks. See the [verification report](docs/verification.md).
 
-[![Eight-second preview recorded with the official DeepSeek API](docs/media/live/feature-8s.gif)](docs/media/live/demo.mp4)
+[Full-frame eight-second preview](docs/media/live/feature-8s.gif)
 
 [Watch the demo with a written walkthrough](https://liush2yuxjtu.github.io/dsh-sidebar-history/demo/) · [Real API video](docs/media/live/demo.mp4) · [Actual browser snapshot](docs/media/live/snapshot.png) · [API receipts](docs/media/live/evidence/result.json)
 
@@ -18,11 +28,7 @@ A fresh DSH session calls the official DeepSeek API. The model reads generated d
 
 The video preserves the exact original capture bytes and real elapsed time. The screenshot comes from that same API run. No scripted model, seeded assistant message, seeded task event or mock endpoint is used. [Media provenance and hashes](docs/media/live/provenance.json) · [Media QA](docs/media/live/qa.json).
 
-
-
-## Story-first product demo (new edit)
-
-A longer **problem → action → payoff** video is now available. This is a traceable edit of the existing real DeepSeek API recording, not a new API request. The original 8-second feature GIF and its proof are unchanged. Independent cold-viewer story approval is still pending. See [storyboard, video links, exact cuts and QA](docs/media/story-first.md).
+[Install the plugin](#install) to show the same progress and reply previews in your own DSH history. See the [five-language story and source record](docs/media/story-first.md). The earlier 20-second edit used a controlled adapter and has been withdrawn from release demonstration use; its original bytes and correction remain in the source record.
 
 ## Find and resume work
 
@@ -35,7 +41,6 @@ Task state comes only from `todo/write`. A new `turn/start` clears the previous 
 Markdown previews render bold, emphasis, strikethrough, and code with the same GFM grammar used by DSH. Lists and tables become compact readable text. Links show their labels and images show their alt text. The read-only preview does not navigate, load remote images, or interpret raw HTML. Open the conversation for the full native rendering. Card descriptions expose task counts, individual task states, reply text, and turn context to accessibility APIs.
 
 The host stores a bounded `sidebarHistory` projection in each session's normal summary. Version 2 replays old checkpoints from durable logs without activating historical agents. Cold cards read projections on demand, with explicit loading and failure states. The client renders the viewport plus overscan. Archived sessions stay hidden. Search combines cached titles and replies with DSH's official content search. A failed remote search keeps local matches, marks the results incomplete, and offers **Retry search**. A result-limit notice identifies truncated content search. Remote-only matches and their scroll position survive a navigation round trip. Keyboard navigation supports Up, Down, Home, End, and Enter.
-
 
 The sidebar supports English, Simplified Chinese, Traditional Chinese, Japanese, and Spanish, following DSH's language setting. Each README points to its own language-specific media in [locales.json](docs/media/locales.json). The Traditional Chinese native-host pack covers 17 namespaces and 1829 keys, including the demonstrated screens; other host namespaces can fall back to Simplified Chinese. [Language-pack provenance](src/zh-tw-host-provenance.json) records the sources and scope.
 

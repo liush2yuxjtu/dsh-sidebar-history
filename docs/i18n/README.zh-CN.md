@@ -8,15 +8,27 @@
 
 这是一个采用 MIT 许可证的独立插件。它使用 DSH 官方投影和侧栏插槽 API，不修改上游 DSH 源码。
 
-## 功能视频
+## 看清已完成与待处理的任务
+
+订单核对正在运行，原侧栏只显示会话标题。打开 **历史卡片**，卡片进度从 **0/3** 变为 **2/3**，并显示模型保存的正式回复。「发布版本」仍待处理。8 秒进度预览是侧栏的连续裁切，保留真实速度。完整视频展示历史入口操作和完整回复。
+
+**已归档的真实 API 进度故事。** 录制回执中的包哈希匹配 0.2.2。 下方另附当前 0.2.3 的真实 API 录屏与验证。
+
+[![DSH 历史卡片显示真实 TODO 进度和最新 Assistant 回复](../media/localized/zh-CN/story-preview.gif)](../media/localized/zh-CN/story-source-04f2e81-snapshot/raw/gt.mp4)
+
+[安装侧栏插件](#安装侧栏插件)
+
+[完整画面来源片段（0.2.2）](../media/localized/zh-CN/story-source-04f2e81-snapshot/feature-8s.gif) · [MP4](../media/localized/zh-CN/story-source-04f2e81-snapshot/raw/gt.mp4)
 
 **0.2.3 五语媒体验证通过。** 五套素材已通过真实文本、像素、来源与播放检查，参见[验证报告](../verification.md)。
 
-[![DSH 历史卡片显示真实 TODO 进度和最新 Assistant 回复](../media/localized/zh-CN/feature-8s.gif)](../media/localized/zh-CN/demo.mp4)
+[8 秒完整画面预览](../media/localized/zh-CN/feature-8s.gif)
 
 [观看真实 API 视频](../media/localized/zh-CN/demo.mp4) · [实际浏览器截图](../media/localized/zh-CN/snapshot.png) · [API 回执](../media/localized/zh-CN/evidence/result.json)
 
 全新的 DSH 会话调用 DeepSeek 官方 API。模型读取演示订单输入，调用原生 TODO 工具，并保存自己的回答。侧栏显示 2/3 项任务已完成，以及该会话保存的回复。视频保留原始录制字节和真实时长。录制中没有 mock 接口、脚本回复，也没有预先写入 Assistant 消息或 TODO 事件。另一个真实 API 会话和刷新恢复也已检查。参见[媒体来源与哈希](../media/localized/zh-CN/provenance.json)和[媒体检查结果](../media/localized/zh-CN/qa.json)。
+
+[安装侧栏插件](#安装侧栏插件) · [故事与来源记录](../media/story-first.md)
 
 ## 查找并继续工作
 

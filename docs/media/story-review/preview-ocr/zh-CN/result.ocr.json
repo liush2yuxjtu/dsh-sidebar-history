@@ -1,0 +1,264 @@
+{
+  "file": "/Users/liushiyu/projects/dsh-sidebar-story-20261111/docs/media/story-review/preview/zh-CN/result.png",
+  "sha256": "af5d2158f963e8974b29e738bd8aa9761fa8c9f84ba8cf3bd03bd98eda05e6cc",
+  "locale": "zh-CN",
+  "terms": [
+    "2/3",
+    "历史会话",
+    "读取订单数据",
+    "核对订单金额",
+    "发布版本"
+  ],
+  "language": "zh-Hans",
+  "lines": [
+    {
+      "box": [
+        0.0689077171223606,
+        0.8617240169144998,
+        0.19679995316725513,
+        0.04779379508074599
+      ],
+      "confidence": 1,
+      "segments": [
+        {
+          "classificationText": "历史会话",
+          "hypotheses": {
+            "ja": 2.0500512398768933e-10,
+            "zh-Hans": 1,
+            "zh-Hant": 7.641266858660295e-17
+          },
+          "language": "zh-Hans",
+          "text": "历史会话"
+        }
+      ],
+      "text": "历史会话"
+    },
+    {
+      "box": [
+        0.09594741332860893,
+        0.7575406827184294,
+        0.17733594454251803,
+        0.043742165845983116
+      ],
+      "confidence": 0.5,
+      "segments": [
+        {
+          "classificationText": "搜案会话",
+          "hypotheses": {
+            "ja": 0.000010976609701174311,
+            "zh-Hans": 0.9999890327453613,
+            "zh-Hant": 1.1302635494203628e-9
+          },
+          "language": "zh-Hans",
+          "text": "搜案会话"
+        }
+      ],
+      "text": "搜案会话"
+    },
+    {
+      "box": [
+        0.7615384629807693,
+        0.8627450982298475,
+        0.17307692307692302,
+        0.042483660130719025
+      ],
+      "confidence": 0.5,
+      "segments": [
+        {
+          "classificationText": "1个会话",
+          "hypotheses": {
+            "ja": 3.148558313704775e-16,
+            "zh-Hans": 1,
+            "zh-Hant": 3.86976525946744e-27
+          },
+          "language": "zh-Hans",
+          "text": "1个会话"
+        }
+      ],
+      "text": "1个会话"
+    },
+    {
+      "box": [
+        0.09230769222527466,
+        0.6176470584500466,
+        0.696153846153846,
+        0.05228758169934644
+      ],
+      "confidence": 0.5,
+      "segments": [
+        {
+          "classificationText": "对  。",
+          "hypotheses": {
+            "ja": 2.5386566098522234e-31,
+            "zh-Hans": 1,
+            "zh-Hant": 2.2340971481653775e-39
+          },
+          "language": "zh-Hans",
+          "text": "对 orders.json。"
+        },
+        {
+          "classificationText": "全程使用简体中",
+          "hypotheses": {
+            "ja": 0.004491507541388273,
+            "zh-Hans": 0.9931642413139343,
+            "zh-Hant": 0.002344263019040227
+          },
+          "language": "zh-Hans",
+          "text": "全程使用简体中"
+        }
+      ],
+      "text": "对 orders.json。全程使用简体中"
+    },
+    {
+      "box": [
+        0.08791667283187944,
+        0.504443659296604,
+        0.21647434234619145,
+        0.04666823655172114
+      ],
+      "confidence": 0.5,
+      "segments": [
+        {
+          "classificationText": "2/3项任务",
+          "hypotheses": {
+            "ja": 5.2709805652354105e-18,
+            "zh-Hans": 1,
+            "zh-Hant": 7.088299566443815e-23
+          },
+          "language": "zh-Hans",
+          "text": "2/3项任务"
+        }
+      ],
+      "text": "2/3项任务"
+    },
+    {
+      "box": [
+        0.16144191328903157,
+        0.44089954241127705,
+        0.1809623278104342,
+        0.046305491254220565
+      ],
+      "confidence": 1,
+      "segments": [
+        {
+          "classificationText": "发布版本",
+          "hypotheses": {
+            "ja": 0.0004731041844934225,
+            "zh-Hans": 0.9995269179344177,
+            "zh-Hant": 1.5736373981667384e-8
+          },
+          "language": "zh-Hans",
+          "text": "发布版本"
+        }
+      ],
+      "text": "发布版本"
+    },
+    {
+      "box": [
+        0.16522252140371094,
+        0.3848883047768282,
+        0.26186265211838944,
+        0.04394888098722971
+      ],
+      "confidence": 1,
+      "segments": [
+        {
+          "classificationText": "读取订单数据",
+          "hypotheses": {
+            "ja": 2.0775003939377257e-10,
+            "zh-Hans": 1,
+            "zh-Hant": 1.1866241259180735e-14
+          },
+          "language": "zh-Hans",
+          "text": "读取订单数据"
+        }
+      ],
+      "text": "读取订单数据"
+    },
+    {
+      "box": [
+        0.16127244701690427,
+        0.325544586514109,
+        0.2697628021240235,
+        0.0449892601935693
+      ],
+      "confidence": 0.5,
+      "segments": [
+        {
+          "classificationText": "核对订单金额",
+          "hypotheses": {
+            "ja": 1.2803462886526885e-14,
+            "zh-Hans": 1,
+            "zh-Hant": 4.8225543746418385e-18
+          },
+          "language": "zh-Hans",
+          "text": "核对订单金额"
+        }
+      ],
+      "text": "核对订单金额"
+    },
+    {
+      "box": [
+        0.7843008488614513,
+        0.5058480837764802,
+        0.1275521498460036,
+        0.04385938831404146
+      ],
+      "confidence": 1,
+      "segments": [
+        {
+          "classificationText": "23:43",
+          "hypotheses": {},
+          "language": "und",
+          "text": "23:43"
+        }
+      ],
+      "text": "23:43"
+    },
+    {
+      "box": [
+        0.09615384955128198,
+        0.24183006552287578,
+        0.6115384615384616,
+        0.042483660130718914
+      ],
+      "confidence": 0.30000001192092896,
+      "segments": [
+        {
+          "classificationText": "• 核对编号 ea5ed592已读取",
+          "hypotheses": {
+            "ja": 1.0154321827826607e-10,
+            "zh-Hans": 1,
+            "zh-Hant": 5.680279922641585e-13
+          },
+          "language": "zh-Hans",
+          "text": "• 核对编号 ea5ed592已读取"
+        }
+      ],
+      "text": "• 核对编号 ea5ed592已读取"
+    },
+    {
+      "box": [
+        0.16153846772435893,
+        0.18300653597494565,
+        0.7423076923076923,
+        0.04901960784313719
+      ],
+      "confidence": 0.5,
+      "segments": [
+        {
+          "classificationText": ",前两项任务已完成..",
+          "hypotheses": {
+            "ja": 1.539355101720652e-11,
+            "zh-Hans": 1,
+            "zh-Hant": 7.280443066991216e-13
+          },
+          "language": "zh-Hans",
+          "text": "orders.json，前两项任务已完成.."
+        }
+      ],
+      "text": "orders.json，前两项任务已完成.."
+    }
+  ],
+  "text": "历史会话\n搜案会话\n1个会话\n对 orders.json。全程使用简体中\n2/3项任务\n发布版本\n读取订单数据\n核对订单金额\n23:43\n• 核对编号 ea5ed592已读取\norders.json，前两项任务已完成.."
+}

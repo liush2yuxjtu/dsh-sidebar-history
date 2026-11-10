@@ -1,0 +1,47 @@
+{
+  "mediaLocale": "zh-TW",
+  "hostLocale": "zh-TW",
+  "htmlLang": "zh-TW",
+  "runId": "123db8c4-2509-42a7-a041-9876867b1e74",
+  "provider": "deepseek-official",
+  "model": "deepseek-flash",
+  "liveModel": true,
+  "mockedService": false,
+  "scriptedModel": false,
+  "duration_s": 10.633333,
+  "gif_source_window_s": [
+    1.82126708984375,
+    9.82126708984375
+  ],
+  "proof_interval_s": [
+    5.32126708984375,
+    10.63626708984375
+  ],
+  "video_is_exact_original_recording": true,
+  "artifacts": {
+    "demo.mp4": "5fe1fac002be74f4d4af63336a4c389311288f3ddc96d0a13b1776310c1d8d87",
+    "feature-8s.gif": "a39a258da787cb3968240b2d020211744d409d47c25cd4e193b702ccd48353e4",
+    "snapshot.png": "78ce6dddef83343971d77f7af624abda9618dd0ad36ba3774184aa206a601fab",
+    "poster.png": "78ce6dddef83343971d77f7af624abda9618dd0ad36ba3774184aa206a601fab",
+    "raw/gt.mp4": "5fe1fac002be74f4d4af63336a4c389311288f3ddc96d0a13b1776310c1d8d87",
+    "contact-sheet.png": "0e7c335a9fc42830604196d5572c21dd78f2c1a2d3d29fa85675c537cc964b1e",
+    "interaction-strip.png": "58ab3527367f2562ede5ec8fd89c8a0f12a42ccf09991d6f0c127e3431c15bce",
+    "evidence/result.json": "3f77533a958f6e6208cab3d2012fdf20550ee52050b7f5c4ba6906773c90cc38",
+    "evidence/native-events.json": "f79b3b5856fed9ed053a9474df5363315d05b4d95be3017df229988adf3e94ce",
+    "evidence/preflight.png": "5c59a98f08dffc5ee442c5e6030d93bb9c326f057579da254063236010fde7b8",
+    "evidence/progress.png": "ad98282a4254f31a9f08a9c60c47c92faece0c92e92995b475dec329e19cfe36",
+    "evidence/final.png": "78ce6dddef83343971d77f7af624abda9618dd0ad36ba3774184aa206a601fab",
+    "evidence/reloaded.png": "8cd7ac9680b84de55ae13ffeb8da5f15077393d2ab9099960cc39ba9f7cd40f0",
+    "evidence/navigation-restored.png": "8978c062e1f61f16195a8ce694cb9a8a043383431c890522a164b97bc3ce764d",
+    "evidence/offline-search.png": "d6ae59d8ea00c17f633738e30b775a396ac98fce96f6ee36dda8d269ead958a8",
+    "evidence/mobile.png": "fa0fde36380f23cce9745be471d49cdc7d838230b49c780953334384c15eabc1",
+    "evidence/zoom-equivalent-reflow.png": "69aea362a4d067a0455d3749648e731956d70732db6140700d7f37d3538361e3",
+    "evidence/light-theme.png": "ab83c721bb481c36a9748e242e89c215b2fb40d9416c50c0d76d057e73497740",
+    "evidence/dark-theme.png": "a22f66a0763421a4a3692e8832a9175a2cff9b135ed6238a6d0f07bfdcd88f7c",
+    "evidence/earlier-reply.png": "307fcfdfbaab92e4ddb885d587df30d21f556b304264479f9ce4844e7cb1387d",
+    "evidence/followup.png": "c80968914f47c09da48078663adac01707ed4f372d56d6929097338a7bc2c6d9",
+    "evidence/stopped.png": "e23e67e9a9a96cf4052e5f5ac0bda79b328d4ef2994583fda98c0368c3bbf570",
+    "evidence/restarted.png": "b8e47717a25b0b79fcf1017e97b08db5b935821ecb87f0994cf8967c395fa330",
+    "evidence/lifecycle-reloaded.png": "53eb88845695e1f8ceec1615cd31f676b4cbd29cb480c8371c8c3e3a558e2d63"
+  }
+}

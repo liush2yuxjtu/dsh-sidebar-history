@@ -1,0 +1,44 @@
+{
+  "scope": "Selected byte-for-byte media from the retaining repository snapshot, not a claimed recording commit. Other assets named by the original provenance and QA remain available at this immutable snapshot.",
+  "artifacts": [
+    {
+      "path": "raw/gt.mp4",
+      "sha256": "8d2fd67e3571ebe88cf9c3b9eeaa5ef1262e58f94e5203818aa41cdd1ea48233",
+      "original_path": "docs/media/live/raw/gt.mp4",
+      "original_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b"
+    },
+    {
+      "path": "feature-8s.gif",
+      "sha256": "31985d8811b02bd01cf4abda63dc9a8db1ace90cc2341cf77337b1127125685f",
+      "original_path": "docs/media/live/feature-8s.gif",
+      "original_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b"
+    },
+    {
+      "path": "evidence/result.json",
+      "sha256": "3abe722d337d612a05e84c129176d6193e09bc261ac4c861559368bce38a14cc",
+      "original_path": "docs/media/live/evidence/result.json",
+      "original_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b"
+    },
+    {
+      "path": "evidence/native-events.json",
+      "sha256": "05d8cf47a7b832eba2c47da3ab36ee9f0300ac687696fed5af3061702065c117",
+      "original_path": "docs/media/live/evidence/native-events.json",
+      "original_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b"
+    },
+    {
+      "path": "provenance.json",
+      "sha256": "d5ce1220d03a2a1c5746f25d0abad15bec48bc94282e1fae1cd0b49c6e943108",
+      "original_path": "docs/media/live/provenance.json",
+      "original_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b"
+    },
+    {
+      "path": "qa.json",
+      "sha256": "3f454fdea9e485f2868c76d1db617fbbe3fec5d2d4cff2b1ef7151940ff5d5d8",
+      "original_path": "docs/media/live/qa.json",
+      "original_snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b"
+    }
+  ],
+  "snapshot_revision": "04f2e81cefca978a8ecb442900be90c913db065b",
+  "recording_commit": null,
+  "recorded_package_version_by_hash": "0.2.2"
+}
