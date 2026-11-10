@@ -1,0 +1,66 @@
+name: Publish npm package (Trusted Publishing)
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: npm-publish-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.event_name == 'workflow_dispatch' || !github.event.release.prerelease
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Check out immutable release ref
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
+      - name: Validate release tag and package metadata
+        shell: bash
+        env:
+          REF_NAME: ${{ github.ref_name }}
+          REF_TYPE: ${{ github.ref_type }}
+          GIT_EVENT: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          test "$REF_TYPE" = tag || { echo 'BLOCKED: trigger from an immutable version tag, not a branch.'; exit 1; }
+          node --input-type=module - <<'NODE'
+          import fs from 'node:fs';
+          const pkg = JSON.parse(fs.readFileSync('package.json','utf8'));
+          const ref = process.env.REF_NAME;
+          if (pkg.name !== 'dsh-sidebar-history' || ref !== `v${pkg.version}`)
+            throw new Error(`tag ${ref} does not match ${pkg.name}@${pkg.version}`);
+          if (!pkg.license || !pkg.repository?.url || !pkg.dsh?.client)
+            throw new Error('Required package metadata is missing');
+          console.log(`Release validated: ${pkg.name}@${pkg.version}`);
+          NODE
+          npm --version
+          npm pack --dry-run --json > /tmp/npm-pack-audit.json
+          node --input-type=module - <<'NODE'
+          import fs from 'node:fs';
+          const pkg=JSON.parse(fs.readFileSync('/tmp/npm-pack-audit.json','utf8'))[0];
+          const bad=pkg.files.filter(f=>/(^|\/)(\.env|\.npmrc|\.runtime|node_modules)(\/|$)|\.(pem|key)$|credential|secret/i.test(f.path));
+          if(bad.length) throw new Error(`Sensitive files in package: ${bad.map(x=>x.path).join(', ')}`);
+          if (!pkg.files.some(f=>f.path==='client.js') || !pkg.files.some(f=>f.path==='index.mjs'))
+            throw new Error('Distribution entry points missing');
+          console.log(`Pack audited: ${pkg.files.length} files, ${pkg.size} bytes`);
+          NODE
+      - name: Publish via npm OIDC, no long-lived token
+        env:
+          NPM_CONFIG_REGISTRY: https://registry.npmjs.org/
+        run: npm publish --access public --ignore-scripts
