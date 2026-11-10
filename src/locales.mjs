@@ -56,7 +56,16 @@ export const sidebarDictionaries = {
     "error": "Failed",
     "max-tokens": "Token limit reached",
     "interrupted": "Interrupted",
-    "forked": "Forked"
+    "forked": "Forked",
+    "usageTitle": "Usage statistics",
+    "usageDisclosure": "Off by default. Send fixed action names, plugin version, interface language and a random event ID to Supabase. No chat, tasks, search terms, session IDs or installation IDs. Stored for 30 days. Hosting infrastructure can observe network metadata. Turning off stops new events; already received events expire automatically.",
+    "usageEnable": "Share usage statistics",
+    "usageBlocked": "Blocked by your browser privacy preference.",
+    "usageStorageError": "Could not save the setting. Collection stays unchanged.",
+    "usageStatus": "Accepted: {sent} · Failed: {failed} · Pending: {pending}",
+    "usageTest": "Send test event",
+    "usageForget": "Turn off and forget",
+    "usageClose": "Close"
   },
   "zh": {
     "history": "历史会话",
@@ -91,7 +100,16 @@ export const sidebarDictionaries = {
     "error": "失败",
     "max-tokens": "达到 Token 上限",
     "interrupted": "已中断",
-    "forked": "已分支"
+    "forked": "已分支",
+    "usageTitle": "使用统计",
+    "usageDisclosure": "默认关闭。向 Supabase 发送固定操作名、插件版本、界面语言和随机事件编号。不发送聊天、任务、搜索词、会话或安装标识。保存 30 天。托管平台可观察网络元数据。关闭后停止新事件，已接收事件到期自动清理。",
+    "usageEnable": "分享使用统计",
+    "usageBlocked": "浏览器隐私偏好已阻止采集。",
+    "usageStorageError": "无法保存设置，采集状态未更改。",
+    "usageStatus": "已接收：{sent} · 失败：{failed} · 待发送：{pending}",
+    "usageTest": "发送测试事件",
+    "usageForget": "关闭并清除设置",
+    "usageClose": "关闭"
   },
   "zh-TW": {
     "history": "歷史會話",
@@ -126,7 +144,16 @@ export const sidebarDictionaries = {
     "error": "失敗",
     "max-tokens": "達到 Token 上限",
     "interrupted": "已中斷",
-    "forked": "已分支"
+    "forked": "已分支",
+    "usageTitle": "使用統計",
+    "usageDisclosure": "預設關閉。向 Supabase 傳送固定操作名稱、外掛版本、介面語言與隨機事件編號。不傳送聊天、任務、搜尋詞、對話或安裝識別碼。儲存 30 天。託管平台可觀察網路中繼資料。關閉後停止新事件，已接收事件到期自動清除。",
+    "usageEnable": "分享使用統計",
+    "usageBlocked": "瀏覽器隱私偏好已阻止蒐集。",
+    "usageStorageError": "無法儲存設定，蒐集狀態未變更。",
+    "usageStatus": "已接收：{sent} · 失敗：{failed} · 待傳送：{pending}",
+    "usageTest": "傳送測試事件",
+    "usageForget": "關閉並清除設定",
+    "usageClose": "關閉"
   },
   "ja": {
     "history": "チャット履歴",
@@ -161,7 +188,16 @@ export const sidebarDictionaries = {
     "error": "失敗",
     "max-tokens": "トークン上限に到達",
     "interrupted": "中断",
-    "forked": "分岐済み"
+    "forked": "分岐済み",
+    "usageTitle": "利用統計",
+    "usageDisclosure": "初期設定では無効です。固定の操作名、プラグインのバージョン、表示言語、ランダムなイベント番号を Supabase に送信します。会話、タスク、検索語、セッションやインストールの識別子は送信しません。保存期間は30日です。運営基盤は通信情報を観測できます。無効にすると新しい送信が止まり、受信済みの情報は期限後に削除されます。",
+    "usageEnable": "利用統計を共有する",
+    "usageBlocked": "ブラウザーのプライバシー設定により収集が停止されています。",
+    "usageStorageError": "設定を保存できませんでした。収集状態は変更されていません。",
+    "usageStatus": "受信済み: {sent} · 失敗: {failed} · 送信待ち: {pending}",
+    "usageTest": "テストイベントを送信",
+    "usageForget": "無効にして設定を消去",
+    "usageClose": "閉じる"
   },
   "es": {
     "history": "Historial de chats",
@@ -196,7 +232,16 @@ export const sidebarDictionaries = {
     "error": "Fallida",
     "max-tokens": "Límite de tokens alcanzado",
     "interrupted": "Interrumpida",
-    "forked": "Bifurcada"
+    "forked": "Bifurcada",
+    "usageTitle": "Estadísticas de uso",
+    "usageDisclosure": "Desactivadas por defecto. Envía nombres fijos de acciones, versión del complemento, idioma y un identificador aleatorio del evento a Supabase. No envía chats, tareas, búsquedas ni identificadores de sesión o instalación. Conservación: 30 días. La infraestructura puede observar metadatos de red. Al desactivar se detienen los eventos nuevos; los recibidos caducan automáticamente.",
+    "usageEnable": "Compartir estadísticas de uso",
+    "usageBlocked": "La preferencia de privacidad del navegador bloquea la recopilación.",
+    "usageStorageError": "No se pudo guardar la configuración. La recopilación no ha cambiado.",
+    "usageStatus": "Aceptados: {sent} · Fallidos: {failed} · Pendientes: {pending}",
+    "usageTest": "Enviar evento de prueba",
+    "usageForget": "Desactivar y borrar ajustes",
+    "usageClose": "Cerrar"
   }
 };
 

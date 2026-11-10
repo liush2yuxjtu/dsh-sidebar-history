@@ -1,6 +1,6 @@
 # DSH Sidebar History para DeepSeek Harness
 
-Este checkout compila la versión 0.2.2. Las instrucciones crean el paquete desde este código; el Release publicado puede corresponder a una versión anterior.
+Este checkout compila la versión 0.2.3. Las instrucciones crean el paquete desde este código; el Release publicado puede corresponder a una versión anterior.
 
 [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md)
 
@@ -10,7 +10,7 @@ Es un plugin independiente con licencia MIT. Usa las API oficiales de proyecció
 
 ## Vídeo de la función
 
-**El material de 0.2.1 supera la verificación en cinco idiomas.** Se comprobaron textos reales, píxeles, procedencia y reproducción. Consulta el [informe de verificación](../verification.md).
+**El material de 0.2.3 supera la verificación en cinco idiomas.** Se comprobaron textos reales, píxeles, procedencia y reproducción. Consulta el [informe de verificación](../verification.md).
 
 [![Las tarjetas de DSH muestran el progreso real de TODO y la última respuesta del asistente](../media/localized/es/feature-8s.gif)](../media/localized/es/demo.mp4)
 
@@ -40,7 +40,7 @@ Crea un tarball local e instálalo en el profile `web`:
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.2.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.3.tgz"
 ```
 
 Abre DSH Web. La barra lateral muestra tarjetas para las sesiones sin archivar. Sustituye `web` si usas otro profile Web. La opción `--profile` debe ir antes de `add`. También puedes instalar el tarball local con el gestor de plugins de DSH. Consulta la [guía de instalación de DSH](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md).
@@ -51,7 +51,7 @@ El paquete incluye un módulo de navegador ya compilado. Tras editar `src/client
 
 Los mantenedores pueden ejecutar `npm run telemetry:collect` con acceso autorizado a GitHub. El script obtiene visitas al repositorio, clones, sitios de referencia, estrellas y descargas de archivos de Release. Genera informes locales en JSON y Markdown. Las API de tráfico no disponibles se marcan como **BLOCKED**, no como cero.
 
-El plugin no instala un SDK de seguimiento. El script no contacta con los usuarios del plugin ni recopila el contenido del chat. Los clics en funciones y la retención de usuarios aún no se miden. La [guía de telemetría](../telemetry.md) describe las métricas disponibles y un diseño propuesto de eventos con consentimiento.
+Las «Estadísticas de uso» del pie de la barra lateral están desactivadas por defecto. Solo con consentimiento se envían a Supabase nombres fijos de acciones, versión, idioma e identificadores aleatorios de eventos. No se envían chats, tareas, búsquedas ni identificadores de sesión o instalación. Se respetan las preferencias de privacidad del navegador y se permite desactivar y borrar ajustes. La conservación es de 30 días. Se cuentan eventos, no usuarios únicos ni retención. La infraestructura puede observar metadatos de red. Consulte la [guía de telemetría](../telemetry.md).
 
 ## Verifica un cambio
 

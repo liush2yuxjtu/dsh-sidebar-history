@@ -1,22 +1,26 @@
 [
   {
     "label": "\u6ce8\u6587\u306e\u78ba\u8a8d\u3092\u958b\u59cb",
-    "time_s": 0.007
+    "time_s": 0.005
   },
   {
     "label": "DeepSeek \u306b\u9001\u4fe1",
-    "time_s": 1.112
+    "time_s": 1.108
   },
   {
     "label": "\u5c65\u6b74\u30ab\u30fc\u30c9\u3092\u958b\u304f",
-    "time_s": 3.12
+    "time_s": 2.614
   },
   {
     "label": "\u30bf\u30b9\u30af\u306e\u9032\u6357",
-    "time_s": 3.422
+    "time_s": 2.77
   },
   {
     "label": "\u4fdd\u5b58\u3055\u308c\u305f\u8fd4\u4fe1\u3092\u78ba\u8a8d",
-    "time_s": 5.689
+    "time_s": 5.926
+  },
+  {
+    "label": "\u9332\u753b\u7d42\u4e86",
+    "time_s": 11.218
   }
 ]

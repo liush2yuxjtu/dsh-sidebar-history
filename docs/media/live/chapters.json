@@ -1,22 +1,26 @@
 [
   {
     "label": "New order audit",
-    "time_s": 0.007
+    "time_s": 0.008
   },
   {
     "label": "Send to DeepSeek",
-    "time_s": 1.111
+    "time_s": 1.112
   },
   {
     "label": "Open history cards",
-    "time_s": 2.548
+    "time_s": 2.748
   },
   {
     "label": "Native task progress",
-    "time_s": 2.75
+    "time_s": 3.04
   },
   {
     "label": "Saved reply verified",
-    "time_s": 5.587
+    "time_s": 4.455
+  },
+  {
+    "label": "End of recording",
+    "time_s": 9.858
   }
 ]

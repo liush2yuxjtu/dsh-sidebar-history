@@ -1,3 +1,4 @@
+import { browserOptions } from './browser-options.mjs';
 import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
@@ -66,7 +67,7 @@ it('keeps Japanese Markdown and CJK inline code inside two readable preview line
   let browser;
   try {
     for (const item of cases) await seedSession(scaffold, fixture(item), item.id);
-    browser = await chromium.launch({ headless: true, ...(process.env.DSH_CHROMIUM_PATH ? { executablePath: process.env.DSH_CHROMIUM_PATH } : {}) });
+    browser = await chromium.launch(browserOptions());
     const page = await browser.newPage({ viewport: { width: 1280, height: 800 }, locale: 'ja-JP', colorScheme: 'dark' });
     await page.goto(scaffold.authenticatedUrl, { waitUntil: 'domcontentloaded' });
     const results = { fixtureData: true, liveModel: false, cases: [] };

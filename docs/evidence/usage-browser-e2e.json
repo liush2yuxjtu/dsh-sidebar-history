@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "endpoint": "https://mezthyaerhhohywcxmqi.supabase.co/functions/v1/dsh-sidebar-events",
+  "requests": [
+    {
+      "schema_version": 1,
+      "event_id": "511f9f06-e7c5-4f03-ba54-87fe0e738583",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "plugin_loaded"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "55fe23f6-8a06-429f-b5ca-1e9a1c378dde",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "diagnostic_test"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "94a3485b-457c-4abe-83d4-34fa8ba14d6c",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "card_open_requested"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "4bda7aee-b812-4fe5-b94a-9fdcfb890fad",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "search_zero"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "12bf57ed-3a80-4e10-892b-e7446f5f23f5",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "native_navigation_selected"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "57b9324c-ac64-4061-a4fc-8a7048f8708a",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "history_cards_selected"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "a2b4e0b5-62c1-4eb9-a727-6d752ee70b69",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "search_error"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "f15fb7aa-0135-4aab-b6e7-54369e60f73f",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "plugin_loaded"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "f5993917-bfcb-4abc-be78-979be121a03b",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "projection_ready"
+    }
+  ],
+  "responses": [
+    {
+      "event_id": "511f9f06-e7c5-4f03-ba54-87fe0e738583",
+      "status": 202
+    },
+    {
+      "event_id": "55fe23f6-8a06-429f-b5ca-1e9a1c378dde",
+      "status": 202
+    },
+    {
+      "event_id": "94a3485b-457c-4abe-83d4-34fa8ba14d6c",
+      "status": 202
+    },
+    {
+      "event_id": "4bda7aee-b812-4fe5-b94a-9fdcfb890fad",
+      "status": 202
+    },
+    {
+      "event_id": "12bf57ed-3a80-4e10-892b-e7446f5f23f5",
+      "status": 202
+    },
+    {
+      "event_id": "57b9324c-ac64-4061-a4fc-8a7048f8708a",
+      "status": 202
+    },
+    {
+      "event_id": "a2b4e0b5-62c1-4eb9-a727-6d752ee70b69",
+      "status": 202
+    },
+    {
+      "event_id": "f15fb7aa-0135-4aab-b6e7-54369e60f73f",
+      "status": 202
+    }
+  ],
+  "networkFailures": [
+    {
+      "errorText": "net::ERR_ABORTED"
+    }
+  ],
+  "checks": [
+    "default-off-no-network",
+    "actual-card-request",
+    "zero-result-search",
+    "controlled-search-error-event",
+    "native-navigation-round-trip",
+    "consent-survives-reload",
+    "revocation-stops-network",
+    "forget-consent",
+    "no-chat-search-or-session-values-in-wire-payload",
+    "every-event-independently-read-back-from-supabase"
+  ],
+  "receipts": [
+    {
+      "event_id": "511f9f06-e7c5-4f03-ba54-87fe0e738583",
+      "stored": true
+    },
+    {
+      "event_id": "55fe23f6-8a06-429f-b5ca-1e9a1c378dde",
+      "stored": true
+    },
+    {
+      "event_id": "94a3485b-457c-4abe-83d4-34fa8ba14d6c",
+      "stored": true
+    },
+    {
+      "event_id": "4bda7aee-b812-4fe5-b94a-9fdcfb890fad",
+      "stored": true
+    },
+    {
+      "event_id": "12bf57ed-3a80-4e10-892b-e7446f5f23f5",
+      "stored": true
+    },
+    {
+      "event_id": "57b9324c-ac64-4061-a4fc-8a7048f8708a",
+      "stored": true
+    },
+    {
+      "event_id": "a2b4e0b5-62c1-4eb9-a727-6d752ee70b69",
+      "stored": true
+    },
+    {
+      "event_id": "f15fb7aa-0135-4aab-b6e7-54369e60f73f",
+      "stored": true
+    }
+  ],
+  "revokedInFlight": [
+    "f5993917-bfcb-4abc-be78-979be121a03b"
+  ]
+}

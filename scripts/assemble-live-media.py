@@ -38,7 +38,7 @@ def ffmpeg(arguments):
     subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-n', *arguments], check=True, timeout=180)
 
 ffmpeg(['-ss', str(start), '-t', '8', '-i', str(output / 'raw/gt.mp4'), '-filter_complex',
-        'fps=12,scale=1040:-2:flags=lanczos,split[a][b];[a]palettegen=max_colors=256:stats_mode=diff[p];[b][p]paletteuse=dither=sierra2_4a:diff_mode=rectangle',
+        'fps=12,scale=1280:-2:flags=lanczos,split[a][b];[a]palettegen=max_colors=256:stats_mode=diff[p];[b][p]paletteuse=dither=sierra2_4a:diff_mode=rectangle',
         '-an', '-loop', '0', '-final_delay', '8', str(output / 'feature-8s.gif')])
 ffmpeg(['-i', str(output / 'raw/gt.mp4'), '-vf', f'fps=8/{duration},scale=480:-2,tile=4x2', '-frames:v', '1', str(output / 'contact-sheet.png')])
 ffmpeg(['-ss', str(start), '-t', '8', '-i', str(output / 'raw/gt.mp4'), '-vf', 'fps=2,scale=320:-2,tile=4x4', '-frames:v', '1', str(output / 'interaction-strip.png')])

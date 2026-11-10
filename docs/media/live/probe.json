@@ -31,11 +31,11 @@
         "time_base": "1/15360",
         "start_pts": 0,
         "start_time": "0.000000",
-        "duration_ts": 169472,
-        "duration": "11.033333",
-        "bit_rate": "315253",
+        "duration_ts": 151552,
+        "duration": "9.866667",
+        "bit_rate": "307348",
         "bits_per_raw_sample": "8",
-        "nb_frames": "331",
+        "nb_frames": "296",
         "extradata_size": 49,
         "disposition": {
           "default": 1,
@@ -66,16 +66,16 @@
       }
     ],
     "format": {
-      "filename": "/private/tmp/dsh-publish-Cfq2qWrv/sidebar/.runtime/release-022-record-1794325384/en/raw/gt.mp4",
+      "filename": "/Users/liushiyu/projects/dsh-sidebar-localized-20261110/.runtime/usage-media-20261110-v023/en/raw/gt.mp4",
       "nb_streams": 1,
       "nb_programs": 0,
       "nb_stream_groups": 0,
       "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
       "format_long_name": "QuickTime / MOV",
       "start_time": "0.000000",
-      "duration": "11.033333",
-      "size": "439632",
-      "bit_rate": "318766",
+      "duration": "9.866667",
+      "size": "383488",
+      "bit_rate": "310936",
       "probe_score": 100,
       "tags": {
         "major_brand": "isom",
@@ -94,10 +94,10 @@
         "codec_type": "video",
         "codec_tag_string": "[0][0][0][0]",
         "codec_tag": "0x0000",
-        "width": 1040,
-        "height": 650,
-        "coded_width": 1040,
-        "coded_height": 650,
+        "width": 1280,
+        "height": 800,
+        "coded_width": 1280,
+        "coded_height": 800,
         "has_b_frames": 0,
         "sample_aspect_ratio": "1:1",
         "display_aspect_ratio": "8:5",
@@ -135,7 +135,7 @@
       }
     ],
     "format": {
-      "filename": "/private/tmp/dsh-publish-Cfq2qWrv/sidebar/.runtime/release-022-record-1794325384/en-assembled/feature-8s.gif",
+      "filename": "/Users/liushiyu/projects/dsh-sidebar-localized-20261110/docs/media/live/feature-8s.gif",
       "nb_streams": 1,
       "nb_programs": 0,
       "nb_stream_groups": 0,
@@ -143,8 +143,8 @@
       "format_long_name": "CompuServe Graphics Interchange Format (GIF)",
       "start_time": "0.000000",
       "duration": "8.000000",
-      "size": "716586",
-      "bit_rate": "716586",
+      "size": "823879",
+      "bit_rate": "823879",
       "probe_score": 100
     }
   }

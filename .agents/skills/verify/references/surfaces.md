@@ -17,5 +17,6 @@
 | maintainer-github-telemetry | An existing authorized GitHub login retrieves aggregate metrics without collecting plugin conversation content or reporting API errors as zero. | [Real GitHub collection](discovery-telemetry.md). |
 | public-discovery | Anonymous readers can reach the bilingual public website, install instructions, real API media and search metadata. | [Public website verification](surfaces/public-discovery.md). |
 | localized-release-media | Each published language uses its own real API screenshot, GIF and MP4, and actual pixels contain the expected language. | [Localized media verification](localized-media.md). |
+| opt-in-remote-usage | Real DSH controls send only fixed metadata after consent; Supabase independently persists each receipt, and revocation prevents later uploads. | [Usage telemetry](usage-telemetry.md). |
 
 Do not mark the whole feature PASS until every applicable surface passes. Builds and controlled adapters are not evidence of live model behavior.

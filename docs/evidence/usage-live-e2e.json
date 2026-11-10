@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "endpoint": "https://mezthyaerhhohywcxmqi.supabase.co/functions/v1/dsh-sidebar-events",
+  "requests": [
+    {
+      "schema_version": 1,
+      "event_id": "88366a8c-e6f2-4c4e-81a3-89335b6820c4",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "plugin_loaded"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "22fcd23c-20ed-421e-9222-2e26f38c180b",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "diagnostic_test"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "98a250d9-52fe-43cf-bf91-12457abbef3e",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "card_open_requested"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "f877fcc0-5205-4e3c-a062-7c45d2bc0a18",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "search_zero"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "01bc7b82-1ba0-4fd9-8cf1-0b9ac189815b",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "native_navigation_selected"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "622dd3af-3d13-41c2-9d27-80d49dc41aa9",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "history_cards_selected"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "c16564c8-d224-411e-9c59-51f1877c3af6",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "search_error"
+    },
+    {
+      "schema_version": 1,
+      "event_id": "5d60ba41-daba-4cb1-ab69-cdf10b855f3b",
+      "package": "dsh-sidebar-history",
+      "version": "0.2.3",
+      "locale": "en",
+      "event": "plugin_loaded"
+    }
+  ],
+  "responses": [
+    {
+      "event_id": "88366a8c-e6f2-4c4e-81a3-89335b6820c4",
+      "status": 202
+    },
+    {
+      "event_id": "22fcd23c-20ed-421e-9222-2e26f38c180b",
+      "status": 202
+    },
+    {
+      "event_id": "98a250d9-52fe-43cf-bf91-12457abbef3e",
+      "status": 202
+    },
+    {
+      "event_id": "f877fcc0-5205-4e3c-a062-7c45d2bc0a18",
+      "status": 202
+    },
+    {
+      "event_id": "01bc7b82-1ba0-4fd9-8cf1-0b9ac189815b",
+      "status": 202
+    },
+    {
+      "event_id": "622dd3af-3d13-41c2-9d27-80d49dc41aa9",
+      "status": 202
+    },
+    {
+      "event_id": "c16564c8-d224-411e-9c59-51f1877c3af6",
+      "status": 202
+    },
+    {
+      "event_id": "5d60ba41-daba-4cb1-ab69-cdf10b855f3b",
+      "status": 202
+    }
+  ],
+  "networkFailures": [],
+  "checks": [
+    "default-off-no-network",
+    "actual-card-request",
+    "zero-result-search",
+    "controlled-search-error-event",
+    "native-navigation-round-trip",
+    "consent-survives-reload",
+    "revocation-stops-network",
+    "forget-consent",
+    "no-chat-search-or-session-values-in-wire-payload",
+    "every-event-independently-read-back-from-supabase"
+  ],
+  "receipts": [
+    {
+      "event_id": "88366a8c-e6f2-4c4e-81a3-89335b6820c4",
+      "stored": true
+    },
+    {
+      "event_id": "22fcd23c-20ed-421e-9222-2e26f38c180b",
+      "stored": true
+    },
+    {
+      "event_id": "98a250d9-52fe-43cf-bf91-12457abbef3e",
+      "stored": true
+    },
+    {
+      "event_id": "f877fcc0-5205-4e3c-a062-7c45d2bc0a18",
+      "stored": true
+    },
+    {
+      "event_id": "01bc7b82-1ba0-4fd9-8cf1-0b9ac189815b",
+      "stored": true
+    },
+    {
+      "event_id": "622dd3af-3d13-41c2-9d27-80d49dc41aa9",
+      "stored": true
+    },
+    {
+      "event_id": "c16564c8-d224-411e-9c59-51f1877c3af6",
+      "stored": true
+    },
+    {
+      "event_id": "5d60ba41-daba-4cb1-ab69-cdf10b855f3b",
+      "stored": true
+    }
+  ],
+  "revokedInFlight": []
+}

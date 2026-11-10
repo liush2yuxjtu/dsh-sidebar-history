@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "at": "2026-11-10T16:18:43.482350+00:00",
+  "eventId": "af515527-ef00-420f-9d7c-2868a3ba54ca",
+  "checks": [
+    {
+      "name": "persist",
+      "httpStatus": 202
+    },
+    {
+      "name": "deduplicate",
+      "httpStatus": 202
+    },
+    {
+      "name": "receipt",
+      "httpStatus": 200
+    },
+    {
+      "name": "reject_prompt",
+      "httpStatus": 400
+    },
+    {
+      "name": "reject_session_id",
+      "httpStatus": 400
+    },
+    {
+      "name": "reject_oversize",
+      "httpStatus": 413
+    },
+    {
+      "name": "reject_missing_auth",
+      "httpStatus": 401
+    },
+    {
+      "name": "deny_direct_GET",
+      "httpStatus": 401
+    },
+    {
+      "name": "deny_direct_POST",
+      "httpStatus": 401
+    },
+    {
+      "name": "deny_direct_PATCH",
+      "httpStatus": 401
+    },
+    {
+      "name": "deny_direct_DELETE",
+      "httpStatus": 401
+    }
+  ]
+}

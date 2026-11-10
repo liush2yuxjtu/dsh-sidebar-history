@@ -1,5 +1,15 @@
 # Verification
 
+## 0.2.3 Supabase usage telemetry
+
+Feature and media acceptance: **PASS**. Collection is off by default, with five-language consent controls, browser privacy preferences and revocation. The exact six-field payload has no chat, TODO, search text, session IDs or stable installation IDs.
+
+49 tests and two browser cases passed. Actual DSH operations reached the deployed Supabase function; every accepted event was read back with a separate database query. Owner SQL independently matched all eight receipts from the controlled UI lane, each stored once. The English genuine-model lane repeated the usage flow. Five fresh captures have 31 complete official API responses and five native stops; 100 pixel samples passed with zero OCR exceptions and all MP4s played to the end.
+
+[Actual usage requests and readbacks](evidence/usage-browser-e2e.json) · [real-model usage flow](evidence/usage-live-e2e.json) · [fields and owner reports](telemetry.md) · [verification recipe](../.agents/skills/verify/references/usage-telemetry.md).
+
+Supabase function version 2 keeps gateway JWT validation enabled. Dedicated tables deny direct anonymous access. The daily write cap was tested with transaction rollback. Daily 30-day retention is configured; the first scheduled deletion has not been observed. Counts include acceptance activity and do not measure unique users or retention. The normal user profile has not been opted in. The final staged-tree gate and its new five-language API runs are recorded separately in the release receipt.
+
 ## Current 0.2.2 real API release captures (2026-11-10)
 
 **Media validation PASS.** A fresh set of five official API-driven DSH sessions was recorded against `package.json` version `0.2.2`. Each locale (en, zh-CN, zh-TW, ja, es) returned seven actual API responses. Each provides an exact original H.264 MP4, a source-bound eight-second GIF, original screenshots, tool receipts, native session state, and SHA-256 provenance. The validator accepted 100 actual pixel samples and zero manual OCR exceptions. These captures replace the previous published media; the earlier 0.2.1 results below remain historical.

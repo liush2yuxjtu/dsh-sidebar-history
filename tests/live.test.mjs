@@ -1,3 +1,5 @@
+import { browserOptions } from './browser-options.mjs';
+import { verifyUsageFlow } from './usage-browser-flow.mjs';
 import assert from 'node:assert/strict';
 import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
@@ -22,7 +24,7 @@ const require = createRequire(join(source, 'apps/cli/package.json'));
 const { SessionId } = require('@deepseek-ai/dsh-session');
 const { launchWebScaffold, readPersistedEvents } = await import(pathToFileURL(join(source, 'apps/web/tests/scaffold.ts')).href);
 const { connectFreshWorkspace, writeComposerDraft, openSettings } = await import(pathToFileURL(join(source, 'apps/web/tests/support.ts')).href);
-const sourcePaths = ['package.json', 'index.mjs', 'client.js', 'src/client.mjs', 'src/markdown-preview.mjs', 'src/projection.mjs', 'src/locales.mjs', 'tests/live.test.mjs', 'tests/live-proof.mjs', 'tests/live.config.mjs', 'tests/media-locales.mjs', 'scripts/live-browser.mjs'];
+const sourcePaths = ['src/usage-telemetry.mjs', 'src/usage-config.mjs', 'tests/usage-browser-flow.mjs', 'tests/browser-options.mjs', 'package.json', 'index.mjs', 'client.js', 'src/client.mjs', 'src/markdown-preview.mjs', 'src/projection.mjs', 'src/locales.mjs', 'tests/live.test.mjs', 'tests/live-proof.mjs', 'tests/live.config.mjs', 'tests/media-locales.mjs', 'scripts/live-browser.mjs'];
 const sources = async () => Object.fromEntries(await Promise.all(sourcePaths.map(async path => [path, hash(await readFile(join(root, path)))])));
 const textOf = message => message.content.filter(b => b.type === 'text').map(b => b.text).join('\n');
 const previewOf = message => textOf(message).trim().slice(0, 360);
@@ -122,7 +124,7 @@ it('proves live API responses drive native DSH tasks, persisted history and real
       }
     });
     await scaffold.ctx.agentDefaultModel.saveSelection({ provider: 'deepseek-official', model });
-    browser = await chromium.launch({ headless: true });
+    browser = await chromium.launch(browserOptions());
     page = await browser.newPage({ viewport: { width: 1280, height: 800 }, locale: 'en-US', colorScheme: 'dark' });
     page.on('pageerror', error => errors.push(error.message));
     page.on('console', message => {
@@ -444,6 +446,7 @@ it('proves live API responses drive native DSH tasks, persisted history and real
     await expectPreview(secondary, secondMessage);
     await expect(primary.locator('.dsh-history-todos')).toHaveCount(0);
     await shot('lifecycle-reloaded.png');
+    if (mediaLocale === 'en' && process.env.DSH_VERIFY_USAGE === '1') await verifyUsageFlow(page, join(output, 'evidence'));
     await observer.settle();
     const lifecycleProvenance = assertRealProvenance(calls(), events, primaryId);
     const responseTexts = [...calls(), cancellation.call].filter(receipt => receipt.text?.trim());

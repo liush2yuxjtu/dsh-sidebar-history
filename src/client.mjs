@@ -1,4 +1,6 @@
 import { sidebarDictionaries, traditionalHostDictionaries } from './locales.mjs';
+import { createUsageTelemetry } from './usage-telemetry.mjs';
+import manifest from '../package.json';
 import { parseHistoryMarkdown, renderHistoryMarkdown } from './markdown-preview.mjs';
 
 window.__ModuleLoader__.load({
@@ -43,6 +45,16 @@ window.__ModuleLoader__.load({
           const removeDictionaries = Object.entries(traditionalHostDictionaries).map(([namespace, dictionary]) => ctx.locale.register(namespace, 'zh-TW', dictionary));
           return () => { for (const remove of removeDictionaries.reverse()) remove(); removeLanguage(); };
         }, 'sidebar history traditional Chinese language pack');
+        const usageListeners = new Set();
+        let usageState;
+        let storage; try { storage = window.localStorage; } catch {}
+        const usage = createUsageTelemetry({ storage, fetchImpl: (...args) => window.fetch(...args), cryptoImpl: window.crypto,
+          navigatorImpl: window.navigator || {}, version: manifest.version, locale: () => ctx.locale.getSnapshot().active,
+          onChange: state => { usageState = state; for (const listener of usageListeners) listener(); } });
+        usageState = usage.snapshot();
+        const usageSource = { getSnapshot: () => usageState, subscribe: cb => { usageListeners.add(cb); return () => usageListeners.delete(cb); } };
+        usage.emit('plugin_loaded');
+        ctx.effect(() => () => { usage.dispose(); usageListeners.clear(); }, 'sidebar usage telemetry cleanup');
         const source = ctx.sessions.list;
         let stopCards;
         let navigation = { cards: true, query: '', scrollTop: 0, focus: null, search: { query: '', ids: [], hasMore: false, state: 'idle' } };
@@ -119,9 +131,9 @@ window.__ModuleLoader__.load({
             const timer = setTimeout(async () => {
               try {
                 const result = await ctx.sessions.search(query, controller.signal);
-                if (!controller.signal.aborted) setSearch(result.ok ? { query, ids: result.value.items.map(item => item.sessionId), hasMore: result.value.hasMore, state: 'ready' } : { query, ids: retainedIds, hasMore: retainedHasMore, state: 'error' });
+                if (!controller.signal.aborted) { usage.emit(result.ok ? (result.value.items.length ? 'search_some' : 'search_zero') : 'search_error'); setSearch(result.ok ? { query, ids: result.value.items.map(item => item.sessionId), hasMore: result.value.hasMore, state: 'ready' } : { query, ids: retainedIds, hasMore: retainedHasMore, state: 'error' }); }
               } catch {
-                if (!controller.signal.aborted) setSearch({ query, ids: retainedIds, hasMore: retainedHasMore, state: 'error' });
+                if (!controller.signal.aborted) { usage.emit('search_error'); setSearch({ query, ids: retainedIds, hasMore: retainedHasMore, state: 'error' }); }
               }
             }, 200);
             return () => { clearTimeout(timer); controller.abort(); };
@@ -130,7 +142,12 @@ window.__ModuleLoader__.load({
             if (!wide) return;
             for (const id of visibleIds.split('\n').filter(Boolean)) {
               if (source.getSnapshot().byId[id]?.projectionValues?.sidebarHistory === undefined) {
-                void ctx.sessions.refreshProjections(id).catch(error => console.error('Sidebar summary read failed', error));
+                void ctx.sessions.refreshProjections(id).then(() => {
+                  const snapshot = source.getSnapshot();
+                  const value = snapshot.byId[id]?.projectionValues?.sidebarHistory;
+                  const state = snapshot.projectionsBySession[id]?.state;
+                  usage.emit(value ? 'projection_ready' : state === 'error' ? 'projection_error' : state === 'migration-required' ? 'projection_migration_required' : 'projection_missing');
+                }).catch(() => usage.emit('projection_error'));
               }
             }
           }, [visibleIds, wide]);
@@ -187,7 +204,7 @@ window.__ModuleLoader__.load({
                     key: row.id, type: 'button', className: 'dsh-history-card', role: 'option', 'data-session-id': row.id,
                     'aria-selected': selected === row.id, 'aria-posinset': start + offset + 1, 'aria-setsize': rows.length,
                     'aria-label': row.displayTitle, 'aria-describedby': descriptionId, tabIndex: tabId === row.id ? 0 : -1,
-                    style: { top: positions[start + offset].top, height: positions[start + offset].size - layout.rowGap }, onFocus: () => updateNavigation({ focus: { kind: 'session', id: row.id } }), onClick: () => ctx.uiWorkspace.openSession(row.id),
+                    style: { top: positions[start + offset].top, height: positions[start + offset].size - layout.rowGap }, onFocus: () => updateNavigation({ focus: { kind: 'session', id: row.id } }), onClick: () => { usage.emit('card_open_requested'); try { ctx.uiWorkspace.openSession(row.id); } catch { usage.emit('card_open_failed'); } },
                   },
                   h('span', { className: 'dsh-history-title', title: row.displayTitle }, row.displayTitle),
                   h('span', { className: 'dsh-history-meta' },
@@ -208,6 +225,7 @@ window.__ModuleLoader__.load({
           inject: () => ({ hooks: { sectionScroller: (_standard, { useSectionScroller }) => useSectionScroller } }),
         }, History));
         const toggle = () => {
+          usage.emit(navigation.cards ? 'native_navigation_selected' : 'history_cards_selected');
           updateNavigation({ cards: !navigation.cards });
           if (navigation.cards) stopCards = mountCards();
           else { stopCards?.(); stopCards = undefined; }
@@ -216,7 +234,26 @@ window.__ModuleLoader__.load({
           const state = useSyncExternalStore(navigationSource.subscribe, navigationSource.getSnapshot);
           return h('button', { type: 'button', className: 'dsh-history-toggle', style: { border: 0, background: 'transparent', color: 'inherit', padding: 8, fontSize: 12, cursor: 'pointer' }, onClick: toggle, 'aria-label': t(state.cards ? 'native' : 'cards'), title: t(state.cards ? 'native' : 'cards') }, wide ? t(state.cards ? 'native' : 'cards') : '☷');
         }
+        function UsageSettings({ t, wide }) {
+          const state = useSyncExternalStore(usageSource.subscribe, usageSource.getSnapshot);
+          const [open, setOpen] = useState(false);
+          const [error, setError] = useState(false);
+          return h(React.Fragment, null,
+            h('button', { type: 'button', className: 'dsh-history-toggle', 'data-usage-settings': true, onClick: () => setOpen(value => !value), 'aria-expanded': open, 'aria-label': t('usageTitle') }, wide ? t('usageTitle') : '◉'),
+            open && h('section', { role: 'dialog', 'aria-label': t('usageTitle'), style: { position: 'fixed', left: 12, bottom: 90, width: 'min(360px, calc(100vw - 24px))', maxHeight: '70vh', overflow: 'auto', zIndex: 10000, padding: 16, border: '1px solid var(--dsw-alias-border-l2,#888)', borderRadius: 12, background: 'var(--dsw-specific-input-major,#222)', color: 'var(--dsw-alias-label-primary,#eee)', boxShadow: '0 4px 24px #0005', fontSize: 12, lineHeight: 1.6 } },
+              h('strong', null, t('usageTitle')),
+              h('p', null, t('usageDisclosure')),
+              h('p', { style: { overflowWrap: 'anywhere' } }, state.endpoint),
+              h('label', null, h('input', { type: 'checkbox', checked: state.enabled && !state.blocked, disabled: state.blocked, onChange: event => setError(!usage.setPreferences(event.target.checked)) }), ' ', t('usageEnable')),
+              state.blocked && h('p', { role: 'status' }, t('usageBlocked')),
+              error && h('p', { role: 'alert' }, t('usageStorageError')),
+              h('p', { role: 'status', 'data-usage-status': true }, t('usageStatus', { sent: state.sent, failed: state.failed, pending: state.pending })),
+              h('button', { type: 'button', disabled: !state.enabled || state.blocked, onClick: () => usage.emit('diagnostic_test') }, t('usageTest')),
+              ' ', h('button', { type: 'button', onClick: () => setError(!usage.clear()) }, t('usageForget')),
+              ' ', h('button', { type: 'button', onClick: () => setOpen(false) }, t('usageClose'))));
+        }
         stopCards = mountCards();
+        ctx.slots.inject('sidebar.footer.action', () => ctx.slots.register({ name: 'sidebar.footer.action', id: 'sidebar-history-usage', order: 6, locale: NS }, UsageSettings));
         ctx.effect(() => () => { stopCards?.(); listeners.clear(); }, 'sidebar history navigation cleanup');
         ctx.slots.inject('sidebar.footer.action', () => ctx.slots.register({ name: 'sidebar.footer.action', id: 'sidebar-history-toggle', order: 5, locale: NS }, Toggle));
       },

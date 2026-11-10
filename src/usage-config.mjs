@@ -1,0 +1,2 @@
+// Public legacy anon JWT for the Edge gateway; never a service-role credential.
+export const USAGE_PUBLIC_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1lenRoeWFlcmhob2h5d2N4bXFpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk2Mzc5MDgsImV4cCI6MjEwNTIxMzkwOH0.mFbmQtm7IQIaHymF0CxnP-3A6XvmyeKBjyLxr8-pOHo";

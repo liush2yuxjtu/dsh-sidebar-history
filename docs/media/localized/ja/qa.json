@@ -3,20 +3,33 @@
   "metadata_pass": true,
   "api_provenance": "PASS",
   "liveModel": true,
-  "runId": "55fac021-fdbe-4edc-96b1-3eef2e2e1d36",
+  "runId": "4589e704-3d9e-419f-ba5a-b67ddfcb7b53",
   "visual_review": {
     "status": "PASS",
-    "method": "Actual five-language screenshot and contact-sheet montage visually inspected; QA checks semantic text separately with OCR",
-    "reviewedAt": "2026-11-10T15:48:59.927200+00:00",
+    "method": "Inspected actual capture PNG content through JPEG review previews; original PNGs retained unchanged and hash-bound. Snapshot at 1280px, contact sheet at 1280px and GIF interaction strip at 960px.",
+    "reviewedAt": "2026-11-10T16:13:59.221930+00:00",
     "artifacts": {
-      "snapshot.png": "3c6c5ff84a86064bc554e6881cc297f2cd5183d9728c56e01d8f189804d70f1e",
-      "contact-sheet.png": "701592133510b1454aaeeca33267ce904754d706cd193c3471b70b61fec20709",
-      "interaction-strip.png": "1082d17e96382d9949e68d2bde860235fbcfaf7e051285eb6d3335fec04e2420"
+      "snapshot.png": "07f988bc202fa1dfdbdb22ace2803c3babb20dce7c48191f70a07c80785f5f0c",
+      "contact-sheet.png": "25236497104d0bf39d005600e60b5b48b955ff6619e1b9291b27b880986a43d1",
+      "interaction-strip.png": "e0a9b0fc774e0b75f2d12c4943dde8de6b181c572442628e3a69c30f2c465db6"
     },
-    "findings": "ja original DSH host UI, sidebar session card and two completed of three TODO tasks visible; native conversation and assistant summary persist. Dark UI and own locale labels inspected alongside complete timeline contact sheet. Model API session run 55fac021-fdbe-4edc-96b1-3eef2e2e1d36; independent pixel OCR still required.",
+    "findings": "Japanese labels, intermediate text and reply; audit 4589e704, totals 45 and 6, 2/3 complete. 利用統計 footer is Japanese. Timeline shows native operations and generating-to-saved reply with no blank result. Full-resolution text receives separate OCR validation.",
     "finalResultHold_s": {
-      "demo.mp4": 5.44
+      "demo.mp4": 5.289,
+      "feature-8s.gif": 4.5
     }
   },
-  "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health."
+  "limits": "Isolated real DSH profile and official API. This does not monitor ongoing production health.",
+  "playback": {
+    "status": "pass",
+    "playback": {
+      "currentTime": 1.597231,
+      "duration": 11.233333,
+      "width": 1280,
+      "height": 800,
+      "error": null,
+      "paused": false
+    },
+    "reachedEnd": true
+  }
 }

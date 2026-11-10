@@ -1,3 +1,5 @@
+import { browserOptions } from './browser-options.mjs';
+import { verifyUsageFlow } from './usage-browser-flow.mjs';
 import assert from 'node:assert/strict';
 import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
@@ -152,7 +154,8 @@ it('verifies the installed plugin in real DSH Web, with controlled UI data and n
     await seedSession(scaffold, seed('New conversation', null), 'sidebar-empty');
     scaffold.ctx.llm.registerAdapter(['sidebar-test'], new ControlledUiAdapter());
     await scaffold.ctx.agentDefaultModel.saveSelection({ provider: 'sidebar-test', model: 'controlled-ui-fixture' });
-    browser = await chromium.launch({ ...(process.env.DSH_CHROMIUM_PATH ? { executablePath: process.env.DSH_CHROMIUM_PATH } : {}), headless: true,
+    console.log('Browser proxy configured:', Boolean(browserOptions().proxy));
+    browser = await chromium.launch({ ...browserOptions(),
       args: ['--no-sandbox', '--no-zygote', '--disable-dev-shm-usage', '--disable-gpu'] });
     page = await browser.newPage({ viewport: { width: 1440, height: 1024 }, locale: 'en-US', colorScheme: 'dark' });
     page.on('pageerror', error => errors.push(error.message));
@@ -477,6 +480,7 @@ it('verifies the installed plugin in real DSH Web, with controlled UI data and n
     });
     await chinese.close();
     result.checks.push('chinese-light-theme', 'long-content-clamping-and-html-escaping');
+    if (process.env.DSH_VERIFY_USAGE === '1') result.usage = await verifyUsageFlow(page, output);
     result.regressions = regressions;
     if (repro) {
       await writeFile(join(output, 'audit-red.json'), JSON.stringify({ fixtureData: true, liveModel: false, regressions }, null, 2));

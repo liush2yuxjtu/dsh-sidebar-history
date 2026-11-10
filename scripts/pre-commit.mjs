@@ -23,7 +23,7 @@ try {
   await symlink(join(repository, 'node_modules'), join(temporary, 'node_modules'), 'junction');
   const env = { ...process.env, DSH_SOURCE_ROOT: source,
     DSH_PROVIDER_ENV_FILE: process.env.DSH_PROVIDER_ENV_FILE || setting('dsh.liveEnvFile'),
-    DSH_CANDIDATE_TREE: candidate.tree, DSH_LIVE_OUTPUT: join(output, 'live') };
+    DSH_CANDIDATE_TREE: candidate.tree, DSH_LIVE_OUTPUT: join(output, 'live'), DSH_VERIFY_USAGE: '1' };
   const gitLocal = execFileSync('git', ['-C', repository, 'rev-parse', '--local-env-vars'], { encoding: 'utf8' }).trim().split('\n');
   for (const name of gitLocal) delete env[name];
   console.log(`Pre-commit real E2E started. Staged tree ${candidate.tree}. Run ${runId}.`);

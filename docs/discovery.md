@@ -12,7 +12,7 @@ The repository description names DeepSeek Harness, the sidebar, TODO progress, a
 
 ## Language-specific documents
 
-Each language has its own file with links to the other versions. These are documentation translations. The sidebar UI supports the same five languages through DSH's locale service. Traditional Chinese covers the sidebar and demonstrated native screens; other native namespaces may fall back to Simplified Chinese. Each language has an independent real API screenshot, GIF, and video, mapped in [locales.json](media/locales.json). The Traditional Chinese host pack covers 17 namespaces and 1829 keys. Version 0.2.2 includes fresh real API captures verified across all five languages.
+Each language has its own file with links to the other versions. These are documentation translations. The sidebar UI supports the same five languages through DSH's locale service. Traditional Chinese covers the sidebar and demonstrated native screens; other native namespaces may fall back to Simplified Chinese. Each language has an independent real API screenshot, GIF, and video, mapped in [locales.json](media/locales.json). The Traditional Chinese host pack covers 17 namespaces and 1829 keys. Version 0.2.3 includes fresh real API captures verified across all five languages.
 
 | Language | README |
 | --- | --- |

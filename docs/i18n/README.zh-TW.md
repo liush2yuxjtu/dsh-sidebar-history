@@ -1,6 +1,6 @@
 # DSH Sidebar History：DeepSeek Harness 歷史側欄外掛
 
-此 checkout 建置 0.2.2；下方指令從目前原始碼建立安裝包，已發佈的 Release 可能仍是較早版本。
+此 checkout 建置 0.2.3；下方指令從目前原始碼建立安裝包，已發佈的 Release 可能仍是較早版本。
 
 [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md)
 
@@ -10,7 +10,7 @@
 
 ## 功能影片
 
-**0.2.1 五語媒體驗證通過。** 五套素材已通過真實文字、像素、來源與播放檢查，請參閱[驗證報告](../verification.md)。
+**0.2.3 五語媒體驗證通過。** 五套素材已通過真實文字、像素、來源與播放檢查，請參閱[驗證報告](../verification.md)。
 
 [![DSH 歷史卡片顯示真實 TODO 進度和最新 Assistant 回覆](../media/localized/zh-TW/feature-8s.gif)](../media/localized/zh-TW/demo.mp4)
 
@@ -40,7 +40,7 @@ Markdown 預覽使用與 DSH 相同的 GFM 語法，顯示粗體、斜體、刪�
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.2.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.3.tgz"
 ```
 
 開啟 DSH Web。歷史側欄會為未歸檔的對話顯示卡片。如果你使用其他 Web profile，請替換 `web`。`--profile` 參數必須放在 `add` 前。也可以透過 DSH 外掛管理員安裝本機包。請參閱[上游安裝指南](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md)。
@@ -51,7 +51,7 @@ dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.2.tgz"
 
 維護者可以使用已有授權的 GitHub 存取權，執行 `npm run telemetry:collect`，收集儲存庫瀏覽、複製、來源網站、Star 數和 Release 附件下載數。腳本產生本機 JSON 和 Markdown 報告。無法讀取的流量 API 標記為 **BLOCKED**，不會記為零。
 
-外掛不安裝追蹤 SDK。收集腳本不聯絡外掛使用者，也不收集聊天內容。目前尚未測量功能點擊和使用者留存。[遙測指南](../telemetry.md)列出已有指標和擬議的自願參與事件設計。
+側欄底部的「使用統計」預設關閉。明確開啟後，向 Supabase 傳送固定操作名稱、版本、介面語言與隨機事件編號；不傳送聊天、TODO、搜尋詞、對話或安裝識別碼。支援瀏覽器隱私偏好、關閉與清除設定，並顯示接收結果。儲存 30 天。指標是事件數，不能代表獨立使用者或留存；託管平台可觀察網路中繼資料。詳見[遙測指南](../telemetry.md)。
 
 ## 驗證修改
 

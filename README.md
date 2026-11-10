@@ -8,7 +8,7 @@ This independent, MIT-licensed plugin uses DSH's official projection and sidebar
 
 ## Feature video
 
-**Verified real API media for 0.2.1.** The five language captures passed actual-text, pixel, provenance and playback checks. See the [verification report](docs/verification.md).
+**Verified real API media for 0.2.3.** The five language captures passed actual-text, pixel, provenance and playback checks. See the [verification report](docs/verification.md).
 
 [![Eight-second preview recorded with the official DeepSeek API](docs/media/live/feature-8s.gif)](docs/media/live/demo.mp4)
 
@@ -26,7 +26,7 @@ A longer **problem → action → payoff** video is now available. This is a tra
 
 ## Find and resume work
 
-This checkout builds version 0.2.2. The latest published Release can lag behind the checkout; the installation below builds this source.
+This checkout builds version 0.2.3. The latest published Release can lag behind the checkout; the installation below builds this source.
 
 Each compact card shows its title, update date, completed/total count, up to three tasks, and a two-line assistant preview. Active and pending tasks take precedence over completed tasks. Use **Workspaces & archives** at the foot to open DSH's workspace browser and session actions. **History cards** returns to the same search, scroll position, and focused session. DSH keeps control of the sidebar shell, collapse, and mobile drawer.
 
@@ -49,7 +49,7 @@ Build a local tarball and install it into the `web` profile:
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.2.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.3.tgz"
 ```
 
 Open DSH Web. The history sidebar displays cards for your unarchived sessions. Replace `web` if you use another Web profile. The profile option must appear before `add`. You can also install the tarball with DSH's plugin manager. See the [upstream installation guide](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md).
@@ -60,7 +60,7 @@ The package ships a prebuilt browser module. Maintainers edit `src/client.mjs` a
 
 Maintainers can run `npm run telemetry:collect` with authorized GitHub access to collect repository views, clones, referrers, stars, and release asset downloads. The script writes local JSON and Markdown reports. Unavailable traffic APIs are marked **BLOCKED**, not recorded as zero.
 
-No tracking SDK is installed in the plugin. The collector does not contact plugin users or collect chat content. Feature clicks and user retention are not measured yet. The [telemetry guide](docs/telemetry.md) describes the available metrics and a proposed opt-in event design.
+Optional **Usage statistics** in the sidebar footer sends fixed action events to Supabase only after explicit opt-in. It is off by default and respects browser Do Not Track and Global Privacy Control. No chat, TODO text, search terms, session IDs or installation IDs are sent. Events expire after 30 days. The dialog shows accepted/failed counts and provides a test button and revocation. This measures event counts, not unique users or retention. Hosting infrastructure can observe network metadata. See the [telemetry guide](docs/telemetry.md) for fields, limits and owner-only reports.
 
 ## Verify
 

@@ -55,6 +55,8 @@ Run the actual-pixel negative test. It must reject English pixels renamed and re
 
 ## Verdict
 
+For remote usage changes, read [Usage telemetry](references/usage-telemetry.md). Require actual DSH controls, genuine Supabase delivery, independent persisted receipt readback, privacy and revocation negatives. The staged hook sets `DSH_VERIFY_USAGE=1`; do not replace the collector with a fixture or suppress missing-network failures.
+
 Use one overall verdict, retaining per-surface results:
 
 - PASS: all required checks and applicable runtime acceptance passed on the candidate.

@@ -1,6 +1,6 @@
 # DSH Sidebar History：DeepSeek Harness の履歴サイドバープラグイン
 
-この checkout は 0.2.2 をビルドします。以下の手順は現在のソースからパッケージを作成します。公開済みの Release は古い場合があります。
+この checkout は 0.2.3 をビルドします。以下の手順は現在のソースからパッケージを作成します。公開済みの Release は古い場合があります。
 
 [English](../../README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md)
 
@@ -10,7 +10,7 @@ MIT ライセンスの独立したプラグインです。DSH の公式 projecti
 
 ## 機能の動画
 
-**0.2.1 の5言語メディア検証に合格しました。** 実際の文字、画面、出典、動画再生を確認しました。[検証レポート](../verification.md)をご覧ください。
+**0.2.3 の5言語メディア検証に合格しました。** 実際の文字、画面、出典、動画再生を確認しました。[検証レポート](../verification.md)をご覧ください。
 
 [![DSH の履歴カードに実際の TODO 進捗と最新の Assistant 返信を表示](../media/localized/ja/feature-8s.gif)](../media/localized/ja/demo.mp4)
 
@@ -40,7 +40,7 @@ Node.js `>=24.9.0` と、インストール済みの DSH Web が必要です。�
 git clone https://github.com/liush2yuxjtu/dsh-sidebar-history.git
 cd dsh-sidebar-history
 npm pack
-dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.2.tgz"
+dsh plugin --profile web add "$PWD/dsh-sidebar-history-0.2.3.tgz"
 ```
 
 DSH Web を開くと、アーカイブされていないセッションの履歴カードが表示されます。別の Web profile を使う場合は `web` を置き換えてください。`--profile` は `add` より前に指定します。DSH のプラグインマネージャーからローカル tarball をインストールすることもできます。[上流のインストールガイド](https://github.com/deepseek-ai/deepseek-harness/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/docs/user/develop/basic/publish.md)を参照してください。
@@ -51,7 +51,7 @@ DSH Web を開くと、アーカイブされていないセッションの履歴
 
 メンテナーは、認可済みの GitHub アクセスを使って `npm run telemetry:collect` を実行できます。リポジトリの閲覧、clone、参照元、Star 数、Release 添付ファイルのダウンロード数を取得し、ローカルに JSON と Markdown のレポートを保存します。利用できないトラフィック API はゼロではなく **BLOCKED** と記録します。
 
-プラグインに追跡用 SDK は導入しません。収集スクリプトはプラグイン利用者に接続せず、会話内容も収集しません。機能のクリック数とユーザー継続率はまだ測定していません。[テレメトリーガイド](../telemetry.md)に、取得できる指標と、利用者の同意に基づくイベント収集の設計案を記載しています。
+サイドバー下部の「利用統計」は初期設定で無効です。同意後に限り、固定の操作名、バージョン、表示言語、ランダムなイベント番号を Supabase に送信します。会話、TODO、検索語、セッションやインストールの識別子は送信しません。ブラウザーのプライバシー設定、無効化、設定の消去に対応し、受信結果を表示します。保存期間は30日です。イベント数はユーザー数や継続率を示しません。運営基盤は通信情報を観測できます。詳細は[テレメトリーガイド](../telemetry.md)を参照してください。
 
 ## 変更を検証する
 
